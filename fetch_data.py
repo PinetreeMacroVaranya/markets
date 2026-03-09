@@ -268,6 +268,62 @@ def load_existing_manual():
     only updated when the user saves from the browser — we must
     not overwrite them.
     """
+    def is_last_trading_day_of_month():
+    """Returns True if today is the last trading day of the current month."""
+    today = date.today()
+    for i in range(1, 4):
+        next_day = today + timedelta(days=i)
+        if next_day.weekday() < 5:  # find next weekday
+            return next_day.month != today.month
+    return False
+
+
+def update_monthly_history(indicators):
+    """
+    If today is the last trading day of the month, append current
+    indicator values to monthly_history.json and keep last 6 months.
+    """
+    if not is_last_trading_day_of_month():
+        log("  Not end of month — skipping monthly history update")
+        return
+
+    log("  ✓ End of month detected — updating monthly_history.json")
+
+    try:
+        with open("monthly_history.json", "r") as f:
+            history = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        history = {"months": []}
+
+    today     = date.today()
+    day       = today.day
+    month_str = today.strftime("%b-%y")
+    label     = f"{day}-{month_str}"
+
+    values = {}
+    for ind_id in ["move","dxy","jgb","nfci","gldtlt","spread","vix","brent","buffett","hyg","gvz","fg"]:
+        values[ind_id] = indicators.get(ind_id, {}).get("latest")
+
+    new_entry = {
+        "label":  label,
+        "date":   today.isoformat(),
+        "values": values
+    }
+
+    # Remove any existing entry for this same month
+    months = history.get("months", [])
+    months = [m for m in months if not m["date"].startswith(today.strftime("%Y-%m"))]
+    months.append(new_entry)
+    months.sort(key=lambda x: x["date"])
+
+    # Keep only last 6 months — oldest drops off automatically
+    months = months[-6:]
+    history["months"] = months
+
+    with open("monthly_history.json", "w") as f:
+        json.dump(history, f, indent=2)
+
+    log(f"  ✓ monthly_history.json updated — {len(months)} months stored")
     try:
         with open("data.json", "r") as f:
             existing = json.load(f)
@@ -331,7 +387,9 @@ def main():
         icon = "✓" if v["status"] == "ok" else ("✗" if v["status"] == "error" else "✎")
         val  = v["latest"]
         log(f"  {icon} {k:10s} latest={val}  ({v['status']})")
-
+        
+ # ── Update monthly history if end of month ────────────────────
+    update_monthly_history(indicators)
     # ── Write data.json ───────────────────────────────────────────
     output = {
         "generated_at": datetime.utcnow().isoformat() + "Z",
