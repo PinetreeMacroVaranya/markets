@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-09T08:04:58.605083Z",
+  "generated_at": "2026-03-09T11:11:03.269121Z",
   "generated_date": "2026-03-09",
   "indicators": {
     "move": {
@@ -2089,14 +2089,19 @@
       "note": ""
     },
     "buffett": {
-      "series": [],
-      "latest": null,
+      "series": [
+        {
+          "date": "2026-03-09",
+          "value": 216.63
+        }
+      ],
+      "latest": 216.63,
       "prev": null,
       "change": null,
-      "as_of": null,
-      "status": "error",
-      "source": "FRED",
-      "note": "Buffett computation failed: One of the FRED series failed"
+      "as_of": "2026-03-09",
+      "status": "ok",
+      "source": "thebuffettindicator.com",
+      "note": "Scraped from thebuffettindicator.com. Value: 216.63%"
     },
     "fg": {
       "series": [],
