@@ -204,88 +204,102 @@ def fetch_fred(series_id, decimals=2, months_back=None):
 
 def fetch_buffett(months=3):
     """
-    Buffett Indicator = Wilshire 5000 Total Market Cap / US Nominal GDP * 100
-    
-    Market Cap proxy : yfinance ^W5000  (daily — index points ≈ $B market cap)
-    GDP              : FRED GDP series  (quarterly SAAR in $B, forward-filled)
+    Buffett Indicator = Wilshire 5000 / US GDP * 100
+    Tries multiple sources in order until one works.
     """
-    log("  Computing Buffett Indicator (yfinance ^W5000 + FRED GDP)")
+    log("  Computing Buffett Indicator")
 
-    # ── Step 1: Pull Wilshire 5000 from yfinance ──────────────────
+    # ── Step 1: Get Wilshire 5000 — try 3 sources in order ───────
+    w5000_series = None
+
+    # Source A: yfinance ^W5000
     try:
-        ticker = yf.Ticker("^W5000")
-        hist   = ticker.history(start=START_DATE, end=TODAY, interval="1d", auto_adjust=True)
-
-        if hist.empty:
-            raise ValueError("yfinance returned no data for ^W5000")
-
-        w5000_series = []
-        for idx, row in hist.iterrows():
-            val = safe_float(row["Close"], 2)
-            if val is not None:
-                w5000_series.append({
-                    "date":  idx.strftime("%Y-%m-%d"),
-                    "value": val
-                })
-
-        if not w5000_series:
-            raise ValueError("All ^W5000 values were null")
-
-        log(f"    ^W5000 → {len(w5000_series)} daily points, latest: {w5000_series[-1]['value']}")
-
+        log("    Trying yfinance ^W5000...")
+        t    = yf.Ticker("^W5000")
+        hist = t.history(start=START_DATE, end=TODAY, interval="1d", auto_adjust=True)
+        if not hist.empty:
+            w5000_series = []
+            for idx, row in hist.iterrows():
+                val = safe_float(row["Close"], 2)
+                if val is not None:
+                    w5000_series.append({"date": idx.strftime("%Y-%m-%d"), "value": val})
+            if w5000_series:
+                log(f"    ✓ yfinance ^W5000 → {len(w5000_series)} points, latest: {w5000_series[-1]['value']}")
     except Exception as e:
         log(f"    ✗ yfinance ^W5000 failed: {e}")
-        return error_entry("yfinance + FRED", f"Wilshire 5000 fetch failed: {e}")
 
-    # ── Step 2: Pull US GDP from FRED ─────────────────────────────
-    try:
-        gdp = fetch_fred("GDP", decimals=1, months_back=18)  # 18 months to ensure we have latest quarter
+    # Source B: yfinance ^WILL5000 (alternate ticker)
+    if not w5000_series:
+        try:
+            log("    Trying yfinance ^WILL5000...")
+            t    = yf.Ticker("^WILL5000")
+            hist = t.history(start=START_DATE, end=TODAY, interval="1d", auto_adjust=True)
+            if not hist.empty:
+                w5000_series = []
+                for idx, row in hist.iterrows():
+                    val = safe_float(row["Close"], 2)
+                    if val is not None:
+                        w5000_series.append({"date": idx.strftime("%Y-%m-%d"), "value": val})
+                if w5000_series:
+                    log(f"    ✓ yfinance ^WILL5000 → {len(w5000_series)} points")
+        except Exception as e:
+            log(f"    ✗ yfinance ^WILL5000 failed: {e}")
 
-        if gdp["status"] != "ok" or not gdp["series"]:
-            raise ValueError("FRED GDP fetch failed or empty")
+    # Source C: FRED WILL5000PR (final fallback)
+    if not w5000_series:
+        log("    Trying FRED WILL5000PR as fallback...")
+        fred_w = fetch_fred("WILL5000PR", decimals=2, months_back=months)
+        if fred_w["status"] == "ok" and fred_w["series"]:
+            w5000_series = fred_w["series"]
+            log(f"    ✓ FRED WILL5000PR → {len(w5000_series)} points")
+        else:
+            log(f"    ✗ FRED WILL5000PR also failed: {fred_w['note']}")
 
-        # Build a date→GDP lookup (quarterly values)
-        gdp_lookup = {d["date"]: d["value"] for d in gdp["series"]}
-        gdp_dates  = sorted(gdp_lookup.keys())
-        latest_gdp = gdp_lookup[gdp_dates[-1]]
+    if not w5000_series:
+        return error_entry(
+            "yfinance + FRED",
+            "Wilshire 5000 unavailable from all sources (^W5000, ^WILL5000, FRED WILL5000PR)"
+        )
 
-        log(f"    GDP   → latest quarter: {gdp_dates[-1]}, value: ${latest_gdp}B")
+    # ── Step 2: Get US GDP from FRED ─────────────────────────────
+    # Use 24 months lookback — GDP is quarterly so we need enough history
+    log("    Fetching GDP from FRED...")
+    gdp_result = fetch_fred("GDP", decimals=1, months_back=24)
 
-    except Exception as e:
-        log(f"    ✗ FRED GDP failed: {e}")
-        return error_entry("yfinance + FRED", f"GDP fetch failed: {e}")
+    if gdp_result["status"] != "ok" or not gdp_result["series"]:
+        return error_entry(
+            "yfinance + FRED",
+            f"GDP fetch failed: {gdp_result.get('note', 'unknown error')}"
+        )
 
-    # ── Step 3: Forward-fill GDP to daily and compute ratio ───────
-    # GDP is quarterly — we use the most recent available quarter
-    # for each daily Wilshire observation (standard methodology)
+    gdp_lookup = {d["date"]: d["value"] for d in gdp_result["series"]}
+    gdp_dates  = sorted(gdp_lookup.keys())
+    latest_gdp = gdp_lookup[gdp_dates[-1]]
+    log(f"    ✓ GDP → latest quarter: {gdp_dates[-1]}, value: ${latest_gdp}B")
+
+    # ── Step 3: Compute daily ratio ───────────────────────────────
+    # For each daily Wilshire value, use the most recent GDP quarter
     def get_gdp_for_date(d):
-        """Return the latest GDP value available on or before date d."""
         applicable = [gd for gd in gdp_dates if gd <= d]
-        if not applicable:
-            return latest_gdp  # fallback to latest if date is before GDP history
-        return gdp_lookup[applicable[-1]]
+        return gdp_lookup[applicable[-1]] if applicable else latest_gdp
 
     series = []
     for point in w5000_series:
         gdp_val = get_gdp_for_date(point["date"])
-        # Wilshire index points ≈ $B market cap (standard approximation)
-        # GDP is in $B (SAAR quarterly)
-        ratio = round((point["value"] / gdp_val) * 100, 1)
-        series.append({
-            "date":  point["date"],
-            "value": ratio
-        })
+        if gdp_val and gdp_val > 0:
+            ratio = round((point["value"] / gdp_val) * 100, 1)
+            series.append({"date": point["date"], "value": ratio})
 
     if not series:
         return error_entry("yfinance + FRED", "Ratio computation produced no results")
 
-    log(f"    Buffett Indicator → latest: {series[-1]['value']}% on {series[-1]['date']}")
+    log(f"    ✓ Buffett Indicator → latest: {series[-1]['value']}% on {series[-1]['date']}")
 
     return make_entry(
         series,
         status="ok",
         source="yfinance (^W5000) + FRED (GDP)",
-        note=f"Computed daily. Wilshire 5000 index level ÷ US nominal GDP × 100. Latest GDP quarter used: {gdp_dates[-1]} (${latest_gdp}B)"
+        note=f"Wilshire 5000 ÷ US nominal GDP × 100. GDP quarter: {gdp_dates[-1]} (${latest_gdp}B)"
     )# ─────────────────────────────────────────────────────────────────
 # LOAD EXISTING MANUAL DATA (carry forward from previous data.json)
 # ─────────────────────────────────────────────────────────────────
