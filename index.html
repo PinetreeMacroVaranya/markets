@@ -249,7 +249,38 @@ td { padding: 11px 12px; vertical-align: middle; white-space: nowrap; }
 #err-banner { display: none; background: #fdf2f2; border: 1px solid #f5c6c6; border-left: 4px solid var(--rust); padding: 14px 18px; margin-bottom: 16px; font-size: 11px; line-height: 1.7; }
 #err-banner.show { display: block; }
 #err-banner strong { color: var(--rust); }
+/* ── MONTHLY HISTORY TABLE ───────────────── */
+.monthly-section { margin-bottom: 28px; }
 
+.mth-scroll { overflow-x: auto; }
+
+.mth-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+
+.mth-table thead th {
+  font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--slate); padding: 8px 12px; text-align: left;
+  border-bottom: 2px solid var(--ink);
+  background: var(--paper); white-space: nowrap;
+}
+.mth-table thead th.mth-val { text-align: center; min-width: 88px; }
+
+.mth-table tbody tr { border-bottom: 1px solid var(--border); }
+.mth-table tbody tr:hover { background: var(--cream); }
+
+.mth-table td { padding: 9px 12px; vertical-align: middle; white-space: nowrap; }
+
+.mth-ind-name { font-family: var(--ff-head); font-size: 12px; font-weight: 700; }
+.mth-ind-sub  { font-size: 9px; color: var(--slate); margin-top: 1px; }
+
+.mth-val-cell {
+  text-align: center; font-size: 12px; font-weight: 500;
+  padding: 9px 10px;
+}
+.mth-val-cell.sig-g { background: #2d7a55; color: #fff; }
+.mth-val-cell.sig-y { background: #e6b800; color: #1a1a1a; }
+.mth-val-cell.sig-r { background: #b83232; color: #fff; }
+.mth-val-cell.sig-none { color: var(--slate); font-style: italic; }
+  
 @media (max-width: 680px) {
   .masthead { grid-template-columns: 1fr; }
   .mh-right { align-items: flex-start; }
@@ -293,7 +324,17 @@ td { padding: 11px 12px; vertical-align: middle; white-space: nowrap; }
   <div class="status-strip" id="status-strip">
     <div class="sp"><span class="dot didle"></span>Loading…</div>
   </div>
-
+<!-- MONTHLY HISTORY TABLE -->
+  <div class="monthly-section">
+    <div class="sec-title">Monthly Indicator Snapshot — Rolling 6 Months</div>
+    <div class="mth-scroll">
+      <table class="mth-table" id="mth-table">
+        <thead id="mth-thead"><tr><th>#</th><th>Indicator</th></tr></thead>
+        <tbody id="mth-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+  
   <!-- MANUAL ENTRY BAR (CNN Fear & Greed — manual only) -->
   <div class="manual-bar">
     <div class="mb-label">✎ Manual Entry — CNN Fear &amp; Greed Index</div>
@@ -690,6 +731,48 @@ function renderStatus(indicators) {
 // ═══════════════════════════════════════════════════════
 //  LEGEND
 // ═══════════════════════════════════════════════════════
+  function renderMonthlyTable(monthlyData) {
+  if (!monthlyData || !monthlyData.months || !monthlyData.months.length) return;
+
+  const months = monthlyData.months;
+
+  // Build header
+  const thead = document.getElementById('mth-thead');
+  thead.innerHTML = '<tr><th>#</th><th>Indicator</th>' +
+    months.map(m => `<th class="mth-val">${m.label}</th>`).join('') +
+    '</tr>';
+
+  // Build rows
+  const tbody = document.getElementById('mth-tbody');
+  tbody.innerHTML = '';
+
+  ORDER.forEach(id => {
+    const m  = META[id];
+    const tr = document.createElement('tr');
+
+    let cells = months.map(mon => {
+      const val = mon.values?.[id];
+      if (val === null || val === undefined) {
+        return `<td class="mth-val-cell sig-none">—</td>`;
+      }
+      const sig = m.sig(val);
+      const cls = sig === 'g' ? 'sig-g' : sig === 'r' ? 'sig-r' : 'sig-y';
+      const display = fmt(val, m);
+      return `<td class="mth-val-cell ${cls}">${display}</td>`;
+    }).join('');
+
+    tr.innerHTML = `
+      <td style="color:var(--slate);font-size:11px;text-align:center">${m.sno}</td>
+      <td>
+        <div class="mth-ind-name">${m.name}</div>
+        <div class="mth-ind-sub">${m.sub}</div>
+      </td>
+      ${cells}
+    `;
+    tbody.appendChild(tr);
+  });
+}
+  
 function renderLegend() {
   document.getElementById('legend').innerHTML = ORDER.map(id => {
     const m = META[id];
@@ -796,8 +879,17 @@ async function boot() {
     return;
   }
 
-  // 2. Merge data
+// 2. Merge data
   RAW = { ...(json.indicators || {}) };
+
+  // 2b. Fetch and render monthly history table
+  try {
+    const mres  = await fetch('./monthly_history.json?t=' + Date.now());
+    const mdata = await mres.json();
+    renderMonthlyTable(mdata);
+  } catch (e) {
+    console.warn('monthly_history.json not found or unreadable:', e);
+  }
 
   // 3. Override Fear & Greed with browser localStorage (more frequently updated)
   const fgLocal = loadFGFromStorage();
