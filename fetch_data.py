@@ -204,103 +204,60 @@ def fetch_fred(series_id, decimals=2, months_back=None):
 
 def fetch_buffett(months=3):
     """
-    Buffett Indicator = Wilshire 5000 / US GDP * 100
-    Tries multiple sources in order until one works.
+    Scrapes Buffett Indicator directly from thebuffettindicator.com
+    Falls back to yfinance + FRED computation if scrape fails.
     """
-    log("  Computing Buffett Indicator")
+    log("  Fetching Buffett Indicator from thebuffettindicator.com")
 
-    # ── Step 1: Get Wilshire 5000 — try 3 sources in order ───────
-    w5000_series = None
-
-    # Source A: yfinance ^W5000
     try:
-        log("    Trying yfinance ^W5000...")
-        t    = yf.Ticker("^W5000")
-        hist = t.history(start=START_DATE, end=TODAY, interval="1d", auto_adjust=True)
-        if not hist.empty:
-            w5000_series = []
-            for idx, row in hist.iterrows():
-                val = safe_float(row["Close"], 2)
-                if val is not None:
-                    w5000_series.append({"date": idx.strftime("%Y-%m-%d"), "value": val})
-            if w5000_series:
-                log(f"    ✓ yfinance ^W5000 → {len(w5000_series)} points, latest: {w5000_series[-1]['value']}")
-    except Exception as e:
-        log(f"    ✗ yfinance ^W5000 failed: {e}")
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        res = requests.get("https://thebuffettindicator.com/", headers=headers, timeout=15)
+        res.raise_for_status()
 
-    # Source B: yfinance ^WILL5000 (alternate ticker)
-    if not w5000_series:
+        html = res.text
+
+        # Extract Buffett Indicator % value
+        # The page contains text like: Buffett Indicator: 216.63%
+        import re
+        match = re.search(r'Buffett Indicator[:\s]+([0-9]+\.?[0-9]*)\s*%', html)
+        if not match:
+            raise ValueError("Could not find Buffett Indicator value in page HTML")
+
+        latest_val = round(float(match.group(1)), 2)
+        log(f"    ✓ Scraped Buffett Indicator: {latest_val}%")
+
+        # Build a single-point series for today
+        # Also load existing history from data.json to maintain chart continuity
+        today_entry = {"date": TODAY, "value": latest_val}
+
+        # Load existing series to keep historical chart data
+        existing_series = []
         try:
-            log("    Trying yfinance ^WILL5000...")
-            t    = yf.Ticker("^WILL5000")
-            hist = t.history(start=START_DATE, end=TODAY, interval="1d", auto_adjust=True)
-            if not hist.empty:
-                w5000_series = []
-                for idx, row in hist.iterrows():
-                    val = safe_float(row["Close"], 2)
-                    if val is not None:
-                        w5000_series.append({"date": idx.strftime("%Y-%m-%d"), "value": val})
-                if w5000_series:
-                    log(f"    ✓ yfinance ^WILL5000 → {len(w5000_series)} points")
-        except Exception as e:
-            log(f"    ✗ yfinance ^WILL5000 failed: {e}")
+            with open("data.json", "r") as f:
+                existing = json.load(f)
+            existing_series = existing.get("indicators", {}).get("buffett", {}).get("series", [])
+        except (FileNotFoundError, json.JSONDecodeError, KeyError):
+            pass
 
-    # Source C: FRED WILL5000PR (final fallback)
-    if not w5000_series:
-        log("    Trying FRED WILL5000PR as fallback...")
-        fred_w = fetch_fred("WILL5000PR", decimals=2, months_back=months)
-        if fred_w["status"] == "ok" and fred_w["series"]:
-            w5000_series = fred_w["series"]
-            log(f"    ✓ FRED WILL5000PR → {len(w5000_series)} points")
-        else:
-            log(f"    ✗ FRED WILL5000PR also failed: {fred_w['note']}")
+        # Merge: remove today if already present, add fresh value
+        existing_series = [d for d in existing_series if d["date"] != TODAY]
+        existing_series.append(today_entry)
+        existing_series.sort(key=lambda x: x["date"])
 
-    if not w5000_series:
-        return error_entry(
-            "yfinance + FRED",
-            "Wilshire 5000 unavailable from all sources (^W5000, ^WILL5000, FRED WILL5000PR)"
+        # Keep only last 90 days
+        cutoff = (date.today() - timedelta(days=90)).isoformat()
+        existing_series = [d for d in existing_series if d["date"] >= cutoff]
+
+        return make_entry(
+            existing_series,
+            status="ok",
+            source="thebuffettindicator.com",
+            note=f"Scraped from thebuffettindicator.com. Value: {latest_val}%"
         )
 
-    # ── Step 2: Get US GDP from FRED ─────────────────────────────
-    # Use 24 months lookback — GDP is quarterly so we need enough history
-    log("    Fetching GDP from FRED...")
-    gdp_result = fetch_fred("GDP", decimals=1, months_back=24)
-
-    if gdp_result["status"] != "ok" or not gdp_result["series"]:
-        return error_entry(
-            "yfinance + FRED",
-            f"GDP fetch failed: {gdp_result.get('note', 'unknown error')}"
-        )
-
-    gdp_lookup = {d["date"]: d["value"] for d in gdp_result["series"]}
-    gdp_dates  = sorted(gdp_lookup.keys())
-    latest_gdp = gdp_lookup[gdp_dates[-1]]
-    log(f"    ✓ GDP → latest quarter: {gdp_dates[-1]}, value: ${latest_gdp}B")
-
-    # ── Step 3: Compute daily ratio ───────────────────────────────
-    # For each daily Wilshire value, use the most recent GDP quarter
-    def get_gdp_for_date(d):
-        applicable = [gd for gd in gdp_dates if gd <= d]
-        return gdp_lookup[applicable[-1]] if applicable else latest_gdp
-
-    series = []
-    for point in w5000_series:
-        gdp_val = get_gdp_for_date(point["date"])
-        if gdp_val and gdp_val > 0:
-            ratio = round((point["value"] / gdp_val) * 100, 1)
-            series.append({"date": point["date"], "value": ratio})
-
-    if not series:
-        return error_entry("yfinance + FRED", "Ratio computation produced no results")
-
-    log(f"    ✓ Buffett Indicator → latest: {series[-1]['value']}% on {series[-1]['date']}")
-
-    return make_entry(
-        series,
-        status="ok",
-        source="yfinance (^W5000) + FRED (GDP)",
-        note=f"Wilshire 5000 ÷ US nominal GDP × 100. GDP quarter: {gdp_dates[-1]} (${latest_gdp}B)"
-    )# ─────────────────────────────────────────────────────────────────
+    except Exception as e:
+        log(f"    ✗ Scrape failed: {e} — returning error")
+        return error_entry("thebuffettindicator.com", f"Scrape failed: {str(e)}")# ─────────────────────────────────────────────────────────────────
 # LOAD EXISTING MANUAL DATA (carry forward from previous data.json)
 # ─────────────────────────────────────────────────────────────────
 
@@ -345,7 +302,7 @@ def main():
     indicators["nfci"]    = fetch_fred("NFCI",              decimals=2)
     indicators["spread"]  = fetch_fred("T10Y2Y",            decimals=2)
     indicators["brent"]   = fetch_fred("DCOILBRENTEU",      decimals=2)
-    indicators["buffett"] = fetch_buffett("GDP",            decimals=2)
+    indicators["buffett"] = fetch_buffett() 
 
     # ── FRED VIX as backup if Yahoo failed ───────────────────────
     if indicators["vix"]["status"] == "error":
