@@ -331,7 +331,7 @@ def main():
     indicators["nfci"]    = fetch_fred("NFCI",              decimals=2)
     indicators["spread"]  = fetch_fred("T10Y2Y",            decimals=2)
     indicators["brent"]   = fetch_fred("DCOILBRENTEU",      decimals=2)
-    indicators["buffett"] = fetch_buffett()
+    indicators["buffett"] = fetch_buffett("GDP",            decimals=2)
 
     # ── FRED VIX as backup if Yahoo failed ───────────────────────
     if indicators["vix"]["status"] == "error":
