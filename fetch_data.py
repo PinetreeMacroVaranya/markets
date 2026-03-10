@@ -1,13 +1,12 @@
 """
-Market Intelligence Dashboard — Data Fetcher
+Market Intelligence Dashboard - Data Fetcher
 Runs daily via GitHub Actions.
 Writes data.json to repo root which index.html reads.
-
-Libraries: yfinance, requests, pandas
 """
 
 import json
 import os
+import re
 import sys
 from datetime import datetime, timedelta, date
 import requests
@@ -18,39 +17,36 @@ except ImportError:
     print("ERROR: yfinance not installed. Run: pip install yfinance")
     sys.exit(1)
 
-# ─────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------
 # CONFIG
-# ─────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------
 
 FRED_API_KEY = os.environ.get("FRED_API_KEY", "")
 FRED_BASE    = "https://api.stlouisfed.org/fred/series/observations"
-MONTHS_BACK  = 3  # how many months of history to include in charts
+MONTHS_BACK  = 3
 
-TODAY        = date.today().isoformat()
-START_DATE   = (date.today() - timedelta(days=MONTHS_BACK * 31)).isoformat()
+TODAY      = (date.today() + timedelta(days=1)).isoformat()
+START_DATE = (date.today() - timedelta(days=MONTHS_BACK * 31)).isoformat()
 
-# ─────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------
 # HELPERS
-# ─────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------
 
 def log(msg):
     print(f"[{datetime.utcnow().strftime('%H:%M:%S')}] {msg}", flush=True)
 
+
 def safe_float(v, decimals=2):
-    """Round a float safely, return None if invalid."""
     try:
         f = float(v)
-        if f != f:   # NaN check
+        if f != f:
             return None
         return round(f, decimals)
     except (TypeError, ValueError):
         return None
 
+
 def make_entry(series_list, status, source, note=""):
-    """
-    series_list: [{"date": "YYYY-MM-DD", "value": float}, ...]
-    Returns a standardised dict for data.json
-    """
     clean = [
         {"date": d["date"], "value": d["value"]}
         for d in series_list
@@ -68,10 +64,11 @@ def make_entry(series_list, status, source, note=""):
         "prev":   prev,
         "change": round(latest - prev, 4) if (latest is not None and prev is not None) else None,
         "as_of":  as_of,
-        "status": status,   # "ok" | "error" | "manual"
+        "status": status,
         "source": source,
         "note":   note,
     }
+
 
 def error_entry(source, message):
     return {
@@ -85,18 +82,14 @@ def error_entry(source, message):
         "note":   message,
     }
 
-# ─────────────────────────────────────────────────────────────────
-# YAHOO FINANCE FETCHER (via yfinance)
-# ─────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------
+# YAHOO FINANCE
+# -----------------------------------------------------------------
 
 def fetch_yahoo(ticker, decimals=2):
-    """
-    Fetch 3-month daily history for a ticker using yfinance.
-    Returns a standardised entry dict.
-    """
-    log(f"  Yahoo → {ticker}")
+    log(f"  Yahoo -> {ticker}")
     try:
-        t = yf.Ticker(ticker)
+        t    = yf.Ticker(ticker)
         hist = t.history(start=START_DATE, end=TODAY, interval="1d", auto_adjust=True)
 
         if hist.empty:
@@ -119,10 +112,7 @@ def fetch_yahoo(ticker, decimals=2):
 
 
 def fetch_yahoo_ratio(ticker1, ticker2, decimals=3):
-    """
-    Compute the ratio of two Yahoo tickers (e.g. GLD / TLT).
-    """
-    log(f"  Yahoo ratio → {ticker1} / {ticker2}")
+    log(f"  Yahoo ratio -> {ticker1} / {ticker2}")
     try:
         t1 = yf.Ticker(ticker1)
         t2 = yf.Ticker(ticker2)
@@ -132,7 +122,6 @@ def fetch_yahoo_ratio(ticker1, ticker2, decimals=3):
         if h1.empty or h2.empty:
             return error_entry("Yahoo Finance", f"Empty data for {ticker1} or {ticker2}")
 
-        # Align on common dates
         common_dates = h1.index.intersection(h2.index)
         series = []
         for idx in common_dates:
@@ -152,16 +141,12 @@ def fetch_yahoo_ratio(ticker1, ticker2, decimals=3):
     except Exception as e:
         return error_entry("Yahoo Finance", str(e))
 
-# ─────────────────────────────────────────────────────────────────
-# FRED FETCHER
-# ─────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------
+# FRED
+# -----------------------------------------------------------------
 
 def fetch_fred(series_id, decimals=2, months_back=None):
-    """
-    Fetch a FRED series via the official REST API.
-    Returns a standardised entry dict.
-    """
-    log(f"  FRED  → {series_id}")
+    log(f"  FRED  -> {series_id}")
     if not FRED_API_KEY:
         return error_entry("FRED", "FRED_API_KEY not set in environment")
 
@@ -170,7 +155,7 @@ def fetch_fred(series_id, decimals=2, months_back=None):
     params = {
         "series_id":         series_id,
         "observation_start": start,
-        "observation_end":   TODAY,
+        "observation_end":   date.today().isoformat(),
         "file_type":         "json",
         "api_key":           FRED_API_KEY,
     }
@@ -201,36 +186,27 @@ def fetch_fred(series_id, decimals=2, months_back=None):
     except Exception as e:
         return error_entry("FRED", str(e))
 
+# -----------------------------------------------------------------
+# BUFFETT INDICATOR
+# -----------------------------------------------------------------
 
-def fetch_buffett(months=3):
-    """
-    Scrapes Buffett Indicator directly from thebuffettindicator.com
-    Falls back to yfinance + FRED computation if scrape fails.
-    """
+def fetch_buffett():
     log("  Fetching Buffett Indicator from thebuffettindicator.com")
-
     try:
         headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
         res = requests.get("https://thebuffettindicator.com/", headers=headers, timeout=15)
         res.raise_for_status()
 
-        html = res.text
-
-        # Extract Buffett Indicator % value
-        # The page contains text like: Buffett Indicator: 216.63%
-        import re
-        match = re.search(r'Buffett Indicator[:\s]+([0-9]+\.?[0-9]*)\s*%', html)
+        match = re.search(r'Buffett Indicator[:\s]+([0-9]+\.?[0-9]*)\s*%', res.text)
         if not match:
             raise ValueError("Could not find Buffett Indicator value in page HTML")
 
         latest_val = round(float(match.group(1)), 2)
-        log(f"    ✓ Scraped Buffett Indicator: {latest_val}%")
+        log(f"    Scraped Buffett Indicator: {latest_val}%")
 
-        # Build a single-point series for today
-        # Also load existing history from data.json to maintain chart continuity
-        today_entry = {"date": TODAY, "value": latest_val}
+        today_str   = date.today().isoformat()
+        today_entry = {"date": today_str, "value": latest_val}
 
-        # Load existing series to keep historical chart data
         existing_series = []
         try:
             with open("data.json", "r") as f:
@@ -239,12 +215,10 @@ def fetch_buffett(months=3):
         except (FileNotFoundError, json.JSONDecodeError, KeyError):
             pass
 
-        # Merge: remove today if already present, add fresh value
-        existing_series = [d for d in existing_series if d["date"] != TODAY]
+        existing_series = [d for d in existing_series if d["date"] != today_str]
         existing_series.append(today_entry)
         existing_series.sort(key=lambda x: x["date"])
 
-        # Keep only last 90 days
         cutoff = (date.today() - timedelta(days=90)).isoformat()
         existing_series = [d for d in existing_series if d["date"] >= cutoff]
 
@@ -256,80 +230,14 @@ def fetch_buffett(months=3):
         )
 
     except Exception as e:
-        log(f"    ✗ Scrape failed: {e} — returning error")
-        return error_entry("thebuffettindicator.com", f"Scrape failed: {str(e)}")# ─────────────────────────────────────────────────────────────────
-# LOAD EXISTING MANUAL DATA (carry forward from previous data.json)
-# ─────────────────────────────────────────────────────────────────
+        log(f"    Scrape failed: {e}")
+        return error_entry("thebuffettindicator.com", f"Scrape failed: {str(e)}")
+
+# -----------------------------------------------------------------
+# LOAD EXISTING MANUAL DATA
+# -----------------------------------------------------------------
 
 def load_existing_manual():
-    """
-    Read data.json if it exists and preserve manual entries.
-    Manual indicators (MOVE history, GLD/TLT history, etc.) are
-    only updated when the user saves from the browser — we must
-    not overwrite them.
-    """
-   def is_last_trading_day_of_month():
-    """Returns True if today is the last trading day of the current month."""
-    today = date.today()
-    for i in range(1, 4):
-        next_day = today + timedelta(days=i)
-        if next_day.weekday() < 5:
-            return next_day.month != today.month
-    return False
-    today = date.today()
-    for i in range(1, 4):
-        next_day = today + timedelta(days=i)
-        if next_day.weekday() < 5:  # find next weekday
-            return next_day.month != today.month
-    return False
-
-
-def update_monthly_history(indicators):
-    """
-    If today is the last trading day of the month, append current
-    indicator values to monthly_history.json and keep last 6 months.
-    """
-    if not is_last_trading_day_of_month():
-        log("  Not end of month — skipping monthly history update")
-        return
-
-    log("  ✓ End of month detected — updating monthly_history.json")
-
-    try:
-        with open("monthly_history.json", "r") as f:
-            history = json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        history = {"months": []}
-
-    today     = date.today()
-    day       = today.day
-    month_str = today.strftime("%b-%y")
-    label     = f"{day}-{month_str}"
-
-    values = {}
-    for ind_id in ["move","dxy","jgb","nfci","gldtlt","spread","vix","brent","buffett","hyg","gvz","fg"]:
-        values[ind_id] = indicators.get(ind_id, {}).get("latest")
-
-    new_entry = {
-        "label":  label,
-        "date":   today.isoformat(),
-        "values": values
-    }
-
-    # Remove any existing entry for this same month
-    months = history.get("months", [])
-    months = [m for m in months if not m["date"].startswith(today.strftime("%Y-%m"))]
-    months.append(new_entry)
-    months.sort(key=lambda x: x["date"])
-
-    # Keep only last 6 months — oldest drops off automatically
-    months = months[-6:]
-    history["months"] = months
-
-    with open("monthly_history.json", "w") as f:
-        json.dump(history, f, indent=2)
-
-    log(f"  ✓ monthly_history.json updated — {len(months)} months stored")
     try:
         with open("data.json", "r") as f:
             existing = json.load(f)
@@ -338,43 +246,93 @@ def update_monthly_history(indicators):
     except (FileNotFoundError, json.JSONDecodeError):
         return {}
 
-# ─────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------
+# MONTHLY HISTORY UPDATE
+# -----------------------------------------------------------------
+
+def is_last_trading_day_of_month():
+    today = date.today()
+    for i in range(1, 4):
+        next_day = today + timedelta(days=i)
+        if next_day.weekday() < 5:
+            return next_day.month != today.month
+    return False
+
+
+def update_monthly_history(indicators):
+    if not is_last_trading_day_of_month():
+        log("  Not end of month - skipping monthly history update")
+        return
+
+    log("  End of month detected - updating monthly_history.json")
+
+    try:
+        with open("monthly_history.json", "r") as f:
+            history = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        history = {"months": []}
+
+    today = date.today()
+    label = f"{today.day}-{today.strftime('%b-%y')}"
+
+    values = {}
+    for ind_id in ["move", "dxy", "jgb", "nfci", "gldtlt", "spread", "vix", "brent", "buffett", "hyg", "gvz", "fg"]:
+        values[ind_id] = indicators.get(ind_id, {}).get("latest")
+
+    new_entry = {
+        "label":  label,
+        "date":   today.isoformat(),
+        "values": values
+    }
+
+    months = history.get("months", [])
+    months = [m for m in months if not m["date"].startswith(today.strftime("%Y-%m"))]
+    months.append(new_entry)
+    months.sort(key=lambda x: x["date"])
+    months = months[-6:]
+    history["months"] = months
+
+    with open("monthly_history.json", "w") as f:
+        json.dump(history, f, indent=2)
+
+    log(f"  monthly_history.json updated - {len(months)} months stored")
+
+# -----------------------------------------------------------------
 # MAIN
-# ─────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------
 
 def main():
     log("=== Market Intelligence Data Fetch Starting ===")
-    log(f"Date range: {START_DATE} → {TODAY}")
-    log(f"FRED key:   {'SET ✓' if FRED_API_KEY else 'MISSING ✗'}")
+    log(f"Date range: {START_DATE} -> {TODAY}")
+    log(f"FRED key:   {'SET' if FRED_API_KEY else 'MISSING'}")
 
     indicators = {}
 
-    # ── Yahoo Finance pulls ───────────────────────────────────────
-    log("\n── Yahoo Finance ──")
-    indicators["move"]   = fetch_yahoo("^MOVE",   decimals=2)
-    indicators["vix"]    = fetch_yahoo("^VIX",    decimals=2)
-    indicators["gvz"]    = fetch_yahoo("^GVZ",    decimals=2)
-    indicators["hyg"]    = fetch_yahoo("HYG",     decimals=2)
+    # Yahoo Finance pulls
+    log("\n-- Yahoo Finance --")
+    indicators["move"]   = fetch_yahoo("^MOVE",  decimals=2)
+    indicators["vix"]    = fetch_yahoo("^VIX",   decimals=2)
+    indicators["gvz"]    = fetch_yahoo("^GVZ",   decimals=2)
+    indicators["hyg"]    = fetch_yahoo("HYG",    decimals=2)
     indicators["gldtlt"] = fetch_yahoo_ratio("GLD", "TLT", decimals=3)
 
-    # ── FRED pulls ────────────────────────────────────────────────
-    log("\n── FRED ──")
-    indicators["dxy"]     = fetch_fred("DTWEXBGS",          decimals=2)
-    indicators["jgb"]     = fetch_fred("IRLTLT01JPM156N",   decimals=2)
-    indicators["nfci"]    = fetch_fred("NFCI",              decimals=2)
-    indicators["spread"]  = fetch_fred("T10Y2Y",            decimals=2)
-    indicators["brent"]   = fetch_fred("DCOILBRENTEU",      decimals=2)
-    indicators["buffett"] = fetch_buffett() 
+    # FRED + other pulls
+    log("\n-- FRED + other --")
+    indicators["dxy"]     = fetch_yahoo("DX-Y.NYB",          decimals=2)
+    indicators["jgb"]     = fetch_fred("IRLTLT01JPM156N",    decimals=2)
+    indicators["nfci"]    = fetch_fred("NFCI",               decimals=2)
+    indicators["spread"]  = fetch_fred("T10Y2Y",             decimals=2)
+    indicators["brent"]   = fetch_fred("DCOILBRENTEU",       decimals=2)
+    indicators["buffett"] = fetch_buffett()
 
-    # ── FRED VIX as backup if Yahoo failed ───────────────────────
+    # VIX fallback to FRED if Yahoo fails
     if indicators["vix"]["status"] == "error":
-        log("  Yahoo VIX failed — trying FRED VIXCLS as backup")
+        log("  Yahoo VIX failed - trying FRED VIXCLS as backup")
         indicators["vix"] = fetch_fred("VIXCLS", decimals=2)
 
-    # ── Manual indicators (carry forward from existing data.json) ─
-    log("\n── Manual indicators (preserved from existing data.json) ──")
+    # Manual indicators - carry forward from existing data.json
+    log("\n-- Manual indicators --")
     existing_manual = load_existing_manual()
-    # fg (Fear & Greed) is always manual
     indicators["fg"] = existing_manual.get("fg", {
         "series": [], "latest": None, "prev": None,
         "change": None, "as_of": None,
@@ -382,32 +340,34 @@ def main():
         "note": "Enter from CNN Fear & Greed page"
     })
 
-    # ── Summary ───────────────────────────────────────────────────
-    log("\n── Summary ──")
+    # Monthly history
+    log("\n-- Monthly history check --")
+    update_monthly_history(indicators)
+
+    # Summary log
+    log("\n-- Summary --")
     ok  = sum(1 for v in indicators.values() if v["status"] == "ok")
     err = sum(1 for v in indicators.values() if v["status"] == "error")
     man = sum(1 for v in indicators.values() if v["status"] == "manual")
     log(f"  OK: {ok}  |  Errors: {err}  |  Manual: {man}")
 
     for k, v in indicators.items():
-        icon = "✓" if v["status"] == "ok" else ("✗" if v["status"] == "error" else "✎")
-        val  = v["latest"]
-        log(f"  {icon} {k:10s} latest={val}  ({v['status']})")
-        
- # ── Update monthly history if end of month ────────────────────
-    update_monthly_history(indicators)
-    # ── Write data.json ───────────────────────────────────────────
+        icon = "OK" if v["status"] == "ok" else ("ERR" if v["status"] == "error" else "MAN")
+        log(f"  [{icon}] {k:10s} latest={v['latest']}  as_of={v.get('as_of')}")
+
+    # Write data.json
     output = {
-        "generated_at": datetime.utcnow().isoformat() + "Z",
-        "generated_date": TODAY,
-        "indicators": indicators,
+        "generated_at":   datetime.utcnow().isoformat() + "Z",
+        "generated_date": date.today().isoformat(),
+        "indicators":     indicators,
     }
 
     with open("data.json", "w") as f:
         json.dump(output, f, indent=2)
 
-    log(f"\n✅ data.json written — {len(json.dumps(output)) // 1024} KB")
+    log(f"\n data.json written - {len(json.dumps(output)) // 1024} KB")
     log("=== Done ===")
+
 
 if __name__ == "__main__":
     main()
