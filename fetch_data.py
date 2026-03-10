@@ -273,6 +273,12 @@ def load_existing_manual():
     today = date.today()
     for i in range(1, 4):
         next_day = today + timedelta(days=i)
+        if next_day.weekday() < 5:
+            return next_day.month != today.month
+    return False
+    today = date.today()
+    for i in range(1, 4):
+        next_day = today + timedelta(days=i)
         if next_day.weekday() < 5:  # find next weekday
             return next_day.month != today.month
     return False
