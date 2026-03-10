@@ -268,7 +268,7 @@ def load_existing_manual():
     only updated when the user saves from the browser — we must
     not overwrite them.
     """
-    def is_last_trading_day_of_month():
+   def is_last_trading_day_of_month():
     """Returns True if today is the last trading day of the current month."""
     today = date.today()
     for i in range(1, 4):
