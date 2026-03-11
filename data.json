@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-10T08:38:29.462901Z",
-  "generated_date": "2026-03-10",
+  "generated_at": "2026-03-11T08:03:38.707005Z",
+  "generated_date": "2026-03-11",
   "indicators": {
     "move": {
       "series": [
@@ -251,12 +251,16 @@
         {
           "date": "2026-03-09",
           "value": 79.74
+        },
+        {
+          "date": "2026-03-10",
+          "value": 76.33
         }
       ],
-      "latest": 79.74,
-      "prev": 81.26,
-      "change": -1.52,
-      "as_of": "2026-03-09",
+      "latest": 76.33,
+      "prev": 79.74,
+      "change": -3.41,
+      "as_of": "2026-03-10",
       "status": "ok",
       "source": "Yahoo Finance (^MOVE)",
       "note": ""
@@ -513,13 +517,17 @@
         },
         {
           "date": "2026-03-10",
-          "value": 23.33
+          "value": 24.93
+        },
+        {
+          "date": "2026-03-11",
+          "value": 25.48
         }
       ],
-      "latest": 23.33,
-      "prev": 25.5,
-      "change": -2.17,
-      "as_of": "2026-03-10",
+      "latest": 25.48,
+      "prev": 24.93,
+      "change": 0.55,
+      "as_of": "2026-03-11",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
       "note": ""
@@ -773,12 +781,16 @@
         {
           "date": "2026-03-09",
           "value": 33.52
+        },
+        {
+          "date": "2026-03-10",
+          "value": 32.11
         }
       ],
-      "latest": 33.52,
-      "prev": 34.26,
-      "change": -0.74,
-      "as_of": "2026-03-09",
+      "latest": 32.11,
+      "prev": 33.52,
+      "change": -1.41,
+      "as_of": "2026-03-10",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
       "note": ""
@@ -1032,12 +1044,16 @@
         {
           "date": "2026-03-09",
           "value": 80.17
+        },
+        {
+          "date": "2026-03-10",
+          "value": 80.04
         }
       ],
-      "latest": 80.17,
-      "prev": 79.69,
-      "change": 0.48,
-      "as_of": "2026-03-09",
+      "latest": 80.04,
+      "prev": 80.17,
+      "change": -0.13,
+      "as_of": "2026-03-10",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
       "note": ""
@@ -1291,12 +1307,16 @@
         {
           "date": "2026-03-09",
           "value": 5.296
+        },
+        {
+          "date": "2026-03-10",
+          "value": 5.413
         }
       ],
-      "latest": 5.296,
-      "prev": 5.353,
-      "change": -0.057,
-      "as_of": "2026-03-09",
+      "latest": 5.413,
+      "prev": 5.296,
+      "change": 0.117,
+      "as_of": "2026-03-10",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
       "note": ""
@@ -1553,13 +1573,17 @@
         },
         {
           "date": "2026-03-10",
-          "value": 98.57
+          "value": 98.83
+        },
+        {
+          "date": "2026-03-11",
+          "value": 98.86
         }
       ],
-      "latest": 98.57,
-      "prev": 99.18,
-      "change": -0.61,
-      "as_of": "2026-03-10",
+      "latest": 98.86,
+      "prev": 98.83,
+      "change": 0.03,
+      "as_of": "2026-03-11",
       "status": "ok",
       "source": "Yahoo Finance (DX-Y.NYB)",
       "note": ""
@@ -1891,12 +1915,16 @@
         {
           "date": "2026-03-09",
           "value": 0.56
+        },
+        {
+          "date": "2026-03-10",
+          "value": 0.58
         }
       ],
-      "latest": 0.56,
-      "prev": 0.59,
-      "change": -0.03,
-      "as_of": "2026-03-09",
+      "latest": 0.58,
+      "prev": 0.56,
+      "change": 0.02,
+      "as_of": "2026-03-10",
       "status": "ok",
       "source": "FRED (T10Y2Y)",
       "note": ""
@@ -2153,12 +2181,16 @@
         {
           "date": "2026-03-10",
           "value": 216.63
+        },
+        {
+          "date": "2026-03-11",
+          "value": 216.63
         }
       ],
       "latest": 216.63,
       "prev": 216.63,
       "change": 0.0,
-      "as_of": "2026-03-10",
+      "as_of": "2026-03-11",
       "status": "ok",
       "source": "thebuffettindicator.com",
       "note": "Scraped from thebuffettindicator.com. Value: 216.63%"
