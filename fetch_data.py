@@ -191,48 +191,22 @@ def fetch_fred(series_id, decimals=2, months_back=None):
 # -----------------------------------------------------------------
 
 def fetch_buffett():
-    log("  Fetching Buffett Indicator from thebuffettindicator.com")
+    log("  Buffett Indicator - loading from existing data.json (manual)")
     try:
-        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
-        res = requests.get("https://thebuffettindicator.com/", headers=headers, timeout=15)
-        res.raise_for_status()
-
-        match = re.search(r'Buffett Indicator[:\s]+([0-9]+\.?[0-9]*)\s*%', res.text)
-        if not match:
-            raise ValueError("Could not find Buffett Indicator value in page HTML")
-
-        latest_val = round(float(match.group(1)), 2)
-        log(f"    Scraped Buffett Indicator: {latest_val}%")
-
-        today_str   = date.today().isoformat()
-        today_entry = {"date": today_str, "value": latest_val}
-
-        existing_series = []
-        try:
-            with open("data.json", "r") as f:
-                existing = json.load(f)
-            existing_series = existing.get("indicators", {}).get("buffett", {}).get("series", [])
-        except (FileNotFoundError, json.JSONDecodeError, KeyError):
-            pass
-
-        existing_series = [d for d in existing_series if d["date"] != today_str]
-        existing_series.append(today_entry)
-        existing_series.sort(key=lambda x: x["date"])
-
-        cutoff = (date.today() - timedelta(days=90)).isoformat()
-        existing_series = [d for d in existing_series if d["date"] >= cutoff]
-
-        return make_entry(
-            existing_series,
-            status="ok",
-            source="thebuffettindicator.com",
-            note=f"Scraped from thebuffettindicator.com. Value: {latest_val}%"
-        )
-
-    except Exception as e:
-        log(f"    Scrape failed: {e}")
-        return error_entry("thebuffettindicator.com", f"Scrape failed: {str(e)}")
-
+        with open("data.json", "r") as f:
+            existing = json.load(f)
+        existing_buffett = existing.get("indicators", {}).get("buffett", {})
+        if existing_buffett.get("series"):
+            log(f"    Carried forward: {existing_buffett.get('latest')}%")
+            return existing_buffett
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+    return {
+        "series": [], "latest": None, "prev": None,
+        "change": None, "as_of": None,
+        "status": "manual", "source": "Manual entry",
+        "note": "Enter from thebuffettindicator.com"
+    }
 # -----------------------------------------------------------------
 # LOAD EXISTING MANUAL DATA
 # -----------------------------------------------------------------
@@ -241,7 +215,7 @@ def load_existing_manual():
     try:
         with open("data.json", "r") as f:
             existing = json.load(f)
-        manual_ids = ["move", "gldtlt", "hyg", "gvz", "fg"]
+       manual_ids = ["move", "gldtlt", "hyg", "gvz", "fg", "buffett"]
         return {k: v for k, v in existing.get("indicators", {}).items() if k in manual_ids}
     except (FileNotFoundError, json.JSONDecodeError):
         return {}
