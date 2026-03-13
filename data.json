@@ -1,13 +1,9 @@
 {
-  "generated_at": "2026-03-12T08:04:30.114856Z",
-  "generated_date": "2026-03-12",
+  "generated_at": "2026-03-13T08:03:27.768385Z",
+  "generated_date": "2026-03-13",
   "indicators": {
     "move": {
       "series": [
-        {
-          "date": "2025-12-09",
-          "value": 75.38
-        },
         {
           "date": "2025-12-10",
           "value": 68.62
@@ -255,22 +251,22 @@
         {
           "date": "2026-03-11",
           "value": 78.59
+        },
+        {
+          "date": "2026-03-12",
+          "value": 95.3
         }
       ],
-      "latest": 78.59,
-      "prev": 76.33,
-      "change": 2.26,
-      "as_of": "2026-03-11",
+      "latest": 95.3,
+      "prev": 78.59,
+      "change": 16.71,
+      "as_of": "2026-03-12",
       "status": "ok",
       "source": "Yahoo Finance (^MOVE)",
       "note": ""
     },
     "vix": {
       "series": [
-        {
-          "date": "2025-12-09",
-          "value": 16.93
-        },
         {
           "date": "2025-12-10",
           "value": 15.77
@@ -521,23 +517,23 @@
         },
         {
           "date": "2026-03-12",
-          "value": 25.28
+          "value": 27.29
+        },
+        {
+          "date": "2026-03-13",
+          "value": 27.76
         }
       ],
-      "latest": 25.28,
-      "prev": 24.23,
-      "change": 1.05,
-      "as_of": "2026-03-12",
+      "latest": 27.76,
+      "prev": 27.29,
+      "change": 0.47,
+      "as_of": "2026-03-13",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
       "note": ""
     },
     "gvz": {
       "series": [
-        {
-          "date": "2025-12-09",
-          "value": 20.35
-        },
         {
           "date": "2025-12-10",
           "value": 20.2
@@ -785,22 +781,22 @@
         {
           "date": "2026-03-11",
           "value": 30.68
+        },
+        {
+          "date": "2026-03-12",
+          "value": 31.09
         }
       ],
-      "latest": 30.68,
-      "prev": 32.11,
-      "change": -1.43,
-      "as_of": "2026-03-11",
+      "latest": 31.09,
+      "prev": 30.68,
+      "change": 0.41,
+      "as_of": "2026-03-12",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
       "note": ""
     },
     "hyg": {
       "series": [
-        {
-          "date": "2025-12-09",
-          "value": 79.3
-        },
         {
           "date": "2025-12-10",
           "value": 79.56
@@ -1048,22 +1044,22 @@
         {
           "date": "2026-03-11",
           "value": 79.86
+        },
+        {
+          "date": "2026-03-12",
+          "value": 79.35
         }
       ],
-      "latest": 79.86,
-      "prev": 80.04,
-      "change": -0.18,
-      "as_of": "2026-03-11",
+      "latest": 79.35,
+      "prev": 79.86,
+      "change": -0.51,
+      "as_of": "2026-03-12",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
       "note": ""
     },
     "gldtlt": {
       "series": [
-        {
-          "date": "2025-12-09",
-          "value": 4.452
-        },
         {
           "date": "2025-12-10",
           "value": 4.454
@@ -1311,22 +1307,22 @@
         {
           "date": "2026-03-11",
           "value": 5.465
+        },
+        {
+          "date": "2026-03-12",
+          "value": 5.368
         }
       ],
-      "latest": 5.465,
-      "prev": 5.413,
-      "change": 0.052,
-      "as_of": "2026-03-11",
+      "latest": 5.368,
+      "prev": 5.465,
+      "change": -0.097,
+      "as_of": "2026-03-12",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
       "note": ""
     },
     "dxy": {
       "series": [
-        {
-          "date": "2025-12-09",
-          "value": 99.22
-        },
         {
           "date": "2025-12-10",
           "value": 98.79
@@ -1577,13 +1573,17 @@
         },
         {
           "date": "2026-03-12",
-          "value": 99.41
+          "value": 99.74
+        },
+        {
+          "date": "2026-03-13",
+          "value": 100.14
         }
       ],
-      "latest": 99.41,
-      "prev": 99.23,
-      "change": 0.18,
-      "as_of": "2026-03-12",
+      "latest": 100.14,
+      "prev": 99.74,
+      "change": 0.4,
+      "as_of": "2026-03-13",
       "status": "ok",
       "source": "Yahoo Finance (DX-Y.NYB)",
       "note": ""
@@ -1672,10 +1672,6 @@
     },
     "spread": {
       "series": [
-        {
-          "date": "2025-12-09",
-          "value": 0.57
-        },
         {
           "date": "2025-12-10",
           "value": 0.59
@@ -1923,22 +1919,22 @@
         {
           "date": "2026-03-11",
           "value": 0.57
+        },
+        {
+          "date": "2026-03-12",
+          "value": 0.51
         }
       ],
-      "latest": 0.57,
-      "prev": 0.58,
-      "change": -0.01,
-      "as_of": "2026-03-11",
+      "latest": 0.51,
+      "prev": 0.57,
+      "change": -0.06,
+      "as_of": "2026-03-12",
       "status": "ok",
       "source": "FRED (T10Y2Y)",
       "note": ""
     },
     "brent": {
       "series": [
-        {
-          "date": "2025-12-09",
-          "value": 62.62
-        },
         {
           "date": "2025-12-10",
           "value": 63.12
@@ -2200,7 +2196,7 @@
       "as_of": null,
       "status": "error",
       "source": "thebuffettindicator.com",
-      "note": "Scrape failed: Could not find Buffett Indicator value in page HTML"
+      "note": "Scrape failed: HTTPSConnectionPool(host='thebuffettindicator.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='thebuffettindicator.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     },
     "fg": {
       "series": [],
