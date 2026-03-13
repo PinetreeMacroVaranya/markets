@@ -187,7 +187,7 @@ def fetch_fred(series_id, decimals=2, months_back=None):
         return error_entry("FRED", str(e))
 
 # -----------------------------------------------------------------
-# BUFFETT INDICATOR
+# BUFFETT INDICATOR - manual, carried forward from data.json
 # -----------------------------------------------------------------
 
 def fetch_buffett():
@@ -202,11 +202,16 @@ def fetch_buffett():
     except (FileNotFoundError, json.JSONDecodeError):
         pass
     return {
-        "series": [], "latest": None, "prev": None,
-        "change": None, "as_of": None,
-        "status": "manual", "source": "Manual entry",
-        "note": "Enter from thebuffettindicator.com"
+        "series": [],
+        "latest": None,
+        "prev": None,
+        "change": None,
+        "as_of": None,
+        "status": "manual",
+        "source": "Manual entry",
+        "note": "Enter from thebuffettindicator.com",
     }
+
 # -----------------------------------------------------------------
 # LOAD EXISTING MANUAL DATA
 # -----------------------------------------------------------------
@@ -215,7 +220,7 @@ def load_existing_manual():
     try:
         with open("data.json", "r") as f:
             existing = json.load(f)
-       manual_ids = ["move", "gldtlt", "hyg", "gvz", "fg", "buffett"]
+        manual_ids = ["move", "gldtlt", "hyg", "gvz", "fg", "buffett"]
         return {k: v for k, v in existing.get("indicators", {}).items() if k in manual_ids}
     except (FileNotFoundError, json.JSONDecodeError):
         return {}
@@ -256,7 +261,7 @@ def update_monthly_history(indicators):
     new_entry = {
         "label":  label,
         "date":   today.isoformat(),
-        "values": values
+        "values": values,
     }
 
     months = history.get("months", [])
@@ -292,12 +297,11 @@ def main():
 
     # FRED + other pulls
     log("\n-- FRED + other --")
-    indicators["dxy"]     = fetch_yahoo("DX-Y.NYB",          decimals=2)
-    indicators["jgb"]     = fetch_fred("IRLTLT01JPM156N",    decimals=2)
-    indicators["nfci"]    = fetch_fred("NFCI",               decimals=2)
-    indicators["spread"]  = fetch_fred("T10Y2Y",             decimals=2)
-    indicators["brent"]   = fetch_fred("DCOILBRENTEU",       decimals=2)
-    indicators["buffett"] = fetch_buffett()
+    indicators["dxy"]    = fetch_yahoo("DX-Y.NYB",        decimals=2)
+    indicators["jgb"]    = fetch_fred("IRLTLT01JPM156N",  decimals=2)
+    indicators["nfci"]   = fetch_fred("NFCI",             decimals=2)
+    indicators["spread"] = fetch_fred("T10Y2Y",           decimals=2)
+    indicators["brent"]  = fetch_fred("DCOILBRENTEU",     decimals=2)
 
     # VIX fallback to FRED if Yahoo fails
     if indicators["vix"]["status"] == "error":
@@ -307,12 +311,15 @@ def main():
     # Manual indicators - carry forward from existing data.json
     log("\n-- Manual indicators --")
     existing_manual = load_existing_manual()
+
     indicators["fg"] = existing_manual.get("fg", {
         "series": [], "latest": None, "prev": None,
         "change": None, "as_of": None,
         "status": "manual", "source": "Manual entry",
-        "note": "Enter from CNN Fear & Greed page"
+        "note": "Enter from CNN Fear & Greed page",
     })
+
+    indicators["buffett"] = fetch_buffett()
 
     # Monthly history
     log("\n-- Monthly history check --")
