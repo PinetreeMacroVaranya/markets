@@ -337,12 +337,18 @@ td { padding: 11px 12px; vertical-align: middle; white-space: nowrap; }
   
   <!-- MANUAL ENTRY BAR (CNN Fear & Greed — manual only) -->
   <div class="manual-bar">
-    <div class="mb-label">✎ Manual Entry — CNN Fear &amp; Greed Index</div>
+    <div class="mb-label">✎ Manual Entry — CNN Fear &amp; Greed &amp; Buffett Indicator</div>
     <div class="mb-fields">
-      <div class="mf">
-        <label>Fear &amp; Greed Score (0–100)</label>
-        <input type="number" id="inp-fg" min="0" max="100" step="1" placeholder="e.g. 42">
-      </div>
+  <div class="mf">
+    <label>Fear &amp; Greed Score (0–100)</label>
+    <input type="number" id="inp-fg" min="0" max="100" step="1" placeholder="e.g. 42">
+  </div>
+  <div class="mf">
+    <label>Buffett Indicator (%)</label>
+    <input type="number" id="inp-buffett" step="0.01" placeholder="e.g. 216.63">
+  </div>
+  <button class="btn btn-gold" onclick="saveManual()" style="height:34px">✓ Save &amp; Update</button>
+</div>
       <button class="btn btn-gold" onclick="saveFG()" style="height:34px">✓ Save &amp; Update</button>
     </div>
     <div class="mb-note">
@@ -783,14 +789,57 @@ function renderLegend() {
 // ═══════════════════════════════════════════════════════
 //  CNN FEAR & GREED — MANUAL SAVE
 // ═══════════════════════════════════════════════════════
-function saveFG() {
-  const val = parseFloat(document.getElementById('inp-fg').value);
-  if (isNaN(val) || val < 0 || val > 100) {
-    alert('Please enter a number between 0 and 100.');
-    return;
-  }
+function saveManual() {
   const today = new Date().toISOString().slice(0,10);
 
+  // Fear & Greed
+  const fgVal = parseFloat(document.getElementById('inp-fg').value);
+  if (!isNaN(fgVal) && fgVal >= 0 && fgVal <= 100) {
+    let hist = [];
+    try { hist = JSON.parse(localStorage.getItem('fg_history') || '[]'); } catch {}
+    hist = hist.filter(d => d.date !== today);
+    hist.push({ date: today, value: fgVal });
+    hist.sort((a,b) => a.date.localeCompare(b.date));
+    hist = hist.slice(-90);
+    localStorage.setItem('fg_history', JSON.stringify(hist));
+    localStorage.setItem('fg_latest', fgVal);
+    RAW['fg'] = {
+      series: hist, latest: fgVal,
+      prev:   hist.length > 1 ? hist[hist.length-2].value : null,
+      change: hist.length > 1 ? +(fgVal - hist[hist.length-2].value).toFixed(1) : null,
+      as_of: today, status: 'manual', source: 'Manual entry (CNN)', note: ''
+    };
+  }
+
+  // Buffett Indicator
+  const bVal = parseFloat(document.getElementById('inp-buffett').value);
+  if (!isNaN(bVal) && bVal > 0) {
+    let hist = [];
+    try { hist = JSON.parse(localStorage.getItem('buffett_history') || '[]'); } catch {}
+    hist = hist.filter(d => d.date !== today);
+    hist.push({ date: today, value: bVal });
+    hist.sort((a,b) => a.date.localeCompare(b.date));
+    hist = hist.slice(-90);
+    localStorage.setItem('buffett_history', JSON.stringify(hist));
+    localStorage.setItem('buffett_latest', bVal);
+    RAW['buffett'] = {
+      series: hist, latest: bVal,
+      prev:   hist.length > 1 ? hist[hist.length-2].value : null,
+      change: hist.length > 1 ? +(bVal - hist[hist.length-2].value).toFixed(1) : null,
+      as_of: today, status: 'manual', source: 'Manual entry (thebuffettindicator.com)', note: ''
+    };
+  }
+
+  if (isNaN(fgVal) && isNaN(bVal)) {
+    alert('Please enter at least one value.');
+    return;
+  }
+  renderTable();
+  renderCharts();
+}
+
+function saveFG() { saveManual(); }
+  
   // Load existing history from localStorage
   let hist = [];
   try { hist = JSON.parse(localStorage.getItem('fg_history') || '[]'); } catch {}
@@ -836,8 +885,25 @@ function loadFGFromStorage() {
 
 // Pre-fill input from storage
 function prefillFG() {
-  const saved = localStorage.getItem('fg_latest');
-  if (saved) document.getElementById('inp-fg').value = saved;
+  const fg = localStorage.getItem('fg_latest');
+  if (fg) document.getElementById('inp-fg').value = fg;
+
+  const b = localStorage.getItem('buffett_latest');
+  if (b) document.getElementById('inp-buffett').value = b;
+
+  try {
+    const hist = JSON.parse(localStorage.getItem('buffett_history') || '[]');
+    if (hist.length) {
+      const latest = hist[hist.length-1];
+      RAW['buffett'] = {
+        series: hist, latest: latest.value,
+        prev:   hist.length > 1 ? hist[hist.length-2].value : null,
+        change: hist.length > 1 ? +(latest.value - hist[hist.length-2].value).toFixed(1) : null,
+        as_of: latest.date, status: 'manual',
+        source: 'Manual entry (thebuffettindicator.com)', note: ''
+      };
+    }
+  } catch {}
 }
 
 // ═══════════════════════════════════════════════════════
