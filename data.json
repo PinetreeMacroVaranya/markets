@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-13T14:59:32.019419Z",
+  "generated_at": "2026-03-13T08:03:27.768385Z",
   "generated_date": "2026-03-13",
   "indicators": {
     "move": {
@@ -521,12 +521,12 @@
         },
         {
           "date": "2026-03-13",
-          "value": 26.13
+          "value": 27.76
         }
       ],
-      "latest": 26.13,
+      "latest": 27.76,
       "prev": 27.29,
-      "change": -1.16,
+      "change": 0.47,
       "as_of": "2026-03-13",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
@@ -785,16 +785,12 @@
         {
           "date": "2026-03-12",
           "value": 31.09
-        },
-        {
-          "date": "2026-03-13",
-          "value": 30.9
         }
       ],
-      "latest": 30.9,
-      "prev": 31.09,
-      "change": -0.19,
-      "as_of": "2026-03-13",
+      "latest": 31.09,
+      "prev": 30.68,
+      "change": 0.41,
+      "as_of": "2026-03-12",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
       "note": ""
@@ -1052,16 +1048,12 @@
         {
           "date": "2026-03-12",
           "value": 79.35
-        },
-        {
-          "date": "2026-03-13",
-          "value": 79.4
         }
       ],
-      "latest": 79.4,
-      "prev": 79.35,
-      "change": 0.05,
-      "as_of": "2026-03-13",
+      "latest": 79.35,
+      "prev": 79.86,
+      "change": -0.51,
+      "as_of": "2026-03-12",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
       "note": ""
@@ -1319,29 +1311,282 @@
         {
           "date": "2026-03-12",
           "value": 5.368
-        },
-        {
-          "date": "2026-03-13",
-          "value": 5.332
         }
       ],
-      "latest": 5.332,
-      "prev": 5.368,
-      "change": -0.036,
-      "as_of": "2026-03-13",
+      "latest": 5.368,
+      "prev": 5.465,
+      "change": -0.097,
+      "as_of": "2026-03-12",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
       "note": ""
     },
     "dxy": {
-      "series": [],
-      "latest": null,
-      "prev": null,
-      "change": null,
-      "as_of": null,
-      "status": "error",
-      "source": "Yahoo Finance",
-      "note": "'chart'"
+      "series": [
+        {
+          "date": "2025-12-10",
+          "value": 98.79
+        },
+        {
+          "date": "2025-12-11",
+          "value": 98.35
+        },
+        {
+          "date": "2025-12-12",
+          "value": 98.4
+        },
+        {
+          "date": "2025-12-15",
+          "value": 98.15
+        },
+        {
+          "date": "2025-12-16",
+          "value": 98.15
+        },
+        {
+          "date": "2025-12-17",
+          "value": 98.37
+        },
+        {
+          "date": "2025-12-18",
+          "value": 98.43
+        },
+        {
+          "date": "2025-12-19",
+          "value": 98.6
+        },
+        {
+          "date": "2025-12-22",
+          "value": 98.29
+        },
+        {
+          "date": "2025-12-23",
+          "value": 97.94
+        },
+        {
+          "date": "2025-12-24",
+          "value": 97.98
+        },
+        {
+          "date": "2025-12-26",
+          "value": 98.02
+        },
+        {
+          "date": "2025-12-29",
+          "value": 98.04
+        },
+        {
+          "date": "2025-12-30",
+          "value": 98.24
+        },
+        {
+          "date": "2025-12-31",
+          "value": 98.28
+        },
+        {
+          "date": "2026-01-02",
+          "value": 98.42
+        },
+        {
+          "date": "2026-01-05",
+          "value": 98.27
+        },
+        {
+          "date": "2026-01-06",
+          "value": 98.58
+        },
+        {
+          "date": "2026-01-07",
+          "value": 98.68
+        },
+        {
+          "date": "2026-01-08",
+          "value": 98.93
+        },
+        {
+          "date": "2026-01-09",
+          "value": 99.13
+        },
+        {
+          "date": "2026-01-12",
+          "value": 98.86
+        },
+        {
+          "date": "2026-01-13",
+          "value": 99.13
+        },
+        {
+          "date": "2026-01-14",
+          "value": 99.13
+        },
+        {
+          "date": "2026-01-15",
+          "value": 99.32
+        },
+        {
+          "date": "2026-01-16",
+          "value": 99.39
+        },
+        {
+          "date": "2026-01-20",
+          "value": 98.64
+        },
+        {
+          "date": "2026-01-21",
+          "value": 98.76
+        },
+        {
+          "date": "2026-01-22",
+          "value": 98.36
+        },
+        {
+          "date": "2026-01-23",
+          "value": 97.6
+        },
+        {
+          "date": "2026-01-26",
+          "value": 97.04
+        },
+        {
+          "date": "2026-01-27",
+          "value": 96.22
+        },
+        {
+          "date": "2026-01-28",
+          "value": 96.45
+        },
+        {
+          "date": "2026-01-29",
+          "value": 96.28
+        },
+        {
+          "date": "2026-01-30",
+          "value": 96.99
+        },
+        {
+          "date": "2026-02-02",
+          "value": 97.61
+        },
+        {
+          "date": "2026-02-03",
+          "value": 97.44
+        },
+        {
+          "date": "2026-02-04",
+          "value": 97.62
+        },
+        {
+          "date": "2026-02-05",
+          "value": 97.82
+        },
+        {
+          "date": "2026-02-06",
+          "value": 97.63
+        },
+        {
+          "date": "2026-02-09",
+          "value": 96.82
+        },
+        {
+          "date": "2026-02-10",
+          "value": 96.8
+        },
+        {
+          "date": "2026-02-11",
+          "value": 96.83
+        },
+        {
+          "date": "2026-02-12",
+          "value": 96.93
+        },
+        {
+          "date": "2026-02-13",
+          "value": 96.88
+        },
+        {
+          "date": "2026-02-17",
+          "value": 97.16
+        },
+        {
+          "date": "2026-02-18",
+          "value": 97.7
+        },
+        {
+          "date": "2026-02-19",
+          "value": 97.93
+        },
+        {
+          "date": "2026-02-20",
+          "value": 97.8
+        },
+        {
+          "date": "2026-02-23",
+          "value": 97.7
+        },
+        {
+          "date": "2026-02-24",
+          "value": 97.88
+        },
+        {
+          "date": "2026-02-25",
+          "value": 97.7
+        },
+        {
+          "date": "2026-02-26",
+          "value": 97.79
+        },
+        {
+          "date": "2026-02-27",
+          "value": 97.61
+        },
+        {
+          "date": "2026-03-02",
+          "value": 98.38
+        },
+        {
+          "date": "2026-03-03",
+          "value": 99.05
+        },
+        {
+          "date": "2026-03-04",
+          "value": 98.77
+        },
+        {
+          "date": "2026-03-05",
+          "value": 99.32
+        },
+        {
+          "date": "2026-03-06",
+          "value": 98.99
+        },
+        {
+          "date": "2026-03-09",
+          "value": 99.18
+        },
+        {
+          "date": "2026-03-10",
+          "value": 98.83
+        },
+        {
+          "date": "2026-03-11",
+          "value": 99.23
+        },
+        {
+          "date": "2026-03-12",
+          "value": 99.74
+        },
+        {
+          "date": "2026-03-13",
+          "value": 100.14
+        }
+      ],
+      "latest": 100.14,
+      "prev": 99.74,
+      "change": 0.4,
+      "as_of": "2026-03-13",
+      "status": "ok",
+      "source": "Yahoo Finance (DX-Y.NYB)",
+      "note": ""
     },
     "jgb": {
       "series": [
@@ -1943,6 +2188,16 @@
       "source": "FRED (DCOILBRENTEU)",
       "note": ""
     },
+    "buffett": {
+      "series": [],
+      "latest": null,
+      "prev": null,
+      "change": null,
+      "as_of": null,
+      "status": "error",
+      "source": "thebuffettindicator.com",
+      "note": "Scrape failed: HTTPSConnectionPool(host='thebuffettindicator.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='thebuffettindicator.com', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    },
     "fg": {
       "series": [],
       "latest": null,
@@ -1952,16 +2207,6 @@
       "status": "manual",
       "source": "Manual entry",
       "note": "Enter from CNN Fear & Greed page"
-    },
-    "buffett": {
-      "series": [],
-      "latest": null,
-      "prev": null,
-      "change": null,
-      "as_of": null,
-      "status": "manual",
-      "source": "Manual entry",
-      "note": "Enter from thebuffettindicator.com"
     }
   }
 }
