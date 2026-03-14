@@ -4,992 +4,345 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Market Intelligence Dashboard</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
-/* ── TOKENS ─────────────────────────────── */
-:root {
-  --ink:      #18181b;
-  --paper:    #f4f0e8;
-  --cream:    #ece8dc;
-  --gold:     #b5893a;
-  --gold-lt:  #d4ad62;
-  --rust:     #b83232;
-  --sage:     #2d7a55;
-  --slate:    #52525b;
-  --border:   #d8d3c8;
-  --shadow:   rgba(24,24,27,0.08);
-  --ff-head:  'Playfair Display', Georgia, serif;
-  --ff-mono:  'DM Mono', 'Courier New', monospace;
-}
-
+/* ── RESET & BASE ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+
+:root {
+  --paper:  #f5f2eb;
+  --cream:  #ede9df;
+  --ink:    #1a1a18;
+  --slate:  #6b6b5e;
+  --border: #d8d3c8;
+  --gold:   #9a7c3f;
+  --green:  #2d7a55;
+  --yellow: #c49a00;
+  --red:    #b83232;
+  --ff-head: 'Georgia', serif;
+  --ff-body: 'Helvetica Neue', Arial, sans-serif;
+}
 
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--ff-mono);
+  font-family: var(--ff-body);
   font-size: 13px;
   line-height: 1.5;
   min-height: 100vh;
 }
 
-/* paper grain */
-body::after {
-  content: '';
-  position: fixed; inset: 0; pointer-events: none; z-index: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+/* ── LOADING SCREEN ── */
+#loading-screen {
+  position: fixed; inset: 0;
+  background: var(--paper);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+  gap: 20px;
 }
+#loading-screen.hidden { display: none; }
+.ls-title { font-family: var(--ff-head); font-size: 32px; letter-spacing: -0.5px; }
+.ls-title span { color: var(--gold); }
+.ls-sub { font-size: 10px; letter-spacing: 3px; color: var(--slate); text-transform: uppercase; }
+.ls-bar { width: 260px; height: 1px; background: var(--border); position: relative; overflow: hidden; }
+.ls-bar::after {
+  content: ''; position: absolute; left: -60%; top: 0; bottom: 0; width: 60%;
+  background: var(--gold);
+  animation: slide 1.4s ease-in-out infinite;
+}
+@keyframes slide { 0%{left:-60%} 100%{left:120%} }
+.ls-steps { display: flex; flex-direction: column; gap: 4px; }
+.ls-step { font-size: 11px; color: var(--slate); }
+.ls-step.active { color: var(--gold); }
 
-.page {
-  position: relative; z-index: 1;
-  max-width: 1440px; margin: 0 auto; padding: 28px 24px 72px;
-}
+/* ── LAYOUT ── */
+#app { max-width: 1400px; margin: 0 auto; padding: 24px 28px 60px; }
 
-/* ── MASTHEAD ────────────────────────────── */
-.masthead {
-  border-top: 3px solid var(--ink);
-  border-bottom: 1px solid var(--border);
-  padding: 18px 0 16px;
-  margin-bottom: 6px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: end;
-  gap: 16px;
+/* ── HEADER ── */
+.hdr {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  padding-bottom: 16px; margin-bottom: 24px;
+  border-bottom: 2px solid var(--ink);
 }
-.mh-title {
-  font-family: var(--ff-head);
-  font-size: clamp(22px, 3.5vw, 40px);
-  font-weight: 900;
-  letter-spacing: -1px;
-  line-height: 1;
-}
-.mh-title em { font-style: normal; color: var(--gold); }
-.mh-sub {
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--slate);
-  margin-top: 5px;
-}
-.mh-right {
-  display: flex; flex-direction: column;
-  align-items: flex-end; gap: 8px;
-}
-.generated-at { font-size: 10px; color: var(--slate); }
+.hdr-title { font-family: var(--ff-head); font-size: 28px; letter-spacing: -0.5px; }
+.hdr-title span { color: var(--gold); }
+.hdr-meta { font-size: 10px; color: var(--slate); letter-spacing: 1.5px; text-transform: uppercase; text-align: right; }
 
-/* ── BUTTONS ──────────────────────────────── */
-.btn {
-  border: none; cursor: pointer;
-  font-family: var(--ff-mono);
-  font-size: 10px; letter-spacing: 1.5px;
-  text-transform: uppercase; padding: 8px 18px;
-  transition: opacity .15s, transform .1s;
-}
-.btn:hover  { opacity: .85; }
-.btn:active { transform: scale(.97); }
-.btn:disabled { opacity: .35; cursor: not-allowed; }
-.btn-dark { background: var(--ink); color: var(--paper); }
-.btn-gold { background: var(--gold); color: #fff; }
-
-/* ── STATUS STRIP ─────────────────────────── */
-.status-strip {
-  display: flex; gap: 16px; flex-wrap: wrap;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 20px;
-  font-size: 10px; color: var(--slate); letter-spacing: .3px;
-}
-.sp { display: flex; align-items: center; gap: 5px; }
-.dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.dok { background: var(--sage); }
-.dwarn { background: var(--gold); }
-.derr { background: var(--rust); }
-.didle { background: var(--border); }
-
-/* ── MANUAL ENTRY BAR ─────────────────────── */
-.manual-bar {
-  background: #fffbf0;
-  border: 1px solid #e5d5a0;
-  border-left: 4px solid var(--gold);
-  padding: 14px 18px 16px;
-  margin-bottom: 22px;
-}
-.mb-label {
-  font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 12px; font-weight: 500;
-}
-.mb-fields {
-  display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end;
-}
-.mf { display: flex; flex-direction: column; gap: 3px; }
-.mf label { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--slate); }
-.mf input {
-  width: 108px; padding: 6px 8px;
-  border: 1px solid var(--border); background: #fff;
-  font-family: var(--ff-mono); font-size: 13px; color: var(--ink); outline: none;
-}
-.mf input:focus { border-color: var(--gold); }
-.mb-note { font-size: 9px; color: var(--slate); margin-top: 10px; line-height: 1.7; }
-.mb-note a { color: var(--gold); }
-
-/* ── SECTION TITLE ────────────────────────── */
+/* ── SECTION TITLE ── */
 .sec-title {
   font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
-  color: var(--slate); margin-bottom: 10px;
-  padding-bottom: 6px; border-bottom: 1px solid var(--border);
+  color: var(--slate); margin-bottom: 14px;
 }
 
-/* ── TABLE ────────────────────────────────── */
-.tbl-scroll { overflow-x: auto; margin-bottom: 36px; }
-
-table { width: 100%; border-collapse: collapse; }
-
-thead th {
-  font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
-  color: var(--slate); padding: 9px 12px; text-align: left;
-  border-bottom: 2px solid var(--ink);
-  white-space: nowrap; background: var(--paper);
-  position: sticky; top: 0; z-index: 2;
-}
-.tr { text-align: right; }
-.tc { text-align: center; }
-
-tbody tr {
-  border-bottom: 1px solid var(--border);
-  transition: background .1s; cursor: pointer;
-}
-tbody tr:hover  { background: var(--cream); }
-tbody tr.hilite { background: #fdf6e3; }
-
-td { padding: 11px 12px; vertical-align: middle; white-space: nowrap; }
-
-.ind-name { font-family: var(--ff-head); font-size: 13px; font-weight: 700; }
-.ind-sub  { font-size: 9px; color: var(--slate); margin-top: 1px; }
-
-.val-cell { text-align: right; font-size: 15px; font-weight: 500; letter-spacing: -.3px; }
-.prev-cell { text-align: right; font-size: 11px; color: var(--slate); }
-.chg-cell  { text-align: right; font-size: 11px; }
-
-.cup  { color: var(--sage); }
-.cdn  { color: var(--rust); }
-.cflat { color: var(--slate); }
-
-.badge {
-  display: inline-block; padding: 2px 7px;
-  font-size: 8px; letter-spacing: 1.2px; text-transform: uppercase;
-  font-weight: 500; border: 1px solid;
-}
-.bg-g { color: var(--sage); border-color: var(--sage); background: #edf7f2; }
-.bg-y { color: #7a5e00;    border-color: #c9a800;     background: #fffbeb; }
-.bg-r { color: var(--rust); border-color: var(--rust); background: #fdf2f2; }
-
-.src-tag {
-  font-size: 8px; letter-spacing: .8px; text-transform: uppercase;
-  padding: 2px 6px; white-space: nowrap;
-}
-.src-yahoo  { background: #e8f4fd; color: #1a6fa0; }
-.src-fred   { background: #f0f4ff; color: #2d4fa0; }
-.src-comp   { background: #f0fff4; color: var(--sage); }
-.src-manual { background: #fff3cd; color: #856404; }
-.src-error  { background: #fde8e8; color: var(--rust); }
-
-.as-of { font-size: 9px; color: var(--slate); }
-
-.sp-wrap canvas { display: block; }
-
-/* ── CHARTS ───────────────────────────────── */
-.charts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
-  gap: 16px; margin-bottom: 40px;
-}
-.cc {
-  background: #fff; border: 1px solid var(--border);
-  padding: 18px; transition: border-color .2s, box-shadow .2s; cursor: pointer;
-}
-.cc:hover    { border-color: var(--gold-lt); box-shadow: 0 3px 16px var(--shadow); }
-.cc.is-on    { border-color: var(--gold);    box-shadow: 0 4px 22px var(--shadow); }
-.cc-top      { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-.cc-title    { font-family: var(--ff-head); font-size: 13px; font-weight: 700; }
-.cc-sub      { font-size: 9px; color: var(--slate); margin-top: 2px; }
-.cc-vb       { text-align: right; }
-.cc-val      { font-size: 20px; font-weight: 500; letter-spacing: -.8px; }
-.cc-chg      { font-size: 10px; margin-top: 2px; }
-.cc-canvas   { height: 148px; position: relative; }
-.cc-foot     { display: flex; justify-content: space-between; margin-top: 9px; font-size: 9px; color: var(--slate); }
-
-/* ── LEGEND ───────────────────────────────── */
-.legend {
-  border-top: 1px solid var(--border); padding-top: 18px;
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 10px;
-}
-.leg-item { display: flex; gap: 8px; font-size: 10px; color: var(--slate); line-height: 1.6; }
-.leg-n { font-family: var(--ff-head); font-weight: 700; color: var(--gold); min-width: 20px; }
-
-/* ── LOADING OVERLAY ──────────────────────── */
-#overlay {
-  position: fixed; inset: 0; z-index: 300;
-  background: rgba(244,240,232,.93); backdrop-filter: blur(6px);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-}
-.ov-h { font-family: var(--ff-head); font-size: 30px; font-weight: 900; margin-bottom: 4px; }
-.ov-h em { font-style: normal; color: var(--gold); }
-.ov-sub { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--slate); margin-bottom: 28px; }
-.ov-bar-wrap { width: 300px; height: 2px; background: var(--border); overflow: hidden; margin-bottom: 20px; }
-.ov-bar      { height: 100%; background: var(--gold); width: 0%; transition: width .4s; }
-.ov-items    { width: 300px; display: flex; flex-direction: column; gap: 6px; }
-.ov-item     { font-size: 10px; letter-spacing: .3px; color: var(--slate); display: flex; align-items: center; gap: 7px; }
-.ov-item.done   { color: var(--sage); }
-.ov-item.active { color: var(--gold); }
-.ov-item.fail   { color: var(--rust); }
-
-/* ── ERROR BANNER ─────────────────────────── */
-#err-banner { display: none; background: #fdf2f2; border: 1px solid #f5c6c6; border-left: 4px solid var(--rust); padding: 14px 18px; margin-bottom: 16px; font-size: 11px; line-height: 1.7; }
-#err-banner.show { display: block; }
-#err-banner strong { color: var(--rust); }
-/* ── MONTHLY HISTORY TABLE ───────────────── */
-.monthly-section { margin-bottom: 28px; }
-
+/* ── MONTHLY TABLE ── */
+.monthly-section { margin-bottom: 32px; }
 .mth-scroll { overflow-x: auto; }
-
 .mth-table { width: 100%; border-collapse: collapse; font-size: 12px; }
-
 .mth-table thead th {
   font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
   color: var(--slate); padding: 8px 12px; text-align: left;
   border-bottom: 2px solid var(--ink);
   background: var(--paper); white-space: nowrap;
 }
-.mth-table thead th.mth-val { text-align: center; min-width: 88px; }
-
+.mth-table thead th.mth-val { text-align: center; min-width: 90px; }
 .mth-table tbody tr { border-bottom: 1px solid var(--border); }
 .mth-table tbody tr:hover { background: var(--cream); }
-
 .mth-table td { padding: 9px 12px; vertical-align: middle; white-space: nowrap; }
-
 .mth-ind-name { font-family: var(--ff-head); font-size: 12px; font-weight: 700; }
 .mth-ind-sub  { font-size: 9px; color: var(--slate); margin-top: 1px; }
-
-.mth-val-cell {
-  text-align: center; font-size: 12px; font-weight: 500;
-  padding: 9px 10px;
-}
+.mth-val-cell { text-align: center; font-size: 12px; font-weight: 500; padding: 9px 10px; }
 .mth-val-cell.sig-g { background: #2d7a55; color: #fff; }
-.mth-val-cell.sig-y { background: #e6b800; color: #1a1a1a; }
+.mth-val-cell.sig-y { background: #c49a00; color: #fff; }
 .mth-val-cell.sig-r { background: #b83232; color: #fff; }
 .mth-val-cell.sig-none { color: var(--slate); font-style: italic; }
-  
-@media (max-width: 680px) {
-  .masthead { grid-template-columns: 1fr; }
-  .mh-right { align-items: flex-start; }
+
+/* ── MANUAL ENTRY BAR ── */
+.manual-bar {
+  background: var(--cream); border: 1px solid var(--border);
+  border-radius: 6px; padding: 14px 18px;
+  display: flex; align-items: center; gap: 18px;
+  margin-bottom: 28px; flex-wrap: wrap;
+}
+.mb-label {
+  font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--gold); font-weight: 700; white-space: nowrap;
+}
+.mb-fields { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.mf { display: flex; flex-direction: column; gap: 3px; }
+.mf label { font-size: 9px; color: var(--slate); letter-spacing: 1px; text-transform: uppercase; }
+.mf input[type=number] {
+  width: 120px; padding: 6px 10px; border: 1px solid var(--border);
+  background: var(--paper); border-radius: 4px;
+  font-size: 13px; color: var(--ink); font-family: var(--ff-body);
+}
+.mf input[type=number]:focus { outline: 2px solid var(--gold); }
+.btn-gold {
+  background: var(--gold); color: #fff; border: none;
+  padding: 7px 16px; border-radius: 4px; font-size: 11px;
+  letter-spacing: 1px; text-transform: uppercase; cursor: pointer;
+  font-family: var(--ff-body); white-space: nowrap;
+}
+.btn-gold:hover { background: #7a5f28; }
+
+/* ── LIVE TABLE ── */
+.live-section { margin-bottom: 36px; }
+.ind-table { width: 100%; border-collapse: collapse; }
+.ind-table thead th {
+  font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--slate); padding: 8px 12px; text-align: left;
+  border-bottom: 2px solid var(--ink); background: var(--paper);
+  white-space: nowrap;
+}
+.ind-table thead th.num { text-align: right; }
+.ind-table tbody tr { border-bottom: 1px solid var(--border); transition: background .1s; }
+.ind-table tbody tr:hover { background: var(--cream); }
+.ind-table td { padding: 12px 12px; vertical-align: middle; }
+
+.ind-name { font-family: var(--ff-head); font-size: 13px; font-weight: 700; }
+.ind-sub   { font-size: 10px; color: var(--slate); margin-top: 2px; }
+.ind-sno   { font-size: 11px; color: var(--slate); text-align: center; }
+
+.val-cell  { text-align: right; font-size: 15px; font-weight: 600; font-family: var(--ff-body); }
+.val-cell.c-g { color: var(--green); }
+.val-cell.c-y { color: var(--yellow); }
+.val-cell.c-r { color: var(--red); }
+.val-cell.c-n { color: var(--slate); }
+
+.chg-cell  { text-align: right; font-size: 12px; color: var(--slate); }
+.chg-cell.up   { color: var(--green); }
+.chg-cell.dn   { color: var(--red); }
+
+.sig-badge {
+  display: inline-block; padding: 3px 8px; border-radius: 3px;
+  font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+  font-weight: 700; border: 1.5px solid;
+}
+.sig-badge.sg { border-color: var(--green); color: var(--green); }
+.sig-badge.sy { border-color: var(--yellow); color: var(--yellow); }
+.sig-badge.sr { border-color: var(--red); color: var(--red); }
+.sig-badge.sn { border-color: var(--slate); color: var(--slate); }
+
+.src-badge {
+  font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+  font-weight: 700; color: var(--slate);
+}
+.src-badge.yf { color: #4a7c59; }
+.src-badge.fr { color: #3a5a8a; }
+.src-badge.mn { color: var(--gold); }
+
+.asof-cell { font-size: 10px; color: var(--slate); text-align: right; }
+.err-msg { font-size: 11px; color: var(--red); font-style: italic; padding: 12px; }
+
+/* ── SPARKLINE ── */
+.spark-cell { width: 130px; }
+.spark-svg { display: block; }
+
+/* ── CHARTS GRID ── */
+.charts-section { margin-bottom: 36px; }
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+.chart-card {
+  background: var(--cream); border: 1px solid var(--border);
+  border-radius: 6px; padding: 16px;
+}
+.chart-card-title {
+  font-family: var(--ff-head); font-size: 12px; font-weight: 700;
+  margin-bottom: 10px; color: var(--ink);
+}
+.chart-card canvas { width: 100% !important; }
+
+/* ── LEGEND ── */
+.legend-section { margin-bottom: 32px; }
+.legend-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+}
+.leg-item {
+  background: var(--cream); border: 1px solid var(--border);
+  border-radius: 5px; padding: 10px 14px;
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.leg-name { font-weight: 700; font-size: 11px; margin-bottom: 4px; }
+.leg-bars { display: flex; gap: 6px; flex-wrap: wrap; }
+.leg-b {
+  font-size: 9px; padding: 2px 6px; border-radius: 2px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
+}
+.leg-b.g { background: var(--green); color: #fff; }
+.leg-b.y { background: var(--yellow); color: #fff; }
+.leg-b.r { background: var(--red); color: #fff; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  #app { padding: 16px; }
+  .hdr { flex-direction: column; align-items: flex-start; gap: 8px; }
   .charts-grid { grid-template-columns: 1fr; }
-  .mb-fields { flex-direction: column; }
+  .manual-bar { flex-direction: column; align-items: flex-start; }
 }
 </style>
 </head>
 <body>
 
-<!-- LOADING OVERLAY -->
-<div id="overlay">
-  <div class="ov-h">Market <em>Intelligence</em></div>
-  <div class="ov-sub">Loading dashboard data…</div>
-  <div class="ov-bar-wrap"><div class="ov-bar" id="ov-bar"></div></div>
-  <div class="ov-items" id="ov-items">
-    <div class="ov-item active" id="ov-fetch">… Reading data.json</div>
-    <div class="ov-item" id="ov-render">… Building table & charts</div>
-    <div class="ov-item" id="ov-manual">… Applying manual entries</div>
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+  <div>
+    <div class="ls-title">Market <span>Intelligence</span></div>
+    <div class="ls-sub">Loading Dashboard Data&hellip;</div>
+  </div>
+  <div class="ls-bar"></div>
+  <div class="ls-steps">
+    <div class="ls-step active" id="ls1">&hellip; Reading data.json</div>
+    <div class="ls-step" id="ls2">&hellip; Building table &amp; charts</div>
+    <div class="ls-step" id="ls3">&hellip; Applying manual entries</div>
   </div>
 </div>
 
-<div class="page">
+<!-- APP -->
+<div id="app" style="display:none">
 
-  <!-- MASTHEAD -->
-  <header class="masthead">
-    <div>
-      <div class="mh-title">Market <em>Intelligence</em></div>
-      <div class="mh-sub">Global Risk &amp; Volatility Monitor · Data via yfinance &amp; FRED</div>
-    </div>
-    <div class="mh-right">
-      <div class="generated-at" id="gen-at">—</div>
-      <button class="btn btn-dark" onclick="location.reload()">↻ Reload</button>
-    </div>
-  </header>
-
-  <!-- ERROR BANNER -->
-  <div id="err-banner"></div>
-
-  <!-- STATUS STRIP -->
-  <div class="status-strip" id="status-strip">
-    <div class="sp"><span class="dot didle"></span>Loading…</div>
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-title">Market <span>Intelligence</span></div>
+    <div class="hdr-meta" id="hdr-meta">Loading&hellip;</div>
   </div>
-<!-- MONTHLY HISTORY TABLE -->
+
+  <!-- MONTHLY SNAPSHOT TABLE -->
   <div class="monthly-section">
-    <div class="sec-title">Monthly Indicator Snapshot — Rolling 6 Months</div>
+    <div class="sec-title">Monthly Indicator Snapshot &mdash; Rolling 6 Months</div>
     <div class="mth-scroll">
-      <table class="mth-table" id="mth-table">
+      <table class="mth-table">
         <thead id="mth-thead"><tr><th>#</th><th>Indicator</th></tr></thead>
         <tbody id="mth-tbody"></tbody>
       </table>
     </div>
   </div>
-  
-  <!-- MANUAL ENTRY BAR (CNN Fear & Greed — manual only) -->
+
+  <!-- MANUAL ENTRY BAR -->
   <div class="manual-bar">
-    <div class="mb-label">✎ Manual Entry — CNN Fear &amp; Greed &amp; Buffett Indicator</div>
+    <div class="mb-label">&#9998; Manual Entry</div>
     <div class="mb-fields">
-  <div class="mf">
-    <label>Fear &amp; Greed Score (0–100)</label>
-    <input type="number" id="inp-fg" min="0" max="100" step="1" placeholder="e.g. 42">
-  </div>
-  <div class="mf">
-    <label>Buffett Indicator (%)</label>
-    <input type="number" id="inp-buffett" step="0.01" placeholder="e.g. 216.63">
-  </div>
-  <button class="btn btn-gold" onclick="saveManual()" style="height:34px">✓ Save &amp; Update</button>
-</div>
-      <button class="btn btn-gold" onclick="saveFG()" style="height:34px">✓ Save &amp; Update</button>
-    </div>
-    <div class="mb-note">
-      Get the score from <a href="https://edition.cnn.com/markets/fear-and-greed" target="_blank">edition.cnn.com/markets/fear-and-greed</a> — the number is shown prominently on the page.
-      Your saved value is stored in your browser and persists across refreshes.
+      <div class="mf">
+        <label>Fear &amp; Greed (0&ndash;100)</label>
+        <input type="number" id="inp-fg" min="0" max="100" step="1" placeholder="e.g. 27">
+      </div>
+      <div class="mf">
+        <label>Buffett Indicator (%)</label>
+        <input type="number" id="inp-buffett" step="0.01" placeholder="e.g. 216.6">
+      </div>
+      <button class="btn-gold" onclick="saveManual()">&#10003; Save &amp; Update</button>
     </div>
   </div>
 
-  <!-- TABLE -->
-  <div class="sec-title">Live Indicator Snapshot</div>
-  <div class="tbl-scroll">
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Indicator</th>
-          <th class="tr">Latest Value</th>
-          <th class="tr">Prev Close</th>
-          <th class="tr">Change</th>
-          <th class="tc">Signal</th>
-          <th class="tc">Trend (14d)</th>
-          <th class="tc">Data Source</th>
-          <th class="tc">As Of</th>
-        </tr>
-      </thead>
-      <tbody id="main-tbody"></tbody>
-    </table>
+  <!-- LIVE TABLE -->
+  <div class="live-section">
+    <div class="sec-title">Live Indicator Snapshot</div>
+    <div style="overflow-x:auto">
+      <table class="ind-table">
+        <thead>
+          <tr>
+            <th style="width:36px">#</th>
+            <th>Indicator</th>
+            <th class="num">Latest Value</th>
+            <th class="num">Prev Close</th>
+            <th class="num">Change</th>
+            <th>Signal</th>
+            <th>Trend (14D)</th>
+            <th>Data Source</th>
+            <th class="num">As Of</th>
+          </tr>
+        </thead>
+        <tbody id="ind-tbody"></tbody>
+      </table>
+    </div>
   </div>
 
   <!-- CHARTS -->
-  <div class="sec-title">3-Month Chart Panel — click any row to highlight</div>
-  <div class="charts-grid" id="charts-grid"></div>
+  <div class="charts-section">
+    <div class="sec-title">3-Month Charts</div>
+    <div class="charts-grid" id="charts-grid"></div>
+  </div>
 
   <!-- LEGEND -->
-  <div class="sec-title" style="margin-top:32px">Source Notes</div>
-  <div class="legend" id="legend"></div>
+  <div class="legend-section">
+    <div class="sec-title">Signal Legend</div>
+    <div class="legend-grid" id="legend-grid"></div>
+  </div>
 
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
-// ═══════════════════════════════════════════════════════
-//  INDICATOR METADATA
-//  (signal thresholds, labels, display config)
-// ═══════════════════════════════════════════════════════
 const META = {
   move: {
-    sno:1, name:'BofA MOVE Index', sub:'Bond market volatility',
-    dec:2, unit:'',
-    sig: v => v<80?'g':v<120?'y':'r',
-    lbl: v => v<80?'CALM':v<120?'ELEVATED':'STRESSED',
-    note:'ICE BofA MOVE Index. Measures bond market implied volatility. Fetched from Yahoo Finance (^MOVE) via yfinance.'
+    sno: 1, name: 'BofA MOVE Index', sub: 'Bond market volatility',
+    fmt: v => v.toFixed(2),
+    sig: v => v < 80 ? 'g' : v < 120 ? 'y' : 'r',
+    sigLabel: v => v < 80 ? 'NORMAL' : v < 120 ? 'ELEVATED' : 'CRITICAL',
+    legend: [{cls:'g',t:'<80 Normal'},{cls:'y',t:'80-120 Elevated'},{cls:'r',t:'>120 Critical'}],
+    srcClass: 'yf', srcLabel: 'YFINANCE'
   },
   dxy: {
-    sno:2, name:'U.S. Dollar Index', sub:'DXY — Broad trade-weighted USD',
-    dec:2, unit:'',
-    sig: v => v<100?'g':v<108?'y':'r',
-    lbl: v => v<100?'WEAK USD':v<108?'NEUTRAL':'STRONG USD',
-    note:'FRED DTWEXBGS — Nominal Broad U.S. Dollar Index. Daily. Federal Reserve official data.'
+    sno: 2, name: 'U.S. Dollar Index', sub: 'DXY - Broad trade-weighted USD',
+    fmt: v => v.toFixed(2),
+    sig: v => v < 100 ? 'g' : v < 108 ? 'y' : 'r',
+    sigLabel: v => v < 100 ? 'NORMAL' : v < 108 ? 'STRONG USD' : 'VERY STRONG',
+    legend: [{cls:'g',t:'<100 Normal'},{cls:'y',t:'100-108 Strong'},{cls:'r',t:'>108 Very Strong'}],
+    srcClass: 'fr', srcLabel: 'FRED'
   },
   jgb: {
-    sno:3, name:'10Y Japan Gov Bond', sub:'JGB Yield (%)',
-    dec:2, unit:'%',
-    sig: v => v<1.5?'g':v<2.0?'y':'r',
-    lbl: v => v<1.5?'LOW':v<2.0?'RISING':'HIGH',
-    note:'FRED IRLTLT01JPM156N — Japan Long-Term Government Bond Yield. Monthly frequency; last published value used.'
+    sno: 3, name: '10Y Japan Gov Bond', sub: 'JGB Yield (%)',
+    fmt: v => v.toFixed(2) + '%',
+    sig: v => v < 1.5 ? 'g' : v < 2.0 ? 'y' : 'r',
+    sigLabel: v => v < 1.5 ? 'LOW' : v < 2.0 ? 'MODERATE' : 'HIGH',
+    legend: [{cls:'g',t:'<1.5% Low'},{cls:'y',t:'1.5-2% Moderate'},{cls:'r',t:'>2% High'}],
+    srcClass: 'fr', srcLabel: 'FRED'
   },
   nfci: {
-    sno:4, name:'Chicago Fed NFCI', sub:'National Financial Conditions Index',
-    dec:2, unit:'',
-    sig: v => v<-0.3?'g':v<0.3?'y':'r',
-    lbl: v => v<-0.3?'LOOSE':v<0.3?'NEUTRAL':'TIGHT',
-    note:'FRED NFCI — Chicago Fed National Financial Conditions Index. Weekly (Wednesdays). Negative = accommodative financial conditions.'
-  },
-  gldtlt: {
-    sno:5, name:'GLD / TLT Ratio', sub:'Gold ETF ÷ Long Bond ETF',
-    dec:3, unit:'x',
-    sig: v => v<2.0?'g':v<3.0?'y':'r',
-    lbl: v => v<2.0?'BONDS LEAD':v<3.0?'BALANCED':'GOLD LEADS',
-    note:'Computed: GLD daily close ÷ TLT daily close. Fetched from Yahoo Finance via yfinance. Ratio > 3.0 signals risk-off / inflation concern.'
-  },
-  spread: {
-    sno:6, name:'10Y–2Y Yield Spread', sub:'US Treasury yield curve slope',
-    dec:2, unit:'%',
-    sig: v => v>0.5?'g':v>-0.1?'y':'r',
-    lbl: v => v>0.5?'NORMAL':v>-0.1?'FLAT':'INVERTED',
-    note:'FRED T10Y2Y — 10-Year minus 2-Year Treasury Constant Maturity Spread. Daily. Negative = inverted yield curve (historical recession signal).'
-  },
-  vix: {
-    sno:7, name:'CBOE VIX', sub:'Equity market fear gauge',
-    dec:2, unit:'',
-    sig: v => v<20?'g':v<30?'y':'r',
-    lbl: v => v<20?'LOW FEAR':v<30?'ELEVATED':'FEAR',
-    note:'Yahoo Finance (^VIX) via yfinance — primary. Fallback: FRED VIXCLS (same data, 1-day lag).'
-  },
-  brent: {
-    sno:8, name:'Brent Crude Oil', sub:'USD per barrel',
-    dec:2, unit:'$',
-    sig: v => v<70?'g':v<90?'y':'r',
-    lbl: v => v<70?'LOW':v<90?'MODERATE':'HIGH',
-    note:'FRED DCOILBRENTEU — Crude Oil Prices: Brent Europe. Daily. U.S. Energy Information Administration (EIA) official data.'
-  },
-  buffett: {
-    sno:9, name:'Market Cap / GDP', sub:'Buffett Indicator (USA) %',
-    dec:1, unit:'%',
-    sig: v => v<130?'g':v<180?'y':'r',
-    lbl: v => v<130?'FAIR VALUE':v<180?'OVERVALUED':'EXTREME',
-    note:'Computed via FRED: Wilshire 5000 Full Cap (WILL5000INDFC) ÷ US GDP (SAAR). Same methodology as MacroMicro Buffett Indicator. MacroMicro has no public API.'
-  },
-  hyg: {
-    sno:10, name:'HYG — iBoxx HY Bond ETF', sub:'iShares High Yield Corporate Bond',
-    dec:2, unit:'$',
-    sig: v => v>78?'g':v>73?'y':'r',
-    lbl: v => v>78?'STABLE':v>73?'CAUTION':'STRESS',
-    note:'Yahoo Finance (HYG) via yfinance. Proxy for high-yield credit conditions — falling price signals widening credit spreads.'
-  },
-  gvz: {
-    sno:11, name:'CBOE Gold VIX (GVZ)', sub:'Gold implied volatility index',
-    dec:2, unit:'',
-    sig: v => v<15?'g':v<25?'y':'r',
-    lbl: v => v<15?'CALM':v<25?'ELEVATED':'VOLATILE',
-    note:'Yahoo Finance (^GVZ) via yfinance. 30-day implied volatility on gold options. No FRED equivalent exists.'
-  },
-  fg: {
-    sno:12, name:'CNN Fear & Greed', sub:'Market sentiment (0 = Fear → 100 = Greed)',
-    dec:0, unit:'',
-    sig: v => v>60?'r':v>40?'y':'g',
-    lbl: v => v>75?'EXTREME GREED':v>60?'GREED':v>40?'NEUTRAL':v>25?'FEAR':'EXTREME FEAR',
-    note:'CNN Fear & Greed Index. Manual entry only — CNN blocks all automated access. Source: edition.cnn.com/markets/fear-and-greed'
-  }
-};
-
-// Display order
-const ORDER = ['move','dxy','jgb','nfci','gldtlt','spread','vix','brent','buffett','hyg','gvz','fg'];
-
-// ═══════════════════════════════════════════════════════
-//  STATE
-// ═══════════════════════════════════════════════════════
-let RAW = {};           // data from data.json
-const CHARTS = {};      // Chart.js instances
-
-// ═══════════════════════════════════════════════════════
-//  FORMAT HELPERS
-// ═══════════════════════════════════════════════════════
-function fmt(v, m) {
-  if (v === null || v === undefined || isNaN(v)) return '—';
-  const s = Math.abs(v).toFixed(m.dec);
-  return (m.unit === '$' ? '$' : '') + s + (m.unit === '%' || m.unit === 'x' ? m.unit : '');
-}
-
-function fmtDate(iso) {
-  if (!iso) return '—';
-  const [y,mo,d] = iso.split('-');
-  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  return `${d}-${months[+mo-1]}-${y.slice(2)}`;
-}
-
-function sigCls(s) {
-  return s === 'g' ? 'bg-g' : s === 'r' ? 'bg-r' : 'bg-y';
-}
-function chgCls(c) {
-  return c > 0 ? 'cup' : c < 0 ? 'cdn' : 'cflat';
-}
-function chgColor(s) {
-  return s === 'g' ? 'var(--sage)' : s === 'r' ? 'var(--rust)' : '#7a5e00';
-}
-function srcTag(d) {
-  if (!d || d.status === 'error') return '<span class="src-tag src-error">Error</span>';
-  const src = (d.source || '').toLowerCase();
-  if (d.status === 'manual') return '<span class="src-tag src-manual">Manual</span>';
-  if (src.includes('yahoo'))  return '<span class="src-tag src-yahoo">yfinance</span>';
-  if (src.includes('computed') || src.includes('will')) return '<span class="src-tag src-comp">FRED computed</span>';
-  return '<span class="src-tag src-fred">FRED</span>';
-}
-
-// ═══════════════════════════════════════════════════════
-//  SPARKLINE
-// ═══════════════════════════════════════════════════════
-function drawSpark(id, series, sig) {
-  const c = document.getElementById('sp-' + id);
-  if (!c) return;
-  const color = sig==='g'?'#2d7a55':sig==='r'?'#b83232':'#7a5e00';
-  const vals = series.slice(-14).map(d=>d.value).filter(v=>v!=null&&!isNaN(v));
-  if (vals.length < 2) return;
-  const ctx = c.getContext('2d');
-  const w=90, h=34, p=2;
-  ctx.clearRect(0,0,w,h);
-  const mn=Math.min(...vals), mx=Math.max(...vals), rng=mx-mn||1;
-  ctx.beginPath();
-  vals.forEach((v,i) => {
-    const x = p + (i/(vals.length-1))*(w-p*2);
-    const y = h-p - ((v-mn)/rng)*(h-p*2);
-    i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
-  });
-  ctx.strokeStyle=color; ctx.lineWidth=1.8; ctx.stroke();
-  const last=vals.length-1;
-  ctx.lineTo(p+last/(vals.length-1)*(w-p*2), h-p);
-  ctx.lineTo(p, h-p); ctx.closePath();
-  ctx.fillStyle=color+'28'; ctx.fill();
-}
-
-// ═══════════════════════════════════════════════════════
-//  MAIN CHART
-// ═══════════════════════════════════════════════════════
-function drawChart(id, series, color) {
-  const el = document.getElementById('ch-'+id);
-  if (!el) return;
-  if (CHARTS[id]) { CHARTS[id].destroy(); }
-  const ctx  = el.getContext('2d');
-  const grad = ctx.createLinearGradient(0,0,0,148);
-  grad.addColorStop(0, color+'44');
-  grad.addColorStop(1, color+'00');
-  const m = META[id];
-  CHARTS[id] = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: series.map(d=>d.date),
-      datasets: [{
-        data: series.map(d=>d.value),
-        borderColor: color, borderWidth: 2,
-        backgroundColor: grad, fill: true,
-        tension: 0.35,
-        pointRadius: 0, pointHoverRadius: 4,
-        pointHoverBackgroundColor: color
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      interaction: { intersect: false, mode: 'index' },
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          backgroundColor: '#18181b', titleColor: '#a09070',
-          bodyColor: '#f4f0e8', borderColor: '#d8d3c8', borderWidth: 1,
-          titleFont: { family:"'DM Mono',monospace", size:9 },
-          bodyFont:  { family:"'DM Mono',monospace", size:11 },
-          callbacks: { label: c => '  ' + fmt(c.parsed.y, m) }
-        }
-      },
-      scales: {
-        x: {
-          grid:  { color:'#e8e4dc' },
-          ticks: { color:'#9a8f82', font:{family:"'DM Mono',monospace",size:8}, maxTicksLimit:6, maxRotation:0 }
-        },
-        y: {
-          grid:     { color:'#e8e4dc' },
-          ticks:    { color:'#9a8f82', font:{family:"'DM Mono',monospace",size:8}, maxTicksLimit:5 },
-          position: 'right'
-        }
-      }
-    }
-  });
-}
-
-// ═══════════════════════════════════════════════════════
-//  RENDER TABLE
-// ═══════════════════════════════════════════════════════
-function renderTable() {
-  const tbody = document.getElementById('main-tbody');
-  tbody.innerHTML = '';
-
-  ORDER.forEach(id => {
-    const m  = META[id];
-    const d  = RAW[id];
-    const tr = document.createElement('tr');
-    tr.id = 'row-'+id;
-
-    tr.addEventListener('click', () => {
-      document.querySelectorAll('tbody tr').forEach(r=>r.classList.remove('hilite'));
-      tr.classList.add('hilite');
-      const card = document.getElementById('cc-'+id);
-      if (card) {
-        card.scrollIntoView({behavior:'smooth',block:'center'});
-        document.querySelectorAll('.cc').forEach(c=>c.classList.remove('is-on'));
-        card.classList.add('is-on');
-      }
-    });
-
-    // No data or error state
-    if (!d || !d.series || !d.series.length) {
-      const msg = d?.status === 'error'
-        ? `Fetch failed: ${d.note || 'unknown error'}`
-        : (id === 'fg' ? 'Enter score from CNN Fear & Greed ↑' : 'No data available');
-      tr.innerHTML = `
-        <td class="tc" style="color:var(--slate);font-size:11px">${m.sno}</td>
-        <td><div class="ind-name">${m.name}</div><div class="ind-sub">${m.sub}</div></td>
-        <td colspan="7" style="font-size:11px;color:var(--slate);font-style:italic">${msg}</td>
-      `;
-      tbody.appendChild(tr); return;
-    }
-
-    const s      = d.series;
-    const latest = d.latest;
-    const prev   = d.prev;
-    const chg    = d.change;
-    const sig    = m.sig(latest);
-
-    tr.innerHTML = `
-      <td class="tc" style="color:var(--slate);font-size:11px">${m.sno}</td>
-      <td>
-        <div class="ind-name">${m.name}</div>
-        <div class="ind-sub">${m.sub}</div>
-      </td>
-      <td class="val-cell" style="color:${chgColor(sig)}">${fmt(latest, m)}</td>
-      <td class="prev-cell">${fmt(prev, m)}</td>
-      <td class="chg-cell ${chgCls(chg)}">
-        ${chg!==null ? (chg>=0?'▲':'▼')+' '+Math.abs(chg).toFixed(m.dec) : '—'}
-      </td>
-      <td class="tc"><span class="badge ${sigCls(sig)}">${m.lbl(latest)}</span></td>
-      <td class="tc sp-wrap"><canvas id="sp-${id}" width="90" height="34"></canvas></td>
-      <td class="tc">${srcTag(d)}</td>
-      <td class="tc as-of">${fmtDate(d.as_of)}</td>
-    `;
-    tbody.appendChild(tr);
-    setTimeout(() => drawSpark(id, s, sig), 20);
-  });
-}
-
-// ═══════════════════════════════════════════════════════
-//  RENDER CHARTS
-// ═══════════════════════════════════════════════════════
-function renderCharts() {
-  const grid = document.getElementById('charts-grid');
-  grid.innerHTML = '';
-
-  ORDER.forEach(id => {
-    const m = META[id];
-    const d = RAW[id];
-    if (!d || !d.series || !d.series.length) return;
-
-    const sig   = m.sig(d.latest);
-    const color = sig==='g'?'#2d7a55':sig==='r'?'#b83232':'#7a5e00';
-    const chg   = d.change;
-
-    const card = document.createElement('div');
-    card.className = 'cc';
-    card.id = 'cc-'+id;
-    card.innerHTML = `
-      <div class="cc-top">
-        <div>
-          <div class="cc-title">${m.name}</div>
-          <div class="cc-sub">${m.sub} · ${d.series.length} data points</div>
-        </div>
-        <div class="cc-vb">
-          <div class="cc-val" style="color:${color}">${fmt(d.latest, m)}</div>
-          <div class="cc-chg ${chgCls(chg)}">
-            ${chg!==null ? (chg>=0?'▲':'▼')+' '+Math.abs(chg).toFixed(m.dec) : '—'}
-          </div>
-        </div>
-      </div>
-      <div class="cc-canvas"><canvas id="ch-${id}"></canvas></div>
-      <div class="cc-foot">
-        <span>${fmtDate(d.series[0]?.date)} → ${fmtDate(d.as_of)}</span>
-        <span class="badge ${sigCls(sig)}">${m.lbl(d.latest)}</span>
-      </div>
-    `;
-    grid.appendChild(card);
-
-    card.addEventListener('click', () => {
-      document.querySelectorAll('.cc').forEach(c=>c.classList.remove('is-on'));
-      card.classList.add('is-on');
-      document.getElementById('row-'+id)?.scrollIntoView({behavior:'smooth',block:'center'});
-    });
-
-    setTimeout(() => drawChart(id, d.series, color), 20);
-  });
-}
-
-// ═══════════════════════════════════════════════════════
-//  STATUS STRIP
-// ═══════════════════════════════════════════════════════
-function renderStatus(indicators) {
-  const ok  = ORDER.filter(id => indicators[id]?.status === 'ok').length;
-  const man = ORDER.filter(id => indicators[id]?.status === 'manual').length;
-  const err = ORDER.filter(id => indicators[id]?.status === 'error').length;
-  const nd  = ORDER.filter(id => !indicators[id]?.series?.length && indicators[id]?.status !== 'error').length;
-
-  document.getElementById('status-strip').innerHTML = `
-    <div class="sp"><span class="dot dok"></span>${ok} live (yfinance + FRED)</div>
-    ${man ? `<div class="sp"><span class="dot dwarn"></span>${man} manual</div>` : ''}
-    ${err ? `<div class="sp"><span class="dot derr"></span>${err} failed</div>` : ''}
-    ${nd  ? `<div class="sp"><span class="dot didle"></span>${nd} awaiting input</div>` : ''}
-    <div class="sp"><span class="dot dok"></span>Data fetched by GitHub Actions daily</div>
-  `;
-}
-
-// ═══════════════════════════════════════════════════════
-//  LEGEND
-// ═══════════════════════════════════════════════════════
-  function renderMonthlyTable(monthlyData) {
-  if (!monthlyData || !monthlyData.months || !monthlyData.months.length) return;
-
-  const months = monthlyData.months;
-
-  // Build header
-  const thead = document.getElementById('mth-thead');
-  thead.innerHTML = '<tr><th>#</th><th>Indicator</th>' +
-    months.map(m => `<th class="mth-val">${m.label}</th>`).join('') +
-    '</tr>';
-
-  // Build rows
-  const tbody = document.getElementById('mth-tbody');
-  tbody.innerHTML = '';
-
-  ORDER.forEach(id => {
-    const m  = META[id];
-    const tr = document.createElement('tr');
-
-    let cells = months.map(mon => {
-      const val = mon.values?.[id];
-      if (val === null || val === undefined) {
-        return `<td class="mth-val-cell sig-none">—</td>`;
-      }
-      const sig = m.sig(val);
-      const cls = sig === 'g' ? 'sig-g' : sig === 'r' ? 'sig-r' : 'sig-y';
-      const display = fmt(val, m);
-      return `<td class="mth-val-cell ${cls}">${display}</td>`;
-    }).join('');
-
-    tr.innerHTML = `
-      <td style="color:var(--slate);font-size:11px;text-align:center">${m.sno}</td>
-      <td>
-        <div class="mth-ind-name">${m.name}</div>
-        <div class="mth-ind-sub">${m.sub}</div>
-      </td>
-      ${cells}
-    `;
-    tbody.appendChild(tr);
-  });
-}
-  
-function renderLegend() {
-  document.getElementById('legend').innerHTML = ORDER.map(id => {
-    const m = META[id];
-    return `<div class="leg-item"><span class="leg-n">${m.sno}.</span><span><strong>${m.name}</strong> — ${m.note}</span></div>`;
-  }).join('');
-}
-
-// ═══════════════════════════════════════════════════════
-//  CNN FEAR & GREED — MANUAL SAVE
-// ═══════════════════════════════════════════════════════
-function saveManual() {
-  const today = new Date().toISOString().slice(0,10);
-
-  // Fear & Greed
-  const fgVal = parseFloat(document.getElementById('inp-fg').value);
-  if (!isNaN(fgVal) && fgVal >= 0 && fgVal <= 100) {
-    let hist = [];
-    try { hist = JSON.parse(localStorage.getItem('fg_history') || '[]'); } catch {}
-    hist = hist.filter(d => d.date !== today);
-    hist.push({ date: today, value: fgVal });
-    hist.sort((a,b) => a.date.localeCompare(b.date));
-    hist = hist.slice(-90);
-    localStorage.setItem('fg_history', JSON.stringify(hist));
-    localStorage.setItem('fg_latest', fgVal);
-    RAW['fg'] = {
-      series: hist, latest: fgVal,
-      prev:   hist.length > 1 ? hist[hist.length-2].value : null,
-      change: hist.length > 1 ? +(fgVal - hist[hist.length-2].value).toFixed(1) : null,
-      as_of: today, status: 'manual', source: 'Manual entry (CNN)', note: ''
-    };
-  }
-
-  // Buffett Indicator
-  const bVal = parseFloat(document.getElementById('inp-buffett').value);
-  if (!isNaN(bVal) && bVal > 0) {
-    let hist = [];
-    try { hist = JSON.parse(localStorage.getItem('buffett_history') || '[]'); } catch {}
-    hist = hist.filter(d => d.date !== today);
-    hist.push({ date: today, value: bVal });
-    hist.sort((a,b) => a.date.localeCompare(b.date));
-    hist = hist.slice(-90);
-    localStorage.setItem('buffett_history', JSON.stringify(hist));
-    localStorage.setItem('buffett_latest', bVal);
-    RAW['buffett'] = {
-      series: hist, latest: bVal,
-      prev:   hist.length > 1 ? hist[hist.length-2].value : null,
-      change: hist.length > 1 ? +(bVal - hist[hist.length-2].value).toFixed(1) : null,
-      as_of: today, status: 'manual', source: 'Manual entry (thebuffettindicator.com)', note: ''
-    };
-  }
-
-  if (isNaN(fgVal) && isNaN(bVal)) {
-    alert('Please enter at least one value.');
-    return;
-  }
-  renderTable();
-  renderCharts();
-}
-
-function saveFG() { saveManual(); }
-  
-  // Load existing history from localStorage
-  let hist = [];
-  try { hist = JSON.parse(localStorage.getItem('fg_history') || '[]'); } catch {}
-  hist = hist.filter(d => d.date !== today);
-  hist.push({ date: today, value: val });
-  hist.sort((a,b) => a.date.localeCompare(b.date));
-  hist = hist.slice(-90);
-  localStorage.setItem('fg_history', JSON.stringify(hist));
-  localStorage.setItem('fg_latest', val);
-
-  // Update live data
-  RAW['fg'] = {
-    series:  hist,
-    latest:  val,
-    prev:    hist.length > 1 ? hist[hist.length-2].value : null,
-    change:  hist.length > 1 ? +(val - hist[hist.length-2].value).toFixed(1) : null,
-    as_of:   today,
-    status:  'manual',
-    source:  'Manual entry (CNN)',
-    note:    ''
-  };
-  renderTable();
-  renderCharts();
-}
-
-function loadFGFromStorage() {
-  const hist = (() => {
-    try { return JSON.parse(localStorage.getItem('fg_history') || '[]'); } catch { return []; }
-  })();
-  if (!hist.length) return null;
-  const latest = hist[hist.length-1];
-  return {
-    series:  hist,
-    latest:  latest.value,
-    prev:    hist.length > 1 ? hist[hist.length-2].value : null,
-    change:  hist.length > 1 ? +(latest.value - hist[hist.length-2].value).toFixed(1) : null,
-    as_of:   latest.date,
-    status:  'manual',
-    source:  'Manual entry (CNN)',
-    note:    ''
-  };
-}
-
-// Pre-fill input from storage
-function prefillFG() {
-  const fg = localStorage.getItem('fg_latest');
-  if (fg) document.getElementById('inp-fg').value = fg;
-
-  const b = localStorage.getItem('buffett_latest');
-  if (b) document.getElementById('inp-buffett').value = b;
-
-  try {
-    const hist = JSON.parse(localStorage.getItem('buffett_history') || '[]');
-    if (hist.length) {
-      const latest = hist[hist.length-1];
-      RAW['buffett'] = {
-        series: hist, latest: latest.value,
-        prev:   hist.length > 1 ? hist[hist.length-2].value : null,
-        change: hist.length > 1 ? +(latest.value - hist[hist.length-2].value).toFixed(1) : null,
-        as_of: latest.date, status: 'manual',
-        source: 'Manual entry (thebuffettindicator.com)', note: ''
-      };
-    }
-  } catch {}
-}
-
-// ═══════════════════════════════════════════════════════
-//  OVERLAY HELPERS
-// ═══════════════════════════════════════════════════════
-function ovMark(id, state) {
-  const el = document.getElementById('ov-'+id);
-  if (!el) return;
-  el.className = 'ov-item ' + state;
-  const labels = { fetch:'Reading data.json', render:'Building table & charts', manual:'Applying manual entries' };
-  el.textContent = (state==='done'?'✓':state==='fail'?'✗':'…') + ' ' + labels[id];
-}
-function ovPct(p) { document.getElementById('ov-bar').style.width = p + '%'; }
-
-// ═══════════════════════════════════════════════════════
-//  MAIN BOOT
-// ═══════════════════════════════════════════════════════
-async function boot() {
-  ovPct(10);
-
-  // 1. Fetch data.json (generated by GitHub Actions)
-  let json;
-  try {
-    const res = await fetch('./data.json?t=' + Date.now());
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    json = await res.json();
-    ovMark('fetch','done'); ovPct(40);
-  } catch (e) {
-    ovMark('fetch','fail'); ovPct(40);
-    document.getElementById('err-banner').className = 'show';
-    document.getElementById('err-banner').innerHTML = `
-      <strong>data.json not found or unreadable.</strong><br>
-      This usually means the GitHub Actions workflow hasn't run yet. 
-      Go to your repository → Actions tab → select "Fetch Market Data Daily" → click "Run workflow" manually.
-      Wait ~60 seconds then reload this page.
-      <br><br>Error detail: ${e.message}
-    `;
-    document.getElementById('overlay').style.display = 'none';
-    return;
-  }
-
-// 2. Merge data
-  RAW = { ...(json.indicators || {}) };
-
-  // 2b. Fetch and render monthly history table
-  try {
-    const mres  = await fetch('./monthly_history.json?t=' + Date.now());
-    const mdata = await mres.json();
-    renderMonthlyTable(mdata);
-  } catch (e) {
-    console.warn('monthly_history.json not found or unreadable:', e);
-  }
-
-  // 3. Override Fear & Greed with browser localStorage (more frequently updated)
-  const fgLocal = loadFGFromStorage();
-  if (fgLocal) {
-    RAW['fg'] = fgLocal;
-  } else if (!RAW['fg'] || !RAW['fg'].series?.length) {
-    RAW['fg'] = { series:[], latest:null, prev:null, change:null, as_of:null, status:'manual', source:'Manual', note:'' };
-  }
-
-  ovMark('render','active'); ovPct(55);
-
-  // 4. Render everything
-  renderStatus(RAW);
-  renderTable();
-  renderCharts();
-  renderLegend();
-  ovMark('render','done'); ovPct(80);
-
-  // 5. Manual entries
-  ovMark('manual','active');
-  prefillFG();
-  ovMark('manual','done'); ovPct(100);
-
-  // 6. Header timestamp
-  if (json.generated_at) {
-    const dt = new Date(json.generated_at);
-    document.getElementById('gen-at').textContent =
-      'Data as of: ' + dt.toLocaleString('en-IN', {dateStyle:'medium', timeStyle:'short', timeZone:'Asia/Kolkata'}) + ' IST';
-  }
-
-  setTimeout(() => { document.getElementById('overlay').style.display = 'none'; }, 300);
-}
-
-window.addEventListener('DOMContentLoaded', boot);
-</script>
-</body>
-</html>
+    sno: 4, name: 'Chicago Fed NFCI', sub: 'National Financial Conditions Index',
+    fmt: v => v.toFixed(2),
+    sig: v => v < -0.3 ? 'g' : v < 0.3 ? 'y' : 'r',
+    sigLabel: v => v < -0.3 ? 'LOOSE' : v < 0.3 ? 'NEUTRAL' : 'TIGHT',
+    leg
