@@ -345,4 +345,301 @@ const META = {
     fmt: v => v.toFixed(2),
     sig: v => v < -0.3 ? 'g' : v < 0.3 ? 'y' : 'r',
     sigLabel: v => v < -0.3 ? 'LOOSE' : v < 0.3 ? 'NEUTRAL' : 'TIGHT',
-    leg
+    legend: [{cls:'g',t:'<-0.3 Loose'},{cls:'y',t:'-0.3 to 0.3 Neutral'},{cls:'r',t:'>0.3 Tight'}],
+    srcClass: 'fr', srcLabel: 'FRED'
+  },
+  gldtlt: {
+    sno: 5, name: 'GLD / TLT Ratio', sub: 'Gold ETF / Long Bond ETF',
+    fmt: v => v.toFixed(3) + 'x',
+    sig: v => v < 3.0 ? 'g' : v < 4.5 ? 'y' : 'r',
+    sigLabel: v => v < 3.0 ? 'BONDS LEAD' : v < 4.5 ? 'NEUTRAL' : 'GOLD LEADS',
+    legend: [{cls:'g',t:'<3.0 Bonds Lead'},{cls:'y',t:'3.0-4.5 Neutral'},{cls:'r',t:'>4.5 Gold Leads'}],
+    srcClass: 'yf', srcLabel: 'YFINANCE'
+  },
+  spread: {
+    sno: 6, name: '10Y-2Y Yield Spread', sub: 'US Treasury yield curve slope',
+    fmt: v => v.toFixed(2) + '%',
+    sig: v => v > 0.5 ? 'g' : v > -0.1 ? 'y' : 'r',
+    sigLabel: v => v > 0.5 ? 'NORMAL' : v > -0.1 ? 'FLAT' : 'INVERTED',
+    legend: [{cls:'g',t:'>0.5% Normal'},{cls:'y',t:'-0.1 to 0.5% Flat'},{cls:'r',t:'<-0.1% Inverted'}],
+    srcClass: 'fr', srcLabel: 'FRED'
+  },
+  vix: {
+    sno: 7, name: 'CBOE VIX', sub: 'Equity market fear gauge',
+    fmt: v => v.toFixed(2),
+    sig: v => v < 20 ? 'g' : v < 30 ? 'y' : 'r',
+    sigLabel: v => v < 20 ? 'CALM' : v < 30 ? 'ELEVATED' : 'FEAR',
+    legend: [{cls:'g',t:'<20 Calm'},{cls:'y',t:'20-30 Elevated'},{cls:'r',t:'>30 Fear'}],
+    srcClass: 'yf', srcLabel: 'YFINANCE'
+  },
+  brent: {
+    sno: 8, name: 'Brent Crude Oil', sub: 'USD per barrel',
+    fmt: v => '$' + v.toFixed(2),
+    sig: v => v < 70 ? 'g' : v < 90 ? 'y' : 'r',
+    sigLabel: v => v < 70 ? 'LOW' : v < 90 ? 'MODERATE' : 'HIGH',
+    legend: [{cls:'g',t:'<$70 Low'},{cls:'y',t:'$70-90 Moderate'},{cls:'r',t:'>$90 High'}],
+    srcClass: 'fr', srcLabel: 'FRED'
+  },
+  buffett: {
+    sno: 9, name: 'Market Cap / GDP', sub: 'Buffett Indicator (USA) %',
+    fmt: v => v.toFixed(1) + '%',
+    sig: v => v < 130 ? 'g' : v < 180 ? 'y' : 'r',
+    sigLabel: v => v < 130 ? 'FAIR' : v < 180 ? 'HIGH' : 'EXTREME',
+    legend: [{cls:'g',t:'<130% Fair'},{cls:'y',t:'130-180% High'},{cls:'r',t:'>180% Extreme'}],
+    srcClass: 'mn', srcLabel: 'MANUAL'
+  },
+  hyg: {
+    sno: 10, name: 'HYG - iBoxx HY Bond ETF', sub: 'iShares High Yield Corporate Bond',
+    fmt: v => '$' + v.toFixed(2),
+    sig: v => v > 78 ? 'g' : v > 73 ? 'y' : 'r',
+    sigLabel: v => v > 78 ? 'STABLE' : v > 73 ? 'WATCH' : 'STRESS',
+    legend: [{cls:'g',t:'>$78 Stable'},{cls:'y',t:'$73-78 Watch'},{cls:'r',t:'<$73 Stress'}],
+    srcClass: 'yf', srcLabel: 'YFINANCE'
+  },
+  gvz: {
+    sno: 11, name: 'CBOE Gold VIX (GVZ)', sub: 'Gold implied volatility index',
+    fmt: v => v.toFixed(2),
+    sig: v => v < 15 ? 'g' : v < 25 ? 'y' : 'r',
+    sigLabel: v => v < 15 ? 'CALM' : v < 25 ? 'ELEVATED' : 'VOLATILE',
+    legend: [{cls:'g',t:'<15 Calm'},{cls:'y',t:'15-25 Elevated'},{cls:'r',t:'>25 Volatile'}],
+    srcClass: 'yf', srcLabel: 'YFINANCE'
+  },
+  fg: {
+    sno: 12, name: 'CNN Fear & Greed', sub: 'Market sentiment (0 = Fear, 100 = Greed)',
+    fmt: v => Math.round(v).toString(),
+    sig: v => v <= 40 ? 'g' : v <= 60 ? 'y' : 'r',
+    sigLabel: v => v <= 25 ? 'EXT FEAR' : v <= 40 ? 'FEAR' : v <= 60 ? 'NEUTRAL' : v <= 75 ? 'GREED' : 'EXT GREED',
+    legend: [{cls:'g',t:'0-40 Fear'},{cls:'y',t:'41-60 Neutral'},{cls:'r',t:'61-100 Greed'}],
+    srcClass: 'mn', srcLabel: 'MANUAL'
+  }
+};
+
+const ORDER = ['move','dxy','jgb','nfci','gldtlt','spread','vix','brent','buffett','hyg','gvz','fg'];
+let RAW = {};
+let CHARTS = {};
+
+function fmt(val, m) {
+  if (val === null || val === undefined) return '-';
+  try { return m.fmt(val); } catch { return val; }
+}
+function sigCls(s) { return s==='g'?'sg':s==='r'?'sr':s==='y'?'sy':'sn'; }
+function valCls(s) { return s==='g'?'c-g':s==='r'?'c-r':s==='y'?'c-y':'c-n'; }
+
+function drawSparkline(series, sig) {
+  if (!series || series.length < 2) return '<svg width="120" height="36"></svg>';
+  const vals = series.slice(-14).map(d => d.value);
+  const mn = Math.min(...vals), mx = Math.max(...vals);
+  const range = mx - mn || 1;
+  const W = 120, H = 36, pad = 3;
+  const pts = vals.map((v, i) => {
+    const x = pad + (i / (vals.length - 1)) * (W - 2*pad);
+    const y = H - pad - ((v - mn) / range) * (H - 2*pad);
+    return x.toFixed(1) + ',' + y.toFixed(1);
+  });
+  const col = sig==='g'?'#2d7a55':sig==='r'?'#b83232':'#c49a00';
+  const fillPts = pts[0].split(',')[0] + ',' + H + ' ' + pts.join(' ') + ' ' + pts[pts.length-1].split(',')[0] + ',' + H;
+  return '<svg class="spark-svg" width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '">' +
+    '<polygon points="' + fillPts + '" fill="' + col + '" fill-opacity="0.15"/>' +
+    '<polyline points="' + pts.join(' ') + '" fill="none" stroke="' + col + '" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '</svg>';
+}
+
+function renderTable() {
+  const tbody = document.getElementById('ind-tbody');
+  tbody.innerHTML = '';
+  ORDER.forEach(id => {
+    const m = META[id];
+    const d = RAW[id] || {};
+    const tr = document.createElement('tr');
+    if (d.status === 'error' || (!d.latest && d.status !== 'manual')) {
+      tr.innerHTML = '<td class="ind-sno">' + m.sno + '</td><td><div class="ind-name">' + m.name + '</div><div class="ind-sub">' + m.sub + '</div></td><td colspan="7" class="err-msg">Fetch failed: ' + (d.note || 'No data') + '</td>';
+      tbody.appendChild(tr);
+      return;
+    }
+    const val = d.latest;
+    const prev = d.prev;
+    const chg = d.change;
+    const sig = (val !== null && val !== undefined) ? m.sig(val) : null;
+    const sigLabel = (val !== null && val !== undefined) ? m.sigLabel(val) : '-';
+    const valStr = fmt(val, m);
+    const prevStr = fmt(prev, m);
+    let chgStr = '-', chgCls = '';
+    if (chg !== null && chg !== undefined) {
+      chgStr = (chg >= 0 ? 'up ' : 'dn ') + Math.abs(chg).toFixed(2);
+      chgStr = (chg >= 0 ? '▲ ' : '▼ ') + Math.abs(chg).toFixed(2);
+      chgCls = chg >= 0 ? 'up' : 'dn';
+    }
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const asOf = d.as_of ? (function(s){ const p=s.split('-'); return p[2]+'-'+months[parseInt(p[1])-1]+'-'+p[0].slice(2); })(d.as_of) : '-';
+    const src = d.status==='manual'?'mn':m.srcClass;
+    const srcLbl = d.status==='manual'?'MANUAL':m.srcLabel;
+    tr.innerHTML =
+      '<td class="ind-sno">' + m.sno + '</td>' +
+      '<td><div class="ind-name">' + m.name + '</div><div class="ind-sub">' + m.sub + '</div></td>' +
+      '<td class="val-cell ' + (sig?valCls(sig):'c-n') + '">' + valStr + '</td>' +
+      '<td class="val-cell c-n" style="font-size:13px;font-weight:400">' + prevStr + '</td>' +
+      '<td class="chg-cell ' + chgCls + '">' + chgStr + '</td>' +
+      '<td><span class="sig-badge ' + (sig?sigCls(sig):'sn') + '">' + sigLabel + '</span></td>' +
+      '<td class="spark-cell">' + drawSparkline(d.series, sig) + '</td>' +
+      '<td><span class="src-badge ' + src + '">' + srcLbl + '</span></td>' +
+      '<td class="asof-cell">' + asOf + '</td>';
+    tbody.appendChild(tr);
+  });
+}
+
+function renderMonthlyTable(monthlyData) {
+  if (!monthlyData || !monthlyData.months || !monthlyData.months.length) return;
+  const months = monthlyData.months;
+  const thead = document.getElementById('mth-thead');
+  thead.innerHTML = '<tr><th>#</th><th>Indicator</th>' + months.map(m => '<th class="mth-val">' + m.label + '</th>').join('') + '</tr>';
+  const tbody = document.getElementById('mth-tbody');
+  tbody.innerHTML = '';
+  ORDER.forEach(id => {
+    const m = META[id];
+    const tr = document.createElement('tr');
+    const cells = months.map(mon => {
+      const val = (mon.values && mon.values[id] !== undefined) ? mon.values[id] : null;
+      if (val === null) return '<td class="mth-val-cell sig-none">-</td>';
+      const sig = m.sig(val);
+      const cls = sig==='g'?'sig-g':sig==='r'?'sig-r':'sig-y';
+      return '<td class="mth-val-cell ' + cls + '">' + fmt(val, m) + '</td>';
+    }).join('');
+    tr.innerHTML = '<td style="color:var(--slate);font-size:11px;text-align:center">' + m.sno + '</td><td><div class="mth-ind-name">' + m.name + '</div><div class="mth-ind-sub">' + m.sub + '</div></td>' + cells;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderCharts() {
+  const grid = document.getElementById('charts-grid');
+  grid.innerHTML = '';
+  Object.values(CHARTS).forEach(c => c.destroy());
+  CHARTS = {};
+  ORDER.forEach(id => {
+    const m = META[id];
+    const d = RAW[id] || {};
+    if (!d.series || d.series.length < 2) return;
+    const card = document.createElement('div');
+    card.className = 'chart-card';
+    const cid = 'chart-' + id;
+    card.innerHTML = '<div class="chart-card-title">' + m.name + '</div><canvas id="' + cid + '" height="120"></canvas>';
+    grid.appendChild(card);
+    const labels = d.series.map(p => p.date.slice(5));
+    const values = d.series.map(p => p.value);
+    const sig = d.latest !== null ? m.sig(d.latest) : 'y';
+    const col = sig==='g'?'#2d7a55':sig==='r'?'#b83232':'#c49a00';
+    CHARTS[id] = new Chart(document.getElementById(cid).getContext('2d'), {
+      type: 'line',
+      data: { labels, datasets: [{ data: values, borderColor: col, backgroundColor: col+'18', borderWidth: 1.8, pointRadius: 0, fill: true, tension: 0.3 }] },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false } },
+        scales: {
+          x: { ticks: { maxTicksLimit: 6, font: { size: 9 } }, grid: { display: false } },
+          y: { ticks: { font: { size: 9 } }, grid: { color: '#e8e3d8' } }
+        }
+      }
+    });
+  });
+}
+
+function renderLegend() {
+  const grid = document.getElementById('legend-grid');
+  grid.innerHTML = '';
+  ORDER.forEach(id => {
+    const m = META[id];
+    const div = document.createElement('div');
+    div.className = 'leg-item';
+    div.innerHTML = '<div><div class="leg-name">' + m.name + '</div><div class="leg-bars">' + m.legend.map(l => '<span class="leg-b ' + l.cls + '">' + l.t + '</span>').join('') + '</div></div>';
+    grid.appendChild(div);
+  });
+}
+
+function saveManual() {
+  const today = new Date().toISOString().slice(0,10);
+  let saved = false;
+  const fgVal = parseFloat(document.getElementById('inp-fg').value);
+  if (!isNaN(fgVal) && fgVal >= 0 && fgVal <= 100) {
+    let hist = [];
+    try { hist = JSON.parse(localStorage.getItem('fg_history') || '[]'); } catch {}
+    hist = hist.filter(d => d.date !== today);
+    hist.push({ date: today, value: fgVal });
+    hist.sort((a,b) => a.date.localeCompare(b.date));
+    hist = hist.slice(-90);
+    localStorage.setItem('fg_history', JSON.stringify(hist));
+    localStorage.setItem('fg_latest', fgVal.toString());
+    RAW['fg'] = { series: hist, latest: fgVal, prev: hist.length>1?hist[hist.length-2].value:null, change: hist.length>1?+(fgVal-hist[hist.length-2].value).toFixed(1):null, as_of: today, status: 'manual', source: 'Manual (CNN)', note: '' };
+    saved = true;
+  }
+  const bVal = parseFloat(document.getElementById('inp-buffett').value);
+  if (!isNaN(bVal) && bVal > 0) {
+    let hist = [];
+    try { hist = JSON.parse(localStorage.getItem('buffett_history') || '[]'); } catch {}
+    hist = hist.filter(d => d.date !== today);
+    hist.push({ date: today, value: bVal });
+    hist.sort((a,b) => a.date.localeCompare(b.date));
+    hist = hist.slice(-90);
+    localStorage.setItem('buffett_history', JSON.stringify(hist));
+    localStorage.setItem('buffett_latest', bVal.toString());
+    RAW['buffett'] = { series: hist, latest: bVal, prev: hist.length>1?hist[hist.length-2].value:null, change: hist.length>1?+(bVal-hist[hist.length-2].value).toFixed(2):null, as_of: today, status: 'manual', source: 'Manual (thebuffettindicator.com)', note: '' };
+    saved = true;
+  }
+  if (!saved) { alert('Please enter at least one value.'); return; }
+  renderTable();
+  renderCharts();
+}
+
+function prefillManual() {
+  const fg = localStorage.getItem('fg_latest');
+  if (fg) document.getElementById('inp-fg').value = fg;
+  try {
+    const hist = JSON.parse(localStorage.getItem('fg_history') || '[]');
+    if (hist.length) {
+      const last = hist[hist.length-1];
+      RAW['fg'] = { series: hist, latest: last.value, prev: hist.length>1?hist[hist.length-2].value:null, change: hist.length>1?+(last.value-hist[hist.length-2].value).toFixed(1):null, as_of: last.date, status: 'manual', source: 'Manual (CNN)', note: '' };
+    }
+  } catch {}
+  const b = localStorage.getItem('buffett_latest');
+  if (b) document.getElementById('inp-buffett').value = b;
+  try {
+    const hist = JSON.parse(localStorage.getItem('buffett_history') || '[]');
+    if (hist.length) {
+      const last = hist[hist.length-1];
+      RAW['buffett'] = { series: hist, latest: last.value, prev: hist.length>1?hist[hist.length-2].value:null, change: hist.length>1?+(last.value-hist[hist.length-2].value).toFixed(2):null, as_of: last.date, status: 'manual', source: 'Manual (thebuffettindicator.com)', note: '' };
+    }
+  } catch {}
+}
+
+async function boot() {
+  try {
+    document.getElementById('ls1').classList.add('active');
+    const res = await fetch('./data.json?t=' + Date.now());
+    if (!res.ok) throw new Error('data.json fetch failed: ' + res.status);
+    const json = await res.json();
+    RAW = json.indicators || {};
+    document.getElementById('hdr-meta').textContent = 'Data refreshed: ' + (json.generated_date || '').slice(0,10);
+    document.getElementById('ls2').classList.add('active');
+    try {
+      const mres = await fetch('./monthly_history.json?t=' + Date.now());
+      if (mres.ok) renderMonthlyTable(await mres.json());
+    } catch(e) { console.warn('monthly_history.json not available'); }
+    document.getElementById('ls3').classList.add('active');
+    prefillManual();
+    renderTable();
+    renderCharts();
+    renderLegend();
+    document.getElementById('loading-screen').classList.add('hidden');
+    document.getElementById('app').style.display = 'block';
+  } catch(err) {
+    console.error('Boot error:', err);
+    document.getElementById('loading-screen').classList.add('hidden');
+    document.getElementById('app').style.display = 'block';
+    document.getElementById('hdr-meta').textContent = 'Error: ' + err.message;
+    renderTable();
+    renderLegend();
+  }
+}
+
+window.addEventListener('DOMContentLoaded', boot);
+</script>
+</body>
+</html>
