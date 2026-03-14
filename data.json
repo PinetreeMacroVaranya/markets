@@ -1,13 +1,9 @@
 {
-  "generated_at": "2026-03-13T17:20:50.790782Z",
-  "generated_date": "2026-03-13",
+  "generated_at": "2026-03-14T04:55:46.660560Z",
+  "generated_date": "2026-03-14",
   "indicators": {
     "move": {
       "series": [
-        {
-          "date": "2025-12-10",
-          "value": 68.62
-        },
         {
           "date": "2025-12-11",
           "value": 69.24
@@ -255,22 +251,22 @@
         {
           "date": "2026-03-12",
           "value": 95.3
+        },
+        {
+          "date": "2026-03-13",
+          "value": 91.17
         }
       ],
-      "latest": 95.3,
-      "prev": 78.59,
-      "change": 16.71,
-      "as_of": "2026-03-12",
+      "latest": 91.17,
+      "prev": 95.3,
+      "change": -4.13,
+      "as_of": "2026-03-13",
       "status": "ok",
       "source": "Yahoo Finance (^MOVE)",
       "note": ""
     },
     "vix": {
       "series": [
-        {
-          "date": "2025-12-10",
-          "value": 15.77
-        },
         {
           "date": "2025-12-11",
           "value": 14.85
@@ -521,12 +517,12 @@
         },
         {
           "date": "2026-03-13",
-          "value": 27.43
+          "value": 27.19
         }
       ],
-      "latest": 27.43,
+      "latest": 27.19,
       "prev": 27.29,
-      "change": 0.14,
+      "change": -0.1,
       "as_of": "2026-03-13",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
@@ -534,10 +530,6 @@
     },
     "gvz": {
       "series": [
-        {
-          "date": "2025-12-10",
-          "value": 20.2
-        },
         {
           "date": "2025-12-11",
           "value": 20.97
@@ -788,12 +780,12 @@
         },
         {
           "date": "2026-03-13",
-          "value": 31.35
+          "value": 32.31
         }
       ],
-      "latest": 31.35,
+      "latest": 32.31,
       "prev": 31.09,
-      "change": 0.26,
+      "change": 1.22,
       "as_of": "2026-03-13",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
@@ -801,10 +793,6 @@
     },
     "hyg": {
       "series": [
-        {
-          "date": "2025-12-10",
-          "value": 79.56
-        },
         {
           "date": "2025-12-11",
           "value": 79.55
@@ -1055,12 +1043,12 @@
         },
         {
           "date": "2026-03-13",
-          "value": 79.21
+          "value": 79.2
         }
       ],
-      "latest": 79.21,
+      "latest": 79.2,
       "prev": 79.35,
-      "change": -0.14,
+      "change": -0.15,
       "as_of": "2026-03-13",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
@@ -1068,10 +1056,6 @@
     },
     "gldtlt": {
       "series": [
-        {
-          "date": "2025-12-10",
-          "value": 4.454
-        },
         {
           "date": "2025-12-11",
           "value": 4.509
@@ -1322,12 +1306,12 @@
         },
         {
           "date": "2026-03-13",
-          "value": 5.37
+          "value": 5.325
         }
       ],
-      "latest": 5.37,
+      "latest": 5.325,
       "prev": 5.368,
-      "change": 0.002,
+      "change": -0.043,
       "as_of": "2026-03-13",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
@@ -1335,10 +1319,6 @@
     },
     "dxy": {
       "series": [
-        {
-          "date": "2025-12-10",
-          "value": 120.68
-        },
         {
           "date": "2025-12-11",
           "value": 119.98
@@ -1665,10 +1645,6 @@
     "spread": {
       "series": [
         {
-          "date": "2025-12-10",
-          "value": 0.59
-        },
-        {
           "date": "2025-12-11",
           "value": 0.62
         },
@@ -1915,22 +1891,22 @@
         {
           "date": "2026-03-12",
           "value": 0.51
+        },
+        {
+          "date": "2026-03-13",
+          "value": 0.55
         }
       ],
-      "latest": 0.51,
-      "prev": 0.57,
-      "change": -0.06,
-      "as_of": "2026-03-12",
+      "latest": 0.55,
+      "prev": 0.51,
+      "change": 0.04,
+      "as_of": "2026-03-13",
       "status": "ok",
       "source": "FRED (T10Y2Y)",
       "note": ""
     },
     "brent": {
       "series": [
-        {
-          "date": "2025-12-10",
-          "value": 63.12
-        },
         {
           "date": "2025-12-11",
           "value": 61.87
