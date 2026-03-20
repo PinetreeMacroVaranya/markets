@@ -1,7 +1,15 @@
 {
-  "generated_at": "2026-03-20T07:36:50.766795Z",
+  "generated_at": "2026-03-20T07:45:58.735186Z",
   "generated_date": "2026-03-20",
-  "tickers": [],
+  "tickers": [
+    "SPY",
+    "IAU",
+    "SLV",
+    "COPX",
+    "PLTR",
+    "EWA",
+    "URNM"
+  ],
   "universe": [
     "SPY",
     "IVV",
@@ -1782,7 +1790,7 @@
     "SPY": {
       "status": "ok",
       "ticker": "SPY",
-      "name": "SPY",
+      "name": "State Street SPDR S&P 500 ETF T",
       "price": 659.8,
       "prev_close": 661.43,
       "change_pct": -0.25,
@@ -1799,7 +1807,7 @@
       "ema200": 657.59,
       "ma_signal": "MONITOR",
       "zscore": -2.15,
-      "cmf": null,
+      "cmf": 0.052,
       "series": [
         {
           "date": "2026-02-05",
@@ -1923,7 +1931,68 @@
         }
       ],
       "note": "",
-      "news": []
+      "news": [
+        {
+          "title": "Is Hess Midstream\u2019s Capital Return Program a Strength or a Warning Sign?",
+          "link": "https://247wallst.com/investing/2026/03/19/is-hess-midstreams-capital-return-program-a-strength-or-a-warning-sign/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 21:31:11 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Sunoco Is No Longer Just a Gas Station Company",
+          "link": "https://247wallst.com/investing/2026/03/19/sunoco-is-no-longer-just-a-gas-station-company/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 21:27:50 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Calydon Capital Dumps $9 Million of ZoomInfo Amid Stock's 92% Decline Since 2021",
+          "link": "https://www.fool.com/coverage/filings/2026/03/19/calydon-capital-dumps-usd9-million-of-zoominfo-amid-stock-s-92-decline-since-2021/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 19:33:15 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Energy stocks can\u2019t carry the entire market alone: Chart of the Day",
+          "link": "https://finance.yahoo.com/news/energy-stocks-cant-carry-the-entire-market-alone-chart-of-the-day-174629845.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 17:46:29 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "MoneyMasters Podcast 3-19-26- The Golden Rule of Trading",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/moneymasters-podcast-3-19-26-163000363.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 16:30:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Defense Stocks Are Surging and This ETF Lets You Collect Dividends From the Global Arms Race",
+          "link": "https://247wallst.com/investing/2026/03/19/defense-stocks-are-surging-and-this-etf-lets-you-collect-dividends-from-the-global-arms-race/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 16:05:20 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "One Fed Rate Cut for 2026? ETFs in Focus",
+          "link": "https://finance.yahoo.com/economy/policy/articles/one-fed-rate-cut-2026-140000823.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 14:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Survival Tips for Retail Options Sellers to Manage Risk",
+          "link": "https://www.barchart.com/story/news/843695/survival-tips-for-retail-options-sellers-to-manage-risk?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 13:48:29 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Lower Pre-Bell Thursday Amid Rising Oil Prices, Reduced Rate-Cut Expectations",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-124923636.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 12:49:23 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "The Market Is Selling Off But These 3 Oil and Gas ETFs Are Still Green",
+          "link": "https://247wallst.com/investing/2026/03/19/the-market-is-selling-off-but-these-3-oil-and-gas-etfs-are-still-green/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 12:30:23 +0000",
+          "source": "Yahoo Finance"
+        }
+      ]
     },
     "IVV": {
       "status": "ok",
@@ -8206,7 +8275,7 @@
     "SLV": {
       "status": "ok",
       "ticker": "SLV",
-      "name": "SLV",
+      "name": "iShares Silver Trust",
       "price": 65.68,
       "prev_close": 68.7,
       "change_pct": -4.4,
@@ -8223,7 +8292,7 @@
       "ema200": 56.29,
       "ma_signal": "MONITOR",
       "zscore": -0.16,
-      "cmf": null,
+      "cmf": 0.31,
       "series": [
         {
           "date": "2026-02-05",
@@ -8347,7 +8416,68 @@
         }
       ],
       "note": "",
-      "news": []
+      "news": [
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Lower Pre-Bell Thursday Amid Rising Oil Prices, Reduced Rate-Cut Expectations",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-124923636.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 12:49:23 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Lower Ahead of Key Economic Data, FOMC Meeting",
+          "link": "https://finance.yahoo.com/news/exchange-traded-funds-equity-futures-132829827.html?.tsrc=rss",
+          "published": "Wed, 18 Mar 2026 13:28:29 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds Higher, Equity Futures Mixed Pre-Bell Tuesday Ahead of US Federal Reserve Meeting",
+          "link": "https://finance.yahoo.com/news/exchange-traded-funds-higher-equity-125618314.html?.tsrc=rss",
+          "published": "Tue, 17 Mar 2026 12:56:18 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Silver Dollar Hires Versa for Diamond Drilling at Its La Joya Silver (Cu-Au) Project",
+          "link": "https://finance.yahoo.com/news/silver-dollar-hires-versa-diamond-120000057.html?.tsrc=rss",
+          "published": "Tue, 17 Mar 2026 12:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as Investors Weigh Tech Rally Against Geopolitical Risks",
+          "link": "https://finance.yahoo.com/news/exchange-traded-funds-equity-futures-125548179.html?.tsrc=rss",
+          "published": "Mon, 16 Mar 2026 12:55:48 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Friday as Oil Prices Ease From Recent Surge",
+          "link": "https://finance.yahoo.com/news/exchange-traded-funds-equity-futures-130200978.html?.tsrc=rss",
+          "published": "Fri, 13 Mar 2026 13:02:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Key Advisors Group prefers gold over silver as volatility spikes",
+          "link": "https://247wallst.com/investing/2026/03/13/key-advisors-group-prefers-gold-over-silver-as-volatility-spikes/?.tsrc=rss",
+          "published": "Fri, 13 Mar 2026 10:09:03 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Lower Pre-Bell Thursday as Traders React to Oil Supply Risks From Iran Conflict",
+          "link": "https://finance.yahoo.com/news/exchange-traded-funds-equity-futures-125355502.html?.tsrc=rss",
+          "published": "Thu, 12 Mar 2026 12:53:55 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Lower Pre-Bell Wednesday Amid CPI Inflation Data",
+          "link": "https://finance.yahoo.com/news/exchange-traded-funds-equity-futures-125234255.html?.tsrc=rss",
+          "published": "Wed, 11 Mar 2026 12:52:34 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Tuesday as Investors Weigh Middle East War Signals, Oil Price Volatility",
+          "link": "https://finance.yahoo.com/news/exchange-traded-funds-equity-futures-124514170.html?.tsrc=rss",
+          "published": "Tue, 10 Mar 2026 12:45:14 +0000",
+          "source": "Yahoo Finance"
+        }
+      ]
     },
     "USO": {
       "status": "ok",
@@ -8498,7 +8628,7 @@
     "IAU": {
       "status": "ok",
       "ticker": "IAU",
-      "name": "IAU",
+      "name": "iShares Gold Trust Shares",
       "price": 87.37,
       "prev_close": 91.12,
       "change_pct": -4.12,
@@ -8515,7 +8645,7 @@
       "ema200": 79.15,
       "ma_signal": "MONITOR",
       "zscore": -0.01,
-      "cmf": null,
+      "cmf": 0.026,
       "series": [
         {
           "date": "2026-02-05",
@@ -8639,7 +8769,68 @@
         }
       ],
       "note": "",
-      "news": []
+      "news": [
+        {
+          "title": "i-80 Gold Announces Pricing of Upsized Offering of US$250 Million Convertible Senior Notes",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/80-gold-announces-pricing-upsized-110000027.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 11:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "i-80 Gold Launches Offering of US$200 Million Convertible Senior Notes",
+          "link": "https://finance.yahoo.com/news/80-gold-launches-offering-us-110000869.html?.tsrc=rss",
+          "published": "Wed, 18 Mar 2026 11:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Here's Why Gold ETFs Remain a Smart Long-Term Portfolio Bet",
+          "link": "https://finance.yahoo.com/news/heres-why-gold-etfs-remain-155100612.html?.tsrc=rss",
+          "published": "Fri, 13 Mar 2026 15:51:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Middle East Risks Keep Markets Uneasy: ETFs to Consider",
+          "link": "https://finance.yahoo.com/news/middle-east-risks-keep-markets-145300120.html?.tsrc=rss",
+          "published": "Wed, 11 Mar 2026 14:53:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Inflation Pressure Intensifying? ETFs May Help Stay Prepared",
+          "link": "https://finance.yahoo.com/news/inflation-pressure-intensifying-etfs-may-162700370.html?.tsrc=rss",
+          "published": "Fri, 06 Mar 2026 16:27:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Gold ETFs Shine as Middle East Tensions Stoke Safe-Haven Demand",
+          "link": "https://finance.yahoo.com/news/gold-etfs-shine-middle-east-154300235.html?.tsrc=rss",
+          "published": "Mon, 02 Mar 2026 15:43:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Dollar at a 4-Year Low? ETFs That You Could Play",
+          "link": "https://finance.yahoo.com/news/dollar-4-low-etfs-could-155500514.html?.tsrc=rss",
+          "published": "Wed, 28 Jan 2026 15:55:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "ETFs to Watch as Gold Breaches the $5,200 Mark",
+          "link": "https://finance.yahoo.com/news/etfs-watch-gold-breaches-5-154900315.html?.tsrc=rss",
+          "published": "Wed, 28 Jan 2026 15:49:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Gold ETFs Glitter Amid Renewed Transatlantic Trade Strains",
+          "link": "https://finance.yahoo.com/news/gold-etfs-glitter-amid-renewed-150200252.html?.tsrc=rss",
+          "published": "Wed, 21 Jan 2026 15:02:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Gold Hits Record High on Political Uncertainty: Can the ETF Rally Last?",
+          "link": "https://finance.yahoo.com/news/gold-hits-record-high-political-130000051.html?.tsrc=rss",
+          "published": "Mon, 12 Jan 2026 13:00:00 +0000",
+          "source": "Yahoo Finance"
+        }
+      ]
     },
     "SGOL": {
       "status": "ok",
@@ -18572,7 +18763,7 @@
     "EWA": {
       "status": "ok",
       "ticker": "EWA",
-      "name": "EWA",
+      "name": "iShares MSCI Australia Index Fu",
       "price": 28.26,
       "prev_close": 28.0,
       "change_pct": 0.93,
@@ -18589,7 +18780,7 @@
       "ema200": 26.65,
       "ma_signal": "MONITOR",
       "zscore": 0.69,
-      "cmf": null,
+      "cmf": 0.191,
       "series": [
         {
           "date": "2026-02-05",
@@ -18713,7 +18904,68 @@
         }
       ],
       "note": "",
-      "news": []
+      "news": [
+        {
+          "title": "Australian ETFs Under Radar as Energy Crisis & Rate Hikes Raise Concern",
+          "link": "https://finance.yahoo.com/news/australian-etfs-under-radar-energy-140900644.html?.tsrc=rss",
+          "published": "Wed, 18 Mar 2026 14:09:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Avoiding Lag: Real-Time Signals in (EWA) Movement - Stock Traders Daily",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNLTVjUlVOSnUyRVpVcjJRcXBZc3BPbFJvZDNhbEE1bVFNU2t6NVY5cVpvd3pfV2tRVHZ0eWU2dnkxUEVPQ3V5MkFWUXo4ZjdZZ1dBZktvaER4ekczaGZwNFRNeVRob0NrUldTZ2hadHpQVmdMMk1tZHJjejBaYjlLV21CV1BPekRfZ0RodmMxeG1wc0NsUXBlSWs5RU1PZjA3OF9DVl9hNmNMZG9iSlg1OGk3d05nRmd3N0ZyUDhhMGoyZ3UyS1E?oc=5",
+          "published": "Mon, 16 Mar 2026 12:54:02 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Asian shares gain and oil slips back despite a barrage of attacks by Iran - Click2Houston",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWHV4d1FXOUxoTm1PX20ySzRIUFJRN2hKS3oycGpSeUNLMGwxX3lOSmZtOGRfcDh6Z0g1MThNTWJXZEdRNkYtVlJibTFwUHc4eUNoS0xpVzNLckpLZlozQVpVYVc4SnJTNEZEOUppcjJCTnplbTV6ZlBBWFYzSVRJWnJvanpScVRUQnZiQjlMbUQ3U2trQmhaQkVzc2JOMHhFdTNHdjd4ZnpsQnBMaFVwdld1c2hnM05ZempkZHY5ZWdrVjI0QlA4?oc=5",
+          "published": "Wed, 18 Mar 2026 05:13:14 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Asia shares are mixed following Wall Street's losses, as oil edges lower - KSAT",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQeVFkVU45X2Qwb0J4RFI0bm1OSExsYWpLSkNfMTJQYkhTamh5U3FqZnJTRXd2bUxZUWMxS0ZKb1ZHVzZfSF81MmJMMGhwczhaRGhXZ1NOVmZFOFl1NG5sOVRfSmxHc0VpaDV3ZHFkRzdtX3ZHdFc4YUhjM1BIRVZLRFFNdmMwaHI3UHdRWHZkajg2dGNUd3NWNWF3VmxBM05qeHptY0ctOUVVVG1heWhYVF8tWFNyN28?oc=5",
+          "published": "Thu, 05 Mar 2026 08:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "EWA: Potentially Range Bound, Given The Mix Of Tailwinds And Headwinds - Seeking Alpha",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQWjZhX052R2pSOU40MENENF9fSDEzdEFZYk1UbzBoYmJoMHRpdXBRdnozdUtZdGNoRW8zU083Q0pEemhENVBwWnJaT3BlVlRuY3pUZTROUldRWGsxWjQtLUgtRFhiSGpHdU1RS2szdFhMTzk5UUZzOWN1U191NXJGNEpfV0FWVTBvbTIybG14T1Nha29IYjM4ZnBBXzA2X1ZNUkVrR1M0VDBwbV9valE?oc=5",
+          "published": "Thu, 15 Jan 2026 08:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Live Oak Bancshares names Ewa Stasiowska as chief risk officer - Investing.com",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPN2tfbm1jQlBOOTBmYmhyXzlreFQ1R2RvM3p5ejA0MjFZOUptNlA0OXFsNFFaT2ZNNFdaaFFtQmdKaF9kWGFrWlNkajJPYkVMZVlvbnZmTmhiWmpyRVhRb2ZlQzV2QmoxdTAtdVFxRWE0cEZLS2JJQmhEbVBtOV9Cdnd2MnJUUDZlVDVYTE8wVDVJQ0NQY1lRWjR4Q3ViQm9TZGdweC1tdzQ5Zk8wM0k4bjZSV1p3dllDX3dV?oc=5",
+          "published": "Mon, 01 Dec 2025 08:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Asia shares are mixed following Wall Street's losses, as oil edges lower - Click2Houston",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZG91Y3NnRjU5eUVneWhFVlVSQkRTZ29tZzVCTlhOVlNHYlp4OTEyUElNelZTaFBCM0ptdUx6VjN3elo2WVdSSnVzN0RRbW9UZWh5WTB4VExaVGV1ZVJzRDVvMmpmaklXSkdENDQxNHhWSVpLOHJDX1JMWlBGbnhDaTB5S2hQNGtXLWxKVGdLajFHdlNjanpUMVJUSHZzLUxabzZ6eFdFX0pDZWgzVzdFQ3NnMzhibG9Ma3ltUEYzY2lfc1E?oc=5",
+          "published": "Thu, 05 Mar 2026 08:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Emergency units reveal more details into Ewa Beach house fire - KITV",
+          "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPYnB5WGZzWlBQaHJ3a3B6N3prODFUTTFUZUlNQjN2ZE5PYkd2SW9UUVZXcF9jdU9TRm9IeTZqcVFMR29WVmpTUTlFMmFGSU8wbmQxWjgtRVNTMTdzbUhNM25HZHU0QUNKQmVUVUhQWjl4X0c0OFVQc09EemY5SndoODVSODJvMnNPaHFUbjBqT1gxRkFNaHVhYWpMbkxFWk0tV0xCVXdwdFZ2RmxIOFNHOUNrdWtiS213Tk5KVW9Edk13bFpHd19fR1BLMENpaGlZUGwwZ1QxQloxNUVvZXZRZnBoa014TS13SUpSY3pWMDBhQQ?oc=5",
+          "published": "Thu, 30 Oct 2025 07:23:45 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "EWA: Structural Tailwinds On One Hand, Slowdowns On The Other - Seeking Alpha",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxONUV5VV94eUUyOWEwcDRMVXlLOFByTm10QkJ2Wk43NGw2Y3UyN0lFRDhlVjZOTHVNa3M1WWNVdUtzU1JQZ0h3cnVfX2lRcVFpWU0xTzZpNW9qdnlWV1h2QTFwZDVKTGRnVFYtTm5BMkFsMzVrRnljLU9WWXNjc29qbFdTMXJSbE55Wk5ub1gxYlctaWhCMkRJZk40M2FJcXdyWFE?oc=5",
+          "published": "Thu, 30 Oct 2025 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "You Have To Experience This Fort Tryon Park Trail in New York City For Yourself - Only In Your State",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOWHVqZWZlOUprSlBwQkxzdFlYTm52d25vbHgzaEJuZW1rODJvczlLUDVxLW9vVHF2elk2czVaUUQ3YnhGMnNlTUxZSGp1VGhsZWNhZHhZUWozV0wyMDIydFNJdUlnSXRRRVJZWFlQdWFYcjNpRklEeDQyaDNUM0doUmVkQU5OQjJpcHFQSGJB?oc=5",
+          "published": "Sat, 01 Nov 2025 07:00:00 GMT",
+          "source": "Google News"
+        }
+      ]
     },
     "EWH": {
       "status": "ok",
@@ -26748,7 +27000,7 @@
     "COPX": {
       "status": "ok",
       "ticker": "COPX",
-      "name": "COPX",
+      "name": "Global X Copper Miners ETF",
       "price": 72.38,
       "prev_close": 74.93,
       "change_pct": -3.4,
@@ -26765,7 +27017,7 @@
       "ema200": 65.71,
       "ma_signal": "MONITOR",
       "zscore": -0.34,
-      "cmf": null,
+      "cmf": 0.196,
       "series": [
         {
           "date": "2026-02-05",
@@ -26889,7 +27141,68 @@
         }
       ],
       "note": "",
-      "news": []
+      "news": [
+        {
+          "title": "Retirees Are Loading Up On A Copper ETF Before the Supercycle Spikes It Higher",
+          "link": "https://247wallst.com/investing/2026/03/04/retirees-are-loading-up-on-a-copper-etf-before-the-supercycle-spikes-it-higher/?.tsrc=rss",
+          "published": "Wed, 04 Mar 2026 22:55:07 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Bet on These Copper ETFs as Red Metal Demand Expected to Surge 50%",
+          "link": "https://finance.yahoo.com/news/bet-copper-etfs-red-metal-134100869.html?.tsrc=rss",
+          "published": "Mon, 23 Feb 2026 13:41:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Defiance Launches COPZ: The First Daily 2X Long ETF For Copper Miners",
+          "link": "https://finance.yahoo.com/news/defiance-launches-copz-first-daily-133000992.html?.tsrc=rss",
+          "published": "Wed, 18 Feb 2026 13:30:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Copper prices settle at a record high as metals are going \u2018absolutely bonkers\u2019 right now",
+          "link": "https://www.marketwatch.com/story/copper-prices-touch-a-record-high-as-metals-go-absolutely-bonkers-right-now-4918ebed?.tsrc=rss",
+          "published": "Thu, 29 Jan 2026 18:57:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Copper Mining ETF (COPX) Hits a New 52-Week High",
+          "link": "https://finance.yahoo.com/news/copper-mining-etf-copx-hits-110000309.html?.tsrc=rss",
+          "published": "Wed, 07 Jan 2026 11:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Copper Rally Sends Obscure Chilean Stock Fund Up 70% But Everyone Missed It",
+          "link": "https://247wallst.com/investing/2026/01/06/copper-rally-sends-obscure-chilean-stock-fund-up-70-but-everyone-missed-it/?.tsrc=rss",
+          "published": "Tue, 06 Jan 2026 19:08:33 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Santa Rally Falls Short: Top ETF Performers of December",
+          "link": "https://finance.yahoo.com/news/santa-rally-falls-short-top-130000378.html?.tsrc=rss",
+          "published": "Fri, 02 Jan 2026 13:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Tariffs Pushed CPER Up 39%, Doubling S&P 500 Returns",
+          "link": "https://247wallst.com/investing/2026/01/01/tariffs-pushed-cper-up-39-doubling-sp-500-returns/?.tsrc=rss",
+          "published": "Thu, 01 Jan 2026 16:22:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Global X Copper Miners ETF Surges 60% as Supply Deficits Grip Metal Markets",
+          "link": "https://247wallst.com/investing/2026/01/01/global-x-copper-miners-etf-surges-60-as-supply-deficits-grip-metal-markets/?.tsrc=rss",
+          "published": "Thu, 01 Jan 2026 16:19:47 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "The Red Metal's AI Revolution: Copper ETFs Poised for a Strong 2026",
+          "link": "https://finance.yahoo.com/news/red-metals-ai-revolution-copper-125700835.html?.tsrc=rss",
+          "published": "Wed, 31 Dec 2025 12:57:00 +0000",
+          "source": "Yahoo Finance"
+        }
+      ]
     },
     "URA": {
       "status": "ok",
@@ -27040,7 +27353,7 @@
     "URNM": {
       "status": "ok",
       "ticker": "URNM",
-      "name": "URNM",
+      "name": "Sprott Uranium Miners ETF",
       "price": 60.9,
       "prev_close": 62.55,
       "change_pct": -2.64,
@@ -27057,7 +27370,7 @@
       "ema200": 57.54,
       "ma_signal": "MONITOR",
       "zscore": -0.27,
-      "cmf": null,
+      "cmf": 0.1,
       "series": [
         {
           "date": "2026-02-05",
@@ -27181,7 +27494,68 @@
         }
       ],
       "note": "",
-      "news": []
+      "news": [
+        {
+          "title": "3 ETFs That Thrive When the Fed Does Absolutely Nothing",
+          "link": "https://247wallst.com/investing/2026/03/16/3-etfs-that-thrive-when-the-fed-does-absolutely-nothing/?.tsrc=rss",
+          "published": "Mon, 16 Mar 2026 15:12:36 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Energy is no longer dead money \u2014 here's what investors are really buying",
+          "link": "https://finance.yahoo.com/news/energy-is-no-longer-dead-money--heres-what-investors-are-really-buying-172553987.html?.tsrc=rss",
+          "published": "Fri, 13 Mar 2026 17:25:53 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Renaming of Index Tracked by Sprott Uranium Miners ETF (URNM)",
+          "link": "https://finance.yahoo.com/news/renaming-index-tracked-sprott-uranium-210000451.html?.tsrc=rss",
+          "published": "Thu, 12 Mar 2026 21:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Top-Performing ETF Stories of January: Winning Investing Areas",
+          "link": "https://finance.yahoo.com/news/top-performing-etf-stories-january-130000947.html?.tsrc=rss",
+          "published": "Wed, 04 Feb 2026 13:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Sprott Silver Miners & Physical Silver ETF Surpasses $1 Billion in Assets in Just Over a Year",
+          "link": "https://finance.yahoo.com/news/sprott-silver-miners-physical-silver-130000395.html?.tsrc=rss",
+          "published": "Wed, 28 Jan 2026 13:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Why These 3 Uranium ETFs Could Be 2026\u2019s Most Overlooked Winners",
+          "link": "https://www.marketbeat.com/stock-ideas/why-these-3-uranium-etfs-could-be-2026s-most-overlooked-winners/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+          "published": "Tue, 27 Jan 2026 13:11:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "NLR ETF Climbs 75% in One Year as Uranium Miners Ride $100 Per Pound Breakout",
+          "link": "https://247wallst.com/investing/2026/01/21/nlr-etf-climbs-75-in-one-year-as-uranium-miners-ride-100-per-pound-breakout/?.tsrc=rss",
+          "published": "Wed, 21 Jan 2026 13:50:33 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "ETFs Primed to Benefit From America's $2.7 Billion Nuclear Push",
+          "link": "https://finance.yahoo.com/news/etfs-primed-benefit-americas-2-143900753.html?.tsrc=rss",
+          "published": "Thu, 15 Jan 2026 14:39:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Sprott Silver Miners & Physical Silver ETF Reaches $500 Million in Assets in Less Than a Year",
+          "link": "https://finance.yahoo.com/news/sprott-silver-miners-physical-silver-210000488.html?.tsrc=rss",
+          "published": "Mon, 15 Dec 2025 21:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "From Gold to Uranium: Inside the Metals Boom of 2025",
+          "link": "https://finance.yahoo.com/news/gold-uranium-inside-metals-boom-181100356.html?.tsrc=rss",
+          "published": "Tue, 28 Oct 2025 18:11:00 +0000",
+          "source": "Yahoo Finance"
+        }
+      ]
     },
     "IYR": {
       "status": "ok",
@@ -86316,7 +86690,7 @@
     "PLTR": {
       "status": "ok",
       "ticker": "PLTR",
-      "name": "PLTR",
+      "name": "Palantir Technologies Inc.",
       "price": 155.68,
       "prev_close": 152.77,
       "change_pct": 1.9,
@@ -86333,7 +86707,7 @@
       "ema200": 153.47,
       "ma_signal": "BUY",
       "zscore": -0.43,
-      "cmf": null,
+      "cmf": 0.282,
       "series": [
         {
           "date": "2026-02-05",
@@ -86457,7 +86831,68 @@
         }
       ],
       "note": "",
-      "news": []
+      "news": [
+        {
+          "title": "Palantir Stock Is 2,500% More Expensive Than the S&P 500 Average. History Is Clear About What Happens Next.",
+          "link": "https://www.fool.com/investing/2026/03/19/palantir-stock-is-2500-more-expensive-than-the-sp/?.tsrc=rss",
+          "published": "Fri, 20 Mar 2026 02:50:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "1 Artificial Intelligence (AI) Stock With Generational Wealth Potential",
+          "link": "https://www.fool.com/investing/2026/03/19/1-artificial-intelligence-ai-stock-with-generation/?.tsrc=rss",
+          "published": "Fri, 20 Mar 2026 02:35:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "NVIDIA and Palantir Cool Off in 2026: Concerning?",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-palantir-cool-off-2026-195100247.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 19:51:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Palantir Gains as Mizuho Reiterates Outperform",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/palantir-gains-mizuho-reiterates-outperform-184406155.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 18:44:06 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Why More Retirees Are Allocating 5% \u2013 10% to Angel Investing On Top of Dividend Stocks",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/why-more-retirees-allocating-5-153405357.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 15:34:05 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Intuitive Surgical and Lennar have been highlighted as Zacks Bull and Bear of the Day",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/intuitive-surgical-lennar-highlighted-zacks-130300145.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 13:03:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Data Analytics Stocks Q4 Earnings: Palantir Technologies (NASDAQ:PLTR) Firing on All Cylinders",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/data-analytics-stocks-q4-earnings-110038565.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 11:00:38 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Palantir and Moder Partner to Transform Mortgage Industry",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/palantir-moder-partner-transform-mortgage-105900586.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 10:59:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Where Could Palantir Be in 3 Years? The Base Case.",
+          "link": "https://www.fool.com/investing/2026/03/19/where-could-palantir-be-in-3-years-the-base-case/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 09:35:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Palantir Stock Investors Just Got Great News from Wall Street",
+          "link": "https://www.fool.com/investing/2026/03/19/palantir-stock-investors-great-news-wall-street/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 07:15:00 +0000",
+          "source": "Yahoo Finance"
+        }
+      ]
     },
     "ABNB": {
       "status": "ok",
