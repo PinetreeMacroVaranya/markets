@@ -1,8 +1,8 @@
 """
 Portfolio Intelligence - Data Fetcher
 Runs daily via GitHub Actions.
-Fetches price data + signals + news for 500 ETFs + 500 US stocks.
-User selects which to display on the dashboard.
+Fetches price data + signals for ETFs + US stocks.
+Only display tickers (from tickers.json) get CMF + news enrichment.
 Writes portfolio.json to repo root.
 """
 
@@ -32,11 +32,10 @@ except ImportError:
 # -----------------------------------------------------------------
 
 NEWS_PER_TICKER = 10
-HISTORY_PERIOD  = "15mo"
 BATCH_SIZE      = 50
 
 # -----------------------------------------------------------------
-# TOP 500 US ETFs BY AUM
+# ETF TICKERS
 # -----------------------------------------------------------------
 
 ETF_TICKERS = [
@@ -53,7 +52,7 @@ ETF_TICKERS = [
     "VDC","VPU","VRE","VOX","VBK","VBR","VGK","VPL","EFA","EEM",
     "EWJ","EWZ","EWC","EWG","EWU","EWA","EWH","EWS","EWL","EWT",
     "EWY","EWP","EWQ","EWI","EWD","EWN","EWO","EWK","FXI","MCHI",
-    "KWEB","ASHR","EPI","INDA","SMIN","INDY","AAXJ","VWO","DEM","EDIV",
+    "KWEB","ASHR","EPI","INDA","SMIN","INDY","AAXJ","DEM","EDIV",
     "IYW","IGV","SOXX","SMH","QTEC","SKYY","CLOU","WCLD","BUG","CIBR",
     "HACK","ROBO","BOTZ","IRBO","ICLN","QCLN","ACES","SMOG","CNRG","ERTH",
     "IBB","XBI","PTH","BBH","FBT","SBIO","GNR","XME","PICK","SLX",
@@ -61,44 +60,79 @@ ETF_TICKERS = [
     "TBF","TMF","TBT","SPTL","EDV","ZROZ","PSQ","SH","RWM","DOG",
     "SDS","QID","TWM","TQQQ","UPRO","UDOW","URTY","TNA","SPXL","TECL",
     "JEPI","JEPQ","DIVO","QYLD","RYLD","XYLD","NUSI","GPIX","GPIQ","XDTE",
-    "AMLP","AMJ","ENFR","MLPA","PFF","PFFD","FPE","SPFF","HYD","HYMB",
+    "ENFR","MLPA","PFF","PFFD","FPE","SPFF","HYD","HYMB",
     "BKLN","SRLN","FLOT","USFR","TFLO","ICSH","NEAR","SHV","BIL","SGOV",
     "TBIL","GBIL","MINT","JPST","GSY","PULS","RAVI","FTSM","IGSB","ANGL",
     "FALN","HYS","HYDB","SHYG","USHY","HYLB","HYXF","HYXU","BNDX","IAGG",
     "BWX","WIP","IGOV","EBND","HYEM","DXJ","HEDJ","HEFA","DBEF","DBEZ",
-    "HEWJ","HEWG","HEWU","HEEM","HEZU","SPLV","USMV","EFAV","EEMV","ACWV",
+    "HEWJ","HEWU","HEEM","HEZU","SPLV","USMV","EFAV","EEMV","ACWV",
     "LGLV","QUAL","SIZE","VLUE","MTUM","LRGF","ESGU","ESGE","USSG","ESGV",
-    "CRBN","LOWC","ETHO","COWZ","CALF","DEEP","DSTL","MOAT","GOAT","WIDE",
-    "VRP","PGF","PSK","PFIG","BMAX","BUFD","BUFQ","BUFW","BUFZ","BUFE",
-    "SVOL","QQQY","SPYY","IWMY","DIVY","JEPY","FEPI","AIPI","CONY","NVDY",
-    "AMZY","MSFO","TSLL","NVDL","GGLL","MSTU","MSFU","NVDU","NVDD","TSLU",
-    "YMAX","YMAG","PLTY","TSMY","SNOY","GOGL","METL","NFLY","AMDY","GOGY",
-    "FIVY","SIXO","ODTE","RDTE","WDTE","MDTE","QDTE","BSVO","BUFO","BUFP",
-    "BUFN","BUFO","RDVY","TDIV","SDOG","FDL","FVD","CDC","DGRO","DGRW",
+    "CRBN","LOWC","ETHO","COWZ","CALF","DEEP","DSTL","MOAT",
+    "VRP","PGF","PSK","PFIG","BMAX","BUFD","BUFQ","BUFZ",
+    "SVOL","IWMY","DIVY","JEPY","FEPI","AIPI","CONY","NVDY",
+    "AMZY","MSFO","TSLL","NVDL","GGLL","MSTU","MSFU","NVDU","NVDD",
+    "YMAX","YMAG","PLTY","TSMY","SNOY","METL","NFLY","AMDY","GOGY",
+    "FIVY","SIXO","RDTE","WDTE","QDTE","BSVO","BUFP",
+    "RDVY","TDIV","SDOG","FDL","FVD","CDC","DGRO","DGRW",
     "NOBL","REGL","SMDV","VYMI","VIGI","VFMF","VFMO","VFQY","VFVA","VFLQ",
-    "OMFL","OMFS","DYNF","FVAL","FQAL","FMOM","FLCG","FLCV","FLMG","FLMV",
-    "FLSV","FLGV","LRGF","INTF","INTL","MFUS","MFEM","MFMO","MFGP","MFDX",
+    "OMFL","OMFS","DYNF","FVAL","FQAL","FLCG","FLCV","FLGV","INTF","INTL",
+    "MFUS","MFEM","MFMO","MFDX",
     "ONEQ","FENY","FIDU","FSTA","FHLC","FMAT","FNCL","FREL","FTEC","FUTY",
     "FCOM","FDIS","FIVG","FDRV","FBND","FCOR","FLTB","FSEC","FUMB","FLDR",
-    "FTSM","FCSH","FCLD","FDWM","FDIG","FSMB","FMCX","FSST","FLEE","FDEV",
-    "FINX","IPAY","LEND","KOIN","SNSR","XITK","XWEB","XHLT","XSHD","XSLV",
-    "XSOE","XSMO","XSVM","XSIX","XSW","XNTK","XMMO","XMHQ","XMVM","XLBS",
-    "XLEY","XLFS","XLGS","XLCS","XLHB","XLUS","XLBS","XLES","XLHE","XLIE",
-    "XLIS","XLIT","XLID","XLIF","XLIM","XLIK","XLIL","XLII","XLIH","XLIG",
-    "XLTV","XLTU","XLTS","XLTR","XLTQ","XLTP","XLTO","XLTN","XLTM","XLTL",
+    "FCSH","FCLD","FDWM","FDIG","FSMB","FMCX","FSST","FLEE","FDEV",
+    "FINX","IPAY","LEND","SNSR","XITK","XSHD","XSLV",
+    "XSOE","XSMO","XSVM","XSW","XNTK","XMMO","XMHQ","XMVM",
     "JMST","JPIE","JAGG","JBND","JCPB","JMUB","JPUS","JIRE","JHEM","JIVE",
-"HELO","BSCO","BSCP","BSCQ","BSCR","BSCS","BSCT","BSCU","BSCV","BSCW",
-"IBDO","IBDP","IBDQ","IBDR","IBDS","IBDT","IBDU","IBDV","IBDW","IBDX",
-"BSJP","BSJQ","BSJR","BSJS","BSJT","BSJU","BSJV","BSJW","BSJX","BSJY",
-"IBTD","IBTE","IBTF","IBTG","IBTH","IBTI","IBTJ","IBTK","IBTL","IBTM"
+    "HELO","BSCO","BSCP","BSCQ","BSCR","BSCS","BSCT","BSCU","BSCV","BSCW",
+    "IBDO","IBDP","IBDQ","IBDR","IBDS","IBDT","IBDU","IBDV","IBDW","IBDX",
+    "BSJP","BSJQ","BSJR","BSJS","BSJT","BSJU","BSJV","BSJW","BSJX","BSJY",
+    "IBTD","IBTE","IBTF","IBTG","IBTH","IBTI","IBTJ","IBTK","IBTL","IBTM",
 ]
 
-# TOP 500 US STOCKS BY MARKET CAP
+# -----------------------------------------------------------------
+# STOCK TICKERS
+# -----------------------------------------------------------------
+
 STOCK_TICKERS = [
-    "GEV", "ABXX.NE"
+    "GEV","AAPL","MSFT","NVDA","GOOGL","AMZN","META","TSLA","AVGO","JPM",
+    "LLY","V","UNH","XOM","MA","JNJ","PG","HD","COST","ABBV",
+    "MRK","CVX","BAC","WMT","NFLX","KO","CRM","AMD","ORCL","PEP",
+    "TMO","ACN","CSCO","LIN","MCD","ABT","DHR","ADBE","TXN","WFC",
+    "PM","CAT","NEE","IBM","QCOM","GE","INTU","RTX","VZ","SPGI",
+    "MS","GS","BLK","AXP","ISRG","PLD","SYK","T","BKNG","AMGN",
+    "HON","ELV","MDT","TJX","GILD","CB","C","DE","VRTX","REGN",
+    "MU","BSX","SCHW","ADI","CI","MCO","NKE","SO","DUK","ZTS",
+    "CL","CME","MDLZ","HCA","ICE","LRCX","PGR","USB","APH","KLAC",
+    "SHW","EQIX","TGT","MO","ITW","FCX","AON","EMR","NSC","WM",
+    "CSX","ROP","OKE","PCAR","ALL","AIG","HLT","FDX","ECL","COF",
+    "EW","FTNT","CARR","GWW","STZ","PSA","AEP","D","WELL","AFL",
+    "CMG","TFC","PH","ROST","JCI","SRE","SPG","FAST","GPC","PAYX",
+    "ETN","IDXX","SLB","CTAS","IQV","GIS","A","VRSK","YUM","KMB",
+    "BDX","OTIS","MSCI","ODFL","XEL","ED","PPG","KEYS","CDW","HBAN",
+    "MTB","CBOE","CINF","EXPD","HIG","LHX","NUE","PKG","PFG","RF",
+    "STT","SWKS","SYF","TRV","UAL","UDR","VTR","XYL","ZBRA","ZBH",
+    "ZION","ZM","ZS","DDOG","SNOW","PLTR","ABNB","COIN","RBLX","UBER",
+    "LYFT","DASH","SHOP","PYPL","SNAP","PINS","SPOT","HOOD","RIVN","LCID",
+    "NIO","XPEV","LI","BIDU","JD","PDD","BABA","TME","BILI","IQ",
+    "TSM","ASML","SAP","SONY","TM","AZN","GSK","BP","SHEL","RIO",
+    "BHP","VALE","PBR","SAN","BBVA","ING","UBS","BCS","LYG","NWG",
+    "COP","EOG","MPC","VLO","PSX","DVN","APA","FANG","OXY","PBF",
+    "DIS","CMCSA","WBD","FOX","FOXA","NYT","AMC","CNK","IMAX",
+    "EA","TTWO","U","DKNG","RSI","MAR","H","IHG","WH","CHH",
+    "DAL","AAL","LUV","ALK","JBLU","CCL","RCL","NCLH",
+    "AMT","CCI","SBAC","IRM","DLR","VICI","GLPI","O","NNN","STAG",
+    "EXR","CUBE","REXR","FR","EGP","BXP","SLG","HIW","PDM","VNO",
+    "KRC","DEA","ARE","CLDT","MOH","CNC","HUM","CVS","APP","CAVA",
+    "DUOL","CELH","AXON","GLBE","TOST","GTLB","IOT","SMAR","SOFI",
+    "AFRM","UPST","RELY","FLUT","RKLB","ACHR","JOBY","VST","CEG",
+    "NRG","ETR","EXC","FE","PPL","AES","NI","CMS","ALAB","SMCI",
+    "NTAP","PSTG","DELL","HPE","HPQ","ESTC","MDB","CFLT","DT","NET",
 ]
 
-# Deduplicate
+# -----------------------------------------------------------------
+# HELPERS
+# -----------------------------------------------------------------
+
 def dedup(lst):
     seen = set()
     out = []
@@ -107,16 +141,6 @@ def dedup(lst):
             seen.add(t)
             out.append(t)
     return out
-
-ETF_TICKERS   = dedup(ETF_TICKERS)[:500]
-STOCK_TICKERS = dedup(STOCK_TICKERS)[:500]
-ALL_TICKERS   = dedup(ETF_TICKERS + STOCK_TICKERS)
-
-all_closes = fetch_batch_prices(ALL_TICKERS)
-
-# -----------------------------------------------------------------
-# HELPERS
-# -----------------------------------------------------------------
 
 def log(msg):
     print(f"[{datetime.utcnow().strftime('%H:%M:%S')}] {msg}", flush=True)
@@ -172,7 +196,6 @@ def get_ma_signal(price, ema50, ema200):
 # -----------------------------------------------------------------
 
 def fetch_batch_prices(tickers):
-    """Fetch closing prices for all tickers in batches using yfinance download."""
     log(f"Fetching price history for {len(tickers)} tickers in batches of {BATCH_SIZE}...")
     all_closes = {}
 
@@ -209,15 +232,12 @@ def fetch_batch_prices(tickers):
     return all_closes
 
 # -----------------------------------------------------------------
-# COMPUTE SIGNALS FOR ONE TICKER
+# COMPUTE SIGNALS
 # -----------------------------------------------------------------
 
 def compute_signals(ticker, close_series):
     try:
-        close = close_series
-
-        # Need volume for CMF — fetch individually only for tickers displayed
-        # For batch processing, we skip volume-based CMF and compute from close only
+        close      = close_series
         price      = safe_float(close.iloc[-1], 2)
         prev_close = safe_float(close.iloc[-2], 2) if len(close) >= 2 else None
         as_of      = close.index[-1].strftime("%Y-%m-%d")
@@ -234,11 +254,9 @@ def compute_signals(ticker, close_series):
         ema50  = safe_float(compute_ema(close, 50).iloc[-1], 2)
         ema200 = safe_float(compute_ema(close, 200).iloc[-1], 2)
         signal = get_ma_signal(price, ema50, ema200)
-
         zs     = compute_zscore(close, 90)
         zscore = safe_float(zs.iloc[-1], 2)
 
-        # Build 30-day series for sparkline
         series = [
             {"date": idx.strftime("%Y-%m-%d"), "value": safe_float(v)}
             for idx, v in close.tail(30).items()
@@ -248,7 +266,7 @@ def compute_signals(ticker, close_series):
         return {
             "status":     "ok",
             "ticker":     ticker,
-            "name":       ticker,  # enriched later for displayed tickers
+            "name":       ticker,
             "price":      price,
             "prev_close": prev_close,
             "change_pct": returns["1d"],
@@ -258,7 +276,7 @@ def compute_signals(ticker, close_series):
             "ema200":     ema200,
             "ma_signal":  signal,
             "zscore":     zscore,
-            "cmf":        None,   # requires volume; enriched on demand
+            "cmf":        None,
             "series":     series,
             "note":       "",
             "news":       [],
@@ -273,11 +291,10 @@ def compute_signals(ticker, close_series):
         }
 
 # -----------------------------------------------------------------
-# ENRICH TOP TICKERS (name, CMF, news) — only for commonly viewed
+# ENRICH DISPLAY TICKERS
 # -----------------------------------------------------------------
 
 def enrich_ticker(ticker, data):
-    """Fetch full OHLCV + info + news for a single ticker."""
     try:
         t    = yf.Ticker(ticker)
         hist = t.history(period="6mo", interval="1d", auto_adjust=True)
@@ -296,8 +313,7 @@ def enrich_ticker(ticker, data):
             volume = hist["Volume"].dropna()
             cmf_series = compute_cmf(high, low, close, volume, 21)
             data["cmf"] = safe_float(cmf_series.iloc[-1], 3)
-
-    except Exception as e:
+    except Exception:
         pass
     return data
 
@@ -330,7 +346,7 @@ def fetch_news(ticker, max_articles=10):
     return articles[:max_articles]
 
 # -----------------------------------------------------------------
-# LOAD TICKERS FROM tickers.json
+# LOAD DISPLAY TICKERS
 # -----------------------------------------------------------------
 
 def load_display_tickers():
@@ -346,24 +362,27 @@ def load_display_tickers():
 # -----------------------------------------------------------------
 
 def main():
+    etf_list   = dedup(ETF_TICKERS)
+    stock_list = dedup(STOCK_TICKERS)
+    all_tickers = dedup(etf_list + stock_list)
+
     log("=== Portfolio Data Fetch Starting ===")
-    log(f"Universe: {len(ALL_TICKERS)} tickers ({len(ETF_TICKERS)} ETFs + {len(STOCK_TICKERS)} stocks)")
+    log(f"Universe: {len(all_tickers)} tickers ({len(etf_list)} ETFs + {len(stock_list)} stocks)")
 
     # 1. Batch fetch all prices
-    all_closes = fetch_batch_prices(ALL_TICKERS)
+    all_closes = fetch_batch_prices(all_tickers)
 
     # 2. Compute signals for all tickers
     log("Computing signals for all tickers...")
     stocks = {}
     for ticker, close in all_closes.items():
         stocks[ticker] = compute_signals(ticker, close)
-
     log(f"Signals computed for {len(stocks)} tickers")
 
-    # 3. Enrich display tickers with full name, CMF, and news
+    # 3. Enrich display tickers with name + CMF + news
     display_tickers = load_display_tickers()
     if display_tickers:
-        log(f"Enriching {len(display_tickers)} display tickers with name + CMF + news...")
+        log(f"Enriching {len(display_tickers)} display tickers...")
         for ticker in display_tickers:
             if ticker in stocks and stocks[ticker]["status"] == "ok":
                 stocks[ticker] = enrich_ticker(ticker, stocks[ticker])
@@ -381,17 +400,16 @@ def main():
         "generated_at":   datetime.utcnow().isoformat() + "Z",
         "generated_date": date.today().isoformat(),
         "tickers":        display_tickers,
-        "universe":       ALL_TICKERS,
-        "etf_universe":   ETF_TICKERS,
-        "stock_universe": STOCK_TICKERS,
+        "universe":       all_tickers,
+        "etf_universe":   etf_list,
+        "stock_universe": stock_list,
         "stocks":         stocks,
     }
 
     with open("portfolio.json", "w") as f:
         json.dump(output, f, indent=2)
 
-    size_kb = len(json.dumps(output)) // 1024
-    log(f"portfolio.json written — {size_kb} KB")
+    log(f"portfolio.json written — {len(json.dumps(output)) // 1024} KB")
     log("=== Done ===")
 
 if __name__ == "__main__":
