@@ -152,6 +152,22 @@ ETF_TICKERS   = dedup(ETF_TICKERS)[:500]
 STOCK_TICKERS = dedup(STOCK_TICKERS)[:500]
 ALL_TICKERS   = dedup(ETF_TICKERS + STOCK_TICKERS)
 
+all_closes = fetch_batch_prices(ALL_TICKERS)
+DELISTED = {
+    "AMJ","BUFE","BUFW","WIDE","HEWG","GOGL","ODTE","BUFO","BUFN","MDTE",
+    "SPYY","TSLU","FLMV","FLMG","FMOM","FLSV","MFGP","XLFS","XLID","XLIG",
+    "XLTU","XLTQ","XLGS","XLTV","XSIX","XHLT","XLEY","XLES","XLHE","KOIN",
+    "XLBS","XLIK","XLTS","XLIT","XLTR","XLIM","XLHB","XLIL","XLIH","XLIE",
+    "XLCS","XLIF","XWEB","XLTP","XLTO","XLTN","XLTM","XLTL","MMC","FI","SQ",
+    "WBA","WLTW","NOVN","CS","MTU","PXD","HES","PARA","LGF-B","SKX","HBI",
+    "GPS","PUMA","GCI","LGF-A","JWN","SEAS","WWE","GLUU","PLYA","SAVE",
+    "EVRI","SIX","ATNF","ATVI","MESA","OFC","CONE","PGRE","HTA","QTS","LSI",
+    "LPT","SWCH","MGP","STOR","SNH","PEAK","DRE","ONEM","SGEN","LVGO",
+    "SWAV","ANTM","ACCD","WCG","CANO"
+}
+ALL_TICKERS = [t for t in ALL_TICKERS if t not in DELISTED]
+log(f"After removing delisted: {len(ALL_TICKERS)} tickers remaining")
+
 # -----------------------------------------------------------------
 # HELPERS
 # -----------------------------------------------------------------
