@@ -1,0 +1,35 @@
+name: Fetch Portfolio Data Daily
+
+on:
+  schedule:
+    - cron: '45 6 * * 1-5'   # 12:15 PM IST on weekdays (runs after main workflow)
+  workflow_dispatch:          # allows manual trigger from Actions tab
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install yfinance pandas numpy feedparser requests
+
+      - name: Fetch portfolio data
+        run: python fetch_portfolio.py
+
+      - name: Commit portfolio.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add portfolio.json
+          git diff --staged --quiet || git commit -m "chore: update portfolio data $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
