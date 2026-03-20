@@ -1,0 +1,438 @@
+{
+  "generated_at": "2026-03-20T06:47:01.293967Z",
+  "generated_date": "2026-03-20",
+  "tickers": [
+    "AAPL",
+    "MSFT",
+    "GOOGL",
+    "SPY",
+    "QQQ"
+  ],
+  "stocks": {
+    "AAPL": {
+      "status": "ok",
+      "name": "Apple Inc.",
+      "ticker": "AAPL",
+      "price": 248.96,
+      "prev_close": 249.94,
+      "change_pct": -0.39,
+      "as_of": "2026-03-19",
+      "returns": {
+        "1d": -0.39,
+        "5d": -2.66,
+        "30d": -9.87,
+        "90d": -7.54,
+        "150d": 6.9,
+        "250d": 16.79
+      },
+      "ema50": 261.79,
+      "ema200": 252.55,
+      "ma_signal": "SELL",
+      "zscore": -1.9,
+      "cmf": 0.024,
+      "note": "",
+      "news": [
+        {
+          "title": "Prediction: This Neocloud Stock Will Outperform the \"Magnificent Seven\" in 2026",
+          "link": "https://www.fool.com/investing/2026/03/19/prediction-this-neocloud-stock-will-outperform-the/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 23:35:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Family Manage LLC Initiates 15.58 Million Position in TCW Flexible Income ETF, According to Recent SEC Filing",
+          "link": "https://www.fool.com/coverage/filings/2026/03/19/family-manage-llc-initiates-15-58-million-position-in-tcw-flexible-income-etf-according-to-recent-sec-filing/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 20:45:01 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Calydon Capital Dumps $9 Million of ZoomInfo Amid Stock's 92% Decline Since 2021",
+          "link": "https://www.fool.com/coverage/filings/2026/03/19/calydon-capital-dumps-usd9-million-of-zoominfo-amid-stock-s-92-decline-since-2021/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 19:33:15 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "These Tech Stocks Are Still a Buy for Many People Even as Iran War Pullback Intensifies",
+          "link": "https://finance.yahoo.com/m/95600eb3-6538-34ee-84ef-a5da9f701ad9/these-tech-stocks-are-still-a.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 19:27:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Apple China Sales Jump 23% Despite Market Slump",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/apple-china-sales-jump-23-192616425.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 19:26:16 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Norway Fund Flags 49% Equity Risk as Oil, Tech Threats Build",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/norway-fund-flags-49-equity-183630606.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 18:36:30 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Elon Musk Has One Word for This Apple Problem: 'Ridiculous'",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/elon-musk-one-word-apple-183105362.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 18:31:05 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Apple\u2019s China iPhone Sales Are Up. Thank Memory Cost Increases.",
+          "link": "https://finance.yahoo.com/m/8dcabe29-c733-36f2-b6c5-238db5d1fa4e/apple%E2%80%99s-china-iphone-sales.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 17:51:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Apple fends off bid for new Apple Watch import ban at US trade tribunal",
+          "link": "https://finance.yahoo.com/sectors/healthcare/articles/apple-fends-off-bid-apple-161350874.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 16:13:50 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Market Madness: Why JPMorgan, McDonald's are slam dunk stock picks",
+          "link": "https://finance.yahoo.com/video/market-madness-why-jpmorgan-mcdonalds-160000375.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 16:00:00 +0000",
+          "source": "Yahoo Finance"
+        }
+      ]
+    },
+    "MSFT": {
+      "status": "ok",
+      "name": "Microsoft Corporation",
+      "ticker": "MSFT",
+      "price": 389.02,
+      "prev_close": 391.79,
+      "change_pct": -0.71,
+      "as_of": "2026-03-19",
+      "returns": {
+        "1d": -0.71,
+        "5d": -3.2,
+        "30d": -5.86,
+        "90d": -21.42,
+        "150d": -24.84,
+        "250d": 1.33
+      },
+      "ema50": 420.55,
+      "ema200": 455.92,
+      "ma_signal": "SELL",
+      "zscore": -1.54,
+      "cmf": -0.024,
+      "note": "",
+      "news": [
+        {
+          "title": "What if ASML Becomes the Next Trillion-Dollar Stock?",
+          "link": "https://www.fool.com/investing/2026/03/20/what-if-asml-trillion-dollar-stock/?.tsrc=rss",
+          "published": "Fri, 20 Mar 2026 06:35:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "How many employees does Salesforce have after 2026 layoffs?",
+          "link": "https://www.thestreet.com/investing/stocks/how-many-salesforce-employees?.tsrc=rss",
+          "published": "Fri, 20 Mar 2026 01:06:29 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Ph fintech GCash launches country's first AI financial coach embedded in e-wallet to strengthen financial literacy",
+          "link": "https://finance.yahoo.com/markets/crypto/articles/ph-fintech-gcash-launches-countrys-010000614.html?.tsrc=rss",
+          "published": "Fri, 20 Mar 2026 01:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Prediction: This Neocloud Stock Will Outperform the \"Magnificent Seven\" in 2026",
+          "link": "https://www.fool.com/investing/2026/03/19/prediction-this-neocloud-stock-will-outperform-the/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 23:35:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Alibaba Just Released Earnings. Why the Stock Is Slumping.",
+          "link": "https://finance.yahoo.com/m/ec850f96-ab1b-36a2-91eb-ef2d44221ffa/alibaba-just-released.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 20:28:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Microsoft Stock Has Been Absolutely Slammed This Year. Is It Finally Time to Buy?",
+          "link": "https://www.fool.com/investing/2026/03/19/microsoft-stock-has-been-absolutely-slammed-this-y/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 20:23:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Adobe Stock Hits 7-Year Low After It's Branded AI Loser",
+          "link": "https://finance.yahoo.com/m/ee9e880c-2c5b-3690-88be-498c50f0f184/adobe-stock-hits-7-year-low.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 20:21:48 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "How The Microsoft (MSFT) Investment Story Is Shifting With AI Optimism And Caution",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/microsoft-msft-investment-story-shifting-200518083.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 20:05:18 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Adobe Taps NVIDIA for AI: Can a Rich Partner Base Aid ADBE Stock?",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/adobe-taps-nvidia-ai-rich-184800493.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 18:48:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Is PureCycle Technologies Stock a Buy or Sell After Shay Capital Dumped Shares Worth $3.2 Million?",
+          "link": "https://www.fool.com/coverage/filings/2026/03/19/is-purecycle-technologies-stock-a-buy-or-sell-after-shay-capital-dumped-shares-worth-usd3-2-million/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 18:47:46 +0000",
+          "source": "Yahoo Finance"
+        }
+      ]
+    },
+    "GOOGL": {
+      "status": "ok",
+      "name": "Alphabet Inc.",
+      "ticker": "GOOGL",
+      "price": 307.13,
+      "prev_close": 307.69,
+      "change_pct": -0.18,
+      "as_of": "2026-03-19",
+      "returns": {
+        "1d": -0.18,
+        "5d": 1.18,
+        "30d": -7.71,
+        "90d": 8.01,
+        "150d": 52.42,
+        "250d": 89.31
+      },
+      "ema50": 310.47,
+      "ema200": 271.01,
+      "ma_signal": "MONITOR",
+      "zscore": -0.39,
+      "cmf": 0.289,
+      "note": "",
+      "news": [
+        {
+          "title": "What if ASML Becomes the Next Trillion-Dollar Stock?",
+          "link": "https://www.fool.com/investing/2026/03/20/what-if-asml-trillion-dollar-stock/?.tsrc=rss",
+          "published": "Fri, 20 Mar 2026 06:35:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "AI Startup Yotta Seeks $4 Billion Valuation Ahead of Planned IPO",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/ai-startup-yotta-seeks-4-012540780.html?.tsrc=rss",
+          "published": "Fri, 20 Mar 2026 01:25:40 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Prediction: This Neocloud Stock Will Outperform the \"Magnificent Seven\" in 2026",
+          "link": "https://www.fool.com/investing/2026/03/19/prediction-this-neocloud-stock-will-outperform-the/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 23:35:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Traders Overwhelmed by Iran News Are Turning to AI for Help",
+          "link": "https://finance.yahoo.com/news/traders-overwhelmed-iran-news-turning-230000850.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 23:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Planet Labs PBC Q4 Earnings Call Highlights",
+          "link": "https://www.marketbeat.com/instant-alerts/planet-labs-pbc-q4-earnings-call-highlights-2026-03-19/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 22:37:17 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Should You Really Buy Artificial Intelligence Stocks Right Now? Evidence is Piling Up and Here's What it Says.",
+          "link": "https://www.fool.com/investing/2026/03/19/should-you-really-buy-ai-stocks-now/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 22:35:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Jeff Bezos reportedly wants $100 billion to buy and transform old manufacturing firms with AI",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/jeff-bezos-reportedly-wants-100-220924197.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 22:09:24 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Planet Labs Stock Rockets 20% Higher. Here\u2019s Why.",
+          "link": "https://finance.yahoo.com/m/a09f5f3b-612f-35f4-ace3-14faad37cbd0/planet-labs-stock-rockets-20%25.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 22:08:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Alphabet Taps Health100 To Extend Gemini Deeper Into Consumer Healthcare",
+          "link": "https://finance.yahoo.com/sectors/healthcare/articles/alphabet-taps-health100-extend-gemini-210447741.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 21:04:47 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Anthony Scaramucci Backs Michael Saylor's Preferred Stock Bet: 'This Is His iPhone Moment...Has Set The Clock On Global Adoption'",
+          "link": "https://finance.yahoo.com/markets/crypto/articles/anthony-scaramucci-backs-michael-saylors-203122950.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 20:31:22 +0000",
+          "source": "Yahoo Finance"
+        }
+      ]
+    },
+    "SPY": {
+      "status": "ok",
+      "name": "State Street SPDR S&P 500 ETF T",
+      "ticker": "SPY",
+      "price": 659.8,
+      "prev_close": 661.43,
+      "change_pct": -0.25,
+      "as_of": "2026-03-19",
+      "returns": {
+        "1d": -0.25,
+        "5d": -0.94,
+        "30d": -3.85,
+        "90d": -1.28,
+        "150d": 2.9,
+        "250d": 18.05
+      },
+      "ema50": 679.89,
+      "ema200": 657.59,
+      "ma_signal": "MONITOR",
+      "zscore": -2.15,
+      "cmf": 0.052,
+      "note": "",
+      "news": [
+        {
+          "title": "Is Hess Midstream\u2019s Capital Return Program a Strength or a Warning Sign?",
+          "link": "https://247wallst.com/investing/2026/03/19/is-hess-midstreams-capital-return-program-a-strength-or-a-warning-sign/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 21:31:11 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Sunoco Is No Longer Just a Gas Station Company",
+          "link": "https://247wallst.com/investing/2026/03/19/sunoco-is-no-longer-just-a-gas-station-company/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 21:27:50 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Calydon Capital Dumps $9 Million of ZoomInfo Amid Stock's 92% Decline Since 2021",
+          "link": "https://www.fool.com/coverage/filings/2026/03/19/calydon-capital-dumps-usd9-million-of-zoominfo-amid-stock-s-92-decline-since-2021/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 19:33:15 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Energy stocks can\u2019t carry the entire market alone: Chart of the Day",
+          "link": "https://finance.yahoo.com/news/energy-stocks-cant-carry-the-entire-market-alone-chart-of-the-day-174629845.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 17:46:29 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "MoneyMasters Podcast 3-19-26- The Golden Rule of Trading",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/moneymasters-podcast-3-19-26-163000363.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 16:30:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Defense Stocks Are Surging and This ETF Lets You Collect Dividends From the Global Arms Race",
+          "link": "https://247wallst.com/investing/2026/03/19/defense-stocks-are-surging-and-this-etf-lets-you-collect-dividends-from-the-global-arms-race/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 16:05:20 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "One Fed Rate Cut for 2026? ETFs in Focus",
+          "link": "https://finance.yahoo.com/economy/policy/articles/one-fed-rate-cut-2026-140000823.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 14:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Survival Tips for Retail Options Sellers to Manage Risk",
+          "link": "https://www.barchart.com/story/news/843695/survival-tips-for-retail-options-sellers-to-manage-risk?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 13:48:29 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Lower Pre-Bell Thursday Amid Rising Oil Prices, Reduced Rate-Cut Expectations",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-124923636.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 12:49:23 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "The Market Is Selling Off But These 3 Oil and Gas ETFs Are Still Green",
+          "link": "https://247wallst.com/investing/2026/03/19/the-market-is-selling-off-but-these-3-oil-and-gas-etfs-are-still-green/?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 12:30:23 +0000",
+          "source": "Yahoo Finance"
+        }
+      ]
+    },
+    "QQQ": {
+      "status": "ok",
+      "name": "Invesco QQQ Trust, Series 1",
+      "ticker": "QQQ",
+      "price": 593.02,
+      "prev_close": 594.9,
+      "change_pct": -0.32,
+      "as_of": "2026-03-19",
+      "returns": {
+        "1d": -0.32,
+        "5d": -0.71,
+        "30d": -2.1,
+        "90d": -2.92,
+        "150d": 2.44,
+        "250d": 24.36
+      },
+      "ema50": 608.07,
+      "ema200": 589.04,
+      "ma_signal": "MONITOR",
+      "zscore": -1.89,
+      "cmf": 0.091,
+      "note": "",
+      "news": [
+        {
+          "title": "Invesco QEW ETF Targets Nasdaq 100 Concentration Risk And Growth Story",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/invesco-qew-etf-targets-nasdaq-190515440.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 19:05:15 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds Edge Lower as US Equities Fall After Midday",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-edge-lower-170742555.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 17:07:42 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "MoneyMasters Podcast 3-19-26- The Golden Rule of Trading",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/moneymasters-podcast-3-19-26-163000363.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 16:30:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Lower Pre-Bell Thursday Amid Rising Oil Prices, Reduced Rate-Cut Expectations",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-124923636.html?.tsrc=rss",
+          "published": "Thu, 19 Mar 2026 12:49:23 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "New Fed \"Dot Plot\" Sends Markets Sliding",
+          "link": "https://finance.yahoo.com/economy/policy/articles/fed-dot-plot-sends-markets-213800794.html?.tsrc=rss",
+          "published": "Wed, 18 Mar 2026 21:38:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds Fall as US Equities Decline After Midday",
+          "link": "https://finance.yahoo.com/news/exchange-traded-funds-fall-us-171032561.html?.tsrc=rss",
+          "published": "Wed, 18 Mar 2026 17:10:32 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Is the Thrill Gone in QQQ? Where Investors Should Be Looking Now.",
+          "link": "https://www.barchart.com/story/news/822170/is-the-thrill-gone-in-qqq-where-investors-should-be-looking-now?.tsrc=rss",
+          "published": "Wed, 18 Mar 2026 15:06:08 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "The Zacks Analyst Blog Highlights SPY, QQQ, DIVG, BBEM, PBW and IWM",
+          "link": "https://finance.yahoo.com/news/zacks-analyst-blog-highlights-spy-141700494.html?.tsrc=rss",
+          "published": "Wed, 18 Mar 2026 14:17:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Lower Ahead of Key Economic Data, FOMC Meeting",
+          "link": "https://finance.yahoo.com/news/exchange-traded-funds-equity-futures-132829827.html?.tsrc=rss",
+          "published": "Wed, 18 Mar 2026 13:28:29 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Invesco Expands the Invesco QQQ Innovation Suite with the Launch of Invesco QQQ Equal Weight ETF (QEW)",
+          "link": "https://finance.yahoo.com/news/invesco-expands-invesco-qqq-innovation-130000118.html?.tsrc=rss",
+          "published": "Wed, 18 Mar 2026 13:00:00 +0000",
+          "source": "Yahoo Finance"
+        }
+      ]
+    }
+  }
+}
