@@ -94,39 +94,7 @@ ETF_TICKERS = [
 # -----------------------------------------------------------------
 
 STOCK_TICKERS = [
-    "GEV","AAPL","MSFT","NVDA","GOOGL","AMZN","META","TSLA","AVGO","JPM",
-    "LLY","V","UNH","XOM","MA","JNJ","PG","HD","COST","ABBV",
-    "MRK","CVX","BAC","WMT","NFLX","KO","CRM","AMD","ORCL","PEP",
-    "TMO","ACN","CSCO","LIN","MCD","ABT","DHR","ADBE","TXN","WFC",
-    "PM","CAT","NEE","IBM","QCOM","GE","INTU","RTX","VZ","SPGI",
-    "MS","GS","BLK","AXP","ISRG","PLD","SYK","T","BKNG","AMGN",
-    "HON","ELV","MDT","TJX","GILD","CB","C","DE","VRTX","REGN",
-    "MU","BSX","SCHW","ADI","CI","MCO","NKE","SO","DUK","ZTS",
-    "CL","CME","MDLZ","HCA","ICE","LRCX","PGR","USB","APH","KLAC",
-    "SHW","EQIX","TGT","MO","ITW","FCX","AON","EMR","NSC","WM",
-    "CSX","ROP","OKE","PCAR","ALL","AIG","HLT","FDX","ECL","COF",
-    "EW","FTNT","CARR","GWW","STZ","PSA","AEP","D","WELL","AFL",
-    "CMG","TFC","PH","ROST","JCI","SRE","SPG","FAST","GPC","PAYX",
-    "ETN","IDXX","SLB","CTAS","IQV","GIS","A","VRSK","YUM","KMB",
-    "BDX","OTIS","MSCI","ODFL","XEL","ED","PPG","KEYS","CDW","HBAN",
-    "MTB","CBOE","CINF","EXPD","HIG","LHX","NUE","PKG","PFG","RF",
-    "STT","SWKS","SYF","TRV","UAL","UDR","VTR","XYL","ZBRA","ZBH",
-    "ZION","ZM","ZS","DDOG","SNOW","PLTR","ABNB","COIN","RBLX","UBER",
-    "LYFT","DASH","SHOP","PYPL","SNAP","PINS","SPOT","HOOD","RIVN","LCID",
-    "NIO","XPEV","LI","BIDU","JD","PDD","BABA","TME","BILI","IQ",
-    "TSM","ASML","SAP","SONY","TM","AZN","GSK","BP","SHEL","RIO",
-    "BHP","VALE","PBR","SAN","BBVA","ING","UBS","BCS","LYG","NWG",
-    "COP","EOG","MPC","VLO","PSX","DVN","APA","FANG","OXY","PBF",
-    "DIS","CMCSA","WBD","FOX","FOXA","NYT","AMC","CNK","IMAX",
-    "EA","TTWO","U","DKNG","RSI","MAR","H","IHG","WH","CHH",
-    "DAL","AAL","LUV","ALK","JBLU","CCL","RCL","NCLH",
-    "AMT","CCI","SBAC","IRM","DLR","VICI","GLPI","O","NNN","STAG",
-    "EXR","CUBE","REXR","FR","EGP","BXP","SLG","HIW","PDM","VNO",
-    "KRC","DEA","ARE","CLDT","MOH","CNC","HUM","CVS","APP","CAVA",
-    "DUOL","CELH","AXON","GLBE","TOST","GTLB","IOT","SMAR","SOFI",
-    "AFRM","UPST","RELY","FLUT","RKLB","ACHR","JOBY","VST","CEG",
-    "NRG","ETR","EXC","FE","PPL","AES","NI","CMS","ALAB","SMCI",
-    "NTAP","PSTG","DELL","HPE","HPQ","ESTC","MDB","CFLT","DT","NET",
+    "GEV", "PLTR"
 ]
 
 # -----------------------------------------------------------------
