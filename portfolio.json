@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T07:27:01.202703Z",
+  "generated_at": "2026-03-24T09:42:29.087443Z",
   "generated_date": "2026-03-24",
   "tickers": [
     "SPY",
@@ -1070,6 +1070,12 @@
       "note": "",
       "news": [
         {
+          "title": "OKX Rolls Out Round the Clock Trading for Mag Seven Stocks Using Crypto Collateral",
+          "link": "https://decrypt.co/362158/okx-equity-perps-mag-7-sp-500?.tsrc=rss",
+          "published": "Tue, 24 Mar 2026 09:01:04 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
           "title": "Melius analyst: Microsoft\u2019s Copilot reorganization is a \u2018red flag\u2019",
           "link": "https://247wallst.com/investing/2026/03/23/melius-analyst-microsofts-copilot-reorganization-is-a-red-flag/?.tsrc=rss",
           "published": "Mon, 23 Mar 2026 22:56:52 +0000",
@@ -1121,12 +1127,6 @@
           "title": "This 1 ETF Keeps Outrallying the SPY, While Also Losing Less During Downturns",
           "link": "https://247wallst.com/investing/2026/03/21/this-1-etf-keeps-outrallying-the-spy-while-also-losing-less-during-downturns/?.tsrc=rss",
           "published": "Sat, 21 Mar 2026 12:21:49 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Who\u2019s Right on Arbor Realty? Insiders Load Up While Bears Circle",
-          "link": "https://247wallst.com/investing/2026/03/21/whos-right-on-arbor-realty-insiders-load-up-while-bears-circle/?.tsrc=rss",
-          "published": "Sat, 21 Mar 2026 12:00:49 +0000",
           "source": "Yahoo Finance"
         }
       ]
@@ -18067,15 +18067,9 @@
           "source": "Google News"
         },
         {
-          "title": "Asian shares gain and oil slips back despite a barrage of attacks by Iran - Click2Houston",
-          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWHV4d1FXOUxoTm1PX20ySzRIUFJRN2hKS3oycGpSeUNLMGwxX3lOSmZtOGRfcDh6Z0g1MThNTWJXZEdRNkYtVlJibTFwUHc4eUNoS0xpVzNLckpLZlozQVpVYVc4SnJTNEZEOUppcjJCTnplbTV6ZlBBWFYzSVRJWnJvanpScVRUQnZiQjlMbUQ3U2trQmhaQkVzc2JOMHhFdTNHdjd4ZnpsQnBMaFVwdld1c2hnM05ZempkZHY5ZWdrVjI0QlA4?oc=5",
-          "published": "Wed, 18 Mar 2026 04:50:45 GMT",
-          "source": "Google News"
-        },
-        {
-          "title": "Employers want earned wage access free\u2014and proof it helps workers - Stock Titan",
-          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPdjBsUlNodGMwMUI1X25PbEUwdmVZNWpuMjJWNzhYa294X3BkMG96VUFfV2R3MFl0SGNlTUlwTUV0aG0xdXJpVl9UbENNYTg1TjJ0dUtnMmtpbGR3TVpGSzZJY0NWcVBHRDkwcG14OVF4N3ZCX2tjYkNVMi1zUW1XUHQ4ZTFDeEcyUXFoNG10VFlYdGFCcVU3UlVBWXRPZzlqVmhYanJ2RmgxaGl2MUFUQlJ3TGs4LXJ1M3B3?oc=5",
-          "published": "Thu, 29 Jan 2026 08:00:00 GMT",
+          "title": "Live Oak Bancshares (LOB) appoints Ewa M. Stasiowska CRO as assets surpass $10 billion - Stock Titan",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPa2FZV2hyVllCTV9zM0sybjVmWDU5QWVtaUVCZDJTOFFRaTJYQXpnbUVIVzM2R0JqY2Npb0lfa1dUZE5XdlRvbDJwd2MyaHVKckppcnZYNTJRUEpKU0VweW1haXRNMUxLWHlqcXJ3enZxYjlrUjk1cFlxUVZ4N0x6Wm9YTGtqdTNvbkVCUnJ2YUgyYXNSRGFZUy0wcHlodW9LZ2Ryb1ppTQ?oc=5",
+          "published": "Mon, 01 Dec 2025 08:00:00 GMT",
           "source": "Google News"
         },
         {
@@ -18100,6 +18094,12 @@
           "title": "iShares MSCI Australia ETF (NYSE: EWA) - Share Price - intelligentinvestor.com.au",
           "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWFVTc2ZUb0QyRzQzTElxSHZScHdfb3JXUDFPV252UDJ5bDhHV1RoeTRRX1h5UEtsRS1vbzZGNmhzZE83M2xMYk00anJ0cDl5OC1FMzRYT1ZRNDB6Sjl6dVAxeHRhS3BwUzNaY1RBelFlc25oVUNTSnNGdnQxd2JQNlY0SGVXbWFaR2JMV09ZSEh5dHpwX2piZ240WkJoVXZFR1ow?oc=5",
           "published": "Thu, 25 Sep 2025 16:12:55 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Earned Wage Access (EWA) Software Market Size, Share & Growth Chart by 2033 - Straits Research",
+          "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1lNWp5emN1b2lmejdxU2J2OWRxRFlqbnVPcDVOSnlaUTQxVFIzVWg2Rmt1NnZYTDBONjN5a3piRWxnTlBIR19VNUNfOU43d1oxaEptWTA1MElkS3RvbFc3MmZpaXF0TUMxNnhlLVUyTTJBamxxenN0aUxkcjBvUQ?oc=5",
+          "published": "Wed, 09 Jul 2025 07:32:00 GMT",
           "source": "Google News"
         }
       ]
@@ -66175,6 +66175,18 @@
       "note": "",
       "news": [
         {
+          "title": "OKX Rolls Out Round the Clock Trading for Mag Seven Stocks Using Crypto Collateral",
+          "link": "https://decrypt.co/362158/okx-equity-perps-mag-7-sp-500?.tsrc=rss",
+          "published": "Tue, 24 Mar 2026 09:01:04 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Palantir turns poisonous on the campaign trail",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/palantir-turns-poisonous-campaign-trail-050017559.html?.tsrc=rss",
+          "published": "Tue, 24 Mar 2026 05:00:17 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
           "title": "Palantir Stock Is Up About 23% in 1 Month. Time to Buy?",
           "link": "https://www.fool.com/investing/2026/03/23/palantir-stock-is-up-about-23-in-1-month-time-to-b/?.tsrc=rss",
           "published": "Tue, 24 Mar 2026 03:23:00 +0000",
@@ -66220,18 +66232,6 @@
           "title": "US Equity Markets Rise as Crude Oil Slumps After Trump Delays Iran Strike Plans",
           "link": "https://finance.yahoo.com/markets/stocks/articles/us-equity-markets-rise-crude-201800505.html?.tsrc=rss",
           "published": "Mon, 23 Mar 2026 20:18:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Wedbush Says 2026 Is the \"Inflection Year\" for Artificial Intelligence (AI). Here's the Stock to Own.",
-          "link": "https://www.fool.com/investing/2026/03/23/wedbush-says-2026-is-the-inflection-year-for-artif/?.tsrc=rss",
-          "published": "Mon, 23 Mar 2026 19:37:54 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Nvidia, AMD Rally As War Fears Ease",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-amd-rally-war-fears-181843797.html?.tsrc=rss",
-          "published": "Mon, 23 Mar 2026 18:18:43 +0000",
           "source": "Yahoo Finance"
         }
       ]
