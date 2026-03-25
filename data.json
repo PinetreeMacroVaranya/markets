@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-24T09:13:16.638960Z",
-  "generated_date": "2026-03-24",
+  "generated_at": "2026-03-25T09:13:10.470502Z",
+  "generated_date": "2026-03-25",
   "indicators": {
     "move": {
       "series": [
@@ -251,12 +251,16 @@
         {
           "date": "2026-03-23",
           "value": 98.15
+        },
+        {
+          "date": "2026-03-24",
+          "value": 103.01
         }
       ],
-      "latest": 98.15,
-      "prev": 108.84,
-      "change": -10.69,
-      "as_of": "2026-03-23",
+      "latest": 103.01,
+      "prev": 98.15,
+      "change": 4.86,
+      "as_of": "2026-03-24",
       "status": "ok",
       "source": "Yahoo Finance (^MOVE)",
       "note": ""
@@ -513,13 +517,17 @@
         },
         {
           "date": "2026-03-24",
-          "value": 26.71
+          "value": 26.95
+        },
+        {
+          "date": "2026-03-25",
+          "value": 25.86
         }
       ],
-      "latest": 26.71,
-      "prev": 26.15,
-      "change": 0.56,
-      "as_of": "2026-03-24",
+      "latest": 25.86,
+      "prev": 26.95,
+      "change": -1.09,
+      "as_of": "2026-03-25",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
       "note": ""
@@ -773,12 +781,16 @@
         {
           "date": "2026-03-23",
           "value": 43.36
+        },
+        {
+          "date": "2026-03-24",
+          "value": 41.9
         }
       ],
-      "latest": 43.36,
-      "prev": 35.25,
-      "change": 8.11,
-      "as_of": "2026-03-23",
+      "latest": 41.9,
+      "prev": 43.36,
+      "change": -1.46,
+      "as_of": "2026-03-24",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
       "note": ""
@@ -1032,12 +1044,16 @@
         {
           "date": "2026-03-23",
           "value": 79.44
+        },
+        {
+          "date": "2026-03-24",
+          "value": 79.17
         }
       ],
-      "latest": 79.44,
-      "prev": 78.92,
-      "change": 0.52,
-      "as_of": "2026-03-23",
+      "latest": 79.17,
+      "prev": 79.44,
+      "change": -0.27,
+      "as_of": "2026-03-24",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
       "note": ""
@@ -1291,12 +1307,16 @@
         {
           "date": "2026-03-23",
           "value": 4.677
+        },
+        {
+          "date": "2026-03-24",
+          "value": 4.699
         }
       ],
-      "latest": 4.677,
-      "prev": 4.816,
-      "change": -0.139,
-      "as_of": "2026-03-23",
+      "latest": 4.699,
+      "prev": 4.677,
+      "change": 0.022,
+      "as_of": "2026-03-24",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
       "note": ""
@@ -1887,12 +1907,16 @@
         {
           "date": "2026-03-23",
           "value": 0.51
+        },
+        {
+          "date": "2026-03-24",
+          "value": 0.49
         }
       ],
-      "latest": 0.51,
+      "latest": 0.49,
       "prev": 0.51,
-      "change": 0.0,
-      "as_of": "2026-03-23",
+      "change": -0.02,
+      "as_of": "2026-03-24",
       "status": "ok",
       "source": "FRED (T10Y2Y)",
       "note": ""
