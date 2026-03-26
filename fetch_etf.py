@@ -214,7 +214,6 @@ def rank_etfs(results, period_key, n=10):
 # -----------------------------------------------------------------
 # FETCH NEWLY LISTED ETFs
 # -----------------------------------------------------------------
-
 def fetch_new_etfs():
     log("Fetching newly listed ETFs...")
     new_etfs = []
@@ -260,6 +259,39 @@ def fetch_new_etfs():
     log(f"  Found {len(new_etfs)} newly listed ETFs with AUM >= $1M")
     return new_etfs
     
+def main():
+    log("=== ETF Screener Data Fetch Starting ===")
+    log(f"Universe: {len(ETF_UNIVERSE_CLEAN)} ETFs")
+
+    # 1. Fetch price data for all ETFs
+    results = fetch_etf_returns(ETF_UNIVERSE_CLEAN)
+
+    # 2. Rank by each period
+    top_1d,  bot_1d  = rank_etfs(results, "ret_1d",  TOP_N)
+    top_1w,  bot_1w  = rank_etfs(results, "ret_1w",  TOP_N)
+    top_1m,  bot_1m  = rank_etfs(results, "ret_1m",  TOP_N)
+    top_3m,  bot_3m  = rank_etfs(results, "ret_3m",  TOP_N)
+
+    # 3. Enrich top/bottom candidates with metadata
+    candidates = set(
+        [e["ticker"] for e in top_1d + bot_1d +
+         top_1w + bot_1w + top_1m + bot_1m + top_3m + bot_3m]
+    )
+    enrich_targets = {k: results[k] for k in candidates if k in results}
+    enrich_etf_info(enrich_targets, sample_size=len(enrich_targets))
+    # Merge enriched data back
+    for k, v in enrich_targets.items():
+        results[k].update(v)
+
+    # 4. Rebuild rankings with enriched data
+    top_1d,  bot_1d  = rank_etfs(results, "ret_1d",  TOP_N)
+    top_1w,  bot_1w  = rank_etfs(results, "ret_1w",  TOP_N)
+    top_1m,  bot_1m  = rank_etfs(results, "ret_1m",  TOP_N)
+    top_3m,  bot_3m  = rank_etfs(results, "ret_3m",  TOP_N)
+
+    # 5. Fetch newly listed ETFs
+    new_etfs = fetch_new_etfs()
+
     # 6. Write output
     output = {
         "generated_at":   datetime.utcnow().isoformat() + "Z",
@@ -283,3 +315,4 @@ def fetch_new_etfs():
 
 if __name__ == "__main__":
     main()
+    
