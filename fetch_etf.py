@@ -216,53 +216,13 @@ def rank_etfs(results, period_key, n=10):
 # -----------------------------------------------------------------
 
 def fetch_new_etfs():
-    """
-    Fetch ETFs listed in the last 30 days with AUM >= $1M.
-    Uses a curated approach checking yfinance for recent IPO date.
-    """
     log("Fetching newly listed ETFs...")
     new_etfs = []
-
-    # Check a broader list for recent listings
-    # We use iShares, Vanguard, State Street, Invesco new launches
-    # pulled from ETF.com RSS / SEC EDGAR
     cutoff = date.today() - timedelta(days=30)
 
-    # Try SEC EDGAR full-text search for N-1A (ETF registration) filings
-    try:
-        url = "https://efts.sec.gov/LATEST/search-index?q=%22exchange+traded+fund%22&dateRange=custom&startdt={}&enddt={}&forms=N-1A".format(
-            cutoff.isoformat(), date.today().isoformat()
-        )
-        res = requests.get(url, timeout=15, headers={"User-Agent": "market-dashboard research@example.com"})
-        if res.ok:
-            data = res.json()
-            hits = data.get("hits", {}).get("hits", [])
-            log(f"  SEC EDGAR: {len(hits)} recent N-1A filings")
-    except Exception as e:
-        log(f"  SEC EDGAR failed: {e}")
-
-    # Fallback: check a known list of recently launched ETFs via yfinance
-    # These are tickers from major issuers launched recently
-    candidates = [
-        "BALI","SPGP","RSST","GGLL","NVDL","TSLL","MSFO","APLY","AMZO",
-        "GOGL","METL","NFLY","MSTU","MSFU","NVDU","NVDD","TSLU","TSLQ",
-        "CONY","MSFO","AMZY","GOOGY","PLTY","TSMY","YMAX","YMAG","YBIT",
-        "LFGY","SNOY","NVDY","AMDY","GOGY","MSFY","PYPY","COINY","DISO",
-        "FIVY","SIXO","SVOL","QQQY","SPYY","IWMY","DIVY","JEPY","FEPI",
-        "AIPI","GPIX","GPIQ","XDTE","RDTE","WDTE","MDTE","QDTE","ODTE",
-        "BMAX","BSVO","BUFD","BUFQ","BUFW","BUFZ","BUFE","BUFN","BUFO","BUFP"
-    ]
-
-    for ticker in candidates:
+    for ticker in ETF_UNIVERSE_CLEAN:
         try:
             t    = yf.Ticker(ticker)
-            info = t.info
-            aum  = info.get("totalAssets", 0) or 0
-
-            if aum < 1_000_000:
-                continue
-
-            # Check if recently listed
             hist = t.history(period="3mo", interval="1d", auto_adjust=True)
             if hist.empty:
                 continue
@@ -271,67 +231,35 @@ def fetch_new_etfs():
             if first_date < cutoff:
                 continue
 
-            price   = safe_float(hist["Close"].iloc[-1])
+            info = t.info
+            aum  = info.get("totalAssets", 0) or 0
+            if aum < 1_000_000:
+                continue
+
+            price      = safe_float(hist["Close"].iloc[-1])
             launch_ret = pct_change(hist["Close"].iloc[-1], hist["Close"].iloc[0])
 
             new_etfs.append({
-                "ticker":     ticker,
-                "name":       info.get("longName") or info.get("shortName") or ticker,
-                "launch_date": first_date.isoformat(),
-                "aum_m":      round(aum / 1_000_000, 1),
-                "category":   info.get("category") or info.get("etfType") or "—",
-                "issuer":     info.get("fundFamily") or "—",
+                "ticker":           ticker,
+                "name":             info.get("longName") or info.get("shortName") or ticker,
+                "launch_date":      first_date.isoformat(),
+                "aum_m":            round(aum / 1_000_000, 1),
+                "category":         info.get("category") or "—",
+                "issuer":           info.get("fundFamily") or "—",
                 "ret_since_launch": launch_ret,
-                "expense":    info.get("annualReportExpenseRatio") or info.get("expenseRatio"),
-                "price":      price,
+                "expense":          info.get("annualReportExpenseRatio") or info.get("expenseRatio"),
+                "price":            price,
             })
             log(f"  New ETF: {ticker} launched {first_date} AUM=${round(aum/1e6,1)}M")
-            time.sleep(0.3)
+            time.sleep(0.2)
 
         except Exception:
             pass
 
     new_etfs.sort(key=lambda x: x["launch_date"], reverse=True)
-    log(f"  Found {len(new_etfs)} newly listed ETFs with AUM >= $50M")
+    log(f"  Found {len(new_etfs)} newly listed ETFs with AUM >= $1M")
     return new_etfs
-
-# -----------------------------------------------------------------
-# MAIN
-# -----------------------------------------------------------------
-
-def main():
-    log("=== ETF Screener Data Fetch Starting ===")
-    log(f"Universe: {len(ETF_UNIVERSE_CLEAN)} ETFs")
-
-    # 1. Fetch price data for all ETFs
-    results = fetch_etf_returns(ETF_UNIVERSE_CLEAN)
-
-    # 2. Rank by each period
-    top_1d,  bot_1d  = rank_etfs(results, "ret_1d",  TOP_N)
-    top_1w,  bot_1w  = rank_etfs(results, "ret_1w",  TOP_N)
-    top_1m,  bot_1m  = rank_etfs(results, "ret_1m",  TOP_N)
-    top_3m,  bot_3m  = rank_etfs(results, "ret_3m",  TOP_N)
-
-    # 3. Enrich top/bottom candidates with metadata
-    candidates = set(
-        [e["ticker"] for e in top_1d + bot_1d +
-         top_1w + bot_1w + top_1m + bot_1m + top_3m + bot_3m]
-    )
-    enrich_targets = {k: results[k] for k in candidates if k in results}
-    enrich_etf_info(enrich_targets, sample_size=len(enrich_targets))
-    # Merge enriched data back
-    for k, v in enrich_targets.items():
-        results[k].update(v)
-
-    # 4. Rebuild rankings with enriched data
-    top_1d,  bot_1d  = rank_etfs(results, "ret_1d",  TOP_N)
-    top_1w,  bot_1w  = rank_etfs(results, "ret_1w",  TOP_N)
-    top_1m,  bot_1m  = rank_etfs(results, "ret_1m",  TOP_N)
-    top_3m,  bot_3m  = rank_etfs(results, "ret_3m",  TOP_N)
-
-    # 5. Fetch newly listed ETFs
-    new_etfs = fetch_new_etfs()
-
+    
     # 6. Write output
     output = {
         "generated_at":   datetime.utcnow().isoformat() + "Z",
