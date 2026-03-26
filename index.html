@@ -549,7 +549,7 @@ function renderETFTable(tbodyId, etfs, isTop){
 function renderNewETFs(newEtfs){
   const tbody=document.getElementById('new-etf-tbody');
   if(!newEtfs||!newEtfs.length){
-    tbody.innerHTML='<tr><td colspan="8" class="etf-empty">No newly listed ETFs found with AUM &ge; $50M in the last 30 days.</td></tr>';
+    tbody.innerHTML='<tr><td colspan="8" class="etf-empty">No newly listed ETFs found with AUM &ge; $1M in the last 30 days.</td></tr>';
     return;
   }
   tbody.innerHTML=newEtfs.map((e,i)=>{
