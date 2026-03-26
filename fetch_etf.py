@@ -217,7 +217,7 @@ def rank_etfs(results, period_key, n=10):
 
 def fetch_new_etfs():
     """
-    Fetch ETFs listed in the last 30 days with AUM >= $50M.
+    Fetch ETFs listed in the last 30 days with AUM >= $1M.
     Uses a curated approach checking yfinance for recent IPO date.
     """
     log("Fetching newly listed ETFs...")
@@ -259,7 +259,7 @@ def fetch_new_etfs():
             info = t.info
             aum  = info.get("totalAssets", 0) or 0
 
-            if aum < 50_000_000:
+            if aum < 1_000_000:
                 continue
 
             # Check if recently listed
