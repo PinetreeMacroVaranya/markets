@@ -243,10 +243,11 @@ def main():
     indicators["gvz"]    = fetch_yahoo("^GVZ",   decimals=2)
     indicators["hyg"]    = fetch_yahoo("HYG",    decimals=2)
     indicators["gldtlt"] = fetch_yahoo_ratio("GLD", "TLT", decimals=3)
+   
 
     # FRED
     log("\n-- FRED --")
-    indicators["dxy"]    = fetch_fred("DTWEXBGS",        decimals=2)
+    indicators["dxy"]    = fetch_yahoo("DX-Y.NYB",        decimals=2)
     indicators["jgb"]    = fetch_fred("IRLTLT01JPM156N", decimals=2)
     indicators["nfci"]   = fetch_fred("NFCI",            decimals=2)
     indicators["spread"] = fetch_fred("T10Y2Y",          decimals=2)
