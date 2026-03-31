@@ -247,7 +247,7 @@ def main():
 
     # FRED
     log("\n-- FRED --")
-    indicators["dxy"]    = fetch_fred("DTWEXBGS",        decimals=2)
+    indicators["dxy"]    = fetch_yahoo("DX-Y.NYB",        decimals=2)
     indicators["jgb"]    = fetch_fred("IRLTLT01JPM156N", decimals=2)
     indicators["nfci"]   = fetch_fred("NFCI",            decimals=2)
     indicators["spread"] = fetch_fred("T10Y2Y",          decimals=2)
