@@ -39,11 +39,13 @@ jobs:
           python fetch_data.py
 
       # 5. Commit data.json back to the repository
-    - name: Commit and Push changes
+      - name: Commit and Push changes
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json monthly_history.json
+          # Commit only if there are changes
           git commit -m "chore: update market data $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "No changes to commit"
+          # Sync with the remote repo to avoid 'rejected' errors
           git pull --rebase origin main
           git push origin main
