@@ -187,43 +187,80 @@ def load_existing_manual():
 # MONTHLY HISTORY UPDATE
 # -----------------------------------------------------------------
 
-def is_last_trading_day_of_month():
+from datetime import date, timedelta
+import json
+
+def is_day_after_last_trading_day():
+    """Returns True if yesterday was the last trading day of its month."""
     today = date.today()
+    yesterday = today - timedelta(days=1)
+    
+    # If yesterday was a weekend, it wasn't the last trading day
+    if yesterday.weekday() >= 5:
+        return False
+
+    # Look ahead from 'yesterday' to find the next valid weekday (Mon-Fri)
+    # If that next weekday is in a different month, yesterday was the last trading day.
     for i in range(1, 4):
-        next_day = today + timedelta(days=i)
+        next_day = yesterday + timedelta(days=i)
         if next_day.weekday() < 5:
-            return next_day.month != today.month
+            return next_day.month != yesterday.month
+            
     return False
 
 def update_monthly_history(indicators):
-    if not is_last_trading_day_of_month():
-        log("  Not end of month - skipping monthly history update")
+    """Updates the 6-month history using data from the morning after month-end."""
+    if not is_day_after_last_trading_day():
+        log("  Not the morning after month-end - skipping monthly history update")
         return
-    log("  End of month detected - updating monthly_history.json")
+
+    log("  Month-end follow-up detected - updating monthly_history.json")
+    
     try:
         with open("monthly_history.json", "r") as f:
             history = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         history = {"months": []}
+
+    # We use 'yesterday' for the labels/dates because the data represents the month just closed
     today = date.today()
-    label = f"{today.day}-{today.strftime('%b-%y')}"
+    target_date = today - timedelta(days=1)
+    
+    # Formatting: e.g., "31-Mar-26"
+    label = f"{target_date.day}-{target_date.strftime('%b-%y')}"
+    
     values = {}
-    for ind_id in ["move", "dxy", "jgb", "nfci", "gldtlt", "spread", "vix", "brent", "buffett", "hyg", "gvz", "fg"]:
+    indicator_list = [
+        "move", "dxy", "jgb", "nfci", "gldtlt", "spread", 
+        "vix", "brent", "buffett", "hyg", "gvz", "fg"
+    ]
+    
+    for ind_id in indicator_list:
         values[ind_id] = indicators.get(ind_id, {}).get("latest")
+
     new_entry = {
         "label":  label,
-        "date":   today.isoformat(),
+        "date":   target_date.isoformat(), # Stored as YYYY-MM-DD of the last day
         "values": values,
     }
+
     months = history.get("months", [])
-    months = [m for m in months if not m["date"].startswith(today.strftime("%Y-%m"))]
+    
+    # Remove any existing entry for the target month to prevent duplicates
+    month_prefix = target_date.strftime("%Y-%m")
+    months = [m for m in months if not m["date"].startswith(month_prefix)]
+    
     months.append(new_entry)
     months.sort(key=lambda x: x["date"])
+    
+    # Keep only the last 6 months
     months = months[-6:]
     history["months"] = months
+    
     with open("monthly_history.json", "w") as f:
         json.dump(history, f, indent=2)
-    log(f"  monthly_history.json updated - {len(months)} months stored")
+        
+    log(f"  monthly_history.json updated - {len(months)} months stored (Entry: {label})")
 
 # -----------------------------------------------------------------
 # MAIN
