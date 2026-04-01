@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T09:31:34.068382Z",
+  "generated_at": "2026-04-01T10:17:16.745535Z",
   "generated_date": "2026-04-01",
   "indicators": {
     "move": {
@@ -529,12 +529,12 @@
         },
         {
           "date": "2026-04-01",
-          "value": 24.9
+          "value": 24.77
         }
       ],
-      "latest": 24.9,
+      "latest": 24.77,
       "prev": 25.25,
-      "change": -0.35,
+      "change": -0.48,
       "as_of": "2026-04-01",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
