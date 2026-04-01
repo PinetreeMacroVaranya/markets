@@ -1,29 +1,11 @@
 {
   "months": [
     {
-      "label": "30-Sep-25",
-      "date": "2025-09-30",
-      "values": {
-        "move": 77.93,
-        "dxy": 97.77,
-        "jgb": 1.65,
-        "nfci": -0.56,
-        "gldtlt": 3.99,
-        "spread": 0.56,
-        "vix": 16.28,
-        "brent": 67.02,
-        "buffett": 219.28,
-        "hyg": 80.19,
-        "gvz": 19.95,
-        "fg": 51
-      }
-    },
-    {
       "label": "31-Oct-25",
       "date": "2025-10-31",
       "values": {
         "move": 66.61,
-        "dxy": 99.80,
+        "dxy": 99.8,
         "jgb": 1.66,
         "nfci": -0.55,
         "gldtlt": 4.08,
@@ -31,7 +13,7 @@
         "vix": 17.44,
         "brent": 65.07,
         "buffett": 219.45,
-        "hyg": 80.80,
+        "hyg": 80.8,
         "gvz": 22.66,
         "fg": 34
       }
@@ -44,7 +26,7 @@
         "dxy": 99.46,
         "jgb": 1.81,
         "nfci": -0.52,
-        "gldtlt": 4.30,
+        "gldtlt": 4.3,
         "spread": 0.55,
         "vix": 16.35,
         "brent": 64.07,
@@ -65,7 +47,7 @@
         "gldtlt": 4.56,
         "spread": 0.71,
         "vix": 14.95,
-        "brent": 63.10,
+        "brent": 63.1,
         "buffett": 219.36,
         "hyg": 80.63,
         "gvz": 23.92,
@@ -76,11 +58,11 @@
       "label": "30-Jan-26",
       "date": "2026-01-30",
       "values": {
-        "move": 59.20,
+        "move": 59.2,
         "dxy": 96.99,
         "jgb": 2.25,
         "nfci": -0.55,
-        "gldtlt": 5.10,
+        "gldtlt": 5.1,
         "spread": 0.74,
         "vix": 17.44,
         "brent": 72.25,
@@ -106,6 +88,24 @@
         "hyg": 80.33,
         "gvz": 33.23,
         "fg": 38
+      }
+    },
+    {
+      "label": "31-Mar-26",
+      "date": "2026-03-31",
+      "values": {
+        "move": 96.05,
+        "dxy": 120.89,
+        "jgb": 2.11,
+        "nfci": -0.48,
+        "gldtlt": 4.964,
+        "spread": 0.51,
+        "vix": 24.9,
+        "brent": 103.79,
+        "buffett": null,
+        "hyg": 79.56,
+        "gvz": 38.89,
+        "fg": null
       }
     }
   ]
