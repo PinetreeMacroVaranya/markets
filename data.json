@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T09:46:35.649778Z",
+  "generated_at": "2026-04-02T10:08:31.121286Z",
   "generated_date": "2026-04-02",
   "indicators": {
     "move": {
@@ -529,12 +529,12 @@
         },
         {
           "date": "2026-04-02",
-          "value": 26.48
+          "value": 26.58
         }
       ],
-      "latest": 26.48,
+      "latest": 26.58,
       "prev": 24.54,
-      "change": 1.94,
+      "change": 2.04,
       "as_of": "2026-04-02",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
@@ -1596,16 +1596,6 @@
       "source": "FRED (DTWEXBGS)",
       "note": ""
     },
-    "jgb": {
-      "series": [],
-      "latest": null,
-      "prev": null,
-      "change": null,
-      "as_of": null,
-      "status": "error",
-      "source": "Trading Economics",
-      "note": "TE_API_KEY not set in environment"
-    },
     "nfci": {
       "series": [
         {
@@ -2202,6 +2192,16 @@
       "status": "ok",
       "source": "FRED (DCOILBRENTEU)",
       "note": ""
+    },
+    "jgb": {
+      "series": [],
+      "latest": null,
+      "prev": null,
+      "change": null,
+      "as_of": null,
+      "status": "error",
+      "source": "Trading Economics",
+      "note": "403 Client Error: No Access to this country as free user. for url: https://api.tradingeconomics.com/markets/bond?c=cbec6494ed70472:ysvm2k56e7lzu0d&country=japan"
     },
     "fg": {
       "series": [],
