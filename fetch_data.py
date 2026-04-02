@@ -21,7 +21,7 @@ except ImportError:
 # -----------------------------------------------------------------
 
 FRED_API_KEY = os.environ.get("FRED_API_KEY", "")
-TE_API_KEY = os.environ.get("TE_API_KEY", "")
+TE_API_KEY   = os.environ.get("TE_API_KEY", "")
 FRED_BASE    = "https://api.stlouisfed.org/fred/series/observations"
 MONTHS_BACK  = 3
 
@@ -170,9 +170,11 @@ def fetch_fred(series_id, decimals=2, months_back=None):
         return error_entry("FRED", f"HTTP error: {str(e)}")
     except Exception as e:
         return error_entry("FRED", str(e))
+
 # -----------------------------------------------------------------
 # TRADING ECONOMICS
-# -----------------------------------------------------
+# -----------------------------------------------------------------
+
 def fetch_te_jgb():
     """
     Fetch Japan 10Y Government Bond yield from Trading Economics API.
@@ -255,25 +257,19 @@ def load_existing_manual():
 # MONTHLY HISTORY UPDATE
 # -----------------------------------------------------------------
 
-from datetime import date, timedelta
-import json
-
 def is_day_after_last_trading_day():
     """Returns True if yesterday was the last trading day of its month."""
     today = date.today()
     yesterday = today - timedelta(days=1)
-    
-    # If yesterday was a weekend, it wasn't the last trading day
+
     if yesterday.weekday() >= 5:
         return False
 
-    # Look ahead from 'yesterday' to find the next valid weekday (Mon-Fri)
-    # If that next weekday is in a different month, yesterday was the last trading day.
     for i in range(1, 4):
         next_day = yesterday + timedelta(days=i)
         if next_day.weekday() < 5:
             return next_day.month != yesterday.month
-            
+
     return False
 
 def update_monthly_history(indicators):
@@ -283,51 +279,47 @@ def update_monthly_history(indicators):
         return
 
     log("  Month-end follow-up detected - updating monthly_history.json")
-    
+
     try:
         with open("monthly_history.json", "r") as f:
             history = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         history = {"months": []}
 
-    # We use 'yesterday' for the labels/dates because the data represents the month just closed
     today = date.today()
     target_date = today - timedelta(days=1)
-    
-    # Formatting: e.g., "31-Mar-26"
+
     label = f"{target_date.day}-{target_date.strftime('%b-%y')}"
-    
+
     values = {}
     indicator_list = [
-        "move", "dxy", "jgb", "nfci", "gldtlt", "spread", 
+        "move", "dxy", "jgb", "nfci", "gldtlt", "spread",
         "vix", "brent", "buffett", "hyg", "gvz", "fg"
     ]
-    
+
     for ind_id in indicator_list:
         values[ind_id] = indicators.get(ind_id, {}).get("latest")
 
     new_entry = {
         "label":  label,
-        "date":   target_date.isoformat(), # Stored as YYYY-MM-DD of the last day
+        "date":   target_date.isoformat(),
         "values": values,
     }
 
     months = history.get("months", [])
-    
-    # Remove any existing entry for the target month to prevent duplicates
+
     month_prefix = target_date.strftime("%Y-%m")
     months = [m for m in months if not m["date"].startswith(month_prefix)]
-    
+
     months.append(new_entry)
     months.sort(key=lambda x: x["date"])
-    
-    # Keep only the last 6 months
+
     months = months[-6:]
     history["months"] = months
-    
+
     with open("monthly_history.json", "w") as f:
         json.dump(history, f, indent=2)
-        
+
     log(f"  monthly_history.json updated - {len(months)} months stored (Entry: {label})")
 
 # -----------------------------------------------------------------
@@ -338,6 +330,7 @@ def main():
     log("=== Market Intelligence Data Fetch Starting ===")
     log(f"Date range: {START_DATE} -> {TODAY}")
     log(f"FRED key:   {'SET' if FRED_API_KEY else 'MISSING'}")
+    log(f"TE key:     {'SET' if TE_API_KEY else 'MISSING'}")
 
     indicators = {}
 
@@ -348,15 +341,17 @@ def main():
     indicators["gvz"]    = fetch_yahoo("^GVZ",   decimals=2)
     indicators["hyg"]    = fetch_yahoo("HYG",    decimals=2)
     indicators["gldtlt"] = fetch_yahoo_ratio("GLD", "TLT", decimals=3)
-   
 
     # FRED
     log("\n-- FRED --")
-    indicators["dxy"] = fetch_fred("DTWEXBGS",           decimals=2)
-   indicators["jgb"] = fetch_fred("IRLTLT01JPM156N", decimals=2, months_back=6)
+    indicators["dxy"]    = fetch_fred("DTWEXBGS",        decimals=2)
     indicators["nfci"]   = fetch_fred("NFCI",            decimals=2)
     indicators["spread"] = fetch_fred("T10Y2Y",          decimals=2)
     indicators["brent"]  = fetch_fred("DCOILBRENTEU",    decimals=2)
+
+    # Trading Economics
+    log("\n-- Trading Economics --")
+    indicators["jgb"] = fetch_te_jgb()
 
     # VIX fallback
     if indicators["vix"]["status"] == "error":
