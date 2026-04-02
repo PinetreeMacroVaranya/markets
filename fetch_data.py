@@ -172,7 +172,7 @@ def fetch_fred(series_id, decimals=2, months_back=None):
         return error_entry("FRED", str(e))
 # -----------------------------------------------------------------
 # TRADING ECONOMICS
-# -----------------------------------------------------------------
+# -----------------------------------------------------
 def fetch_te_jgb():
     """
     Fetch Japan 10Y Government Bond yield from Trading Economics API.
@@ -187,22 +187,21 @@ def fetch_te_jgb():
         res.raise_for_status()
         data = res.json()
 
-        # Find the 10Y bond entry
-     for item in data:
+        entry = None
+        for item in data:
             name = item.get("Name", "").lower()
             if ("10" in name and "year" in name) or item.get("Ticker", "") == "GJGB10":
                 entry = item
                 break
 
         if not entry and data:
-            entry = data[0]  # fallback to first result
+            entry = data[0]
 
         if not entry:
             return error_entry("Trading Economics", "No Japan bond data returned")
 
         value = safe_float(entry.get("Last") or entry.get("Price"), 2)
-        dt    = entry.get("Date") or entry.get("LastUpdate") or date.today().isoformat()
-        # Normalise date format
+        dt = entry.get("Date") or entry.get("LastUpdate") or date.today().isoformat()
         try:
             dt = dt[:10]
         except Exception:
@@ -213,8 +212,6 @@ def fetch_te_jgb():
 
         log(f"    JGB 10Y -> {value}% as of {dt}")
 
-        # Build a single point — no historical series from this endpoint
-        # Load existing series to maintain chart continuity
         existing_series = []
         try:
             with open("data.json", "r") as f:
@@ -223,12 +220,10 @@ def fetch_te_jgb():
         except (FileNotFoundError, json.JSONDecodeError):
             pass
 
-        # Remove today if already present, add fresh value
         existing_series = [d for d in existing_series if d["date"] != dt]
         existing_series.append({"date": dt, "value": value})
         existing_series.sort(key=lambda x: x["date"])
 
-        # Keep last 90 days
         cutoff = (date.today() - timedelta(days=90)).isoformat()
         existing_series = [d for d in existing_series if d["date"] >= cutoff]
 
@@ -236,7 +231,7 @@ def fetch_te_jgb():
             existing_series,
             status="ok",
             source="Trading Economics",
-            note=f"Japan 10Y Government Bond Yield. Daily via Trading Economics API."
+            note="Japan 10Y Government Bond Yield. Daily via Trading Economics API."
         )
 
     except Exception as e:
