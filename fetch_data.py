@@ -349,9 +349,9 @@ def main():
     indicators["spread"] = fetch_fred("T10Y2Y",          decimals=2)
     indicators["brent"]  = fetch_fred("DCOILBRENTEU",    decimals=2)
 
-    # Trading Economics
-    log("\n-- Trading Economics --")
-    indicators["jgb"] = fetch_te_jgb()
+# JGB via FRED
+log("\n-- JGB (FRED) --")
+indicators["jgb"] = fetch_fred("IRLTLT01JPM156N", decimals=2, months_back=6)
 
     # VIX fallback
     if indicators["vix"]["status"] == "error":
