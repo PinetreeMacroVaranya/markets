@@ -188,11 +188,11 @@ def fetch_te_jgb():
         data = res.json()
 
         # Find the 10Y bond entry
-       for item in data:
-    name = item.get("Name", "").lower()
-    if ("10" in name and "year" in name) or item.get("Ticker", "") == "GJGB10":
-        entry = item
-        break
+     for item in data:
+            name = item.get("Name", "").lower()
+            if ("10" in name and "year" in name) or item.get("Ticker", "") == "GJGB10":
+                entry = item
+                break
 
         if not entry and data:
             entry = data[0]  # fallback to first result
