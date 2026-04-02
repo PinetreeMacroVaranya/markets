@@ -21,7 +21,6 @@ except ImportError:
 # -----------------------------------------------------------------
 
 FRED_API_KEY = os.environ.get("FRED_API_KEY", "")
-TE_API_KEY   = os.environ.get("TE_API_KEY", "")
 FRED_BASE    = "https://api.stlouisfed.org/fred/series/observations"
 MONTHS_BACK  = 3
 
@@ -172,75 +171,6 @@ def fetch_fred(series_id, decimals=2, months_back=None):
         return error_entry("FRED", str(e))
 
 # -----------------------------------------------------------------
-# TRADING ECONOMICS
-# -----------------------------------------------------------------
-
-def fetch_te_jgb():
-    """
-    Fetch Japan 10Y Government Bond yield from Trading Economics API.
-    Returns a standardised entry dict.
-    """
-    log("  Trading Economics -> Japan 10Y Bond Yield")
-    if not TE_API_KEY:
-        return error_entry("Trading Economics", "TE_API_KEY not set in environment")
-    try:
-        url = f"https://api.tradingeconomics.com/markets/bond?c={TE_API_KEY}&country=japan"
-        res = requests.get(url, timeout=15)
-        res.raise_for_status()
-        data = res.json()
-
-        entry = None
-        for item in data:
-            name = item.get("Name", "").lower()
-            if ("10" in name and "year" in name) or item.get("Ticker", "") == "GJGB10":
-                entry = item
-                break
-
-        if not entry and data:
-            entry = data[0]
-
-        if not entry:
-            return error_entry("Trading Economics", "No Japan bond data returned")
-
-        value = safe_float(entry.get("Last") or entry.get("Price"), 2)
-        dt = entry.get("Date") or entry.get("LastUpdate") or date.today().isoformat()
-        try:
-            dt = dt[:10]
-        except Exception:
-            dt = date.today().isoformat()
-
-        if value is None:
-            return error_entry("Trading Economics", "Null value returned for JGB yield")
-
-        log(f"    JGB 10Y -> {value}% as of {dt}")
-
-        existing_series = []
-        try:
-            with open("data.json", "r") as f:
-                existing = json.load(f)
-            existing_series = existing.get("indicators", {}).get("jgb", {}).get("series", [])
-        except (FileNotFoundError, json.JSONDecodeError):
-            pass
-
-        existing_series = [d for d in existing_series if d["date"] != dt]
-        existing_series.append({"date": dt, "value": value})
-        existing_series.sort(key=lambda x: x["date"])
-
-        cutoff = (date.today() - timedelta(days=90)).isoformat()
-        existing_series = [d for d in existing_series if d["date"] >= cutoff]
-
-        return make_entry(
-            existing_series,
-            status="ok",
-            source="Trading Economics",
-            note="Japan 10Y Government Bond Yield. Daily via Trading Economics API."
-        )
-
-    except Exception as e:
-        log(f"    TE JGB failed: {e}")
-        return error_entry("Trading Economics", str(e))
-
-# -----------------------------------------------------------------
 # LOAD EXISTING MANUAL DATA
 # -----------------------------------------------------------------
 
@@ -330,7 +260,6 @@ def main():
     log("=== Market Intelligence Data Fetch Starting ===")
     log(f"Date range: {START_DATE} -> {TODAY}")
     log(f"FRED key:   {'SET' if FRED_API_KEY else 'MISSING'}")
-    log(f"TE key:     {'SET' if TE_API_KEY else 'MISSING'}")
 
     indicators = {}
 
@@ -345,13 +274,10 @@ def main():
     # FRED
     log("\n-- FRED --")
     indicators["dxy"]    = fetch_fred("DTWEXBGS",        decimals=2)
+    indicators["jgb"]    = fetch_fred("IRLTLT01JPM156N", decimals=2, months_back=6)
     indicators["nfci"]   = fetch_fred("NFCI",            decimals=2)
     indicators["spread"] = fetch_fred("T10Y2Y",          decimals=2)
     indicators["brent"]  = fetch_fred("DCOILBRENTEU",    decimals=2)
-
-# JGB via FRED
-log("\n-- JGB (FRED) --")
-indicators["jgb"] = fetch_fred("IRLTLT01JPM156N", decimals=2, months_back=6)
 
     # VIX fallback
     if indicators["vix"]["status"] == "error":
