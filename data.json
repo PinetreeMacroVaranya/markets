@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T10:08:31.121286Z",
+  "generated_at": "2026-04-02T17:24:48.260558Z",
   "generated_date": "2026-04-02",
   "indicators": {
     "move": {
@@ -529,12 +529,12 @@
         },
         {
           "date": "2026-04-02",
-          "value": 26.58
+          "value": 25.54
         }
       ],
-      "latest": 26.58,
+      "latest": 25.54,
       "prev": 24.54,
-      "change": 2.04,
+      "change": 1.0,
       "as_of": "2026-04-02",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
@@ -797,12 +797,16 @@
         {
           "date": "2026-04-01",
           "value": 36.11
+        },
+        {
+          "date": "2026-04-02",
+          "value": 38.72
         }
       ],
-      "latest": 36.11,
-      "prev": 38.89,
-      "change": -2.78,
-      "as_of": "2026-04-01",
+      "latest": 38.72,
+      "prev": 36.11,
+      "change": 2.61,
+      "as_of": "2026-04-02",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
       "note": ""
@@ -1064,12 +1068,16 @@
         {
           "date": "2026-04-01",
           "value": 79.37
+        },
+        {
+          "date": "2026-04-02",
+          "value": 79.48
         }
       ],
-      "latest": 79.37,
-      "prev": 79.18,
-      "change": 0.19,
-      "as_of": "2026-04-01",
+      "latest": 79.48,
+      "prev": 79.37,
+      "change": 0.11,
+      "as_of": "2026-04-02",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
       "note": ""
@@ -1331,12 +1339,16 @@
         {
           "date": "2026-04-01",
           "value": 5.076
+        },
+        {
+          "date": "2026-04-02",
+          "value": 4.943
         }
       ],
-      "latest": 5.076,
-      "prev": 4.983,
-      "change": 0.093,
-      "as_of": "2026-04-01",
+      "latest": 4.943,
+      "prev": 5.076,
+      "change": -0.133,
+      "as_of": "2026-04-02",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
       "note": ""
@@ -1594,6 +1606,41 @@
       "as_of": "2026-03-27",
       "status": "ok",
       "source": "FRED (DTWEXBGS)",
+      "note": ""
+    },
+    "jgb": {
+      "series": [
+        {
+          "date": "2025-09-01",
+          "value": 1.65
+        },
+        {
+          "date": "2025-10-01",
+          "value": 1.66
+        },
+        {
+          "date": "2025-11-01",
+          "value": 1.8
+        },
+        {
+          "date": "2025-12-01",
+          "value": 2.06
+        },
+        {
+          "date": "2026-01-01",
+          "value": 2.24
+        },
+        {
+          "date": "2026-02-01",
+          "value": 2.11
+        }
+      ],
+      "latest": 2.11,
+      "prev": 2.24,
+      "change": -0.13,
+      "as_of": "2026-02-01",
+      "status": "ok",
+      "source": "FRED (IRLTLT01JPM156N)",
       "note": ""
     },
     "nfci": {
@@ -2192,16 +2239,6 @@
       "status": "ok",
       "source": "FRED (DCOILBRENTEU)",
       "note": ""
-    },
-    "jgb": {
-      "series": [],
-      "latest": null,
-      "prev": null,
-      "change": null,
-      "as_of": null,
-      "status": "error",
-      "source": "Trading Economics",
-      "note": "403 Client Error: No Access to this country as free user. for url: https://api.tradingeconomics.com/markets/bond?c=cbec6494ed70472:ysvm2k56e7lzu0d&country=japan"
     },
     "fg": {
       "series": [],
