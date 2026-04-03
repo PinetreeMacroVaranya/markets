@@ -1,13 +1,9 @@
 {
-  "generated_at": "2026-04-02T17:24:48.260558Z",
-  "generated_date": "2026-04-02",
+  "generated_at": "2026-04-03T07:44:52.239687Z",
+  "generated_date": "2026-04-03",
   "indicators": {
     "move": {
       "series": [
-        {
-          "date": "2025-12-30",
-          "value": 63.98
-        },
         {
           "date": "2025-12-31",
           "value": 63.96
@@ -259,22 +255,22 @@
         {
           "date": "2026-04-01",
           "value": 90.19
+        },
+        {
+          "date": "2026-04-02",
+          "value": 84.41
         }
       ],
-      "latest": 90.19,
-      "prev": 96.05,
-      "change": -5.86,
-      "as_of": "2026-04-01",
+      "latest": 84.41,
+      "prev": 90.19,
+      "change": -5.78,
+      "as_of": "2026-04-02",
       "status": "ok",
       "source": "Yahoo Finance (^MOVE)",
       "note": ""
     },
     "vix": {
       "series": [
-        {
-          "date": "2025-12-30",
-          "value": 14.33
-        },
         {
           "date": "2025-12-31",
           "value": 14.95
@@ -529,12 +525,12 @@
         },
         {
           "date": "2026-04-02",
-          "value": 25.54
+          "value": 23.87
         }
       ],
-      "latest": 25.54,
+      "latest": 23.87,
       "prev": 24.54,
-      "change": 1.0,
+      "change": -0.67,
       "as_of": "2026-04-02",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
@@ -542,10 +538,6 @@
     },
     "gvz": {
       "series": [
-        {
-          "date": "2025-12-30",
-          "value": 24.83
-        },
         {
           "date": "2025-12-31",
           "value": 23.92
@@ -800,12 +792,12 @@
         },
         {
           "date": "2026-04-02",
-          "value": 38.72
+          "value": 37.85
         }
       ],
-      "latest": 38.72,
+      "latest": 37.85,
       "prev": 36.11,
-      "change": 2.61,
+      "change": 1.74,
       "as_of": "2026-04-02",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
@@ -813,10 +805,6 @@
     },
     "hyg": {
       "series": [
-        {
-          "date": "2025-12-30",
-          "value": 79.54
-        },
         {
           "date": "2025-12-31",
           "value": 79.46
@@ -1071,12 +1059,12 @@
         },
         {
           "date": "2026-04-02",
-          "value": 79.48
+          "value": 79.56
         }
       ],
-      "latest": 79.48,
+      "latest": 79.56,
       "prev": 79.37,
-      "change": 0.11,
+      "change": 0.19,
       "as_of": "2026-04-02",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
@@ -1084,10 +1072,6 @@
     },
     "gldtlt": {
       "series": [
-        {
-          "date": "2025-12-30",
-          "value": 4.591
-        },
         {
           "date": "2025-12-31",
           "value": 4.598
@@ -1342,12 +1326,12 @@
         },
         {
           "date": "2026-04-02",
-          "value": 4.943
+          "value": 4.948
         }
       ],
-      "latest": 4.943,
+      "latest": 4.948,
       "prev": 5.076,
-      "change": -0.133,
+      "change": -0.128,
       "as_of": "2026-04-02",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
@@ -1355,10 +1339,6 @@
     },
     "dxy": {
       "series": [
-        {
-          "date": "2025-12-30",
-          "value": 119.49
-        },
         {
           "date": "2025-12-31",
           "value": 119.75
@@ -1709,10 +1689,6 @@
     "spread": {
       "series": [
         {
-          "date": "2025-12-30",
-          "value": 0.69
-        },
-        {
           "date": "2025-12-31",
           "value": 0.71
         },
@@ -1963,22 +1939,22 @@
         {
           "date": "2026-04-01",
           "value": 0.52
+        },
+        {
+          "date": "2026-04-02",
+          "value": 0.52
         }
       ],
       "latest": 0.52,
-      "prev": 0.51,
-      "change": 0.01,
-      "as_of": "2026-04-01",
+      "prev": 0.52,
+      "change": 0.0,
+      "as_of": "2026-04-02",
       "status": "ok",
       "source": "FRED (T10Y2Y)",
       "note": ""
     },
     "brent": {
       "series": [
-        {
-          "date": "2025-12-30",
-          "value": 62.3
-        },
         {
           "date": "2025-12-31",
           "value": 61.35
