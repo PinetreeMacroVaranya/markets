@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-03T07:47:57.605558Z",
-  "generated_date": "2026-04-03",
+  "generated_at": "2026-04-06T08:13:31.756077Z",
+  "generated_date": "2026-04-06",
   "tickers": [
     "SPY",
     "IAU",
@@ -944,7 +944,7 @@
       "ema200": 655.15,
       "ma_signal": "MONITOR",
       "zscore": -1.61,
-      "cmf": -0.243,
+      "cmf": -0.242,
       "series": [
         {
           "date": "2026-02-20",
@@ -1070,6 +1070,42 @@
       "note": "",
       "news": [
         {
+          "title": "Is This ETF the Safest Way to Benefit From AI?",
+          "link": "https://247wallst.com/investing/2026/04/05/is-this-etf-the-safest-way-to-benefit-from-ai/?.tsrc=rss",
+          "published": "Sun, 05 Apr 2026 11:10:10 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "The Jobs Market Showed Signs of a Pulse in March",
+          "link": "https://app.moby.co/home/news/news-the-jobs-market-showed-signs-of-a-pulse-in-march?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+          "published": "Fri, 03 Apr 2026 14:38:11 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Why the Stock Market Has Held Up So Well Despite the Spike in Oil Prices",
+          "link": "https://finance.yahoo.com/m/edd45f03-d915-32f1-8f95-bc3b43bc5036/why-the-stock-market-has-held.html?.tsrc=rss",
+          "published": "Fri, 03 Apr 2026 14:36:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Fidelity\u2019s Active Large-Cap Growth ETF FFLG Is Winning the Battle but Losing the War",
+          "link": "https://247wallst.com/investing/2026/04/03/fidelitys-active-large-cap-growth-etf-fflg-is-winning-the-battle-but-losing-the-war/?.tsrc=rss",
+          "published": "Fri, 03 Apr 2026 13:18:22 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "The S&P 500 Without Big Tech Is Quietly Beating the Full Index in 2026",
+          "link": "https://247wallst.com/investing/2026/04/03/the-sp-500-without-big-tech-is-quietly-beating-the-full-index-in-2026/?.tsrc=rss",
+          "published": "Fri, 03 Apr 2026 13:18:14 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "The Magnificent 7 Stock Crash's Toll Reaches $2.1 Trillion",
+          "link": "https://finance.yahoo.com/m/0519c730-6a8a-386e-8571-0cfc2c958408/the-magnificent-7-stock.html?.tsrc=rss",
+          "published": "Fri, 03 Apr 2026 12:00:38 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
           "title": "MoneyMasters Podcast 4-2-26- The 8 Million Barrel Oil Gap and What it Means for Markets",
           "link": "https://finance.yahoo.com/sectors/energy/articles/moneymasters-podcast-4-2-26-163000407.html?.tsrc=rss",
           "published": "Thu, 02 Apr 2026 16:30:00 +0000",
@@ -1091,42 +1127,6 @@
           "title": "ETF Inflows Hit $462 Billion in Q1 as Investors Ignore Market Drop",
           "link": "http://www.etf.com/sections/monthly-etf-flows/etf-inflows-hit-462-billion-q1-investors-ignore-market-drop?utm_source=yahoo-finance&utm_medium=rss&utm_campaign=yahoo-finance-rss&.tsrc=rss",
           "published": "Wed, 01 Apr 2026 21:00:05 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Wall Street Turns Tactical on Constellation Brands With $170 Target Into Earnings",
-          "link": "https://247wallst.com/investing/2026/04/01/wall-street-turns-tactical-on-constellation-brands-with-170-target-into-earnings/?.tsrc=rss",
-          "published": "Wed, 01 Apr 2026 14:56:52 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "No Foolin': ADP Jobs Led by Small Companies",
-          "link": "https://finance.yahoo.com/economy/articles/no-foolin-adp-jobs-led-143300862.html?.tsrc=rss",
-          "published": "Wed, 01 Apr 2026 14:33:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "US Equity Buffer ETF (APRT) Touches Fresh 52-Week High",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/us-equity-buffer-etf-aprt-142300333.html?.tsrc=rss",
-          "published": "Wed, 01 Apr 2026 14:23:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Market Minute 4-1-26- Mega-Deals Surge, Oracle Cuts, Nike Slumps",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/market-minute-4-1-26-141500863.html?.tsrc=rss",
-          "published": "Wed, 01 Apr 2026 14:15:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "A $2 Million 401(k) in Retirement Can Still Cost You Six Figures Without These Moves",
-          "link": "https://247wallst.com/investing/2026/04/01/a-2-million-401k-in-retirement-can-still-cost-you-six-figures-without-these-moves/?.tsrc=rss",
-          "published": "Wed, 01 Apr 2026 13:39:46 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Exchange-Traded Funds, Equity Futures Gain Pre-Bell Wednesday as Iran War De-Escalation Hopes Drive Sentiment",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-130639197.html?.tsrc=rss",
-          "published": "Wed, 01 Apr 2026 13:06:39 +0000",
           "source": "Yahoo Finance"
         }
       ]
@@ -7908,6 +7908,12 @@
       "note": "",
       "news": [
         {
+          "title": "The Gold ETF With $83.8 Billion in Assets and a 0.25% Fee Investors Keep Choosing Over GLD",
+          "link": "https://247wallst.com/investing/2026/04/04/the-gold-etf-with-83-8-billion-in-assets-and-a-0-25-fee-investors-keep-choosing-over-gld/?.tsrc=rss",
+          "published": "Sat, 04 Apr 2026 13:12:21 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
           "title": "Should You Buy Gold ETFs on Fed's Assurance?",
           "link": "https://finance.yahoo.com/markets/commodities/articles/buy-gold-etfs-feds-assurance-120000267.html?.tsrc=rss",
           "published": "Thu, 02 Apr 2026 12:00:00 +0000",
@@ -7959,12 +7965,6 @@
           "title": "Physical Gold vs. Silver and the ETF Trade Setting Up Right Now",
           "link": "https://247wallst.com/investing/2026/03/21/physical-gold-vs-silver-and-the-etf-trade-setting-up-right-now/?.tsrc=rss",
           "published": "Sat, 21 Mar 2026 10:35:14 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Gold Is Back Under $5,000, And This ETF May Be The Best Bet On A Rebound Run Higher",
-          "link": "https://247wallst.com/investing/2026/03/20/gold-back-under-5000-is-this-the-best-etf-to-buy-for-its-next-run-higher/?.tsrc=rss",
-          "published": "Fri, 20 Mar 2026 17:55:28 +0000",
           "source": "Yahoo Finance"
         }
       ]
@@ -18049,7 +18049,13 @@
           "source": "Yahoo Finance"
         },
         {
-          "title": "Understanding Momentum Shifts in (EWA) - news.stocktradersdaily.com",
+          "title": "iShares MSCI Australia ETF (EWA) stock price, news, quote and history - Yahoo Finance UK",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE04b3FxYlo1TzdyS2hvZ1BJTEduNkt3S0xxOVRfa3kyOHI2ZXc1aWtwWHVnSVJ4SkFXZWdwSDRsLThrMnVQbkhXbi15Vm50VXFvdFFULUxwcEJVWXd4V3VyMw?oc=5",
+          "published": "Thu, 02 Apr 2026 20:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Understanding Momentum Shifts in (EWA) - Stock Traders Daily",
           "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNOWVQN3BjdEpZODhUa2FqY3hjX2dqeXVHaGRqSHh5WGo2Q3hHSnVEemh2SlJsLUxhNzhjaHB0WG93ekZMczhBaml1M1phNm5vazd1QWR1MWM0eFBkS2pkaUZUalJNaDJXVjdtbFhrUGlKVTNfajhMbjNfekc4WnFZeGJHSVg1WFVUa1FkX0hoem41TEd4OUZiYk1PZ001ZWFkWUM3b1BPNkFNdFcwWkJaRjJFOVNFZUJB?oc=5",
           "published": "Fri, 27 Mar 2026 14:02:02 GMT",
           "source": "Google News"
@@ -18061,15 +18067,15 @@
           "source": "Google News"
         },
         {
-          "title": "Asian shares gain and oil slips back despite a barrage of attacks by Iran - KSAT",
-          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdTZwQmNGX0duYjFoLXBuYUNJVkN6NTQ1X0ZTcHdLMnVYODhnSG1FR2lLTWVxQXczTUtJZmFHWG9lOXNwTnBUZzZwQ3pyeUx4SURwRVZ5NXllSVpYMU1QMFBJQWFSc2o5ZEliZ1c0S2FPVFRqc01VdVJZVnBvVW14MlRKNVVmWnZwZWZIeDdIZ0VYaW1GVm05cHNubEpLX0NjV05nT2Vuclh5U2VmYnRKU0Z1ZVFrVTFTb19J?oc=5",
-          "published": "Wed, 18 Mar 2026 07:00:00 GMT",
+          "title": "EWA Apr 2026 28.000 put (EWA260417P00028000) stock price, news, quote and history - Yahoo Finance UK",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAxczlQYVlOWDJNU2d0blVBWS1kclZ5ajEtdWNhVjVhT0xFb2w1WHBHcUhaT09MM09VOGlMR3FlQjcwYVhORVRucTI3YzBLbUdleEdaYW9EU1l3dFY1OVpncGJRbVU?oc=5",
+          "published": "Thu, 02 Apr 2026 19:47:25 GMT",
           "source": "Google News"
         },
         {
-          "title": "More drops for technology stocks weigh on Wall Street - WSLS",
-          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRk13MXlqQXdlN3hfMi1PTG14SWlfYnJwdGh3ZWdkenBMNDNwV2YxZ0p0ZlpORHBzdXV6eHVCdk5ndGFncXBhN2JVSmV5b05BYWJyeWNKbTlLaG5jSnh2bHREMGJycXJlXzNVTjRzVTlFU2Q0UVppTVRZM0UwdDE5N283WnJuYUtraXd1UHcyNGIzOHRkOVZldmFMd3pxNl9EX2NLS1BUMGNVUVVSRFp0SU1qU1hmVWZraWZB?oc=5",
-          "published": "Wed, 04 Feb 2026 08:00:00 GMT",
+          "title": "FXA Stock News Today | Earnings, Events & Price Alerts - Intellectia AI",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5ibUlycm10WXM5MWswVTBqZUN5bVBzbHpYbHc5elFsX2dMNGtuUlFTN0RuaUxrYUIyVzlMNl8tekJ0WU4xVUFQektzelNFREZQQVE?oc=5",
+          "published": "Tue, 31 Mar 2026 21:23:49 GMT",
           "source": "Google News"
         },
         {
@@ -18079,27 +18085,21 @@
           "source": "Google News"
         },
         {
-          "title": "Asian shares gain and oil slips back despite a barrage of attacks by Iran - Click2Houston",
-          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWHV4d1FXOUxoTm1PX20ySzRIUFJRN2hKS3oycGpSeUNLMGwxX3lOSmZtOGRfcDh6Z0g1MThNTWJXZEdRNkYtVlJibTFwUHc4eUNoS0xpVzNLckpLZlozQVpVYVc4SnJTNEZEOUppcjJCTnplbTV6ZlBBWFYzSVRJWnJvanpScVRUQnZiQjlMbUQ3U2trQmhaQkVzc2JOMHhFdTNHdjd4ZnpsQnBMaFVwdld1c2hnM05ZempkZHY5ZWdrVjI0QlA4?oc=5",
-          "published": "Tue, 17 Mar 2026 07:00:00 GMT",
-          "source": "Google News"
-        },
-        {
           "title": "Credit building fintech launches EWA product - American Banker",
           "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZmR5RzFLTTNxMk0ybG9tY2lFUk5wR1pacTkzazZWVVZqWldmOWxwTV9QcVVlZlFKRDZTVVFmd1FaVzZYWHlrUTBDSjdEODY4N0pnZV9QQmw0Vm9aT0R6V3QtUXVrZHBNaFJ1LWFIVTV4dC10dTdHNGxiRVF1eGh4MmtwZEpteC0xaTZjY0ZteU13V0h1Y0p0OTE0QUd0UHRnRjluUk1KOA?oc=5",
           "published": "Thu, 28 Aug 2025 07:00:00 GMT",
           "source": "Google News"
         },
         {
-          "title": "Insider Buying: Ewa Stasiowska Acquires Shares in Live Oak Bancs - GuruFocus",
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSWpycGVZbXVHQTZmUDN2YWVHRnlEWlhCdl9TaHJob0QySXI5YVRmTW9JZHBadXNwVGxkZFJ1aWFMSkRGTFJ1ZHBnM2xzTVZEejlYUnBUVllwZjRRTGJXVmF0czY1bG92d0o3VGtwTjJ1NEhZbGlRWDFwYzZRQzdTdF9ibl9fS3BkU1hoeC1zbjVabDk2bHh6M0xlNERNNi1QMmdBb0xBdHlTRHBTc2s1WA?oc=5",
-          "published": "Wed, 28 Jan 2026 08:00:00 GMT",
+          "title": "Avoiding Lag: Real-Time Signals in (EWA) Movement - Stock Traders Daily",
+          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNLTVjUlVOSnUyRVpVcjJRcXBZc3BPbFJvZDNhbEE1bVFNU2t6NVY5cVpvd3pfV2tRVHZ0eWU2dnkxUEVPQ3V5MkFWUXo4ZjdZZ1dBZktvaER4ekczaGZwNFRNeVRob0NrUldTZ2hadHpQVmdMMk1tZHJjejBaYjlLV21CV1BPekRfZ0RodmMxeG1wc0NsUXBlSWs5RU1PZjA3OF9DVl9hNmNMZG9iSlg1OGk3d05nRmd3N0ZyUDhhMGoyZ3UyS1E?oc=5",
+          "published": "Mon, 16 Mar 2026 12:54:02 GMT",
           "source": "Google News"
         },
         {
-          "title": "Avoiding Lag: Real-Time Signals in (EWA) Movement - news.stocktradersdaily.com",
-          "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNLTVjUlVOSnUyRVpVcjJRcXBZc3BPbFJvZDNhbEE1bVFNU2t6NVY5cVpvd3pfV2tRVHZ0eWU2dnkxUEVPQ3V5MkFWUXo4ZjdZZ1dBZktvaER4ekczaGZwNFRNeVRob0NrUldTZ2hadHpQVmdMMk1tZHJjejBaYjlLV21CV1BPekRfZ0RodmMxeG1wc0NsUXBlSWs5RU1PZjA3OF9DVl9hNmNMZG9iSlg1OGk3d05nRmd3N0ZyUDhhMGoyZ3UyS1E?oc=5",
-          "published": "Mon, 16 Mar 2026 12:54:02 GMT",
+          "title": "EWA Jul 2026 27.000 call (EWA260717C00027000) Interactive Stock Chart - Yahoo! Finance Canada",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE44WjVjUjJ3QXZ2dEhYQl9YbkFzNDBaUGRPbXFubXlqUGMwT0NCdWF3Wjd1UEx0MnptMkVjUXRYS0o0SjdYTVRkaTB6ZmduS2dvakYyYW5Da2JxYmkzZFczTWRXRTEwNzBjY2NDYg?oc=5",
+          "published": "Thu, 02 Apr 2026 16:36:31 GMT",
           "source": "Google News"
         }
       ]
@@ -26280,6 +26280,12 @@
       "note": "",
       "news": [
         {
+          "title": "CPER Returned 138% Over 10 Years, But Copper Miners Left It in the Dust",
+          "link": "https://247wallst.com/investing/2026/04/04/cper-returned-138-over-10-years-but-copper-miners-left-it-in-the-dust/?.tsrc=rss",
+          "published": "Sat, 04 Apr 2026 13:30:12 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
           "title": "Copper Cools After Record January\u2014But This ETF Is a Buy-the-Dip Opportunity",
           "link": "https://www.marketbeat.com/originals/copper-cools-after-record-januarybut-this-etf-is-a-buy-the-dip-opportunity/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
           "published": "Sun, 22 Mar 2026 16:22:00 +0000",
@@ -26331,12 +26337,6 @@
           "title": "Santa Rally Falls Short: Top ETF Performers of December",
           "link": "https://finance.yahoo.com/news/santa-rally-falls-short-top-130000378.html?.tsrc=rss",
           "published": "Fri, 02 Jan 2026 13:00:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Tariffs Pushed CPER Up 39%, Doubling S&P 500 Returns",
-          "link": "https://247wallst.com/investing/2026/01/01/tariffs-pushed-cper-up-39-doubling-sp-500-returns/?.tsrc=rss",
-          "published": "Thu, 01 Jan 2026 16:22:00 +0000",
           "source": "Yahoo Finance"
         }
       ]
@@ -26633,6 +26633,12 @@
       "note": "",
       "news": [
         {
+          "title": "Nuclear's Pullback: A Generational Buying Opportunity?",
+          "link": "https://www.marketbeat.com/originals/nuclears-pullback-a-generational-buying-opportunity/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+          "published": "Thu, 02 Apr 2026 12:20:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
           "title": "3 ETFs That Thrive When the Fed Does Absolutely Nothing",
           "link": "https://247wallst.com/investing/2026/03/16/3-etfs-that-thrive-when-the-fed-does-absolutely-nothing/?.tsrc=rss",
           "published": "Mon, 16 Mar 2026 15:12:36 +0000",
@@ -26684,12 +26690,6 @@
           "title": "Sprott Silver Miners & Physical Silver ETF Reaches $500 Million in Assets in Less Than a Year",
           "link": "https://finance.yahoo.com/news/sprott-silver-miners-physical-silver-210000488.html?.tsrc=rss",
           "published": "Mon, 15 Dec 2025 21:00:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "From Gold to Uranium: Inside the Metals Boom of 2025",
-          "link": "https://finance.yahoo.com/news/gold-uranium-inside-metals-boom-181100356.html?.tsrc=rss",
-          "published": "Tue, 28 Oct 2025 18:11:00 +0000",
           "source": "Yahoo Finance"
         }
       ]
@@ -30794,7 +30794,7 @@
         "1d": 0.23,
         "5d": 1.89,
         "30d": 0.29,
-        "90d": 6.08,
+        "90d": 6.07,
         "150d": 11.14,
         "250d": 20.76
       },
@@ -53717,7 +53717,7 @@
         "5d": 0.93,
         "30d": -5.71,
         "90d": -2.15,
-        "150d": 8.78,
+        "150d": 8.79,
         "250d": 7.07
       },
       "ema50": 72.21,
@@ -65968,6 +65968,12 @@
       "note": "",
       "news": [
         {
+          "title": "The Grid Can't Keep Up. These 2 Utility Stocks Are the Buys of the Month.",
+          "link": "https://www.fool.com/investing/2026/04/03/the-grid-cant-keep-up-these-x-utility-stocks-are-t/?.tsrc=rss",
+          "published": "Fri, 03 Apr 2026 19:50:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
           "title": "Rising AI Power Demand And Nuclear Fuel Deal Might Change The Case For Investing In GE Vernova (GEV)",
           "link": "https://finance.yahoo.com/sectors/energy/articles/rising-ai-power-demand-nuclear-071015328.html?.tsrc=rss",
           "published": "Fri, 03 Apr 2026 07:10:15 +0000",
@@ -66019,12 +66025,6 @@
           "title": "GE Vernova Inc. (GEV): Billionaire Ray Dalio Admires This Energy Stock",
           "link": "https://finance.yahoo.com/sectors/energy/articles/ge-vernova-inc-gev-billionaire-185610389.html?.tsrc=rss",
           "published": "Wed, 01 Apr 2026 18:56:10 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Microsoft and Chevron enter exclusivity deal on powering West Texas AI data center complex",
-          "link": "https://finance.yahoo.com/sectors/energy/articles/microsoft-chevron-enter-exclusivity-deal-185128059.html?.tsrc=rss",
-          "published": "Wed, 01 Apr 2026 18:51:28 +0000",
           "source": "Yahoo Finance"
         }
       ]
@@ -66175,63 +66175,63 @@
       "note": "",
       "news": [
         {
-          "title": "Assessing Palantir Technologies (PLTR) Valuation After Stellantis Renewal And Pentagon Maven Milestone",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/assessing-palantir-technologies-pltr-valuation-061048316.html?.tsrc=rss",
-          "published": "Fri, 03 Apr 2026 06:10:48 +0000",
+          "title": "Lawmakers send stern warning to Palantir",
+          "link": "https://www.thestreet.com/investing/lawmakers-send-stern-warning-to-palantir?.tsrc=rss",
+          "published": "Mon, 06 Apr 2026 01:37:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "IRS adds Palantir tech to find tax cheats",
-          "link": "https://www.thestreet.com/technology/irs-adds-palantir-tech-to-find-tax-cheats?.tsrc=rss",
-          "published": "Fri, 03 Apr 2026 03:17:00 +0000",
+          "title": "If You Buy Palantir Stock Today, Here's Where It Could Be in 5 Years",
+          "link": "https://www.fool.com/investing/2026/04/05/if-you-buy-palantir-stock-today-heres-where-pltr/?.tsrc=rss",
+          "published": "Sun, 05 Apr 2026 12:50:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "What Oil Shock? S&P 500 Estimates Keep Rising. These Stocks' Views Rise Most.",
-          "link": "https://finance.yahoo.com/m/0ef2e461-98e5-3976-972f-f29248ed290d/what-oil-shock%3F-s%26p-500.html?.tsrc=rss",
-          "published": "Thu, 02 Apr 2026 20:32:00 +0000",
+          "title": "Jim Cramer on Palantir: \u201cI Think They\u2019ll Have a Great 2026 and 2027\u201d",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-palantir-think-ll-225624382.html?.tsrc=rss",
+          "published": "Sat, 04 Apr 2026 22:56:24 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Sandisk Was the Top-Performing S&P 500 Stock in Q1. Can SNDK Continue Its Run in Q1?",
-          "link": "https://www.barchart.com/story/news/1121462/sandisk-was-the-top-performing-s-p-500-stock-in-q1-can-sndk-continue-its-run-in-q1?.tsrc=rss",
-          "published": "Thu, 02 Apr 2026 18:12:27 +0000",
+          "title": "Is It Too Late To Consider Palantir Technologies (PLTR) After Its 100% One Year Surge?",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/too-consider-palantir-technologies-pltr-221010956.html?.tsrc=rss",
+          "published": "Sat, 04 Apr 2026 22:10:10 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Iran Identifies Palantir as a \u2018Legitimate Target\u2019 for Threatened Attacks: Should You Sell PLTR Stock Now?",
-          "link": "https://www.barchart.com/story/news/1120836/iran-identifies-palantir-as-a-legitimate-target-for-threatened-attacks-should-you-sell-pltr-stock-now?.tsrc=rss",
-          "published": "Thu, 02 Apr 2026 17:58:52 +0000",
+          "title": "Peter Thiel\u2019s big bet on solar-powered cow collars",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/peter-thiels-big-bet-on-solar-powered-cow-collars-213000530.html?.tsrc=rss",
+          "published": "Sat, 04 Apr 2026 21:30:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Exploring High Growth Tech Stocks In US For April 2026",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/exploring-high-growth-tech-stocks-173848406.html?.tsrc=rss",
-          "published": "Thu, 02 Apr 2026 17:38:48 +0000",
+          "title": "Got $5,000? 3 AI Supercycle Growth Stocks at Every Layer of the Stack.",
+          "link": "https://www.fool.com/investing/2026/04/04/got-5000-3-ai-supercycle-growth-stocks-at-every/?.tsrc=rss",
+          "published": "Sat, 04 Apr 2026 15:20:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "UBS has a message for Palantir investors",
-          "link": "https://www.thestreet.com/investing/stocks/ubs-has-a-message-for-palantir-investors?.tsrc=rss",
-          "published": "Thu, 02 Apr 2026 16:07:20 +0000",
+          "title": "Where Will Nvidia Stock Be in 5 Years?",
+          "link": "https://www.fool.com/investing/2026/04/04/where-will-nvidia-stock-be-in-5-years/?.tsrc=rss",
+          "published": "Sat, 04 Apr 2026 12:25:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "The Market Is Split on Palantir Stock. Should You Buy or Avoid Now?",
-          "link": "https://www.barchart.com/story/news/1118410/the-market-is-split-on-palantir-stock-should-you-buy-or-avoid-now?.tsrc=rss",
-          "published": "Thu, 02 Apr 2026 15:40:13 +0000",
+          "title": "Investors Are Rotating Out of Palantir. Here's the Growth Stock I'm Buying Instead.",
+          "link": "https://www.fool.com/investing/2026/04/04/investors-are-rotating-out-of-palantir-heres-the-g/?.tsrc=rss",
+          "published": "Sat, 04 Apr 2026 11:35:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Is Palantir Actually Undervalued? This Key Metric Says It Is",
-          "link": "https://www.fool.com/investing/2026/04/02/is-palantir-actually-undervalued-this-key-metric/?.tsrc=rss",
-          "published": "Thu, 02 Apr 2026 14:20:00 +0000",
+          "title": "The Artificial Intelligence (AI) Stocks That Worked in 2025 Aren't Working in 2026. Here's the New Playbook.",
+          "link": "https://www.fool.com/investing/2026/04/04/artificial-intelligence-ai-stocks-working-new/?.tsrc=rss",
+          "published": "Sat, 04 Apr 2026 08:50:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Can Multi-Domain ISR Fuel ONDS' Growth Engine After World View Buyout?",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/multi-domain-isr-fuel-onds-121900425.html?.tsrc=rss",
-          "published": "Thu, 02 Apr 2026 12:19:00 +0000",
+          "title": "Palantir Technologies Stock Is Down 30%. Wall Street Says This Will Happen Next. (Hint: It May Surprise You.)",
+          "link": "https://www.fool.com/investing/2026/04/04/palantir-stock-down-30-wall-street-this-comes-next/?.tsrc=rss",
+          "published": "Sat, 04 Apr 2026 08:08:00 +0000",
           "source": "Yahoo Finance"
         }
       ]
