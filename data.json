@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T08:00:40.409059Z",
+  "generated_at": "2026-04-08T18:12:51.898518Z",
   "generated_date": "2026-04-08",
   "indicators": {
     "move": {
@@ -529,12 +529,12 @@
         },
         {
           "date": "2026-04-08",
-          "value": 20.86
+          "value": 21.24
         }
       ],
-      "latest": 20.86,
+      "latest": 21.24,
       "prev": 25.78,
-      "change": -4.92,
+      "change": -4.54,
       "as_of": "2026-04-08",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
@@ -797,12 +797,16 @@
         {
           "date": "2026-04-07",
           "value": 37.43
+        },
+        {
+          "date": "2026-04-08",
+          "value": 33.9
         }
       ],
-      "latest": 37.43,
-      "prev": 37.04,
-      "change": 0.39,
-      "as_of": "2026-04-07",
+      "latest": 33.9,
+      "prev": 37.43,
+      "change": -3.53,
+      "as_of": "2026-04-08",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
       "note": ""
@@ -1064,12 +1068,16 @@
         {
           "date": "2026-04-07",
           "value": 79.72
+        },
+        {
+          "date": "2026-04-08",
+          "value": 80.18
         }
       ],
-      "latest": 79.72,
-      "prev": 79.7,
-      "change": 0.02,
-      "as_of": "2026-04-07",
+      "latest": 80.18,
+      "prev": 79.72,
+      "change": 0.46,
+      "as_of": "2026-04-08",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
       "note": ""
@@ -1331,12 +1339,16 @@
         {
           "date": "2026-04-07",
           "value": 4.984
+        },
+        {
+          "date": "2026-04-08",
+          "value": 5.009
         }
       ],
-      "latest": 4.984,
-      "prev": 4.935,
-      "change": 0.049,
-      "as_of": "2026-04-07",
+      "latest": 5.009,
+      "prev": 4.984,
+      "change": 0.025,
+      "as_of": "2026-04-08",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
       "note": ""
@@ -1605,24 +1617,98 @@
       "note": ""
     },
     "jgb": {
-      "series": [],
-      "latest": null,
-      "prev": null,
-      "change": null,
-      "as_of": null,
-      "status": "error",
-      "source": "FRED",
-      "note": "HTTP error: 500 Server Error: Internal Server Error for url: https://api.stlouisfed.org/fred/series/observations?series_id=IRLTLT01JPM156N&observation_start=2025-10-04&observation_end=2026-04-08&file_type=json&api_key=03e0621a76151977533b8ce1d181595f"
+      "series": [
+        {
+          "date": "2025-10-01",
+          "value": 1.66
+        },
+        {
+          "date": "2025-11-01",
+          "value": 1.8
+        },
+        {
+          "date": "2025-12-01",
+          "value": 2.06
+        },
+        {
+          "date": "2026-01-01",
+          "value": 2.24
+        },
+        {
+          "date": "2026-02-01",
+          "value": 2.11
+        }
+      ],
+      "latest": 2.11,
+      "prev": 2.24,
+      "change": -0.13,
+      "as_of": "2026-02-01",
+      "status": "ok",
+      "source": "FRED (IRLTLT01JPM156N)",
+      "note": ""
     },
     "nfci": {
-      "series": [],
-      "latest": null,
-      "prev": null,
-      "change": null,
-      "as_of": null,
-      "status": "error",
-      "source": "FRED",
-      "note": "HTTP error: 500 Server Error: Internal Server Error for url: https://api.stlouisfed.org/fred/series/observations?series_id=NFCI&observation_start=2026-01-05&observation_end=2026-04-08&file_type=json&api_key=03e0621a76151977533b8ce1d181595f"
+      "series": [
+        {
+          "date": "2026-01-09",
+          "value": -0.55
+        },
+        {
+          "date": "2026-01-16",
+          "value": -0.56
+        },
+        {
+          "date": "2026-01-23",
+          "value": -0.56
+        },
+        {
+          "date": "2026-01-30",
+          "value": -0.56
+        },
+        {
+          "date": "2026-02-06",
+          "value": -0.55
+        },
+        {
+          "date": "2026-02-13",
+          "value": -0.54
+        },
+        {
+          "date": "2026-02-20",
+          "value": -0.52
+        },
+        {
+          "date": "2026-02-27",
+          "value": -0.51
+        },
+        {
+          "date": "2026-03-06",
+          "value": -0.49
+        },
+        {
+          "date": "2026-03-13",
+          "value": -0.47
+        },
+        {
+          "date": "2026-03-20",
+          "value": -0.45
+        },
+        {
+          "date": "2026-03-27",
+          "value": -0.44
+        },
+        {
+          "date": "2026-04-03",
+          "value": -0.43
+        }
+      ],
+      "latest": -0.43,
+      "prev": -0.44,
+      "change": 0.01,
+      "as_of": "2026-04-03",
+      "status": "ok",
+      "source": "FRED (NFCI)",
+      "note": ""
     },
     "spread": {
       "series": [
