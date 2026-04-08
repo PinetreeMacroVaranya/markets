@@ -1,16 +1,13 @@
 name: Fetch Market Data Daily
-
 on:
   schedule:
-    - cron: '30 6 * * 1-5'   # Weekdays only (Mon–Fri)
+    - cron: '30 6 * * 1-5'
   workflow_dispatch:
-
 jobs:
   fetch-and-commit:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -26,9 +23,9 @@ jobs:
       - name: Fetch market data
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-          TE_API_KEY:   ${{ secrets.TE_API_KEY }}
         run: python fetch_data.py
-        - name: Commit and Push changes
+
+      - name: Commit and Push changes
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
