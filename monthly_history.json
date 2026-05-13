@@ -84,10 +84,10 @@
         "spread": 0.51,
         "vix": 24.77,
         "brent": 103.79,
-        "buffett": null,
+        "buffett": 212,
         "hyg": 79.56,
         "gvz": 38.89,
-        "fg": null
+        "fg": 6
       }
     },
     {
@@ -102,10 +102,10 @@
         "spread": 0.52,
         "vix": 17.06,
         "brent": 113.89,
-        "buffett": null,
+        "buffett": 213,
         "hyg": 80.38,
         "gvz": 26.64,
-        "fg": null
+        "fg": 71
       }
     }
   ]
