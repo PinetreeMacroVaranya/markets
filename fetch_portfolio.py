@@ -39,7 +39,7 @@ BATCH_SIZE      = 50
 # -----------------------------------------------------------------
 
 ETF_TICKERS = [
-    "SPY","GLD", "BRK-B", "GRID", "FXI", "SJB","GVAL","VFLO","ABXXF","WRTH","WRTH","RSHO","PAVE","DVYE","XLI","XLB","MOO"
+    "SPY","GLD", "BRK-B", "GRID", "FXI", "SJB","GVAL","VFLO","ABXXF","WRTH","RSHO","PAVE","DVYE","XLI","XLB","MOO"
 ]
 
 # -----------------------------------------------------------------
