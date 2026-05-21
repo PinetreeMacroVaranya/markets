@@ -31,7 +31,7 @@ except ImportError:
 # CONFIG
 # -----------------------------------------------------------------
 
-NEWS_PER_TICKER = 10
+NEWS_PER_TICKER = 20
 BATCH_SIZE      = 50
 
 # -----------------------------------------------------------------
@@ -39,54 +39,7 @@ BATCH_SIZE      = 50
 # -----------------------------------------------------------------
 
 ETF_TICKERS = [
-    "SPY","IVV","VOO","VTI","QQQ","VEA","IEFA","AGG","VUG","VTV",
-    "BND","VWO","GLD","IJH","IWM","VIG","IEMG","IJR","VGT","VO",
-    "IWF","VXUS","BSV","MUB","VB","ITOT","IWD","IEF","LQD","TLT",
-    "SHY","VNQ","XLF","XLK","XLE","XLV","XLI","XLC","XLY","XLP",
-    "XLU","XLB","XLRE","GDX","SLV","USO","IAU","SGOL","DBC","PDBC",
-    "HYG","JNK","EMB","VCIT","VCSH","VGSH","VGIT","VGLT","VMBS","MBB",
-    "TIP","SCHP","STIP","VTIP","SPAB","SPSB","SPSM","SCHB","SCHX","SCHD",
-    "SCHF","SCHE","SCHH","SCHG","SCHV","SCHA","SCHM","ARKK","ARKQ","ARKW",
-    "ARKG","ARKF","SPDW","SPEM","SPLG","SPYG","SPYV","SPYD","SPMO","DIA",
-    "MDY","RSP","OEF","SDY","DVY","VHT","VFH","VIS","VAW","VCR",
-    "VDC","VPU","VRE","VOX","VBK","VBR","VGK","VPL","EFA","EEM",
-    "EWJ","EWZ","EWC","EWG","EWU","EWA","EWH","EWS","EWL","EWT",
-    "EWY","EWP","EWQ","EWI","EWD","EWN","EWO","EWK","FXI","MCHI",
-    "KWEB","ASHR","EPI","INDA","SMIN","INDY","AAXJ","DEM","EDIV",
-    "IYW","IGV","SOXX","SMH","QTEC","SKYY","CLOU","WCLD","BUG","CIBR",
-    "HACK","ROBO","BOTZ","IRBO","ICLN","QCLN","ACES","SMOG","CNRG","ERTH",
-    "IBB","XBI","PTH","BBH","FBT","SBIO","GNR","XME","PICK","SLX",
-    "REMX","LIT","COPX","URA","URNM","IYR","RWR","REM","MORT","HOMZ",
-    "TBF","TMF","TBT","SPTL","EDV","ZROZ","PSQ","SH","RWM","DOG",
-    "SDS","QID","TWM","TQQQ","UPRO","UDOW","URTY","TNA","SPXL","TECL",
-    "JEPI","JEPQ","DIVO","QYLD","RYLD","XYLD","NUSI","GPIX","GPIQ","XDTE",
-    "ENFR","MLPA","PFF","PFFD","FPE","SPFF","HYD","HYMB",
-    "BKLN","SRLN","FLOT","USFR","TFLO","ICSH","NEAR","SHV","BIL","SGOV",
-    "TBIL","GBIL","MINT","JPST","GSY","PULS","RAVI","FTSM","IGSB","ANGL",
-    "FALN","HYS","HYDB","SHYG","USHY","HYLB","HYXF","HYXU","BNDX","IAGG",
-    "BWX","WIP","IGOV","EBND","HYEM","DXJ","HEDJ","HEFA","DBEF","DBEZ",
-    "HEWJ","HEWU","HEEM","HEZU","SPLV","USMV","EFAV","EEMV","ACWV",
-    "LGLV","QUAL","SIZE","VLUE","MTUM","LRGF","ESGU","ESGE","USSG","ESGV",
-    "CRBN","LOWC","ETHO","COWZ","CALF","DEEP","DSTL","MOAT",
-    "VRP","PGF","PSK","PFIG","BMAX","BUFD","BUFQ","BUFZ",
-    "SVOL","IWMY","DIVY","JEPY","FEPI","AIPI","CONY","NVDY",
-    "AMZY","MSFO","TSLL","NVDL","GGLL","MSTU","MSFU","NVDU","NVDD",
-    "YMAX","YMAG","PLTY","TSMY","SNOY","METL","NFLY","AMDY","GOGY",
-    "FIVY","SIXO","RDTE","WDTE","QDTE","BSVO","BUFP",
-    "RDVY","TDIV","SDOG","FDL","FVD","CDC","DGRO","DGRW",
-    "NOBL","REGL","SMDV","VYMI","VIGI","VFMF","VFMO","VFQY","VFVA","VFLQ",
-    "OMFL","OMFS","DYNF","FVAL","FQAL","FLCG","FLCV","FLGV","INTF","INTL",
-    "MFUS","MFEM","MFMO","MFDX",
-    "ONEQ","FENY","FIDU","FSTA","FHLC","FMAT","FNCL","FREL","FTEC","FUTY",
-    "FCOM","FDIS","FIVG","FDRV","FBND","FCOR","FLTB","FSEC","FUMB","FLDR",
-    "FCSH","FCLD","FDWM","FDIG","FSMB","FMCX","FSST","FLEE","FDEV",
-    "FINX","IPAY","LEND","SNSR","XITK","XSHD","XSLV",
-    "XSOE","XSMO","XSVM","XSW","XNTK","XMMO","XMHQ","XMVM",
-    "JMST","JPIE","JAGG","JBND","JCPB","JMUB","JPUS","JIRE","JHEM","JIVE",
-    "HELO","BSCO","BSCP","BSCQ","BSCR","BSCS","BSCT","BSCU","BSCV","BSCW",
-    "IBDO","IBDP","IBDQ","IBDR","IBDS","IBDT","IBDU","IBDV","IBDW","IBDX",
-    "BSJP","BSJQ","BSJR","BSJS","BSJT","BSJU","BSJV","BSJW","BSJX","BSJY",
-    "IBTD","IBTE","IBTF","IBTG","IBTH","IBTI","IBTJ","IBTK","IBTL","IBTM",
+    "SPY","GLD", "BRK-B", "GRID", "FXI", "SJB","GVAL","VFLO","ABXXF","WRTH","WRTH","RSHO","PAVE","DVYE","XLI","XLB","MOO"
 ]
 
 # -----------------------------------------------------------------
@@ -285,34 +238,47 @@ def enrich_ticker(ticker, data):
         pass
     return data
 
-def fetch_news(ticker, max_articles=10):
+def fetch_news(ticker, max_articles=20):
     articles = []
     seen_titles = set()
+
+    # Source 1: Yahoo Finance RSS
     try:
         url  = f"https://feeds.finance.yahoo.com/rss/2.0/headline?s={ticker}&region=US&lang=en-US"
         feed = feedparser.parse(url)
         for entry in feed.entries[:max_articles]:
-            title = entry.get("title","").strip()
+            title = entry.get("title", "").strip()
             if title and title not in seen_titles:
-                articles.append({"title":title,"link":entry.get("link",""),"published":entry.get("published",""),"source":"Yahoo Finance"})
+                articles.append({
+                    "title":     title,
+                    "link":      entry.get("link", ""),
+                    "published": entry.get("published", ""),
+                    "source":    "Yahoo Finance"
+                })
                 seen_titles.add(title)
     except Exception:
         pass
-    if len(articles) < max_articles:
-        try:
-            url  = f"https://news.google.com/rss/search?q={ticker}+stock&hl=en-US&gl=US&ceid=US:en"
-            feed = feedparser.parse(url)
-            for entry in feed.entries:
-                if len(articles) >= max_articles:
-                    break
-                title = entry.get("title","").strip()
-                if title and title not in seen_titles:
-                    articles.append({"title":title,"link":entry.get("link",""),"published":entry.get("published",""),"source":"Google News"})
-                    seen_titles.add(title)
-        except Exception:
-            pass
-    return articles[:max_articles]
 
+    # Source 2: Google News RSS — always fetched, not just fallback
+    try:
+        url  = f"https://news.google.com/rss/search?q={ticker}+stock&hl=en-US&gl=US&ceid=US:en"
+        feed = feedparser.parse(url)
+        for entry in feed.entries:
+            if len(articles) >= max_articles:
+                break
+            title = entry.get("title", "").strip()
+            if title and title not in seen_titles:
+                articles.append({
+                    "title":     title,
+                    "link":      entry.get("link", ""),
+                    "published": entry.get("published", ""),
+                    "source":    "Google News"
+                })
+                seen_titles.add(title)
+    except Exception:
+        pass
+
+    return articles[:max_articles]
 # -----------------------------------------------------------------
 # LOAD DISPLAY TICKERS
 # -----------------------------------------------------------------
