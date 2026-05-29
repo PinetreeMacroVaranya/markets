@@ -39,9 +39,10 @@ BATCH_SIZE      = 50
 # -----------------------------------------------------------------
 
 ETF_TICKERS = [
-    "SPY","GLD", "BRK-B", "GRID", "FXI", "SJB","GVAL","VFLO","ABXXF","DVYE","XLI","XLB","MOO", "WRTH","RSHO","PAVE"
+    "SPY","GLD", "BRK-B", "GRID", "FXI", "SJB","GVAL","VFLO","DVYE","XLI","XLB","MOO","PAVE"
 ]
-
+# Add this list at the top with your other ticker lists
+INDIVIDUAL_TICKERS = ["ABXXF", "WRTH", "RSHO"]  # OTC/illiquid - fetch one by one
 # -----------------------------------------------------------------
 # STOCK TICKERS
 # -----------------------------------------------------------------
