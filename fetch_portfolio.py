@@ -296,16 +296,77 @@ def load_display_tickers():
 # -----------------------------------------------------------------
 
 def main():
-    etf_list   = dedup(ETF_TICKERS)
-    stock_list = dedup(STOCK_TICKERS)
-    all_tickers = dedup(etf_list + stock_list)
+    etf_list      = dedup(ETF_TICKERS)
+    stock_list    = dedup(STOCK_TICKERS)
+    individual    = dedup(INDIVIDUAL_TICKERS)
+    all_tickers   = dedup(etf_list + stock_list + individual)
 
     log("=== Portfolio Data Fetch Starting ===")
     log(f"Universe: {len(all_tickers)} tickers ({len(etf_list)} ETFs + {len(stock_list)} stocks)")
 
     # 1. Batch fetch all prices
-    all_closes = fetch_batch_prices(all_tickers)
+   def fetch_batch_prices(tickers):
+    log(f"Fetching price history for {len(tickers)} tickers...")
+    all_closes = {}
 
+    # Separate individual tickers from batch tickers
+    individual = [t for t in tickers if t in INDIVIDUAL_TICKERS]
+    batch_tickers = [t for t in tickers if t not in INDIVIDUAL_TICKERS]
+
+    # Batch fetch for normal tickers
+    for i in range(0, len(batch_tickers), BATCH_SIZE):
+        batch = batch_tickers[i:i+BATCH_SIZE]
+        log(f"  Batch {i//BATCH_SIZE+1}/{(len(batch_tickers)-1)//BATCH_SIZE+1}: {len(batch)} tickers")
+        try:
+            data = yf.download(
+                batch,
+                period="15mo",
+                interval="1d",
+                auto_adjust=True,
+                progress=False,
+                group_by="ticker",
+                threads=True
+            )
+            for ticker in batch:
+                try:
+                    if len(batch) == 1:
+                        close = data["Close"].dropna()
+                    else:
+                        if ticker not in data.columns.get_level_values(0):
+                            continue
+                        close = data[ticker]["Close"].dropna()
+                    if len(close) >= 5:
+                        all_closes[ticker] = close
+                except Exception:
+                    pass
+        except Exception as e:
+            log(f"  Batch error: {e}")
+        time.sleep(0.5)
+
+    # Individual fetch for OTC/illiquid tickers
+    if individual:
+        log(f"  Fetching {len(individual)} OTC/illiquid tickers individually...")
+        for ticker in individual:
+            try:
+                data = yf.download(
+                    ticker,
+                    period="15mo",
+                    interval="1d",
+                    auto_adjust=True,
+                    progress=False
+                )
+                close = data["Close"].dropna()
+                if len(close) >= 5:
+                    all_closes[ticker] = close
+                    log(f"    {ticker}: {len(close)} days OK")
+                else:
+                    log(f"    {ticker}: insufficient data ({len(close)} days)")
+            except Exception as e:
+                log(f"    {ticker}: failed — {e}")
+            time.sleep(0.5)
+
+    log(f"  Got price data for {len(all_closes)} tickers")
+    return all_closes
     # 2. Compute signals for all tickers
     log("Computing signals for all tickers...")
     stocks = {}
