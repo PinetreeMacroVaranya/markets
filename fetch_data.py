@@ -122,7 +122,7 @@ def fetch_yahoo_ratio(ticker1, ticker2, decimals=3):
         for idx in common_dates:
             v1 = safe_float(h1.loc[idx, "Close"])
             v2 = safe_float(h2.loc[idx, "Close"])
-            if v1 and v2 and v2 != 0:
+            if v1 is not None and v2 is not None and float(v2) != 0:
                 series.append({
                     "date":  idx.strftime("%Y-%m-%d"),
                     "value": round(v1 / v2, decimals)
