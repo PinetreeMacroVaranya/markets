@@ -124,14 +124,12 @@ def fetch_batch_prices(tickers):
     log(f"Fetching price history for {len(tickers)} tickers...")
     all_closes = {}
 
-    # Separate OTC/illiquid tickers from normal tickers
     individual    = [t for t in tickers if t in INDIVIDUAL_TICKERS]
     batch_tickers = [t for t in tickers if t not in INDIVIDUAL_TICKERS]
 
-    # Batch fetch for normal tickers
     for i in range(0, len(batch_tickers), BATCH_SIZE):
         batch = batch_tickers[i:i+BATCH_SIZE]
-        log(f"  Batch {i//BATCH_SIZE+1}/{(len(batch_tickers)-1)//BATCH_SIZE+1}: {len(batch)} tickers")
+        log(f"  Batch {i//BATCH_SIZE+1}/{max(1,(len(batch_tickers)-1)//BATCH_SIZE+1)}: {len(batch)} tickers")
         try:
             data = yf.download(
                 batch,
@@ -158,19 +156,24 @@ def fetch_batch_prices(tickers):
             log(f"  Batch error: {e}")
         time.sleep(0.5)
 
-    # Individual fetch for OTC/illiquid tickers
     if individual:
         log(f"  Fetching {len(individual)} OTC/illiquid tickers individually...")
         for ticker in individual:
             try:
                 data = yf.download(
-                    ticker,
+                    [ticker],          # pass as list to force multi-ticker DataFrame structure
                     period="15mo",
                     interval="1d",
                     auto_adjust=True,
-                    progress=False
+                    progress=False,
+                    group_by="ticker",
+                    threads=False
                 )
-                close = data["Close"].dropna()
+                # With a list of 1, yfinance returns multi-level columns
+                if ticker in data.columns.get_level_values(0):
+                    close = data[ticker]["Close"].dropna()
+                else:
+                    close = data["Close"].dropna()
                 if len(close) >= 5:
                     all_closes[ticker] = close
                     log(f"    {ticker}: {len(close)} days OK")
