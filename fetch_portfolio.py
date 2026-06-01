@@ -43,7 +43,7 @@ ETF_TICKERS = [
     "GVAL", "VFLO","DVYE", "XLI", "XLB", "MOO", 
     "PAVE","ARGT","CANC", "DARP", "DBA","DVYE",
     "EUAD","EWC","EWJ","EWS","EWU","EWZ","FCG",
-    "FXI","GDX","GDXJ","HFG","IEUS","IGV","IWM",
+    "FXI","GDX","GDXJ","HFG","IEUS","SRUUF","IGV","IWM",
     "IXC","IXG","JEDI","KROP","LIT","MOO","NASA"
 ]
 
