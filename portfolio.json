@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-29T10:34:10.715375Z",
-  "generated_date": "2026-05-29",
+  "generated_at": "2026-06-01T12:22:04.724481Z",
+  "generated_date": "2026-06-01",
   "tickers": [
     "SPY",
     "GLD",
@@ -65,28 +65,24 @@
       "status": "ok",
       "ticker": "SPY",
       "name": "State Street SPDR S&P 500 ETF T",
-      "price": 754.6,
-      "prev_close": 750.46,
-      "change_pct": 0.55,
-      "as_of": "2026-05-28",
+      "price": 756.48,
+      "prev_close": 754.6,
+      "change_pct": 0.25,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": 0.55,
-        "5d": 1.8,
+        "1d": 0.25,
+        "5d": 1.85,
         "30d": 7.81,
-        "90d": 9.4,
-        "150d": 13.05,
-        "250d": 29.35
+        "90d": 11.95,
+        "150d": 13.92,
+        "250d": 29.82
       },
-      "ema50": 714.7,
-      "ema200": 675.8,
+      "ema50": 716.34,
+      "ema200": 676.6,
       "ma_signal": "HOLD",
-      "zscore": 2.08,
-      "cmf": 0.269,
+      "zscore": 2.07,
+      "cmf": 0.241,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 701.66
-        },
         {
           "date": "2026-04-17",
           "value": 710.14
@@ -202,10 +198,104 @@
         {
           "date": "2026-05-28",
           "value": 754.6
+        },
+        {
+          "date": "2026-05-29",
+          "value": 756.48
         }
       ],
       "note": "",
       "news": [
+        {
+          "title": "Stock Market Today: Dow Rises Amid Continued U.S.-Iran Deal Hopes; Nvidia Rallies On New Chip (Live Coverage)",
+          "link": "https://finance.yahoo.com/m/3138c2d2-4b2a-32f7-a3e4-cc74938cfe89/stock-market-today%3A-dow-rises.html?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 12:04:35 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Nasdaq, S&P 500 Futures Open June On Strong Footing: Why NVDA, DELL, HPE, TSM, TSLA, SPCE, RVMD Are In Focus",
+          "link": "https://stocktwits.com/news-articles/markets/equity/nasdaq-sp500-futures-rise-ai-trade-nvda-dell-spce-hpe-rvmd-stocks-to-watch/cZ0gZXjReHb?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 08:30:20 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Nasdaq, S&P 500, Dow Futures Edge Higher Even As Trump Keeps Iran Deal In Limbo: BBAI, SPCE, SOFI, IBM In Focus",
+          "link": "https://stocktwits.com/news-articles/markets/equity/nasdaq-sp500-dow-futures-edge-higher-even-as-trump-keeps-iran-deal-in-limbo/cZ0gadJReu0?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 01:29:43 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "I\u2019m 53 With $1.5 Million and Want to Retire in Carmel With a Sports Car. Here\u2019s the Real Math.",
+          "link": "https://247wallst.com/personal-finance/2026/05/31/im-53-with-1-5-million-and-want-to-retire-in-carmel-with-a-sports-car-heres-the-real-math/?.tsrc=rss",
+          "published": "Sun, 31 May 2026 17:15:43 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "S&P 500 Dividend Yield Hits 1.08%. The Lowest Payout Rate Since the 1800s Is a Retirement Red Flag.",
+          "link": "https://247wallst.com/personal-finance/2026/05/31/sp-500-dividend-yield-hits-1-08-the-lowest-payout-rate-since-the-1800s-is-a-retirement-red-flag/?.tsrc=rss",
+          "published": "Sun, 31 May 2026 12:26:47 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "S&P 500 Jumps For Ninth Week, Longest Since 2023 With DELL Leading Nasdaq To Record Highs, While Positive US-Iran Ceasefire Bets Aid Dow \u2014  UMG, COIN, MNKD, ASTC, ASTS In Focus",
+          "link": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-jumps-for-ninth-week-longest-since-2023-with-dell-leading-nasdaq-to-record-highs-while-positive-us-iran-ceasefire-bets-aid-dow-umg-coin-mnkd-astc-asts-in-focus/cZgjRJKReMz?.tsrc=rss",
+          "published": "Fri, 29 May 2026 21:51:59 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "2 Weeks in May Rekindled My Love for Stock Picking. Here\u2019s My Daily Trading Routine.",
+          "link": "https://www.barchart.com/story/news/2206434/2-weeks-in-may-rekindled-my-love-for-stock-picking-heres-my-daily-trading-routine?.tsrc=rss",
+          "published": "Fri, 29 May 2026 19:20:13 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "The S&P 500\u2019s Price Is Getting Better Every Week, But This Indicator Keeps Getting Worse. Why 52% Could Be The Market\u2019s Tragic Number.",
+          "link": "https://www.barchart.com/story/news/2204907/the-s-p-500s-price-is-getting-better-every-week-but-this-indicator-keeps-getting-worse-why-52-could-be-the-markets-tragic-number?.tsrc=rss",
+          "published": "Fri, 29 May 2026 17:39:05 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Pre-Markets Mostly Up on Lower Volume, Trade & Inventory Reports",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/pre-markets-mostly-lower-volume-143400455.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 14:34:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Stock Indexes Rally to Record Highs on Peace Deal Hopes and AI Spending",
+          "link": "https://www.barchart.com/story/news/2201213/stock-indexes-rally-to-record-highs-on-peace-deal-hopes-and-ai-spending?.tsrc=rss",
+          "published": "Fri, 29 May 2026 14:05:45 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Rise Pre-Bell Friday Amid US-Iran Deal Hopes",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-131630396.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 13:16:30 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "CONY\u2019s 100% Yield Hides a 37% Decline That Distributions Cannot Reverse",
+          "link": "https://247wallst.com/investing/2026/05/29/conys-100-yield-hides-a-37-decline-that-distributions-cannot-reverse/?.tsrc=rss",
+          "published": "Fri, 29 May 2026 13:15:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Early Retirees Face a Dangerous Choice, Says Wes Moss: Bonds in IRAs or Access to Cash",
+          "link": "https://247wallst.com/personal-finance/2026/05/29/early-retirees-face-a-dangerous-choice-says-wes-moss-bonds-in-iras-or-access-to-cash/?.tsrc=rss",
+          "published": "Fri, 29 May 2026 13:00:42 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Adobe\u2019s Own AI Tool Is Destroying Its Own Stock Photo Business. Management Just Admitted It",
+          "link": "https://247wallst.com/investing/2026/05/29/adobes-own-ai-tool-is-destroying-its-own-stock-photo-business-management-just-admitted-it/?.tsrc=rss",
+          "published": "Fri, 29 May 2026 11:50:29 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Trump Calls It His Bull Market. The Numbers Say It Belongs to This Person Instead",
+          "link": "https://247wallst.com/investing/2026/05/29/trump-calls-it-his-bull-market-the-numbers-say-it-belongs-to-this-person-instead/?.tsrc=rss",
+          "published": "Fri, 29 May 2026 11:15:36 +0000",
+          "source": "Yahoo Finance"
+        },
         {
           "title": "S&P 500, Nasdaq Futures Pull Back After Trump Wants 'Couple Days To Think' About Iran Ceasefire Deal: ASTS, DELL, BB, SMCI In Focus",
           "link": "https://stocktwits.com/news-articles/markets/equity/sp500-nasdaq-futures-pull-back-after-trump-wants-couple-days-to-think-about-iran-ceasefire-deal/cZgS7tGRet0?.tsrc=rss",
@@ -235,96 +325,6 @@
           "link": "https://247wallst.com/investing/2026/05/28/the-average-american-savings-rate-plunged-to-2-6-every-time-its-fallen-this-low-the-market-crashed/?.tsrc=rss",
           "published": "Thu, 28 May 2026 18:00:58 +0000",
           "source": "Yahoo Finance"
-        },
-        {
-          "title": "The U.S. Market Is On Fire, But One Surprising Country Has Outperformed U.S. Stocks 10-to-1 Since the Start of 2025",
-          "link": "https://247wallst.com/investing/2026/05/28/the-u-s-market-is-on-fire-but-one-surprising-country-has-outperformed-u-s-stocks-10-to-1-since-the-start-of-2025/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 17:04:22 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "This Vanguard VEA ETF Is Beating Your S&P 500 ETF \u2013 Here\u2019s Why You Should Buy It",
-          "link": "https://247wallst.com/investing/2026/05/28/this-vanguard-vea-etf-is-beating-your-sp-500-etf-heres-why-you-should-buy-it/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 17:00:06 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Vanguard\u2019s Value ETF May Soon Outperform Your Tech Holdings as \u201cThe Great Migration\u201d Accelerates",
-          "link": "https://247wallst.com/investing/2026/05/28/vanguards-value-etf-may-soon-outperform-your-tech-holdings-as-the-great-migration-accelerates/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 16:35:47 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "I\u2019m 40, just divorced with $85,000 income and nothing saved. Can I really become a multimillionaire by 65?",
-          "link": "https://247wallst.com/personal-finance/2026/05/28/im-40-just-divorced-with-85000-income-and-nothing-saved-can-i-really-become-a-multimillionaire-by-65/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 16:31:19 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "MoneyMasters Podcast 5-28-26- US-China Relations and the Race for Innovation",
-          "link": "https://finance.yahoo.com/sectors/technology/articles/moneymasters-podcast-5-28-26-163000334.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 16:30:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Wall Street\u2019s Laziest Fund Is Outperforming Against SPY \u2013 Time to Switch to VTI?",
-          "link": "https://247wallst.com/investing/2026/05/28/wall-streets-laziest-fund-is-outperforming-against-spy-time-to-switch-to-vti/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 16:13:09 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Stocks Rebound Amid News of a US-Iran Deal",
-          "link": "https://www.barchart.com/story/news/2180272/stocks-rebound-amid-news-of-a-us-iran-deal?.tsrc=rss",
-          "published": "Thu, 28 May 2026 15:28:03 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Investor Turns $70K to $4M Using This S&P 500 Bull ETF",
-          "link": "https://247wallst.com/investing/2026/05/28/investor-turns-70k-to-4m-using-this-sp-500-bull-etf/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 15:00:01 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Dump-Truck of Economic Data: PCE, Claims, Goods & More",
-          "link": "https://finance.yahoo.com/economy/articles/dump-truck-economic-data-pce-145900543.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 14:59:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Prediction. Intel Has Run 492% and Its Own Insiders Are Selling",
-          "link": "https://247wallst.com/investing/2026/05/28/prediction-intel-has-run-492-and-its-own-insiders-are-selling/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 14:48:23 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "JEPI\u2019s 8.4% Yield Masks The Volatility Trap Most Investors Ignore",
-          "link": "https://247wallst.com/investing/2026/05/28/jepis-8-4-yield-masks-the-volatility-trap-most-investors-ignore/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 14:11:24 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Exchange-Traded Funds, Equity Futures Lower Pre-Bell Thursday Amid New US Attacks on Iran",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-132232793.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 13:22:32 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Buy, Sell, or Hold Schwab\u2019s US Large-Cap ETF Now | SCHX",
-          "link": "https://247wallst.com/investing/2026/05/28/buy-sell-or-hold-schwabs-us-large-cap-etf-now-schx/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 11:30:25 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Three Keys to Successful Investing Hint- Don't Make Easy Things Difficult",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/three-keys-successful-investing-hint-050100545.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 05:01:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "S&P 500, Nasdaq, Dow Futures Rise As AI-Driven Tech Rally Overpowers 'Defensive' Iran Strikes: ONDS, NBIS, RCAT, SNOW In Focus",
-          "link": "https://stocktwits.com/news-articles/markets/equity/why-sp500-nasdaq-dow-futures-are-climbing-despite-purely-defensive-us-strikes-in-iran/cZgibqmRerC?.tsrc=rss",
-          "published": "Thu, 28 May 2026 02:15:41 +0000",
-          "source": "Yahoo Finance"
         }
       ]
     },
@@ -332,28 +332,24 @@
       "status": "ok",
       "ticker": "GLD",
       "name": "SPDR Gold Shares",
-      "price": 412.77,
-      "prev_close": 408.49,
+      "price": 417.12,
+      "prev_close": 412.77,
       "change_pct": 1.05,
-      "as_of": "2026-05-28",
+      "as_of": "2026-05-29",
       "returns": {
         "1d": 1.05,
-        "5d": -1.11,
-        "30d": -6.29,
-        "90d": -2.02,
-        "150d": 9.42,
-        "250d": 35.06
+        "5d": 0.03,
+        "30d": -5.22,
+        "90d": -4.6,
+        "150d": 10.56,
+        "250d": 37.39
       },
-      "ema50": 427.74,
-      "ema200": 401.92,
+      "ema50": 427.33,
+      "ema200": 402.07,
       "ma_signal": "MONITOR",
-      "zscore": -1.29,
-      "cmf": 0.04,
+      "zscore": -1.09,
+      "cmf": 0.001,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 440.08
-        },
         {
           "date": "2026-04-17",
           "value": 445.93
@@ -469,14 +465,54 @@
         {
           "date": "2026-05-28",
           "value": 412.77
+        },
+        {
+          "date": "2026-05-29",
+          "value": 417.12
         }
       ],
       "note": "",
       "news": [
         {
+          "title": "The 2 Signals That Will Determine SLV\u2019s Next Move This Quarter",
+          "link": "https://247wallst.com/investing/2026/05/31/the-2-signals-that-will-determine-slvs-next-move-this-quarter/?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 00:18:39 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Gold Falls To Two-Month Low As Iran War Fears Send Oil Prices, Dollar Climbing",
+          "link": "https://finance.yahoo.com/markets/commodities/articles/gold-falls-two-month-low-180128827.html?.tsrc=rss",
+          "published": "Sat, 30 May 2026 18:01:28 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Gold Is Up Again in 2026 and After Reviewing Every Way to Access the Metal, These 3 ETFs Cover the Trade at Three Different Risk Levels",
+          "link": "https://247wallst.com/investing/2026/05/30/gold-is-up-again-in-2026-and-after-reviewing-every-way-to-access-the-metal-these-3-etfs-cover-the-trade-at-three-different-risk-levels/?.tsrc=rss",
+          "published": "Sat, 30 May 2026 13:36:50 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "TSX Closer: The Index Rises For a Second Straight Day, Back To Within 100 Points of Its Record Close",
+          "link": "https://finance.yahoo.com/economy/articles/tsx-closer-index-rises-second-203028106.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 20:30:28 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Rise Pre-Bell Friday Amid US-Iran Deal Hopes",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-131630396.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 13:16:30 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Gold Trading Higher Again on Expectations the U.S. and Iran are Near a Peace Deal",
+          "link": "https://finance.yahoo.com/markets/commodities/articles/gold-trading-higher-again-expectations-125756709.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 12:57:56 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
           "title": "Bitcoin Slumps, But Strategy Isn't Buying. Here's Why.",
           "link": "https://finance.yahoo.com/m/a9104f7a-9d33-3446-abfe-168e0d92110e/bitcoin-slumps%2C-but-strategy.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 20:13:18 +0000",
+          "published": "Fri, 29 May 2026 11:33:44 +0000",
           "source": "Yahoo Finance"
         },
         {
@@ -556,42 +592,6 @@
           "link": "https://www.fool.com/investing/2026/05/25/what-is-the-best-way-to-own-gold-in-2026/?.tsrc=rss",
           "published": "Mon, 25 May 2026 15:35:00 +0000",
           "source": "Yahoo Finance"
-        },
-        {
-          "title": "Gold Rises as the USD Weakens While U.S. and Iran Talk to End Their War",
-          "link": "https://finance.yahoo.com/markets/commodities/articles/gold-rises-usd-weakens-while-133641488.html?.tsrc=rss",
-          "published": "Mon, 25 May 2026 13:36:41 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "\u2018Expect Corrections and Don\u2019t Rely on Hope\u2019: Cramer\u2019s Reality Check for a First-Time Homebuyer",
-          "link": "https://247wallst.com/personal-finance/2026/05/24/expect-corrections-and-dont-rely-on-hope-cramers-reality-check-for-a-first-time-homebuyer/?.tsrc=rss",
-          "published": "Sun, 24 May 2026 22:21:54 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Most Gold ETFs Skim 0.40% Off the Top Every Year. One Charges a Quarter of That. Run the Math and the Difference Is a Family Vacation.",
-          "link": "https://247wallst.com/investing/2026/05/23/most-gold-etfs-skim-0-40-off-the-top-every-year-one-charges-a-quarter-of-that-run-the-math-and-the-difference-is-a-family-vacation/?.tsrc=rss",
-          "published": "Sat, 23 May 2026 15:15:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "GLD vs IAU: Same Gold. Different Fees. Here Is Which One Long-Term Investors Should Actually Own",
-          "link": "https://www.fool.com/investing/2026/05/23/gld-vs-iau-same-gold-different-fees-here-is-which/?.tsrc=rss",
-          "published": "Sat, 23 May 2026 07:35:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Update: Gold Edges Lower as the Dollar Steadies",
-          "link": "https://finance.yahoo.com/markets/commodities/articles/gold-edges-lower-dollar-steadies-180009024.html?.tsrc=rss",
-          "published": "Fri, 22 May 2026 18:00:09 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Friday Buoyed by Robust Corporate Earnings Season",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-131038113.html?.tsrc=rss",
-          "published": "Fri, 22 May 2026 13:10:38 +0000",
-          "source": "Yahoo Finance"
         }
       ]
     },
@@ -599,28 +599,24 @@
       "status": "ok",
       "ticker": "BRK-B",
       "name": "Berkshire Hathaway Inc. New",
-      "price": 477.42,
-      "prev_close": 479.92,
-      "change_pct": -0.52,
-      "as_of": "2026-05-28",
+      "price": 474.48,
+      "prev_close": 477.42,
+      "change_pct": -0.62,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": -0.52,
-        "5d": -0.72,
-        "30d": 0.7,
-        "90d": -3.22,
-        "150d": -2.82,
-        "250d": -5.68
+        "1d": -0.62,
+        "5d": -1.15,
+        "30d": -0.13,
+        "90d": -2.25,
+        "150d": -3.52,
+        "250d": -5.85
       },
-      "ema50": 480.31,
-      "ema200": 488.98,
+      "ema50": 480.08,
+      "ema200": 488.84,
       "ma_signal": "SELL",
-      "zscore": -0.63,
-      "cmf": -0.115,
+      "zscore": -0.9,
+      "cmf": -0.103,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 475.12
-        },
         {
           "date": "2026-04-17",
           "value": 474.58
@@ -736,128 +732,132 @@
         {
           "date": "2026-05-28",
           "value": 477.42
+        },
+        {
+          "date": "2026-05-29",
+          "value": 474.48
         }
       ],
       "note": "",
       "news": [
         {
-          "title": "5 Warren Buffett Stocks to Hold Forever",
-          "link": "https://www.fool.com/investing/2026/05/29/5-warren-buffett-stocks-to-hold-forever/?.tsrc=rss",
-          "published": "Fri, 29 May 2026 09:45:00 +0000",
+          "title": "Berkshire Hathaway acquires Taylor Morrison for $8.5 billion",
+          "link": "https://qz.com/berkshire-hathaway-taylor-morrison-acquisition-8-billion-053126?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 11:13:12 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "The No. 1 Holding in Warren Buffett's $786 Million \"Secret\" Portfolio Is a Bona Fide Millionaire-Maker (but There's a Catch)",
-          "link": "https://www.fool.com/investing/2026/05/29/no-1-holding-in-warren-buffett-secret-portfolio/?.tsrc=rss",
-          "published": "Fri, 29 May 2026 09:26:00 +0000",
+          "title": "Taylor Morrison to Be Taken Private by Berkshire Hathaway in $6.8 Billion Deal",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/taylor-morrison-taken-private-berkshire-102928872.html?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 10:29:28 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Berkshire Exit Puts Spotlight On UnitedHealth Risks Rewards And Valuation",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/berkshire-exit-puts-spotlight-unitedhealth-230614282.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 23:06:14 +0000",
+          "title": "Berkshire Hathaway Has First Takeover by CEO Abel, Paying $8.5 Billion for a Homebuilder",
+          "link": "https://finance.yahoo.com/m/bf693e31-7dda-36a0-b63b-4b9f8c2833c9/berkshire-hathaway-has-first.html?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 10:09:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Occidental Petroleum vs Exxon Mobil: The Better Oil Titan For 2026",
-          "link": "https://247wallst.com/investing/2026/05/28/occidental-petroleum-vs-exxon-mobil-the-better-oil-titan-for-2026/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 15:01:16 +0000",
+          "title": "Warren Buffett's Successor, Greg Abel, Started His Tenure With a Bang by Dumping Amazon and More Than Tripling Berkshire's Stake in a Virtual Monopoly",
+          "link": "https://www.fool.com/investing/2026/06/01/warren-buffett-successor-abel-sell-amzn-buy-googl/?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 09:26:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "3 Unpopular Stocks That Deserve a Second Chance",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/3-unpopular-stocks-deserve-second-135827611.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 13:58:27 +0000",
+          "title": "Berkshire Hathaway to Buy Taylor Morrison for $6.8 Billion",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/berkshire-hathaway-buy-taylor-morrison-000512741.html?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 08:32:52 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Forget Nvidia As a $39 Trillion Debt Time Bomb Meets a Divided Fed, This Unstoppable Monopoly Is a No-Brainer Buy",
-          "link": "https://247wallst.com/investing/2026/05/28/forget-nvidia-as-a-39-trillion-debt-time-bomb-meets-a-divided-fed-this-unstoppable-monopoly-is-a-no-brainer-buy/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 13:33:17 +0000",
+          "title": "Berkshire Hathaway to acquire Taylor Morrison for $72.50 per share in cash",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/berkshire-hathaway-acquire-taylor-morrison-045510403.html?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 04:55:10 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Berkshire Hathaway Is Underperforming, but 4 of Warren Buffett\u2019s Top Picks Are Up Big This Year",
-          "link": "https://247wallst.com/investing/2026/05/28/berkshire-hathaway-is-underperforming-but-4-of-warren-buffetts-top-picks-are-up-big-this-year/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 12:47:02 +0000",
+          "title": "Occidental Petroleum (OXY) Upgraded at Barclays, Price Target Raised by $13",
+          "link": "https://finance.yahoo.com/sectors/energy/articles/occidental-petroleum-oxy-upgraded-barclays-023945838.html?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 02:39:45 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Jim Cramer says Warren Buffett is wrong about investors being addicted to 'gambling' \u2014 they're addicted to the S&P 500",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-warren-buffett-101500778.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 10:15:00 +0000",
+          "title": "TMHC Stock Jumps Into Spotlight After Berkshire's Surprise $8.5B Housing Bet",
+          "link": "https://stocktwits.com/news-articles/markets/equity/tmhc-stock-jumps-berkshire-acquisition-housing-bet/cZ0gaFFReu1?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 01:49:52 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Warren Buffett's Successor, Greg Abel, Buys an AI Stock That Poses a Threat to Nvidia",
-          "link": "https://www.fool.com/investing/2026/05/28/warren-buffett-abel-buys-ai-stock-threat-to-nvidia/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 09:32:00 +0000",
+          "title": "Another fintech giant gets the pink slip from Warren Buffett's Berkshire",
+          "link": "https://www.thestreet.com/investing/stocks/another-fintech-giant-mastercard-gets-the-pink-slip-from-warren-buffetts-berkshire?.tsrc=rss",
+          "published": "Sun, 31 May 2026 23:17:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "This Warren Buffett-Approved Investment Could Turn $300 Per Month into $1 Million",
-          "link": "https://www.fool.com/investing/2026/05/28/this-warren-buffett-approved-investment-could-turn/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 09:30:00 +0000",
+          "title": "Berkshire Hathaway's Operating Earnings Just Quietly Hit a New Record. Why That Matters More Than the Stock Portfolio.",
+          "link": "https://www.fool.com/investing/2026/05/31/berkshire-hathaway-operating-earnings-record/?.tsrc=rss",
+          "published": "Sun, 31 May 2026 22:50:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Analyst who predicted Micron rally has new message",
-          "link": "https://www.thestreet.com/investing/stocks/analyst-who-predicted-micron-rally-has-new-message?.tsrc=rss",
-          "published": "Thu, 28 May 2026 01:22:57 +0000",
+          "title": "Berkshire Hathaway to Acquire Taylor Morrison Home Corporation for $8.5 Billion",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/berkshire-hathaway-acquire-taylor-morrison-203000990.html?.tsrc=rss",
+          "published": "Sun, 31 May 2026 20:30:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "From $90K Bet to $800K Windfall: When Does a Winning Oil Trade Become a Retirement Risk?",
-          "link": "https://247wallst.com/investing/2026/05/27/from-90k-bet-to-800k-windfall-when-does-a-winning-oil-trade-become-a-retirement-risk/?.tsrc=rss",
-          "published": "Wed, 27 May 2026 23:34:51 +0000",
+          "title": "Berkshire Hathaway Has 28% of Its Portfolio in These 3 Warren Buffett-Approved AI Stocks",
+          "link": "https://www.fool.com/investing/2026/05/31/berkshire-hathaway-has-28-of-portfolio-in-these/?.tsrc=rss",
+          "published": "Sun, 31 May 2026 19:05:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "The Stock Market Is Flashing a Rare Warning Signal. Here's What History Says Happens Next.",
-          "link": "https://www.fool.com/investing/2026/05/27/the-stock-market-is-flashing-a-rare-warning-signal/?.tsrc=rss",
-          "published": "Wed, 27 May 2026 21:35:00 +0000",
+          "title": "DRAM Memory Boom: Why Micron Stock Could Still Double",
+          "link": "https://www.fool.com/investing/2026/05/31/dram-memory-boom-why-micron-stock-could-double/?.tsrc=rss",
+          "published": "Sun, 31 May 2026 15:50:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Warren Buffett's Successor, Greg Abel, Just Sold UnitedHealth Group Stock. Is He Missing a Huge Opportunity?",
-          "link": "https://www.fool.com/investing/2026/05/27/warren-buffetts-successor-greg-abel-just-sold-unit/?.tsrc=rss",
-          "published": "Wed, 27 May 2026 19:52:00 +0000",
+          "title": "Greg Abel Just Sold Both Visa and Mastercard Stock but Kept This Top Buffett Favorite",
+          "link": "https://www.fool.com/investing/2026/05/31/greg-abel-just-sold-both-visa-and-mastercard-stock/?.tsrc=rss",
+          "published": "Sun, 31 May 2026 15:12:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Berkshire Hathaway Still Has Not Sold Its Bank of America Stake. Here's What That Tells Long-Term Investors.",
-          "link": "https://www.fool.com/investing/2026/05/27/berkshire-hathaway-still-has-not-sold-its-bank-of/?.tsrc=rss",
-          "published": "Wed, 27 May 2026 16:50:00 +0000",
+          "title": "Greg Abel Just Dumped Amazon Stock. Here Are 5 Reasons to Buy It.",
+          "link": "https://www.fool.com/investing/2026/05/31/greg-abel-just-dumped-amazon-stock-here-are-5-reas/?.tsrc=rss",
+          "published": "Sun, 31 May 2026 13:25:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Market Minute 5-27-26- The $1 TLN Club Keeps Growing",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/market-minute-5-27-26-141500563.html?.tsrc=rss",
-          "published": "Wed, 27 May 2026 14:15:00 +0000",
+          "title": "45.7% of Berkshire Hathaway's Portfolio Is Parked in 3 Stocks That Could Pay the Conglomerate $1.6 Billion in Dividends This Year",
+          "link": "https://www.fool.com/investing/2026/05/31/457-berkshire-3-stocks-pay-16-billion-dividends/?.tsrc=rss",
+          "published": "Sun, 31 May 2026 10:50:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Want to Build Life-Changing Wealth in the Stock Market? Here's Warren Buffett's Best Advice.",
-          "link": "https://www.fool.com/investing/2026/05/27/want-to-build-life-changing-wealth-in-the-stock-ma/?.tsrc=rss",
-          "published": "Wed, 27 May 2026 10:20:00 +0000",
+          "title": "If Elon Musk merges SpaceX with Tesla he\u2019ll create a $3.4 trillion behemoth\u2014with zero profits",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-merges-spacex-tesla-070000432.html?.tsrc=rss",
+          "published": "Sun, 31 May 2026 07:00:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Warren Buffett's Successor, Greg Abel, Just Unloaded Amazon Shares and Tripled His Position in This Magnificent Seven AI Stock That's Climbed 100% Over the Past Year",
-          "link": "https://www.fool.com/investing/2026/05/27/warren-buffetts-successor-greg-abel-just-unloaded/?.tsrc=rss",
-          "published": "Wed, 27 May 2026 08:22:00 +0000",
+          "title": "Warren Buffett Successor Greg Abel Made 3 Big Purchases Last Quarter, and They're All Exceptional Performers",
+          "link": "https://www.fool.com/investing/2026/05/30/warren-buffett-successor-greg-abel-made-3-big-purc/?.tsrc=rss",
+          "published": "Sat, 30 May 2026 21:50:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "I Still Like the Stock, but This Definitely Isn't Warren Buffett's Berkshire Hathaway Anymore",
-          "link": "https://www.fool.com/investing/2026/05/26/i-still-like-the-stock-but-this-definitely-isnt-wa/?.tsrc=rss",
-          "published": "Wed, 27 May 2026 02:20:00 +0000",
+          "title": "Warren Buffett's Berkshire dumps entire stake in dividend stock",
+          "link": "https://www.thestreet.com/investing/stocks/warren-buffetts-berkshire-dumps-entire-stake-in-dividend-stock?.tsrc=rss",
+          "published": "Sat, 30 May 2026 20:33:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "GameStop & eBay \u2013 Activism: Governance from Investor & Board Perspectives: 2nd Princeton CorpGov Forum",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/gamestop-ebay-activism-governance-investor-202538351.html?.tsrc=rss",
-          "published": "Tue, 26 May 2026 20:25:38 +0000",
+          "title": "Does Warren Buffett's Successor, Greg Abel, Know Something That Wall Street Doesn't? He's Piling Into a \"Magnificent Seven\" Stock at Close to 30x Earnings That Other Billionaire Hedge Fund Managers Are Dumping.",
+          "link": "https://www.fool.com/investing/2026/05/30/does-warren-buffetts-successor-greg-abel-know-some/?.tsrc=rss",
+          "published": "Sat, 30 May 2026 11:45:00 +0000",
           "source": "Yahoo Finance"
         }
       ]
@@ -866,28 +866,24 @@
       "status": "ok",
       "ticker": "GRID",
       "name": "First Trust NASDAQ Clean Edge S",
-      "price": 193.88,
-      "prev_close": 194.2,
-      "change_pct": -0.16,
-      "as_of": "2026-05-28",
+      "price": 193.07,
+      "prev_close": 193.88,
+      "change_pct": -0.42,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": -0.16,
-        "5d": 2.86,
-        "30d": 7.73,
-        "90d": 21.83,
-        "150d": 25.79,
-        "250d": 49.83
+        "1d": -0.42,
+        "5d": 1.09,
+        "30d": 7.27,
+        "90d": 23.07,
+        "150d": 27.07,
+        "250d": 50.16
       },
-      "ema50": 184.44,
-      "ema200": 164.15,
-      "ma_signal": "HOLD",
-      "zscore": 1.52,
+      "ema50": 184.77,
+      "ema200": 164.44,
+      "ma_signal": "BUY",
+      "zscore": 1.42,
       "cmf": 0.326,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 179.98
-        },
         {
           "date": "2026-04-17",
           "value": 183.31
@@ -1003,6 +999,10 @@
         {
           "date": "2026-05-28",
           "value": 193.88
+        },
+        {
+          "date": "2026-05-29",
+          "value": 193.07
         }
       ],
       "note": "",
@@ -1133,28 +1133,24 @@
       "status": "ok",
       "ticker": "FXI",
       "name": "iShares China Large-Cap ETF",
-      "price": 34.99,
-      "prev_close": 35.32,
-      "change_pct": -0.93,
-      "as_of": "2026-05-28",
+      "price": 35.05,
+      "prev_close": 34.99,
+      "change_pct": 0.17,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": -0.93,
-        "5d": -3.45,
-        "30d": -5.12,
-        "90d": -10.97,
-        "150d": -11.44,
-        "250d": 0.7
+        "1d": 0.17,
+        "5d": -2.34,
+        "30d": -5.86,
+        "90d": -9.83,
+        "150d": -10.84,
+        "250d": 2.66
       },
-      "ema50": 36.61,
-      "ema200": 37.35,
+      "ema50": 36.55,
+      "ema200": 37.32,
       "ma_signal": "SELL",
-      "zscore": -1.5,
-      "cmf": 0.122,
+      "zscore": -1.42,
+      "cmf": 0.132,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 37.23
-        },
         {
           "date": "2026-04-17",
           "value": 37.6
@@ -1270,6 +1266,10 @@
         {
           "date": "2026-05-28",
           "value": 34.99
+        },
+        {
+          "date": "2026-05-29",
+          "value": 35.05
         }
       ],
       "note": "",
@@ -1400,28 +1400,24 @@
       "status": "ok",
       "ticker": "SJB",
       "name": "ProShares Short High Yield",
-      "price": 15.31,
+      "price": 15.29,
       "prev_close": 15.31,
-      "change_pct": 0.0,
-      "as_of": "2026-05-28",
+      "change_pct": -0.13,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": 0.0,
-        "5d": -0.39,
-        "30d": 0.2,
-        "90d": 0.74,
-        "150d": 0.52,
-        "250d": -0.83
+        "1d": -0.13,
+        "5d": -0.46,
+        "30d": -0.07,
+        "90d": 0.41,
+        "150d": 0.26,
+        "250d": -0.89
       },
       "ema50": 15.35,
       "ema200": 15.32,
       "ma_signal": "SELL",
-      "zscore": -0.25,
-      "cmf": -0.243,
+      "zscore": -0.43,
+      "cmf": -0.255,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 15.3
-        },
         {
           "date": "2026-04-17",
           "value": 15.25
@@ -1537,16 +1533,14 @@
         {
           "date": "2026-05-28",
           "value": 15.31
+        },
+        {
+          "date": "2026-05-29",
+          "value": 15.29
         }
       ],
       "note": "",
       "news": [
-        {
-          "title": "ProShares Short High Yield ETF Price, Holdings, & News (NYSEARCA:SJB) $SJB - MarketBeat",
-          "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wdkR3YkE2WC1LT3EwU2xRQ09MV3k3YmtpU1JTYXNrdE1XYWpyUXVJN21qcFpxSGFFbk9ITVRuSlk1V1VncG1sOXQtb3ZZOWpYYlpTNW9wREMyWG8?oc=5",
-          "published": "Fri, 22 May 2026 07:00:00 GMT",
-          "source": "Google News"
-        },
         {
           "title": "Trek Financial, LLC's ProShares Short High Yield -1x Shares(SJB) Holding History - GuruFocus",
           "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1uMWNKOXRMZ3N1SmtFWWhtOVFPdzhCTWN0bXFnZWV2aUdrbENDX0MxZ0dYdFVzQTBwR2VnSmlhYUV3TkdMRXI2WDJWRG82WlVFRzcydXBxcDdXVnNTMlhXcDA2VGZ3QmpCUkwwZHJ0NmRHVHlhU3FN?oc=5",
@@ -1560,15 +1554,15 @@
           "source": "Google News"
         },
         {
-          "title": "SJB Stock Fund Price and Chart \u2014 AMEX:SJB - TradingView",
-          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9xbXhUeWM2TzAwYzlvbFBYYXd3OXoxakF4T3BqT0JRZklEZEx6ci1OQVNUeU1WRUtfZ1NQQUlWUF92QXl1d3JpVXZZejM5WU8zd255OGU5ZFo?oc=5",
-          "published": "Fri, 21 Jul 2017 08:37:31 GMT",
+          "title": "Who is Chirayu Rana? Ex-JPMorgan staffer makes shocking sexual-harassment claims on company\u2019s high-ranking - The Economic Times",
+          "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNakctTjNSWUlOWlJSYnoxckx2VHdPbkg3aDhzNzJfNFFodUZrU256UTlrXzFNOHdfZndqaU1LbkdkdEVVNUdBUW8tdHlHSjdVZjRHajAydUprOTNQVFRITDFjVERhQTNFbWFoRDRYZWtfdnNpYWJBNzBOakZYUjJ2SmZSZ0xWQXNWMU1sak5EcmlEWjFlQ3BjXzNxVFNWa3BqTzI0MTNackF6WHBwb3hsUkRwWmFrVy14NzYwVjF0TUZOYkQ1Umg0aGZmTDJfc0VOMzljS29VdmhTV0ZHOWlqZWVEcDBUNTNpWlFTS2d3QmlCNjA5NWc3OE4tX2ViTURxTmpmS2FvSHNvdjNwSHZBZ1ZoN29UdW9CZmfSAZ8CQVVfeXFMTmVnekdOWEYxWktVOFIxVnJyZFdPdk5NUW5ucTZFRkVMdG1kdWRpSTQya1Z4M2gwSUxEMFUxOGZ0cHc3ejVvM1ZIc2Q3VnpKcTVqN3FnZWlrYkktTDJreU9EU0pIWHI1blVoaFN3WnRhcWgtVnpQX0FZak1pUS1GWXptX1pQanZRaVlfNERLTzkxSTQxbjdPY3Q4UHJRZndGT2NrWEI3WHBCaGhHTGFBN2hyTlZOS0NuNEY1c3pSM1cwVjNRaEIxLVl4bDdLMmFvNnNZS0J4bWMtS3g1ZTBrOGhPQ19zVlJpTGljUmhnX1h5MExtZGFYRnlzWlZLYkZ1R0pOTjZvdHhObUFGQW9zejJaMURiM28wVlJiQjVVRUE?oc=5",
+          "published": "Fri, 01 May 2026 07:00:00 GMT",
           "source": "Google News"
         },
         {
-          "title": "5 Inverse-Bond ETFs - Investopedia",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObEtvOWlJZDI1VTZqc05FUE5jTDZKRXFjSE5veThLQlNvdFpZM0xkb0lhblFhQ0xQZ3hETUgzTWVQZndJaDJZUUM1Y0xmcWNrYl9lcDduZTR4eGJNSURDME11RXh2X2sxeEl2WEhkRVN0TzdoYjdXYjRRRGpISDJuWjg2N3R6bGRSQlV4bzFKelRfaFVueEYzWVd5d3YtUXNFQVdoa1dJM1dZUQ?oc=5",
-          "published": "Wed, 12 Apr 2023 07:00:00 GMT",
+          "title": "SJB Stock Fund Price and Chart \u2014 AMEX:SJB - TradingView",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9xbXhUeWM2TzAwYzlvbFBYYXd3OXoxakF4T3BqT0JRZklEZEx6ci1OQVNUeU1WRUtfZ1NQQUlWUF92QXl1d3JpVXZZejM5WU8zd255OGU5ZFo?oc=5",
+          "published": "Fri, 21 Jul 2017 08:37:31 GMT",
           "source": "Google News"
         },
         {
@@ -1578,21 +1572,21 @@
           "source": "Google News"
         },
         {
-          "title": "SJB: Litro, Laugfs making a killing by selling old stocks at inflated prices - Island.lk",
-          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxONHBYRDVGNnRVeGc1Nkg2LTJhOVhDbjVRR3RWNE5hQmlmYnJrdUh3UWU5d1ZSNGMyT3llOEJmVWNtN1R5Wi0wcm9yTkNpZ0k1TUVVdUFWVlVYbS1PZFNlbktHUDZyUmR2RWhtYnFZNlNrSkxpelhHOS1STkd5akxXem95VmlRQXhxa2NMLTZobjYzT3k3Si1Z?oc=5",
-          "published": "Tue, 07 Apr 2026 07:00:00 GMT",
-          "source": "Google News"
-        },
-        {
           "title": "Kabir Hashim appointed SJB Chairman - Sri Lanka Mirror",
           "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQb3g2WFBPazFJRVVHYnB2T09TZW5rYUo2cmJQV3RiekdyczdjU1ZaVWlhX0lnWmRaaThHMkRON3ZRbnhvRk55VHItR29Jc0RDU0M2dXRCLUpQZElNMXBWRm4yNGtvb3V2TDFES2dBekYteFUtekVaTHA5NkRvV1ZRX0JmM0dTUmZWcmFGNdIBgwFBVV95cUxPVkVaTmswQ19wcVpVdjZiWVJXSTVFUWRaLWFnUHJGVUgtbmp4M1UzN1I1WFRzdkxOWWFSYW13djJqY2ExUkJ2NkVub2JxaWlNREJndW8xdkcxX3NoS1g5c2tPS2gzanRBdjlGeVMxUDFCZENrNTFlWDlBdzU2OGkxQ1lqdw?oc=5",
           "published": "Sat, 11 Apr 2026 07:00:00 GMT",
           "source": "Google News"
         },
         {
-          "title": "Former SJB councillor arrested over narcotics seized from fishing boat - Ada Derana",
-          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbGtVbDhjSGZSWkJaR09fRzNISHlqZnU0b2paV2Z1NUFnMHdhOFRaNWxtUjN4NHFlMmhxMFFJVENpb1JqZWJQVW92cWdadVhDYjRKUWJROEYzWlNZUnJaTGtRZFBJTGhLYm5JdHh6UUIxMUFVMW5OT1ZwTEdOME0wQVhvTVMtNDlmODlJVDl3cUYwRkhZRHZad0drT1FhUU1IZHVjQ0RqZ19LZw?oc=5",
-          "published": "Thu, 20 Nov 2025 08:00:00 GMT",
+          "title": "NPP asks why SLPP, SJB didn\u2019t vote against Bill to abolish perks and privileges of former Presidents - Island.lk",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQejhUOVNpM2RNRFRJMUZ6ZkM3cGxzVllVYkE1VGZYS2ZhQmpUS2RsbVhwUmhIZi1XRzU1dF9ybFR6SXRSdWp1NzZDeGx1U3NQWlV5S2dvNVhZeXBLTTBycXc2eDctblJ0Z2RSODVUODQwa3JvWFQzdU1LdUF6ZmdGS242dkd6ZDNMbEtvM2JXcmZoclNsRHlvajJuU3NubzFXbjdzQXZBWmlKMm1kclpqWGRHanJrVnZs?oc=5",
+          "published": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "SJB ETF | ProShares Short High Yield -1x Shares - GuruFocus",
+          "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE93WndxcFFIazNraEtGaEVTRUZwWG96SFdMTjRfblhlV0JMQ3dydURIQWpMLTRGV1RTeGlENER1MFNKVHpHM2tja2I2N3ZLSDFMWjR0MWptLUFVX1pGdEtnTFJR?oc=5",
+          "published": "Fri, 09 Feb 2024 03:24:46 GMT",
           "source": "Google News"
         },
         {
@@ -1605,18 +1599,6 @@
           "title": "Bollinger Champagne owner invests in BI wine merchant - Decanter",
           "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxORmd2VDYwdXlmMjZ3Yl9PWGJxTmF3TW9ZTk9OVC10dm1BNjVJLThBei1IRjFYeU9hZUJnN1FrTVVBOXByZTZHSDRTcm1IazM3U1FnOENOVXF3bkNlRFpVYTlEeUFWNEdWN0JOZExaTlpjSFpWdWc5M0xHdDRtSVBuZw?oc=5",
           "published": "Fri, 31 May 2019 07:00:00 GMT",
-          "source": "Google News"
-        },
-        {
-          "title": "PROSPERA PRIVATE WEALTH, LLC - Portfolio Stock Holdings - Quiver Quantitative",
-          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZnQxSV9DT2NHV3M2Y1otUGtiVElJX0MySmE0eldWWkVnWmd4dkhqczk3Sk56Q2Y1eUZlSWp3WW9HRXdJRThTZHc1VnFmbG1kRnRERFljbmM4cWRLSmNJQloxQV9HU2JGM3d4bGxyVkFkQk4wQzh4WC05VUtEbXl4WW13?oc=5",
-          "published": "Mon, 30 Sep 2024 07:00:00 GMT",
-          "source": "Google News"
-        },
-        {
-          "title": "Photos: Inside Shenzhen's New Stock Exchange, Designed by Rem Koolhaas Architecture Firm OMA - WSJ",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxON084b3lnYkFHYjloNk52aTRNaVdXaWNLRnpTcWMtWU5TV0FMNW9QclY2aXhjTl9tdWNFRWxuMWI5WHU5X2JvZTJtSUl6Y2RpckdmMmcwcmhYNTJPWUdjRzRPOGE1S0hyWXVILUhDNldNeHgtVGM2X085Qm1aeUQ3SA?oc=5",
-          "published": "Mon, 07 Oct 2013 07:00:00 GMT",
           "source": "Google News"
         },
         {
@@ -1638,15 +1620,15 @@
           "source": "Google News"
         },
         {
-          "title": "How to invest in Austria: planning your financial future - Expatica",
-          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQNnd4dmhrRlRmbllEQlc0ZjVBZWRUWjVfNEhYRkVHSE93UGl4WkJOR1ltS3k3LXNiS0xwdEd1bWJRdUdHZXJEbngwbHZ0SVcxRExRYU9NWW85R1N2a3I4c01Db1hfUTJIT3U1MHZnbnNFcFh5MGRJMHNFcHdjbXpZQUhIRQ?oc=5",
-          "published": "Fri, 10 Mar 2023 14:51:50 GMT",
+          "title": "PROSPERA PRIVATE WEALTH, LLC - Portfolio Stock Holdings - Quiver Quantitative",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZnQxSV9DT2NHV3M2Y1otUGtiVElJX0MySmE0eldWWkVnWmd4dkhqczk3Sk56Q2Y1eUZlSWp3WW9HRXdJRThTZHc1VnFmbG1kRnRERFljbmM4cWRLSmNJQloxQV9HU2JGM3d4bGxyVkFkQk4wQzh4WC05VUtEbXl4WW13?oc=5",
+          "published": "Mon, 30 Sep 2024 07:00:00 GMT",
           "source": "Google News"
         },
         {
-          "title": "Who is Chirayu Rana? Ex-JPMorgan staffer makes shocking sexual-harassment claims on company\u2019s high-ranking - The Economic Times",
-          "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNakctTjNSWUlOWlJSYnoxckx2VHdPbkg3aDhzNzJfNFFodUZrU256UTlrXzFNOHdfZndqaU1LbkdkdEVVNUdBUW8tdHlHSjdVZjRHajAydUprOTNQVFRITDFjVERhQTNFbWFoRDRYZWtfdnNpYWJBNzBOakZYUjJ2SmZSZ0xWQXNWMU1sak5EcmlEWjFlQ3BjXzNxVFNWa3BqTzI0MTNackF6WHBwb3hsUkRwWmFrVy14NzYwVjF0TUZOYkQ1Umg0aGZmTDJfc0VOMzljS29VdmhTV0ZHOWlqZWVEcDBUNTNpWlFTS2d3QmlCNjA5NWc3OE4tX2ViTURxTmpmS2FvSHNvdjNwSHZBZ1ZoN29UdW9CZmfSAZ8CQVVfeXFMTmVnekdOWEYxWktVOFIxVnJyZFdPdk5NUW5ucTZFRkVMdG1kdWRpSTQya1Z4M2gwSUxEMFUxOGZ0cHc3ejVvM1ZIc2Q3VnpKcTVqN3FnZWlrYkktTDJreU9EU0pIWHI1blVoaFN3WnRhcWgtVnpQX0FZak1pUS1GWXptX1pQanZRaVlfNERLTzkxSTQxbjdPY3Q4UHJRZndGT2NrWEI3WHBCaGhHTGFBN2hyTlZOS0NuNEY1c3pSM1cwVjNRaEIxLVl4bDdLMmFvNnNZS0J4bWMtS3g1ZTBrOGhPQ19zVlJpTGljUmhnX1h5MExtZGFYRnlzWlZLYkZ1R0pOTjZvdHhObUFGQW9zejJaMURiM28wVlJiQjVVRUE?oc=5",
-          "published": "Fri, 01 May 2026 07:00:00 GMT",
+          "title": "How to invest in Austria: planning your financial future - Expatica",
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQNnd4dmhrRlRmbllEQlc0ZjVBZWRUWjVfNEhYRkVHSE93UGl4WkJOR1ltS3k3LXNiS0xwdEd1bWJRdUdHZXJEbngwbHZ0SVcxRExRYU9NWW85R1N2a3I4c01Db1hfUTJIT3U1MHZnbnNFcFh5MGRJMHNFcHdjbXpZQUhIRQ?oc=5",
+          "published": "Fri, 10 Mar 2023 14:51:50 GMT",
           "source": "Google News"
         },
         {
@@ -1660,6 +1642,24 @@
           "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTy0xQmRUYUdBUHpaSE1LYnVhUlZEVnF4MkxRSVdqenM1eDlMRmxXbllGV0xXcUVFM3BZanQwcHo3R0MxZTFLTWszRFY3RWFvMWZBbnBwMWNLaWhUc0hVN1ZSZUhFZjcwRk9uc2NaWmdjbDZydTZMdmFzRVVuak0tODJyZWtaWlBpSnFGR0VjU2g2VjVUNFlvbGRLMlg1WGlpV1NqT1Y0RmM0a2FMV3hBbWlSdy1Yb1JoalhuT2FXOA?oc=5",
           "published": "Fri, 06 Dec 2024 08:00:00 GMT",
           "source": "Google News"
+        },
+        {
+          "title": "Smart Boards for Schools: Inside the \u201cSakwala\u201d Scandal Linking Singer Sri Lanka and SJB\u2019s Sajith Premadasa - LankaeNews",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB4cXhTUFhsZUh6LWRmQ1QtaUpQdzljMVllWFRqQTlLTzJ1QXlMd3l6cTRZWm16bDJyYlBEZUx3R3BtS29aZ1AweUlKNzJ5ampO?oc=5",
+          "published": "Thu, 09 Oct 2025 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Opposed to privertisation of Strategic SOEs : SJB - Newswire",
+          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPck03ZEV1bXpDa2tpRmR2NjV3c3NQXzNoM0hWcThlTlR3dmNUTjFrN0VxNUotTXNLRUw0UlB6bHI4YWFHX3NvOGUtZ0ppS2IxLUJjaTNHenVMOTJFQTNLS1AzcDBIU0trMlMtRktOa1dXNVhXNTJxWmdMSGpVamNBY0dhV1pMUVJNRDlz?oc=5",
+          "published": "Mon, 08 May 2023 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "South Yarra apartment building to deliver new standard of quality for Claremont Street - Apartments.com.au",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNN1pOOWZHN1RnOTFoNTdSUDBVNXMxLU1UUUZ3ZjJDbzRlMFRSYWUtQXlUdWNuRlplSndQWVpnV09yYWVjRmdqZ3FrclU4VzE1ejhwLW9sUnFTTmprOUlLNzZqSWlZTklJSm44Si1YQXljWmR1VTRvR2lneHVlYy1NTmhiYWZjc1MwZ2UzUmxSNnVlTHdRa3V4SXFCU1FQRGVEcHB4YzNCeVM0NFNPMV90Uk9CY1U0STA3M1huZUJwVE03OXc?oc=5",
+          "published": "Sun, 19 Jun 2022 07:00:00 GMT",
+          "source": "Google News"
         }
       ]
     },
@@ -1667,28 +1667,24 @@
       "status": "ok",
       "ticker": "GVAL",
       "name": "Cambria Global Value ETF",
-      "price": 35.7,
-      "prev_close": 35.62,
-      "change_pct": 0.22,
-      "as_of": "2026-05-28",
+      "price": 35.57,
+      "prev_close": 35.7,
+      "change_pct": -0.36,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": 0.22,
-        "5d": 0.93,
-        "30d": -0.7,
-        "90d": 7.58,
-        "150d": 24.09,
-        "250d": 38.8
+        "1d": -0.36,
+        "5d": 1.22,
+        "30d": -0.64,
+        "90d": 6.9,
+        "150d": 22.92,
+        "250d": 40.13
       },
-      "ema50": 34.86,
-      "ema200": 32.13,
+      "ema50": 34.89,
+      "ema200": 32.17,
       "ma_signal": "BUY",
-      "zscore": 0.91,
-      "cmf": -0.064,
+      "zscore": 0.79,
+      "cmf": -0.058,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 35.8
-        },
         {
           "date": "2026-04-17",
           "value": 36.27
@@ -1804,6 +1800,10 @@
         {
           "date": "2026-05-28",
           "value": 35.7
+        },
+        {
+          "date": "2026-05-29",
+          "value": 35.57
         }
       ],
       "note": "",
@@ -1845,12 +1845,6 @@
           "source": "Google News"
         },
         {
-          "title": "(GVAL) Price Dynamics and Execution-Aware Positioning - Stock Traders Daily",
-          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPZmlWcUJySTJGUDhJRkk2cGlWTk1qbm1kSy1DM0EtQk44bDh5YUhZUlhaTnc4TmpfbFhzekZya1hZcVpKYl8wbmVKY2Ntd00wZVNFcUZtRDBGYm95QldWRHN1cFllX0gxdUVjZzEtVEJzY3Z0UUxwX2tUb0hrZW1aNHA2VDlFZGVUdUxRcnlMU2cycE1Laml0d2V6RDd5UXV0d3Y2Qm9kR0lzaHI0ck5obEIwNWNDcF9ocHAtQjdpLUNDTDR4QU9uN2FWSQ?oc=5",
-          "published": "Fri, 24 Apr 2026 22:50:02 GMT",
-          "source": "Google News"
-        },
-        {
           "title": "3 Great International Value ETFs - Morningstar",
           "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE80dkpLRFRQaFdyZldTWDRSUEdEd3FjaF9qVXh0ZGp4b2RjX3VnQ1VaQmlrU3Y4NHRrQTZuekRmSjdUblR6cVFzUFoyLWVhbVN6S0d0WVpvRmprX1pqRVZLOFV2eDdPcnpSZmpKRjBjY0d2cTRLVVNv?oc=5",
           "published": "Wed, 14 Aug 2024 07:00:00 GMT",
@@ -1863,9 +1857,9 @@
           "source": "Google News"
         },
         {
-          "title": "The highest-rated non-U.S. ETFs to consider now (DXJ:NYSEARCA) - Seeking Alpha",
-          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOa3FpLWZPdTFnLWpGem5nY3lsM0Jhb1NhYU5zMVp6VHJHMVZzSy1GeFJOVVVWVG1vOHBDT0dSX2xESmFZRmxhNGtnUl9icWp5RW5HdmlRQnhoR2k3eVg1UnR3T0luZXZ3ZnBjcEFySFlJTGRPaU1ZTjNTaVdZd0VLMGtPT1BkVWVlUDNN?oc=5",
-          "published": "Mon, 24 Nov 2025 08:00:00 GMT",
+          "title": "AVGV: Global Value ETF With Balanced Sector Allocation - Seeking Alpha",
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQYkZPcm5VWU1CaHg5TmNXT1hYdkU5RDJic18xNWE1ZFRidHZmdHBxQ3JhcjROYnBpdmpYaDRHQWtoVmlEc3pVaGRCVWwzbGtzS1hDVkFVS01pNkhEVHFQVlZBdmNPY3otaW5ma1Q1LU1mV0ZoM0ItM2ZfajRYd18wZ1h4NVF2bUt0aHZHeEhxekJFZzNmcTNtSEpB?oc=5",
+          "published": "Tue, 24 Mar 2026 07:00:00 GMT",
           "source": "Google News"
         }
       ]
@@ -1874,28 +1868,24 @@
       "status": "ok",
       "ticker": "VFLO",
       "name": "VictoryShares Free Cash Flow ET",
-      "price": 44.93,
-      "prev_close": 44.56,
-      "change_pct": 0.83,
-      "as_of": "2026-05-28",
+      "price": 46.57,
+      "prev_close": 44.93,
+      "change_pct": 3.65,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": 0.83,
-        "5d": 4.34,
-        "30d": 9.94,
-        "90d": 13.7,
-        "150d": 18.89,
-        "250d": 34.34
+        "1d": 3.65,
+        "5d": 7.53,
+        "30d": 13.07,
+        "90d": 19.51,
+        "150d": 23.68,
+        "250d": 39.45
       },
-      "ema50": 42.0,
-      "ema200": 39.38,
+      "ema50": 42.18,
+      "ema200": 39.45,
       "ma_signal": "HOLD",
-      "zscore": 2.73,
-      "cmf": 0.217,
+      "zscore": 3.51,
+      "cmf": 0.216,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 41.19
-        },
         {
           "date": "2026-04-17",
           "value": 41.75
@@ -2011,6 +2001,10 @@
         {
           "date": "2026-05-28",
           "value": 44.93
+        },
+        {
+          "date": "2026-05-29",
+          "value": 46.57
         }
       ],
       "note": "",
@@ -2022,9 +2016,9 @@
           "source": "Yahoo Finance"
         },
         {
-          "title": "(VFLO) Volatility Zones as Tactical Triggers - Stock Traders Daily",
-          "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNYXN6bGR2anRIaFJIaFU4NVlvVTM1UmViaFBhaWloSmJGdzh3T05yUWJWUXR4Rmt6anRCdzRZVk5GLV8tdm0tcXVoaWhoRjhENk8yN29PRUlPeUhXWlZvUUNUSkZoQWlsdGdnWTd1bWx3Znh6UTJGeVE2RzczMXdYTHhUOTl4ckNUdE81TEpxSjJSNEdZU1k4bENXenFWbFU3MERBTm5hdUNDZlNaMHdDcThVVGRYOWJWVk1SdUZpWnQ?oc=5",
-          "published": "Thu, 28 May 2026 22:18:01 GMT",
+          "title": "Price-Driven Insight from (VFLO) for Rule-Based Strategy - Stock Traders Daily",
+          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPX1dZNUlUVXV2Y1l4dzI1ckx4UGp3T09uSE1seXdYV0xmeUlGd1JtbUp6NHRfZFhnTHIxREVmWUlaeEpxRVFnME1sUllYUFFJZGF5R1BqdVRlZGpTLV9DakdQWGhjelo1T05XS3BuVmRWNm05bGxmU05iRzFFZG53X24xYTkzeWlVa2FwS1ZpSDd0NzgzbURtUFRNZTBZQnpLWGl6TFlkYk9BM3dnUnlJRHJYak5nMEo5NHRDZHRsTVEyMFBleHJIeWdsYlR4N0J4?oc=5",
+          "published": "Sun, 17 May 2026 21:10:01 GMT",
           "source": "Google News"
         },
         {
@@ -2046,21 +2040,21 @@
           "source": "Google News"
         },
         {
-          "title": "Annex Advisory Dumps 1.42M VFLO Shares That's Worth Over $50 Million - The Motley Fool",
-          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQQktxZkVGTDctZWVUZkRxSnc1eE1RamZmTE8xd2FFNHFjS2lJNHlweUJNeENkZmdiVDFwd2lpcnZaSGJVLWJ1WFFIb0M3cmJaZ2RuZ1NFeGFLQmhyeHhwdVhzenhjdjRFdVZvZC00Rnc4RU9WaWp5VlplQkpaNzFYUGROWl9UYUVYZlhsYXRaVElqNUlMdUpEdWxDNGxScG5mN0ZMVG9ZZzFRZmtkcWQ5UWtNSGx0d2F3d3puYg?oc=5",
-          "published": "Sat, 31 Jan 2026 08:00:00 GMT",
-          "source": "Google News"
-        },
-        {
-          "title": "Price-Driven Insight from (VFLO) for Rule-Based Strategy - Stock Traders Daily",
-          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPX1dZNUlUVXV2Y1l4dzI1ckx4UGp3T09uSE1seXdYV0xmeUlGd1JtbUp6NHRfZFhnTHIxREVmWUlaeEpxRVFnME1sUllYUFFJZGF5R1BqdVRlZGpTLV9DakdQWGhjelo1T05XS3BuVmRWNm05bGxmU05iRzFFZG53X24xYTkzeWlVa2FwS1ZpSDd0NzgzbURtUFRNZTBZQnpLWGl6TFlkYk9BM3dnUnlJRHJYak5nMEo5NHRDZHRsTVEyMFBleHJIeWdsYlR4N0J4?oc=5",
-          "published": "Sun, 17 May 2026 21:10:01 GMT",
+          "title": "WBI Investments Dumps 82,000 VFLO Shares Worth $2.6 Million. Should This Cash Flow Yield ETF Have a Place in Your Portfolio? - The Motley Fool",
+          "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPSHowbXQwaHh4YzdKdTBORE9TWHc0OWdJdm1penphOW9IeTZwY3FjTVE1ZERKNHdmWko0Nm1vLUt2TFZMTWNMcmtNTE80U1kzWkV0WDlzRGpLZEJhUlI0V3h6TXlNRDdqRFp3ajd6bWxuUmtyZ2M0ckx2UGNNZG5YVmNZcmR4cTNhVERYUFFRMlVDbUZ3R2hxMTZvSjU1QWF4S0l3RUxPaXc1aUhoZzJhMlRHWE5qaFFUNlJSVk9TS2x0d3VEVVpySVRkLWdsOFlFSEdmQkFIN2lQbVlqZ1MzYVAwWDFPVFMxWnd1UmFBRER3blhNS0tYcTF6aG56VmZoZG5IRw?oc=5",
+          "published": "Sun, 28 Dec 2025 08:00:00 GMT",
           "source": "Google News"
         },
         {
           "title": "Free Cash Flow Generators: Airline Stocks in Focus - ETF Trends",
           "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQc3BaUVZnaTJzM29wbnQtNTFNSm5SeGtkZDVrVlB4VGp1VjBJVUxyTkxqbDVEam0wYzNsNWRneGRNMjhxbTlETURQcV9USkx6a0w2YUc1ODZ6aFRha1lRSE5aYjMzc0VjSk1UTXJXZ3RjdHRyVzdBUE1HYWd6cjF1U09wMDN0ZGFTQmxZVmpXa2p4d3B0MVY4WlZHNlfSAacBQVVfeXFMTXZsd05LUHlrRF9pVlFhdVI0QjNSOHlZRTJXTklIZE9YZ2xEU0NnSWRWOHpWRTk2Z0o3RmFFT3kycW5YbFN2bkMwTElpbDk1bjVpempXN3lMT2lXc0tZc3VUdXlTclA1TU1EcVNMQ1JYTmRraW1MbEQzNHN4b2NsbnVGc00tdUsxRmFHOXFXLWxuLVFucThNU1BtMkhIVlZDQVFSOHM3Y3c?oc=5",
           "published": "Thu, 10 Jul 2025 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "(VFLO) Price Dynamics and Execution-Aware Positioning - Stock Traders Daily",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPdnZsU3BYdjhJcTRxTjVLcGNkVzZlS2l5XzJCRmYySEc2T2g5N1VybHJnVjFfT1ViaHJWdWhKUmVfX3N4NUVrX3pSblpZZTJreExWQ25oOUJNbHg5OU9RdTJTT090eFNHVkpiT2NrSlY1TU0yQ1E0aTZ2QWIzREJ0UUtORmZqTzFGRkg0TDZ3cHFDbkZRcU91VnFsTG94T2NkVVprNUhuTFZCUmlWYWx6a3dfUVVrZUE4SGZ4QlVuZmJLZ1hPdzhvNHFPZU8?oc=5",
+          "published": "Wed, 06 May 2026 20:02:02 GMT",
           "source": "Google News"
         },
         {
@@ -2076,15 +2070,15 @@
           "source": "Google News"
         },
         {
-          "title": "(VFLO) Price Dynamics and Execution-Aware Positioning - Stock Traders Daily",
-          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPdnZsU3BYdjhJcTRxTjVLcGNkVzZlS2l5XzJCRmYySEc2T2g5N1VybHJnVjFfT1ViaHJWdWhKUmVfX3N4NUVrX3pSblpZZTJreExWQ25oOUJNbHg5OU9RdTJTT090eFNHVkpiT2NrSlY1TU0yQ1E0aTZ2QWIzREJ0UUtORmZqTzFGRkg0TDZ3cHFDbkZRcU91VnFsTG94T2NkVVprNUhuTFZCUmlWYWx6a3dfUVVrZUE4SGZ4QlVuZmJLZ1hPdzhvNHFPZU8?oc=5",
-          "published": "Wed, 06 May 2026 20:02:02 GMT",
+          "title": "VettaFi Is a Differentiated Index Provider - ETF Trends",
+          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TbDlzWXEwNTJ4UER0aTdYZERUQU43dk5EMWg5ZkZDdS04bjV1SnN5R21mSEU4elVMcGszRHlQZE9tbEpkSk96emMwZzhpVzdaRlQ1OHBLZFRTSU01TWhzY1Q0RFZaaFZCQmRRM3JkQXdwQdIBd0FVX3lxTE8zMlBXQVdhZzlXX0NYT2xWTlYwUWR6U3lsS3ZlMVFNN2RiTHhhU2FlaTNienZYOWl5SnRjVndmdDBBRDhrWFRMZF9BcDg1bFg5VF9jdVQ0ZkFjQmNkLTBHcWNTdXRveVpHTHpnUDFUMTdrbUhndWpN?oc=5",
+          "published": "Mon, 06 Oct 2025 07:00:00 GMT",
           "source": "Google News"
         },
         {
-          "title": "VFLO: Free Cash Flow In Vogue Amid High AI Capex Jitters (NASDAQ:VFLO) - Seeking Alpha",
-          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZEhlUk55eklzSWtIOHlfcFIzNXpiYkQ0T1hjOE9iU1FLRlZ5TjJjSVh0bGNac0Y1QUE3LUZWcnE1LVVqQkZQUEY4Mlo1VkRJbU1ZZGMzMUxsMTk5V1dFZF9ua1o5V29MQkxBMldoOXN2ZGlEem5UZmo1UVpHclZ1X1c1LUpWUUl2UXZOalUzcDRrem1Ia1VqWjZ4ZVU?oc=5",
-          "published": "Sat, 21 Feb 2026 08:00:00 GMT",
+          "title": "VFLO: Strong Performance But Still A Hold For Now (NASDAQ:VFLO) - Seeking Alpha",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPdUNjbnNTdlpYSEF5aG9oSE1fSFNGYnRpOG5sWVp6QWR1dGo4YjJ5VEFBMWVwRWZfSHdfODRxaF9tX1Q2SWctZDliZXM4d2pOUXRva0xLQWJoR2E0VUtCVHlleW5OdnV1YnN3Uzd4Tk9RaGg4U1Y3OTFjREFWbGdNRTVheDFPTW9YYktmMUg0VG9Nc1E?oc=5",
+          "published": "Tue, 09 Dec 2025 08:00:00 GMT",
           "source": "Google News"
         },
         {
@@ -2100,15 +2094,15 @@
           "source": "Google News"
         },
         {
-          "title": "How Popular FCF ETF \u2018VFLO\u2019 May Help to Avoid Value Traps - ETF Trends",
-          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdFZSM3otNjE2R0NEWU1UYWFxYThzaUNxNTdiQUZCVUNiSVVhR0VLNHNnN2cxUVNhTWhwMXE5LVNyOHZvd25rZEZjbWl2RnNSRXNhNkwySmcyMXItOEMxTkRZVGdGV05vT1FXbHpNbktPOTNLbWdKOG9jbzVUOFhkeVdMb0NPSUFwV3hvaE5ya3FGWThyWlFRZtIBowFBVV95cUxQLVY4LURUOUJ5YkY4UVdBa3paUGNZYlNncW84U01pQzIwMWlZRUNGNnMtczJxZUw2dzNWaHRDUURZd08tX3JscUpoQ1QzbGhvMGNvd2Q0MFcwUWVySzJkdzFudkJHb2RKdl9VX0RTZUliay02S3B1NDVsT2RHVS1fQVJuSEEtY0w0TEozUTg3ektkNDhVcmJHQXVhQm5FamU2ZWJZ?oc=5",
-          "published": "Tue, 04 Mar 2025 08:00:00 GMT",
+          "title": "VFLO: Free Cash Flow In Vogue Amid High AI Capex Jitters (NASDAQ:VFLO) - Seeking Alpha",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZEhlUk55eklzSWtIOHlfcFIzNXpiYkQ0T1hjOE9iU1FLRlZ5TjJjSVh0bGNac0Y1QUE3LUZWcnE1LVVqQkZQUEY4Mlo1VkRJbU1ZZGMzMUxsMTk5V1dFZF9ua1o5V29MQkxBMldoOXN2ZGlEem5UZmo1UVpHclZ1X1c1LUpWUUl2UXZOalUzcDRrem1Ia1VqWjZ4ZVU?oc=5",
+          "published": "Sat, 21 Feb 2026 08:00:00 GMT",
           "source": "Google News"
         },
         {
-          "title": "VFLO: Strong Performance But Still A Hold For Now (NASDAQ:VFLO) - Seeking Alpha",
-          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPdUNjbnNTdlpYSEF5aG9oSE1fSFNGYnRpOG5sWVp6QWR1dGo4YjJ5VEFBMWVwRWZfSHdfODRxaF9tX1Q2SWctZDliZXM4d2pOUXRva0xLQWJoR2E0VUtCVHlleW5OdnV1YnN3Uzd4Tk9RaGg4U1Y3OTFjREFWbGdNRTVheDFPTW9YYktmMUg0VG9Nc1E?oc=5",
-          "published": "Tue, 09 Dec 2025 08:00:00 GMT",
+          "title": "How Popular FCF ETF \u2018VFLO\u2019 May Help to Avoid Value Traps - ETF Trends",
+          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdFZSM3otNjE2R0NEWU1UYWFxYThzaUNxNTdiQUZCVUNiSVVhR0VLNHNnN2cxUVNhTWhwMXE5LVNyOHZvd25rZEZjbWl2RnNSRXNhNkwySmcyMXItOEMxTkRZVGdGV05vT1FXbHpNbktPOTNLbWdKOG9jbzVUOFhkeVdMb0NPSUFwV3hvaE5ya3FGWThyWlFRZtIBowFBVV95cUxQLVY4LURUOUJ5YkY4UVdBa3paUGNZYlNncW84U01pQzIwMWlZRUNGNnMtczJxZUw2dzNWaHRDUURZd08tX3JscUpoQ1QzbGhvMGNvd2Q0MFcwUWVySzJkdzFudkJHb2RKdl9VX0RTZUliay02S3B1NDVsT2RHVS1fQVJuSEEtY0w0TEozUTg3ektkNDhVcmJHQXVhQm5FamU2ZWJZ?oc=5",
+          "published": "Tue, 04 Mar 2025 08:00:00 GMT",
           "source": "Google News"
         },
         {
@@ -2118,21 +2112,21 @@
           "source": "Google News"
         },
         {
-          "title": "WBI Investments Dumps 82,000 VFLO Shares Worth $2.6 Million. Should This Cash Flow Yield ETF Have a Place in Your Portfolio? - The Motley Fool",
-          "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPSHowbXQwaHh4YzdKdTBORE9TWHc0OWdJdm1penphOW9IeTZwY3FjTVE1ZERKNHdmWko0Nm1vLUt2TFZMTWNMcmtNTE80U1kzWkV0WDlzRGpLZEJhUlI0V3h6TXlNRDdqRFp3ajd6bWxuUmtyZ2M0ckx2UGNNZG5YVmNZcmR4cTNhVERYUFFRMlVDbUZ3R2hxMTZvSjU1QWF4S0l3RUxPaXc1aUhoZzJhMlRHWE5qaFFUNlJSVk9TS2x0d3VEVVpySVRkLWdsOFlFSEdmQkFIN2lQbVlqZ1MzYVAwWDFPVFMxWnd1UmFBRER3blhNS0tYcTF6aG56VmZoZG5IRw?oc=5",
-          "published": "Sun, 28 Dec 2025 08:00:00 GMT",
+          "title": "VFLO: The Potential for an All-Weather Opportunity Within Large-Caps - ETF Trends",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNc00wRnBYaWtjRFdaXzlhVndtRkNZTU1rZ1plNGtMVlA1SFg1QVp1eWYzSFl4MnpmQ29xM2k0QlIzMUhaTDk5Vm83Q1l4WEpCU3o3bEZTRjh4dm9yNjQ2cE85dnR5UzhNTXJleDhOcFlLd3JFN3hPek9Ta1NjdlJZQTQ3dmFEOHZPaW8zWlNueFNzeXQwc2FiN2V1b1FHR3U50gGrAUFVX3lxTE4yaWFMVDN5YkxLNjdBWjltb0I5Tm85dGNwUnBjMTR2QjJQQzZlakJIZExYNnctUWJmVmJzX1Q0bEhWQ3l6eUVJSlBCYmgySHFsdHBtemVOeEhPWGNuTjVBby1kdFMyZjNxTWFleXVqWHJqV3JnRmxhODhlVE5HSy1vVncxQkVVcFFteThzQ1dudWs2Q3o3cU9xblJMelRDd2xtOEl5MFRqYVZxVQ?oc=5",
+          "published": "Tue, 08 Jul 2025 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Why FCF ETF 'VFLO' Looks Strong in 2025 - ETF Trends",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPb1ZzWEl4UG1aVThxYkFBWEFadHQwZXRnV1JlaGxHeHY0MWJxYUlwOXdQVkhoT1lsTnRUWWNnLWdfLUl6eV9ubmltbktCQ0RVUmRkUXRvRC1qSm51NkNQYkJLZmtoeFBzcXlOMlZqdmtrblhya09NOTBXeWFZTWR6V2l4LW1BTjQzb3daU3RMSHluUdIBnAFBVV95cUxNWjliVXhqTURmSUdaVlduZ3hxRXUwMm8xOThVeVB3a0lqZEZyMUdXRkNHSnVQSzVJd2lzRG9QUGVObE53b2ZyQjFHZnJmRmFTLV91QmVGWk5paFhLVUEwQ1VacW9QM2dyVEJSUWw5TVU2WU5DRlRUeUxJU0VNNTVjQmRrdWRxYVo5LUFfQV90Q1I5T01oQ0FZVnZXQlM?oc=5",
+          "published": "Mon, 10 Mar 2025 07:00:00 GMT",
           "source": "Google News"
         },
         {
           "title": "VFLO Seeks Compelling Opportunities Across Market Conditions - ETF Trends",
           "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNRUtrMXktTkowMnh2N1NqYUZiWnk5SHVKd05TTDI4aVBfMVpBXzRUTEplaHowZWdRcG9zOGhPcWIxVzBHem5KZDJKQ0pPU3picmdtSWM0MWU4cWkxUlFpaUYwWlFsQ3Jyakl1YWlmUldDeUlYd0NEZVktbzlGc2JsVEUyZzlWaFFNTFdMSDdQcWprRmkzQUxqeWI2NElCYWt0dGwyVHJSVEVOMVNpSTlZ0gG6AUFVX3lxTE8wbXR2Y3NOVE0xcXllTzVvYWo2Z0NrYWZPczZfeFVYcnlLMU12aFhxX2ZneXpsT3BIOXdoTVZDLVZmZEZnX1U4TDA4bGpXY2lOOXVwLXZkMmJjY2JBaVNma3RYbEppczduc0hCd1Y0VUJRSFBUVThHaWJyQkpRMkxVekQ2XzJuYTBCQ1dsdmFpak83LW5LOU5VOFNmaXYzYzFNQ28xSXVHTlFON010WU9hc2hUS1JmR0xPdw?oc=5",
           "published": "Mon, 04 Aug 2025 07:00:00 GMT",
-          "source": "Google News"
-        },
-        {
-          "title": "Enhance Your Value Exposure and Growth Allocation With VFLO - ETF Trends",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRUJaQXgwU1hWZFFRQjIwSGpUMXY4NDBNeVBwVmsweVg1UVVITkw0LVdrSmJtNWswaGJyOG92SUlQYm5uTWVuUzdaeFRGN1Jsem93WmwwSU03ak5EUXAtUlhqTFNwRjdabFBEUjZWbms4bmRUanZaU2JfX1UzZXdyVy03VWNJMUI2ckNPVmNCcnU?oc=5",
-          "published": "Mon, 24 Jun 2024 07:00:00 GMT",
           "source": "Google News"
         }
       ]
@@ -2141,28 +2135,24 @@
       "status": "ok",
       "ticker": "DVYE",
       "name": "iShares Emerging Markets Divide",
-      "price": 34.26,
-      "prev_close": 34.38,
-      "change_pct": -0.35,
-      "as_of": "2026-05-28",
+      "price": 34.06,
+      "prev_close": 34.26,
+      "change_pct": -0.58,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": -0.35,
-        "5d": -0.41,
-        "30d": -3.66,
-        "90d": 5.87,
-        "150d": 16.89,
-        "250d": 27.0
+        "1d": -0.58,
+        "5d": -0.58,
+        "30d": -4.19,
+        "90d": 4.83,
+        "150d": 15.86,
+        "250d": 27.73
       },
-      "ema50": 34.53,
-      "ema200": 32.23,
+      "ema50": 34.52,
+      "ema200": 32.25,
       "ma_signal": "MONITOR",
-      "zscore": -0.25,
-      "cmf": 0.097,
+      "zscore": -0.57,
+      "cmf": -0.125,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 35.55
-        },
         {
           "date": "2026-04-17",
           "value": 35.77
@@ -2278,6 +2268,10 @@
         {
           "date": "2026-05-28",
           "value": 34.26
+        },
+        {
+          "date": "2026-05-29",
+          "value": 34.06
         }
       ],
       "note": "",
@@ -2325,15 +2319,15 @@
           "source": "Yahoo Finance"
         },
         {
-          "title": "The Technical Signals Behind (DVYE) That Institutions Follow - Stock Traders Daily",
-          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOR2VHV0FGM3hrQUhhT0cwenlZUVcwazczeUdlWFJubExRYlg2ckIzdDhLTzBjZl9OVkpGV3lSdUUyd3owcnZyZ2d3UjBaSHdyODlwTE8tVTRfZGNNejd4c3JYbUV5LVdQSGRjb1ZPU3BQY3p3UjNFUFlpczFoY2N3X0xlSnpkODhkVzlpMU1IY01nOTFtZERac25hOHN4NGFKRTM0bVE2eFVLc1ctdEdaVl91Zm02dVNuaGRPdncxaG13WkFDaDBxd05iLXdKcDk2clh3dw?oc=5",
-          "published": "Sat, 23 May 2026 18:20:02 GMT",
+          "title": "Is iShares Emerging Markets Dividend ETF (DVYE) a Strong ETF Right Now? - Yahoo Finance",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcGpGd3g4d2xtSjNFWEU5czg2R1FQMFFlTVlZb2pXVTd5TGJTZnBCSFc4ZC1hVkJqcV9Ubk92VnQzOWthRk5GWVNpbHZ6WUtnUjBCekVoRUpxeW82YTkzWWtySFpQdDZWSG1za0V0dVM5RFpSRnRSVHN4cXM1dFF5dFVBY0ZiWjFLbUNuNG16dE5Cd0QyUUUxOHc3Q1RhZlVhSUcxRQ?oc=5",
+          "published": "Mon, 18 May 2026 07:00:00 GMT",
           "source": "Google News"
         },
         {
-          "title": "Is iShares Emerging Markets Dividend ETF (DVYE) a Strong ETF Right Now? - Yahoo Finance",
-          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNX0s2R0R3SExkdnllRXJzUWIwWGN0ZUZlS3J5cFo4TE9qZGZOQURWOVAyTko0TVhwbGJqaEVvckxKdWRIcHg0cGJGWGEzNGhpOWZpdnhPcTdZNUw3QzZiWmF4dDJxMmx3RTE2a0JLcHhTMXhfRlQ4ZXhGSDZ1bENyUFU3akE1OTVYRTBr?oc=5",
-          "published": "Wed, 14 Jan 2026 08:00:00 GMT",
+          "title": "The Technical Signals Behind (DVYE) That Institutions Follow - Stock Traders Daily",
+          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOR2VHV0FGM3hrQUhhT0cwenlZUVcwazczeUdlWFJubExRYlg2ckIzdDhLTzBjZl9OVkpGV3lSdUUyd3owcnZyZ2d3UjBaSHdyODlwTE8tVTRfZGNNejd4c3JYbUV5LVdQSGRjb1ZPU3BQY3p3UjNFUFlpczFoY2N3X0xlSnpkODhkVzlpMU1IY01nOTFtZERac25hOHN4NGFKRTM0bVE2eFVLc1ctdEdaVl91Zm02dVNuaGRPdncxaG13WkFDaDBxd05iLXdKcDk2clh3dw?oc=5",
+          "published": "Sat, 23 May 2026 18:20:02 GMT",
           "source": "Google News"
         },
         {
@@ -2346,6 +2340,12 @@
           "title": "DVYE: International Strategy That Can Benefit During Geopolitical Unrest (NYSEARCA:DVYE) - Seeking Alpha",
           "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMm04djZMMGU1NjE3dGdxYjNBVG9JRzVBQkNpNGQweXQ2MlhUemRKd3ZHTmxxdVctWlJiOThVN0hVNmctVUxrUEV3N1I0ZFNRNGhQYjQ0MDItaDQtUFlNdHdLbmdka3NkZXFMaFpoOU5laEJkX2lrdmdoRW56cUFLX2k0a0lhYTFjNGt4SjQ2NnZ4X3VsejA0UWY2dDJXeWNiYVUwT3Q4UjdKWE8xRUtUTHNR?oc=5",
           "published": "Mon, 09 Mar 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "DVYE Technical Analysis & Stock Price Forecast - Intellectia AI",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1PQm80aF9TS3N2OWstNG15WWlLTDZNb0cwVW1jM2JOQkFtbi10YU13OF9BczZHTHE5WFptTEUxWTV0SE1PSndJWUcxLVZ4dDVaU2tTYll1dWZuZw?oc=5",
+          "published": "Wed, 20 May 2026 23:52:13 GMT",
           "source": "Google News"
         },
         {
@@ -2367,6 +2367,12 @@
           "source": "Google News"
         },
         {
+          "title": "Shoot The Lights Out With an ETF That Yields 9%, and Crushed The S&P 500 At The Same Time - 24/7 Wall St.",
+          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPVUVkNC1HU0tNSVpFQWthMnFuM2VuUGlWT3VEWHZxVUxvU1ZOd2VFZG52eGZoOFExQkU5N1lNZ2tWREhyTTNmZkx0SXdXTDI2enNldF9hV2EzaVhQRTM5YlpBUDhvRC1Pazl6Y0lzR2hsVDBtWklMLVB2SnpZNXZCbmtiNUNUOUlQQ29jdDhkM3hHb2VuYW9YYktLYVh2aDNXekdxelJrbzNYZUQ0WlhNdUZPRmFFY1RuVkFpNGRDYlozcE5zSTBxdWtn?oc=5",
+          "published": "Mon, 05 Jan 2026 08:00:00 GMT",
+          "source": "Google News"
+        },
+        {
           "title": "DVYE: Its 5.5% Dividend Yield Is Not Particularly Compelling (NYSEARCA:DVYE) - Seeking Alpha",
           "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdlprRnlXWUIxbGdIZEVYaDJFZWFKbEFaZ2VKdWYxcVBVZU9MSHZ6dnEyeHRwUU5fQzhQWUZrWWNkUmgzUzlTV1RkOGdOd09MYWVxbUI2YXd1ZngxZTVTc3FSWmlhTVEwZzhLMjNQRl9DWFFXb1pPY01PTWIxdlZXRGJOa000V2Ytd1BORHlZaFdFLVoyQi14cjgwTXZsbFdoYW0zQVZNcG02R00?oc=5",
           "published": "Mon, 09 Mar 2026 07:00:00 GMT",
@@ -2379,27 +2385,15 @@
           "source": "Google News"
         },
         {
-          "title": "This ETF Is How You Benefit Massively From a Cheaper Dollar - 24/7 Wall St.",
-          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNYi1abzF0QlBmLTFJM3F3QTdIT3F0dEg3eXpNSlNwelVNU254Qm1kQmN0MTAxR29kdGpJaU8yOFlyNG9PQXVSN09iU3JnTVpXZDFBM2lNbGNoS3BuQVVoUTlld0R4eGFwNW9sOXo5OERLa1IzOE1OQ0ZEcm9PMV9tUkJaX0dfYjg3XzFGMzFpcDdjRGpHbVpOVnh4UFhZNGJhclJObmdR?oc=5",
-          "published": "Sun, 29 Mar 2026 07:00:00 GMT",
-          "source": "Google News"
-        },
-        {
-          "title": "Shoot The Lights Out With an ETF That Yields 9%, and Crushed The S&P 500 At The Same Time - Yahoo Finance",
-          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5LZTNFUU9kU1ZPY1VObU41alUyZEFfWVNQUmo3LWVsTUFMRzF5Si1pQUxUa2lzWmhNZjUzU3BjUUZLQ01tLWdKNXpnNjBNWktCNVkyWEdXdjkwVU03OFZIdnk0dEhOa3E2T2NaZ1RGOHpQWDNuT18tcXZDcw?oc=5",
-          "published": "Mon, 05 Jan 2026 08:00:00 GMT",
-          "source": "Google News"
-        },
-        {
           "title": "EMEQ Vs DVYE: Choosing Growth Or Resilience In Emerging Market ETFs (NASDAQ:EMEQ) - Seeking Alpha",
           "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbV9hZGFvMkJDYXd1dWtqSlR1bnlZYnlOUEFMTU9NYmlLSl80WVo3djQwM3Mzei1CSWVUZ1l2Sl85emFxaUlPY29TVTRDekd0QmZjTDYzb1RyYm8zVl9MOUpScGwzUjItMWRNYVg4bkxjbGFPc2hXaE1xOTVPZ3VGUEpaNk9Genlsc2hUOVNQVkxheWM5TmlSZ2Z5ODR0TVJyaTBXMW9hcklhZk0?oc=5",
           "published": "Thu, 16 Apr 2026 07:00:00 GMT",
           "source": "Google News"
         },
         {
-          "title": "3 Dividend ETFs That Yield Over 7% Without Using Options - 24/7 Wall St.",
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNGMwUFNZQXJtZ3hWM0Z4QXZYQ1Nma09SSnBBTF9mdk9RbkliSVE0a1h0dGg3SEdnMXVhQ1ZaSEN0NHR6S1pYM2ozbnBkUmYtQjhDa3Mxd2dxY2tsTlRKNmRwcVg3ZFpzdFZqbjBHVUJYWjB5dVFwcmZOZXllaUxPVk9vR3UzMFg4OGc3V2Zabkp3NVpoYllYN19IQTk5T0Rj?oc=5",
-          "published": "Mon, 10 Nov 2025 08:00:00 GMT",
+          "title": "This ETF Is How You Benefit Massively From a Cheaper Dollar - 24/7 Wall St.",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNYi1abzF0QlBmLTFJM3F3QTdIT3F0dEg3eXpNSlNwelVNU254Qm1kQmN0MTAxR29kdGpJaU8yOFlyNG9PQXVSN09iU3JnTVpXZDFBM2lNbGNoS3BuQVVoUTlld0R4eGFwNW9sOXo5OERLa1IzOE1OQ0ZEcm9PMV9tUkJaX0dfYjg3XzFGMzFpcDdjRGpHbVpOVnh4UFhZNGJhclJObmdR?oc=5",
+          "published": "Sun, 29 Mar 2026 07:00:00 GMT",
           "source": "Google News"
         }
       ]
@@ -2408,28 +2402,24 @@
       "status": "ok",
       "ticker": "XLI",
       "name": "State Street Industrial Select ",
-      "price": 173.8,
-      "prev_close": 174.3,
-      "change_pct": -0.29,
-      "as_of": "2026-05-28",
+      "price": 173.13,
+      "prev_close": 173.8,
+      "change_pct": -0.39,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": -0.29,
-        "5d": 1.8,
-        "30d": 1.53,
-        "90d": 4.43,
-        "150d": 12.92,
-        "250d": 23.41
+        "1d": -0.39,
+        "5d": 1.52,
+        "30d": 1.64,
+        "90d": 6.17,
+        "150d": 13.96,
+        "250d": 22.86
       },
-      "ema50": 170.95,
-      "ema200": 161.56,
+      "ema50": 171.03,
+      "ema200": 161.68,
       "ma_signal": "BUY",
-      "zscore": 0.79,
-      "cmf": 0.099,
+      "zscore": 0.64,
+      "cmf": 0.124,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 170.33
-        },
         {
           "date": "2026-04-17",
           "value": 173.51
@@ -2545,10 +2535,20 @@
         {
           "date": "2026-05-28",
           "value": 173.8
+        },
+        {
+          "date": "2026-05-29",
+          "value": 173.13
         }
       ],
       "note": "",
       "news": [
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Rise Pre-Bell Friday Amid US-Iran Deal Hopes",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-131630396.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 13:16:30 +0000",
+          "source": "Yahoo Finance"
+        },
         {
           "title": "Exchange-Traded Funds, Equity Futures Lower Pre-Bell Thursday Amid New US Attacks on Iran",
           "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-132232793.html?.tsrc=rss",
@@ -2604,6 +2604,12 @@
           "source": "Yahoo Finance"
         },
         {
+          "title": "What Are Wall Street Analysts' Target Price for Cintas Corporation Stock?",
+          "link": "https://www.barchart.com/story/news/2130485/what-are-wall-street-analysts-target-price-for-cintas-corporation-stock?.tsrc=rss",
+          "published": "Tue, 26 May 2026 13:29:33 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
           "title": "Exchange-Traded Funds, Equity Futures Rise Pre-Bell Tuesday Amid Renewed Hopes Around Middle East Peace Deal",
           "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-131833095.html?.tsrc=rss",
           "published": "Tue, 26 May 2026 13:18:33 +0000",
@@ -2656,18 +2662,6 @@
           "link": "https://www.barchart.com/story/news/2114856/allegion-stock-outlook-is-wall-street-bullish-or-bearish?.tsrc=rss",
           "published": "Mon, 25 May 2026 12:09:42 +0000",
           "source": "Yahoo Finance"
-        },
-        {
-          "title": "Equifax Stock: Is Wall Street Bullish or Bearish?",
-          "link": "https://www.barchart.com/story/news/2113036/equifax-stock-is-wall-street-bullish-or-bearish?.tsrc=rss",
-          "published": "Mon, 25 May 2026 08:56:18 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Are Wall Street Analysts Predicting Jacobs Solutions\u2019 Stock Will Climb or Sink?",
-          "link": "https://www.barchart.com/story/news/2112327/are-wall-street-analysts-predicting-jacobs-solutions-stock-will-climb-or-sink?.tsrc=rss",
-          "published": "Mon, 25 May 2026 06:36:32 +0000",
-          "source": "Yahoo Finance"
         }
       ]
     },
@@ -2675,28 +2669,24 @@
       "status": "ok",
       "ticker": "XLB",
       "name": "State Street Materials Select S",
-      "price": 51.36,
-      "prev_close": 51.18,
-      "change_pct": 0.35,
-      "as_of": "2026-05-28",
+      "price": 51.15,
+      "prev_close": 51.36,
+      "change_pct": -0.41,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": 0.35,
-        "5d": 3.3,
-        "30d": -0.04,
-        "90d": 5.97,
-        "150d": 17.07,
-        "250d": 21.32
+        "1d": -0.41,
+        "5d": 2.26,
+        "30d": -1.16,
+        "90d": 6.61,
+        "150d": 16.94,
+        "250d": 20.81
       },
-      "ema50": 50.81,
-      "ema200": 48.12,
+      "ema50": 50.83,
+      "ema200": 48.15,
       "ma_signal": "BUY",
-      "zscore": 0.35,
-      "cmf": -0.08,
+      "zscore": 0.19,
+      "cmf": -0.097,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 51.75
-        },
         {
           "date": "2026-04-17",
           "value": 51.88
@@ -2812,6 +2802,10 @@
         {
           "date": "2026-05-28",
           "value": 51.36
+        },
+        {
+          "date": "2026-05-29",
+          "value": 51.15
         }
       ],
       "note": "",
@@ -2942,28 +2936,24 @@
       "status": "ok",
       "ticker": "MOO",
       "name": "VanEck Agribusiness ETF",
-      "price": 80.3,
-      "prev_close": 80.45,
-      "change_pct": -0.19,
-      "as_of": "2026-05-28",
+      "price": 79.46,
+      "prev_close": 80.3,
+      "change_pct": -1.05,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": -0.19,
-        "5d": -0.93,
-        "30d": -4.12,
-        "90d": 3.67,
-        "150d": 13.19,
-        "250d": 13.93
+        "1d": -1.05,
+        "5d": -1.24,
+        "30d": -5.18,
+        "90d": 2.75,
+        "150d": 11.3,
+        "250d": 12.63
       },
-      "ema50": 82.16,
-      "ema200": 78.02,
+      "ema50": 82.06,
+      "ema200": 78.03,
       "ma_signal": "MONITOR",
-      "zscore": -1.35,
-      "cmf": -0.208,
+      "zscore": -1.85,
+      "cmf": -0.217,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 83.8
-        },
         {
           "date": "2026-04-17",
           "value": 83.28
@@ -3079,6 +3069,10 @@
         {
           "date": "2026-05-28",
           "value": 80.3
+        },
+        {
+          "date": "2026-05-29",
+          "value": 79.46
         }
       ],
       "note": "",
@@ -3132,21 +3126,9 @@
           "source": "Yahoo Finance"
         },
         {
-          "title": "(MOO) Price Dynamics and Execution-Aware Positioning - Stock Traders Daily",
-          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPZDBid0NGNG1PMHpZQ3pDaV9iQWc2aTdSWVlFOEZvN3hTZ3ZmRHpQR1ZrdEpGTV9PUkwxVWlJa29KY0pyLVVkM0VocGpKalgyVmtSMm5nNTlvaVYzdEdVa3JkX1kyUUlFM2JRX1BEVm9fU1c0a2x6Yjd4OVFaSUFTUWc4WEI1QmhJTjMwTjFWQ1lXNXQyZWFlUVpfTzRoMmFVT2h2X19XWU9BOThSMHo0c2ZoSExnXzl0d3BMeUZ3ZmRvUThsaDBvRXV3?oc=5",
-          "published": "Mon, 25 May 2026 15:36:01 GMT",
-          "source": "Google News"
-        },
-        {
-          "title": "Should You Invest in the VanEck Agribusiness ETF (MOO)? - Yahoo Finance",
-          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPY2t5U0dYV09RZjg4aEg4bWdhVkhYNmJVaFE5T3lJaExOUHN4UjNkdVEzOGxhcEg1VXkySnRhLTJHWEV1TUxUTlFlSEhPcV9yZXYwVEw5VmdmYV9pUEMyMjBkQVIwMk8zeTNEM0VEMjFSeWNEUGZDaVRBMnRadFNUZ0V4dTA0VFNBQmNQNDZlanE5bmNBTUhQNm1kdnNFNWRhejJTWVl2SQ?oc=5",
-          "published": "Mon, 25 May 2026 10:20:02 GMT",
-          "source": "Google News"
-        },
-        {
           "title": "MOO Stock Price, Quote & Chart | VANECK AGRIBUSINESS ETF (NYSEARCA:MOO) - ChartMill",
           "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE04YnE4TnRScFhaRWdfM0FKaF9keWVmMFMtcklTZWh3bDFIaUtQYWlhWk8xRDgyT3ZlQkRadGJXNmlIRS1IRlkzNENOaWYyZ2EzRWtzV1ZEZDF3dXYwUGc?oc=5",
-          "published": "Fri, 22 May 2026 07:00:00 GMT",
+          "published": "Fri, 29 May 2026 07:00:00 GMT",
           "source": "Google News"
         },
         {
@@ -3156,9 +3138,21 @@
           "source": "Google News"
         },
         {
+          "title": "(MOO) Price Dynamics and Execution-Aware Positioning - Stock Traders Daily",
+          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPZDBid0NGNG1PMHpZQ3pDaV9iQWc2aTdSWVlFOEZvN3hTZ3ZmRHpQR1ZrdEpGTV9PUkwxVWlJa29KY0pyLVVkM0VocGpKalgyVmtSMm5nNTlvaVYzdEdVa3JkX1kyUUlFM2JRX1BEVm9fU1c0a2x6Yjd4OVFaSUFTUWc4WEI1QmhJTjMwTjFWQ1lXNXQyZWFlUVpfTzRoMmFVT2h2X19XWU9BOThSMHo0c2ZoSExnXzl0d3BMeUZ3ZmRvUThsaDBvRXV3?oc=5",
+          "published": "Mon, 25 May 2026 15:36:01 GMT",
+          "source": "Google News"
+        },
+        {
           "title": "How to Use Moomoo's Ticks Feature - Moomoo",
           "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPb3Q5VGRDdE05UGJ5TGluc1pQd0tVdm02Vk5FblA3UVNjOHRKWkdoRmNkUUI4elh2VTM2MUtSNlYwRnF5d0E4MDlXSWVROVpQSFltWnM5TllheWNNR0Z1dDZPM2drN182TDBaZ2ZrbUNNZ1YxeWRLWWptZVdjRjNwT0lqYzRQeHFaRUtSOEtuMFVkQQ?oc=5",
           "published": "Tue, 19 May 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Should You Invest in the VanEck Agribusiness ETF (MOO)? - Yahoo Finance",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPY2t5U0dYV09RZjg4aEg4bWdhVkhYNmJVaFE5T3lJaExOUHN4UjNkdVEzOGxhcEg1VXkySnRhLTJHWEV1TUxUTlFlSEhPcV9yZXYwVEw5VmdmYV9pUEMyMjBkQVIwMk8zeTNEM0VEMjFSeWNEUGZDaVRBMnRadFNUZ0V4dTA0VFNBQmNQNDZlanE5bmNBTUhQNm1kdnNFNWRhejJTWVl2SQ?oc=5",
+          "published": "Mon, 25 May 2026 10:20:02 GMT",
           "source": "Google News"
         },
         {
@@ -3180,12 +3174,6 @@
           "source": "Google News"
         },
         {
-          "title": "How to View Today's P/L and Transaction Statement? - Moomoo",
-          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZlFKQ2I3MEdNUmtvdmNSaFp3N040NzA1a1FGNGlkSTlSV3A4OWhnXzRwU0thZzczSHEwd09PZWo2UVllM3lkT2FsSGZUeVd2VF92NmwydHV6ZDYzMlBJNklYdG1neEZMRGhnYnZ1RV9iOG1yRjRUWHByczV3YjFRQnFmZnBPcjlhSGhBUlk0VTBpYnpzN0FsVzFvYWZqQUEzZUd2R2RFNA?oc=5",
-          "published": "Tue, 19 May 2026 07:00:00 GMT",
-          "source": "Google News"
-        },
-        {
           "title": "(MOO) as a Liquidity Pulse for Institutional Tactics - Stock Traders Daily",
           "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxObDl0MklibGRPVFpmVldLVTExUHdoZ0JGSEdlODlHM2xseVhVbFp1Z0NqbDhYc200aHFHdGNlY2luRXVWSjNtNEZwWDE0c253OWtBNElGRGowR1dvVXUwaUptSmN5ZFBrdTVPOWVmMFk0enFLUk5aUXd3YWNqM0VXTGVsUXAzdURsbW9ibjY5Y3Q4cUFLQXVqWjRCcmZ6cTVKbkY1NGpLY3pDTUM1bm80SzdTSnl1OS12eUlNbGdYRV9wcGtPUVkySGtn?oc=5",
           "published": "Thu, 14 May 2026 14:28:02 GMT",
@@ -3202,6 +3190,12 @@
           "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTmFJQTdnUkc1aGJiU1FpeU1MbDhSSFRxeW1FUGVtYWdvVG9zY0hkMFhqRFNMSUJFVkRMdVNRaVhjVDB2VXNwMVh2Q2JZOW1hYk5FWURPOHFKcUdlb1lCVFhwdTNjN25QSnRjZzh1bU5fR0FCSE1yd3pGeFo5andCOVdCc0hIN1BVbHhKR2ZwNA?oc=5",
           "published": "Wed, 08 Apr 2026 07:00:00 GMT",
           "source": "Google News"
+        },
+        {
+          "title": "Food ingredient firm Moolec keeps Nasdaq listing under new conditions - Stock Titan",
+          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNM0xfbE5SUEIzdndLdW1YZmNfNlZobDE5TXdBOGQzTm04MkdxT2p1UXJRMFZSQ2lVZ2NiUkdtVThTQmdXRHNtQXA5d1lWMU9udnd2aG1aV3hXOEZKNWc5cVZWZHB3QXVVTnhUS0tqcjhacVJFZWdtZ3hSZWM4bUVhNXMxbWtJOTVqNFgzbG9kOW9sdjdnZWdOS2xibHl1bzh0SWR4UUpzRlZ5dXIxclk1R3RGQmlCc0k?oc=5",
+          "published": "Fri, 30 Jan 2026 08:00:00 GMT",
+          "source": "Google News"
         }
       ]
     },
@@ -3209,28 +3203,24 @@
       "status": "ok",
       "ticker": "PAVE",
       "name": "Global X U.S. Infrastructure De",
-      "price": 56.45,
-      "prev_close": 56.72,
-      "change_pct": -0.48,
-      "as_of": "2026-05-28",
+      "price": 56.31,
+      "prev_close": 56.45,
+      "change_pct": -0.25,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": -0.48,
-        "5d": 3.6,
-        "30d": 4.42,
-        "90d": 9.46,
-        "150d": 17.95,
-        "250d": 36.86
+        "1d": -0.25,
+        "5d": 3.25,
+        "30d": 4.61,
+        "90d": 11.46,
+        "150d": 20.16,
+        "250d": 36.92
       },
-      "ema50": 54.78,
-      "ema200": 50.6,
+      "ema50": 54.84,
+      "ema200": 50.66,
       "ma_signal": "BUY",
-      "zscore": 1.16,
-      "cmf": 0.104,
+      "zscore": 1.07,
+      "cmf": 0.13,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 53.83
-        },
         {
           "date": "2026-04-17",
           "value": 55.06
@@ -3346,6 +3336,10 @@
         {
           "date": "2026-05-28",
           "value": 56.45
+        },
+        {
+          "date": "2026-05-29",
+          "value": 56.31
         }
       ],
       "note": "",
@@ -3405,21 +3399,9 @@
           "source": "Google News"
         },
         {
-          "title": "PAVE Stock Fund Price and Chart \u2014 CBOE:PAVE - TradingView",
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1MYnBMXzU5cjFRRTQ3dTJDbHV4T1ZhWFl4eWpzNWxOdDVkQll4NzdYYk5QRUxtYTdHWDBPT2JWcjB6ckRiaFhEVU9uOTFQS2NzVWpUalctSHZOQQ?oc=5",
-          "published": "Sat, 16 May 2026 07:00:00 GMT",
-          "source": "Google News"
-        },
-        {
-          "title": "PAVE Stock Price, Quote & Chart | GLOBAL X US INFRASTRUCTURE (NYSEARCA:PAVE) - ChartMill",
-          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBZZGtQSU1BYkZmU3RXTEpYaTZWdHFXeXpyODZkQVdTWmVOeDhRWGNOaHdqV0lzVVE1b2llaExPbFFyM3B4NVFxS2RoTlVlMkN3Wks1bk85MUVlYkVuYUtj?oc=5",
-          "published": "Fri, 22 May 2026 07:00:00 GMT",
-          "source": "Google News"
-        },
-        {
-          "title": "Best Infrastructure ETFs for 2026 and How to Invest - The Motley Fool",
-          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNay1lOURma2V1NkNxcEdwbmQyaUY5Z3BFM0hfWUJFcHNUWXdhdm53RFFvZ0F6eTNCRGlVN1Zpak9PLXJPRjQtckhTMFNnRzN1MXkyVS1PWlRCSXY2b3h3dS0xaDNIQndadGE2eFp1aUxtSTNDSUFSRFVKMWdydTYyakVBdWIxZU5KbnJRa2pDSm5QM29qbVdGRjdkRGxuNXF0dkJndk9NbnJtTTlDX0pDWkVKVzBCMHdWQ0NaQkVHMmVFelJMS1otNXlrcXZxdw?oc=5",
-          "published": "Tue, 12 May 2026 07:00:00 GMT",
+          "title": "PAVE.CA Stock Price, Quote & Chart | GLOBAL X US INFR DEV IND ETF (TSX:PAVE) - ChartMill",
+          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9GcFNKREFsLUVwbmhxT0lFY3p0OWdxVEFPN09EZC1fb0VDOGZyZUx2RmJmd3NVblZYenE1M0NPQndqT3V5YkltNmgzRjJHRldHZW4zOVhEYjkxc0o5SE9PSlF1TQ?oc=5",
+          "published": "Thu, 21 May 2026 07:00:00 GMT",
           "source": "Google News"
         },
         {
@@ -3429,9 +3411,21 @@
           "source": "Google News"
         },
         {
-          "title": "PAVE.CA Stock Price, Quote & Chart | GLOBAL X US INFR DEV IND ETF (TSX:PAVE) - ChartMill",
-          "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9GcFNKREFsLUVwbmhxT0lFY3p0OWdxVEFPN09EZC1fb0VDOGZyZUx2RmJmd3NVblZYenE1M0NPQndqT3V5YkltNmgzRjJHRldHZW4zOVhEYjkxc0o5SE9PSlF1TQ?oc=5",
-          "published": "Thu, 21 May 2026 07:00:00 GMT",
+          "title": "Best Infrastructure ETFs for 2026 and How to Invest - The Motley Fool",
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNay1lOURma2V1NkNxcEdwbmQyaUY5Z3BFM0hfWUJFcHNUWXdhdm53RFFvZ0F6eTNCRGlVN1Zpak9PLXJPRjQtckhTMFNnRzN1MXkyVS1PWlRCSXY2b3h3dS0xaDNIQndadGE2eFp1aUxtSTNDSUFSRFVKMWdydTYyakVBdWIxZU5KbnJRa2pDSm5QM29qbVdGRjdkRGxuNXF0dkJndk9NbnJtTTlDX0pDWkVKVzBCMHdWQ0NaQkVHMmVFelJMS1otNXlrcXZxdw?oc=5",
+          "published": "Tue, 12 May 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Redcare Pharmacy: How a 60% Stock Collapse Could Pave the Way for a Digital Prescription Monopoly - AD HOC NEWS",
+          "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNcVNXVzBmZ2MtNkhQLV9uV2ZNdFBuZmZpSXFMQkxVOUNoM3NQZDkzY1JIOGJkT3BjZ0QweXNnOTFicE5OV0piQ2xWd1AzMzBPbzg3cmNJaHc4cFlscEdGTVEtaDMxck5rX21aOWZQenVqazZIOFBnRENhU2JMdElyNTYyeWNEV1FycUNFdHlKSnJnVjI4UFEwd0lQOHVJdXhLbm91Z3NOVWZ5aUxWRUFUQVFUTGpHRmpoOENNVlNTM3N0QUR4NUVITWVB?oc=5",
+          "published": "Fri, 29 May 2026 23:41:05 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "PAVE Stock Fund Price and Chart \u2014 TSX:PAVE - TradingView",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE92cnR0aGVSR290ZVY4WHM3WE9ndDhCYWxteEhuT0xpbi16dThyQVJEMVdUQkhvTTVzS2RCSjB0WkVZaFdYZVBkRlRFQW9NbGM2Nms3UWc2Vm4?oc=5",
+          "published": "Fri, 01 May 2026 11:16:06 GMT",
           "source": "Google News"
         },
         {
@@ -3453,21 +3447,21 @@
           "source": "Google News"
         },
         {
+          "title": "PAVE-U.CA Stock Price, Quote & Chart | GLOBAL X US INFR DEV IND ETF (TSX:PAVE-U) - ChartMill",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBwS2x5VnVZWEZPLXFLNmJiS2ZFcnJIYktBLTJ3d2gtcVdweTJkVHhXSURuMTJ1dHJpU1BvdnptcGY2NlVyLXhVV3BZMUs4MzhaRzJTY254Y3FXZTVZYVp0dnI3ZXFWZw?oc=5",
+          "published": "Sun, 10 May 2026 00:18:57 GMT",
+          "source": "Google News"
+        },
+        {
           "title": "India reduces minimum public share float, paving way for NSE, Jio listings - Reuters",
           "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxONnk0YU1nSE43bWdHbmNzNktsUWo1NTh1ckl5MTV0STcwLUhKeGxObzJfMHVJWDAzd2ktMFN4TlQwa0gtLW1kM2RWOHg3eFFKNTVpdUxHU1VJVHRiOWJSdXI2ZnF5VjNseDB4RVpMMTdYdjFxaWt0bnlkS0xyck96RUpzY3poeGlhdV9RejJDRFBOaEY4dUxLcFcwSWtUUnN5QzdQU3Z2b2c4T0NKbnQ4ODdaNDFKOVhJTElZTWpNTzlPV2kxSDZkbWpjOHlJWE9hZ0Rsc3ctdUZMZzE4?oc=5",
           "published": "Fri, 13 Mar 2026 07:00:00 GMT",
           "source": "Google News"
         },
         {
-          "title": "Boots Group announces key leadership change, could it pave the way for return to stock exchange? - FashionNetwork USA",
-          "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOQjZYV0RjWmtfMWhTZ0w5dWpqY2gwX3JQY1d3cjg4TzZxYmRpN2t3QWhCUVJObmZRT0o2bHlhNFo3ZW9MZXROXzM1QVVoV2h0YUtKUXVRQk9Qd0RscDdDYWp6NWs5dXNIaVpqSVctZEp5Y084Z3JMQUo4YnVqYkFDU2NNc1RFTWdjWW14RW9kbTZCWDVlZ0tjd3BzaGQ0Vi1uYWY5MS1kZFpZUEVSWWVscy1tN0o4ZmloVWgtZUZEMFVSZ0xmemZSS2h0S1B4M3pFR29pbWdtZ3cwcXM?oc=5",
-          "published": "Tue, 27 Jan 2026 08:00:00 GMT",
-          "source": "Google News"
-        },
-        {
-          "title": "SpaceX files to go public, paving way for record stock offering - Phys.org",
-          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1uRExCWnpPU2Nyd21iSGV2OGdFc0U1TXAzSTJGUUJHQmVjS0sxcG9ZbkRzRFJDUjd3MGZWdElfSDd3R29OZlJ3NjZqakRCOXk2VnhaUzd3ckpmNEFvYTVBS2NBT1A?oc=5",
-          "published": "Wed, 01 Apr 2026 07:00:00 GMT",
+          "title": "How to Invest in Global X US Infrastructure Development ETF (PAVE) - The Motley Fool",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPeEhfcnFjVTJRUTl5TXp0Uld4WU1rR245ektVOWUxZWhtWjBTUDdkTlQ3dDg4TGstX1UzWGhiZm55cWsxbHQybUU0RDU5ZG5tWDFuMmtSdk5OaG1uXzhEVldISHVQLTRPNGNPRzRFUGVodXR0akNGeUxCQ0FWOHVYSnNR?oc=5",
+          "published": "Wed, 25 Feb 2026 08:00:00 GMT",
           "source": "Google News"
         }
       ]
@@ -3476,28 +3470,24 @@
       "status": "ok",
       "ticker": "GEV",
       "name": "GE Vernova Inc.",
-      "price": 996.0,
-      "prev_close": 1031.89,
-      "change_pct": -3.48,
-      "as_of": "2026-05-28",
+      "price": 968.32,
+      "prev_close": 996.0,
+      "change_pct": -2.78,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": -3.48,
-        "5d": -2.78,
-        "30d": 1.02,
-        "90d": 46.23,
-        "150d": 70.39,
-        "250d": 111.85
+        "1d": -2.78,
+        "5d": -7.23,
+        "30d": -1.02,
+        "90d": 41.47,
+        "150d": 68.34,
+        "250d": 105.18
       },
-      "ema50": 994.5,
-      "ema200": 782.28,
-      "ma_signal": "BUY",
-      "zscore": 0.69,
-      "cmf": -0.08,
+      "ema50": 993.47,
+      "ema200": 784.13,
+      "ma_signal": "MONITOR",
+      "zscore": 0.46,
+      "cmf": -0.081,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 978.32
-        },
         {
           "date": "2026-04-17",
           "value": 1002.75
@@ -3613,10 +3603,44 @@
         {
           "date": "2026-05-28",
           "value": 996.0
+        },
+        {
+          "date": "2026-05-29",
+          "value": 968.32
         }
       ],
       "note": "",
       "news": [
+        {
+          "title": "GE Vernova CEO sends rattling message on data centers",
+          "link": "https://www.thestreet.com/investing/stocks/ge-vernova-ceo-says-tariffs-state-pushback-hamper-data-centers?.tsrc=rss",
+          "published": "Sun, 31 May 2026 17:47:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "AirJoule Technologies (AIRJ) Reaches Key Milestones As Commercial Plans Expand",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/airjoule-technologies-airj-reaches-key-143804665.html?.tsrc=rss",
+          "published": "Sun, 31 May 2026 14:38:04 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "GE Vernova Robotech Deal Puts Automation And Valuation In Fresh Focus",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-robotech-deal-puts-090610317.html?.tsrc=rss",
+          "published": "Sun, 31 May 2026 09:06:10 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "GE Vernova Acquires Robotech Automation to Accelerate Robotics and Automation Capabilities",
+          "link": "https://finance.yahoo.com/sectors/energy/articles/ge-vernova-acquires-robotech-automation-005501801.html?.tsrc=rss",
+          "published": "Sun, 31 May 2026 00:55:01 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "GE Vernova vs. Constellation Energy: Which AI Power Stock Wins?",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-vs-constellation-energy-131300084.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 13:13:00 +0000",
+          "source": "Yahoo Finance"
+        },
         {
           "title": "GE Vernova (GEV) Stock Sinks As Market Gains: What You Should Know",
           "link": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-gev-stock-sinks-215002393.html?.tsrc=rss",
@@ -3706,36 +3730,6 @@
           "link": "https://finance.yahoo.com/sectors/energy/articles/latest-news-energy-transition-revolutionizing-113812003.html?.tsrc=rss",
           "published": "Tue, 26 May 2026 11:38:12 +0000",
           "source": "Yahoo Finance"
-        },
-        {
-          "title": "Dow Jones Futures Rise, Oil Prices Fall: Trump Says No 'Rush' For Iran Deal",
-          "link": "https://finance.yahoo.com/m/879072fd-2d18-3074-b2ec-2e92c37a571e/dow-jones-futures-rise%2C-oil.html?.tsrc=rss",
-          "published": "Mon, 25 May 2026 06:35:36 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Is It Too Late To Consider GE Vernova (GEV) After A 124% One Year Surge?",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/too-consider-ge-vernova-gev-121228179.html?.tsrc=rss",
-          "published": "Sun, 24 May 2026 12:12:28 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Novanta, WillScot Mobile Mini, and Badger Meter Stocks Trade Up, What You Need To Know",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/novanta-willscot-mobile-mini-badger-021255883.html?.tsrc=rss",
-          "published": "Sun, 24 May 2026 02:12:55 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Matrix Service, Hyster-Yale Materials Handling, and FTAI Aviation Shares Are Soaring, What You Need To Know",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/matrix-hyster-yale-materials-handling-020455093.html?.tsrc=rss",
-          "published": "Sun, 24 May 2026 02:04:55 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Hubbell, Rockwell Automation, and First Solar Shares Skyrocket, What You Need To Know",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/hubbell-rockwell-automation-first-solar-015655592.html?.tsrc=rss",
-          "published": "Sun, 24 May 2026 01:56:55 +0000",
-          "source": "Yahoo Finance"
         }
       ]
     },
@@ -3743,28 +3737,24 @@
       "status": "ok",
       "ticker": "PLTR",
       "name": "Palantir Technologies Inc.",
-      "price": 143.34,
-      "prev_close": 132.51,
-      "change_pct": 8.17,
-      "as_of": "2026-05-28",
+      "price": 156.54,
+      "prev_close": 143.34,
+      "change_pct": 9.21,
+      "as_of": "2026-05-29",
       "returns": {
-        "1d": 8.17,
-        "5d": 4.51,
-        "30d": 0.84,
-        "90d": -16.16,
-        "150d": -21.03,
-        "250d": 17.18
+        "1d": 9.21,
+        "5d": 13.92,
+        "30d": 9.65,
+        "90d": -7.11,
+        "150d": -10.8,
+        "250d": 18.79
       },
-      "ema50": 141.18,
-      "ema200": 148.63,
-      "ma_signal": "SELL",
-      "zscore": -0.07,
-      "cmf": 0.079,
+      "ema50": 141.78,
+      "ema200": 148.71,
+      "ma_signal": "HOLD",
+      "zscore": 1.26,
+      "cmf": 0.142,
       "series": [
-        {
-          "date": "2026-04-16",
-          "value": 142.76
-        },
         {
           "date": "2026-04-17",
           "value": 146.39
@@ -3880,152 +3870,854 @@
         {
           "date": "2026-05-28",
           "value": 143.34
+        },
+        {
+          "date": "2026-05-29",
+          "value": 156.54
         }
       ],
       "note": "",
       "news": [
         {
-          "title": "Zacks Investment Ideas feature highlights: Ondas, Unusual Machines and Palantir",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/zacks-investment-ideas-feature-highlights-083500349.html?.tsrc=rss",
-          "published": "Fri, 29 May 2026 08:35:00 +0000",
+          "title": "Palantir Eyes Buy Point As Software Stocks Extend Rally On Snowflake, Dell Earnings",
+          "link": "https://finance.yahoo.com/m/2ed460bf-c7ae-38f1-9320-3e135a84d0c2/palantir-eyes-buy-point-as.html?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 11:44:05 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Guidewire Software and Varonis Systems Shares Are Soaring, What You Need To Know",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/guidewire-software-varonis-systems-shares-052600034.html?.tsrc=rss",
-          "published": "Fri, 29 May 2026 05:26:00 +0000",
+          "title": "Software stocks surge as Nvidia\u2019s Huang dismisses AI disruption fears",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/software-stocks-surge-nvidia-huang-114213880.html?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 11:42:13 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Why SoundHound AI (SOUN) Stock Is Up Today",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/why-soundhound-ai-soun-stock-051800605.html?.tsrc=rss",
-          "published": "Fri, 29 May 2026 05:18:00 +0000",
+          "title": "Exploring 3 High Growth Tech Stocks in the US Market",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/exploring-3-high-growth-tech-113836600.html?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 11:38:36 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Oracle (ORCL) Shares Skyrocket, What You Need To Know",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/oracle-orcl-shares-skyrocket-know-051000953.html?.tsrc=rss",
-          "published": "Fri, 29 May 2026 05:10:00 +0000",
+          "title": "Why Is NOW Stock Surging In Premarket?",
+          "link": "https://stocktwits.com/news-articles/markets/equity/why-is-now-stock-surging-in-premarket/cZ0gn0pReH3?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 09:49:36 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Workday and Doximity Shares Are Soaring, What You Need To Know",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/workday-doximity-shares-soaring-know-050200003.html?.tsrc=rss",
-          "published": "Fri, 29 May 2026 05:02:00 +0000",
+          "title": "Prediction: This Will Be Palantir's Stock Price in a Year",
+          "link": "https://www.fool.com/investing/2026/06/01/this-will-be-palantirs-stock-price-in-year/?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 09:08:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Why Shopify (SHOP) Stock Is Up Today",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/why-shopify-shop-stock-today-045400859.html?.tsrc=rss",
-          "published": "Fri, 29 May 2026 04:54:00 +0000",
+          "title": "Enterprise Software Leaders Build AI Agents With NVIDIA",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/enterprise-software-leaders-build-ai-042100475.html?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 04:21:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Dynatrace, Paycom, and Zeta Global Shares Skyrocket, What You Need To Know",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/dynatrace-paycom-zeta-global-shares-044600588.html?.tsrc=rss",
-          "published": "Fri, 29 May 2026 04:46:00 +0000",
+          "title": "BofA doubles down on cautious S&P 500 view for rest of 2026",
+          "link": "https://www.thestreet.com/investing/stocks/bofa-doubles-down-on-cautious-sp-500-view-for-rest-of-2026-fund?.tsrc=rss",
+          "published": "Mon, 01 Jun 2026 02:37:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Rapid7, Unity, and C3.ai Shares Skyrocket, What You Need To Know",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/rapid7-unity-c3-ai-shares-044600542.html?.tsrc=rss",
-          "published": "Fri, 29 May 2026 04:46:00 +0000",
+          "title": "Dell blockbuster orders trigger Palantir stock surge",
+          "link": "https://www.thestreet.com/investing/palantir-soars-as-dell-earnings-validate-their-al-partnership?.tsrc=rss",
+          "published": "Sat, 30 May 2026 22:33:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Zscaler (ZS) Stock Is Up, What You Need To Know",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/zscaler-zs-stock-know-043800496.html?.tsrc=rss",
-          "published": "Fri, 29 May 2026 04:38:00 +0000",
+          "title": "Why is Palantir Technologies Inc. (PLTR) One of the Stocks to Buy for The Long Term?",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/why-palantir-technologies-inc-pltr-164040616.html?.tsrc=rss",
+          "published": "Sat, 30 May 2026 16:40:40 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Domo, GitLab, and Tenable Stocks Trade Up, What You Need To Know",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/domo-gitlab-tenable-stocks-trade-043000649.html?.tsrc=rss",
-          "published": "Fri, 29 May 2026 04:30:00 +0000",
+          "title": "Palantir Technologies Inc. (PLTR): Renaissance Technologies Continues Trimming Stake",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/palantir-technologies-inc-pltr-renaissance-155106404.html?.tsrc=rss",
+          "published": "Sat, 30 May 2026 15:51:06 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Billionaire Peter Thiel moves out of U.S. citing harsh concerns",
+          "link": "https://www.thestreet.com/crypto/markets/billionaire-peter-thiel-moves-out-of-u-s-citing-harsh-concerns?.tsrc=rss",
+          "published": "Sat, 30 May 2026 14:30:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Forget SaaS: Why AI Agents Could Make ServiceNow and Palantir Technologies the Next Trillion-Dollar Platforms",
+          "link": "https://www.fool.com/investing/2026/05/30/forget-saas-why-ai-agents-could-make-servicenow-an/?.tsrc=rss",
+          "published": "Sat, 30 May 2026 08:05:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Palantir Vatican AI Clash Puts Defense Focus And Investor Risks In Focus",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/palantir-vatican-ai-clash-puts-041807093.html?.tsrc=rss",
+          "published": "Sat, 30 May 2026 04:18:07 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Highlights: Measuring Risk \u2013 AI & Cybersecurity in the Boardroom: 2nd Princeton CorpGov Forum",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/highlights-measuring-risk-ai-cybersecurity-225254846.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 22:52:54 +0000",
           "source": "Yahoo Finance"
         },
         {
           "title": "Why Is Palantir Technologies (PLTR) Stock Soaring Today",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/why-palantir-technologies-pltr-stock-041400175.html?.tsrc=rss",
-          "published": "Fri, 29 May 2026 04:14:00 +0000",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/why-palantir-technologies-pltr-stock-222438680.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 22:24:38 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Google Engineer Charged After Alleged $1.2 Million Polymarket Bets",
-          "link": "https://finance.yahoo.com/markets/crypto/articles/google-engineer-charged-alleged-1-205218460.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 20:52:18 +0000",
+          "title": "Dell, Rocket Lab, Palantir, and More Stocks That Explain the Market Today",
+          "link": "https://finance.yahoo.com/m/4c4161ef-e87a-37db-bf3a-287eaa016f3c/dell%2C-rocket-lab%2C-palantir%2C.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 21:19:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "This Trump-Linked Drone Maker May Get a Pentagon Deal. The Stock Soars 57%.",
-          "link": "https://finance.yahoo.com/m/44e504d1-0663-349d-af50-3c73f0f2089a/this-trump-linked-drone-maker.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 20:15:00 +0000",
+          "title": "Highlights: The 5% Debate \u2013 Endowments & Long-Term Investing: 2nd Princeton CorpGov Forum",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/highlights-5-debate-endowments-long-200824516.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 20:08:24 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Why Palantir Stock Is Soaring Today",
-          "link": "https://www.fool.com/investing/2026/05/28/why-palantir-stock-is-soaring-today/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 19:54:22 +0000",
+          "title": "Highlights: The NIL Effect \u2013 Finance of Sports: Collegiate Focus: 2nd Princeton CorpGov Forum",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/highlights-nil-effect-finance-sports-200137765.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 20:01:37 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Palantir Is Down 20% in 2026 and It\u2019s Still My Favorite Stock Idea: Here\u2019s Why",
-          "link": "https://247wallst.com/investing/2026/05/28/palantir-is-down-20-in-2026-and-its-still-my-favorite-stock-idea-heres-why/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 19:38:18 +0000",
+          "title": "Palantir Stock Is Having Its Best Day in a Year. Software Looks Like a Buy Again.",
+          "link": "https://finance.yahoo.com/m/bc4df5e0-e61b-3f1f-83d0-fee04a80ffd0/palantir-stock-is-having-its.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 18:04:00 +0000",
           "source": "Yahoo Finance"
         },
         {
-          "title": "Palantir vs. Oracle in 2026. Which One Is the Better Buy Right Now?",
-          "link": "https://www.fool.com/investing/2026/05/28/palantir-vs-oracle-in-2026-which-one-is-the-better/?.tsrc=rss",
-          "published": "Thu, 28 May 2026 18:20:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "US High Growth Tech Stocks To Watch",
-          "link": "https://finance.yahoo.com/sectors/technology/articles/us-high-growth-tech-stocks-173845016.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 17:38:45 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "1 Profitable Stock with Impressive Fundamentals and 2 Facing Challenges",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/1-profitable-stock-impressive-fundamentals-170227171.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 17:02:27 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "Snowflake Stock Went From Software Loser to AI Winner in an Instant",
-          "link": "https://finance.yahoo.com/m/09032fd4-c156-338f-ae57-d662c999c974/snowflake-stock-went-from.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 16:36:00 +0000",
-          "source": "Yahoo Finance"
-        },
-        {
-          "title": "BILL or PLTR: Which Is the Better Value Stock Right Now?",
-          "link": "https://finance.yahoo.com/markets/stocks/articles/bill-pltr-better-value-stock-154001312.html?.tsrc=rss",
-          "published": "Thu, 28 May 2026 15:40:01 +0000",
+          "title": "High Growth Tech Stocks in US for May 2026",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/high-growth-tech-stocks-us-173831186.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 17:38:31 +0000",
           "source": "Yahoo Finance"
         }
       ]
     },
     "ABXXF": {
-      "status": "error",
+      "status": "ok",
       "ticker": "ABXXF",
-      "name": "ABXXF",
-      "note": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
-      "news": []
+      "name": "ABAXX Technologies Inc.",
+      "price": 42.0,
+      "prev_close": 41.72,
+      "change_pct": 0.67,
+      "as_of": "2026-05-29",
+      "returns": {
+        "1d": 0.67,
+        "5d": -4.98,
+        "30d": 8.61,
+        "90d": 20.03,
+        "150d": 76.41,
+        "250d": 398.81
+      },
+      "ema50": 38.97,
+      "ema200": 30.39,
+      "ma_signal": "HOLD",
+      "zscore": 1.26,
+      "cmf": -0.287,
+      "series": [
+        {
+          "date": "2026-04-17",
+          "value": 38.01
+        },
+        {
+          "date": "2026-04-20",
+          "value": 36.63
+        },
+        {
+          "date": "2026-04-21",
+          "value": 36.26
+        },
+        {
+          "date": "2026-04-22",
+          "value": 38.7
+        },
+        {
+          "date": "2026-04-23",
+          "value": 39.46
+        },
+        {
+          "date": "2026-04-24",
+          "value": 38.71
+        },
+        {
+          "date": "2026-04-27",
+          "value": 40.2
+        },
+        {
+          "date": "2026-04-28",
+          "value": 41.0
+        },
+        {
+          "date": "2026-04-29",
+          "value": 41.69
+        },
+        {
+          "date": "2026-04-30",
+          "value": 40.9
+        },
+        {
+          "date": "2026-05-01",
+          "value": 41.91
+        },
+        {
+          "date": "2026-05-04",
+          "value": 39.86
+        },
+        {
+          "date": "2026-05-05",
+          "value": 38.91
+        },
+        {
+          "date": "2026-05-06",
+          "value": 37.08
+        },
+        {
+          "date": "2026-05-07",
+          "value": 36.82
+        },
+        {
+          "date": "2026-05-08",
+          "value": 39.33
+        },
+        {
+          "date": "2026-05-11",
+          "value": 39.42
+        },
+        {
+          "date": "2026-05-12",
+          "value": 39.5
+        },
+        {
+          "date": "2026-05-13",
+          "value": 39.9
+        },
+        {
+          "date": "2026-05-14",
+          "value": 42.19
+        },
+        {
+          "date": "2026-05-15",
+          "value": 39.67
+        },
+        {
+          "date": "2026-05-18",
+          "value": 41.6
+        },
+        {
+          "date": "2026-05-19",
+          "value": 46.97
+        },
+        {
+          "date": "2026-05-20",
+          "value": 47.13
+        },
+        {
+          "date": "2026-05-21",
+          "value": 44.2
+        },
+        {
+          "date": "2026-05-22",
+          "value": 43.0
+        },
+        {
+          "date": "2026-05-26",
+          "value": 45.14
+        },
+        {
+          "date": "2026-05-27",
+          "value": 40.05
+        },
+        {
+          "date": "2026-05-28",
+          "value": 41.72
+        },
+        {
+          "date": "2026-05-29",
+          "value": 42.0
+        }
+      ],
+      "note": "",
+      "news": [
+        {
+          "title": "Abaxx Announces Filing of Prospectus Supplement in Connection with Previously Announced Bought Deal Offering",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/abaxx-announces-filing-prospectus-supplement-024600612.html?.tsrc=rss",
+          "published": "Fri, 29 May 2026 02:46:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Technologies (TSX:ABXX) Upsizes Equity Raise To Fund Singapore Push Is The Platform Bet Deepening?",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/abaxx-technologies-tsx-abxx-upsizes-140320553.html?.tsrc=rss",
+          "published": "Wed, 27 May 2026 14:03:20 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Announces Upsize of Previously Announced Bought Deal Offering to $60 Million",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/abaxx-announces-upsize-previously-announced-105600740.html?.tsrc=rss",
+          "published": "Wed, 27 May 2026 10:56:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Announces $50 Million Bought Deal Offering",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/abaxx-announces-50-million-bought-212200214.html?.tsrc=rss",
+          "published": "Tue, 26 May 2026 21:22:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Confirms Active Trading in Silver Singapore Futures Following Launch",
+          "link": "https://finance.yahoo.com/markets/commodities/articles/abaxx-confirms-active-trading-silver-115300086.html?.tsrc=rss",
+          "published": "Tue, 26 May 2026 11:53:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Silver Singapore Futures Now Live for Trading on Abaxx Exchange",
+          "link": "https://finance.yahoo.com/markets/commodities/articles/silver-singapore-futures-now-live-110000177.html?.tsrc=rss",
+          "published": "Fri, 22 May 2026 11:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx to Launch Silver Singapore Futures on May 22, 2026",
+          "link": "https://finance.yahoo.com/markets/commodities/articles/abaxx-launch-silver-singapore-futures-112400898.html?.tsrc=rss",
+          "published": "Mon, 18 May 2026 11:24:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Technologies Inc. to Begin Trading on Toronto Stock Exchange May 21, 2026",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/abaxx-technologies-inc-begin-trading-200000032.html?.tsrc=rss",
+          "published": "Fri, 15 May 2026 20:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Provides Corporate Milestone Update",
+          "link": "https://finance.yahoo.com/markets/commodities/articles/abaxx-provides-corporate-milestone-114400737.html?.tsrc=rss",
+          "published": "Fri, 15 May 2026 11:44:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Exchange Single-Day Trading Volume Surpasses 50,000 Contracts",
+          "link": "https://finance.yahoo.com/markets/commodities/articles/abaxx-exchange-single-day-trading-180400046.html?.tsrc=rss",
+          "published": "Thu, 14 May 2026 18:04:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Technologies Inc. to List on the Toronto Stock Exchange (TSX)",
+          "link": "https://finance.yahoo.com/news/abaxx-technologies-inc-list-toronto-200000110.html?.tsrc=rss",
+          "published": "Wed, 13 May 2026 20:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Appoints Jeff Currie as Executive Co-Chairman of Abaxx Markets",
+          "link": "https://finance.yahoo.com/news/abaxx-appoints-jeff-currie-executive-110000240.html?.tsrc=rss",
+          "published": "Wed, 13 May 2026 11:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Announces First Quarter 2026 Earnings and Business Update Call",
+          "link": "https://finance.yahoo.com/markets/stocks/articles/abaxx-announces-first-quarter-2026-110000270.html?.tsrc=rss",
+          "published": "Tue, 12 May 2026 11:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Exchange Named Newcomer of the Year at 2026 Energy Risk Awards",
+          "link": "https://finance.yahoo.com/sectors/energy/articles/abaxx-exchange-named-newcomer-2026-113700153.html?.tsrc=rss",
+          "published": "Fri, 08 May 2026 11:37:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Advances Digital Title Toward Commercial Implementation; Names Alta as First Singapore Integration Partner",
+          "link": "https://finance.yahoo.com/markets/crypto/articles/abaxx-advances-digital-title-toward-113000715.html?.tsrc=rss",
+          "published": "Thu, 07 May 2026 11:30:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Signs MoU to Support Development of Cambodian National Futures Exchange",
+          "link": "https://finance.yahoo.com/markets/commodities/articles/abaxx-signs-mou-support-development-113000355.html?.tsrc=rss",
+          "published": "Wed, 06 May 2026 11:30:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx Announces the Formation of Abaxx Labs and the Release of an Open-Source Library for Agentic Identity: Agents++",
+          "link": "https://finance.yahoo.com/sectors/technology/articles/abaxx-announces-formation-abaxx-labs-113000515.html?.tsrc=rss",
+          "published": "Fri, 01 May 2026 11:30:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Velocity Trade and Kilo Capital Execute First Trades in Abaxx Spot Gold Pool",
+          "link": "https://finance.yahoo.com/markets/commodities/articles/velocity-trade-kilo-capital-execute-110000671.html?.tsrc=rss",
+          "published": "Tue, 28 Apr 2026 11:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Enwex Germany Solar Futures Now Live for Trading on Abaxx Exchange",
+          "link": "https://finance.yahoo.com/markets/commodities/articles/enwex-germany-solar-futures-now-110000165.html?.tsrc=rss",
+          "published": "Thu, 23 Apr 2026 11:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "Abaxx to Launch World\u2019s First Exchange-Traded Solar Futures Contract",
+          "link": "https://finance.yahoo.com/sectors/energy/articles/abaxx-launch-world-first-exchange-110000013.html?.tsrc=rss",
+          "published": "Thu, 16 Apr 2026 11:00:00 +0000",
+          "source": "Yahoo Finance"
+        }
+      ]
     },
     "WRTH": {
-      "status": "error",
+      "status": "ok",
       "ticker": "WRTH",
-      "name": "WRTH",
-      "note": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
-      "news": []
+      "name": "Worth Charting Options Income E",
+      "price": 25.19,
+      "prev_close": 25.24,
+      "change_pct": -0.2,
+      "as_of": "2026-05-29",
+      "returns": {
+        "1d": -0.2,
+        "5d": -0.04,
+        "30d": null,
+        "90d": null,
+        "150d": null,
+        "250d": null
+      },
+      "ema50": 25.09,
+      "ema200": 25.05,
+      "ma_signal": "BUY",
+      "zscore": null,
+      "cmf": -0.014,
+      "series": [
+        {
+          "date": "2026-04-28",
+          "value": 25.04
+        },
+        {
+          "date": "2026-04-29",
+          "value": 25.05
+        },
+        {
+          "date": "2026-04-30",
+          "value": 25.04
+        },
+        {
+          "date": "2026-05-01",
+          "value": 25.04
+        },
+        {
+          "date": "2026-05-04",
+          "value": 25.04
+        },
+        {
+          "date": "2026-05-05",
+          "value": 25.04
+        },
+        {
+          "date": "2026-05-06",
+          "value": 25.02
+        },
+        {
+          "date": "2026-05-07",
+          "value": 25.06
+        },
+        {
+          "date": "2026-05-08",
+          "value": 24.99
+        },
+        {
+          "date": "2026-05-11",
+          "value": 24.9
+        },
+        {
+          "date": "2026-05-12",
+          "value": 25.03
+        },
+        {
+          "date": "2026-05-13",
+          "value": 24.93
+        },
+        {
+          "date": "2026-05-14",
+          "value": 24.99
+        },
+        {
+          "date": "2026-05-15",
+          "value": 25.18
+        },
+        {
+          "date": "2026-05-18",
+          "value": 25.25
+        },
+        {
+          "date": "2026-05-19",
+          "value": 25.2
+        },
+        {
+          "date": "2026-05-20",
+          "value": 25.2
+        },
+        {
+          "date": "2026-05-21",
+          "value": 25.2
+        },
+        {
+          "date": "2026-05-22",
+          "value": 25.22
+        },
+        {
+          "date": "2026-05-26",
+          "value": 25.17
+        },
+        {
+          "date": "2026-05-27",
+          "value": 25.2
+        },
+        {
+          "date": "2026-05-28",
+          "value": 25.24
+        },
+        {
+          "date": "2026-05-29",
+          "value": 25.19
+        }
+      ],
+      "note": "",
+      "news": [
+        {
+          "title": "Worth Charting Launches WRTH Options Income ETF",
+          "link": "https://finance.yahoo.com/markets/options/articles/worth-charting-launches-wrth-options-130000633.html?.tsrc=rss",
+          "published": "Tue, 28 Apr 2026 13:00:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "With Stock Debut, Octave Describes Plans for Gov Tech Growth - govtech.com",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQNmUzaVZTcVota1FVcXp5TGR3dk9YUGF0dTVlZWJhN0dNYllyWkhaX25SU1ZKZ2t6bXlUbnNyWlBHX3RJemlRald0cDZNU3Fqa2hnYk5mV0dsUUo3aEdZQUs1U0QyMjMwa2prMTQtUGs5cVZVTDJqclVzOGlycGxlQ0w5ZVVPWHplVzQxYlg0M2k?oc=5",
+          "published": "Fri, 29 May 2026 21:53:50 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "3 Space Stocks Flying Under the Radar and Worth Buying This Month - Yahoo Finance",
+          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ2dhS1ZYV1ExS2xyTjlHNmdsUDRsczRCbERqUUtINGplODZDX3F0dWdZWEVVNjJZY1p1Nzd1M3kwWkFqdlo4TTZWRTItT05CWm1pT2NtYXNYTHlCMWhGWk5JbllKWjR0YXl5TFNJaEJQanZqOF9VZ1ZycHVVYi1ER25iZG9xMG5FRUF1eHd3UGtyY1ljd2Uw?oc=5",
+          "published": "Sat, 30 May 2026 19:50:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Worth Charting Launches WRTH Options Income ETF - Business Wire",
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNUTVibTk1MDFaM3hFZ1pZOEs2RDRKUU04SDM0ejl3aWVkZHpiZTliVHlsQUV6eDE3UWFZckhDbHFZN2xiNXhjWTR2VVhKc3l0Ym5HMzBtY2xVTUJpNmdjWmpqc0ZGUXFSRmdmY3JXNFg5RHJWWnp3RDUzcmxWN1hTRThFcWQ1NnA3TWxfMDM0TWNzakVGZ2doRUZzRG9KbUx3Ym5IMWJmWQ?oc=5",
+          "published": "Tue, 28 Apr 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Dutch Want to Boost Startups With Stock Options Tax Incentive - news.bloombergtax.com",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZmRwSUpSS2dMTzZ4NVg0eE1wNlhnLV9Yd2pVRGFqdktQYk9hMzVVa0lwYTBONVh1aFN5NFc5eTc1dmNZN2lHQWxzY1NUWTV4eVYzcXVwa1YwZjU0azVNSW1FVFZkaW9oU08wZ0pwVWM3dkl2MHRYVU41cURxeXlQamVoZDVrOEJ6ZlZLQWJzQ0tMNFVrZG9JelhJZUlMOFh3akhIbC1wWGFQX0ln?oc=5",
+          "published": "Thu, 02 Apr 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "With stock markets near record highs, why would an investor worry? - Financial Post",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMWgzVTQyakNiNjRueDBDMk03Z1lkVEtfNF9ESTY2LWNFaVZqSnVqYkVWaW5KM1RwSi15Y1paX2VFU2VYX09WRU1vVF9kLWI4SXE1QXlhb2lCRGJ4OGR2SWNFd1dtZm9wcy1meVloM2dtRHZLTVpWQ0R4NHh5UW5hU0dtQ0RMUElt?oc=5",
+          "published": "Thu, 14 May 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "RFD Network kicking off expanded event coverage with Fort Worth Stock Show - Fort Worth Report",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPY1hmUUJtQzFoMk40WFFWQUlZd3dGemxOZFVQT3pubkZlby1HRmFORjFaVWEtX3BnTWhlOFE2YUV5dkZLaW1IX0pzR3lqbXlfcmZ1NFdqLXhhSkYyenhpSHk0dTQxMXRpWElUZzBKWVhsNVM4cWc5eC1iMTgyVWRSS2FOMlZVZ0RsdmZoaVp5TjF5b0REbnBsRzFjTzZMRF8zekdMdDI4eFRuTk9COWVtaU1iMks?oc=5",
+          "published": "Fri, 06 Feb 2026 08:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "'Fast Money' trader Carter Worth launches WRTH short VOL fund - CNBC",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOemJxemVpTUw0Sm80cmpfcWxoUTM4QlJOSUp4bTN3U2JsY0VjN0pacmZQQWhzeWtsaHB6WGRzQ1NxT3g4NVpCbDh0OHBsblhVaUJPMi0wUEx0THRNaXVyb1NnSVFFdjBMQUdkdHBCeVJ0TDFUSGdNVzZvOVQtd0tzc1BNNDRLNlhtN09LVVFUbVJudHMtelZpMkdzVExWVzFFeUVVOA?oc=5",
+          "published": "Tue, 28 Apr 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Trump's 'roaring economy' meets a rough start to 2026 with job losses, rising gas prices and uncertainty - PBS",
+          "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOaDYtaXYtaEkwNHhVQ3hjX3pXekpCS3Q0S0JHRmZUS3Qxa1Y4Zmh4T0EydVU0cTd5Nk9GcVpZNWZWcG1TR1VwOVpMVkU1em5IbHR2QUhDR29MSDVrTlpJTjNWczJKUEI1UmtqbGhuRmVWU0ZCVTNZT0R6UTFMRkw0TmQ0NDAtaEVNYkw2NzJHa2RFVlpUMVBnQlo2NjgwNjdmRHpacEREVnhxcW1uR2d3dUFWbThzTkZpVkIyRTBXQUJucnhCb0pYTVRBWmlxamE0cFBnQtIB2gFBVV95cUxQRndudVM4Q0lpRWhPM25BWmhGdjJoamhXLWlxcGdndG9JU1d1dmk0NUxSU2xhMTBMSkJPbkFiTjFkVkVVZzBVLWxNZXlDOXN4a1JfSmh1VFNkZ2pyYWUtSHdpMFRDZ1ZudXpyOFI2b3BXZ3RDSnlrcFVkQ0tweWJla2FhRzl4MFcwemJwZ3dJTTFxbE9qWnVRckd6Y3RqN0pnVTRHSlZEclNKdUFyNW03eGxJOHdKU1lhS0dpaUYtb1VfYUg2ak1tVjY0bGozZ2lKenZma29IM2prZw?oc=5",
+          "published": "Mon, 09 Mar 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "WRTH ETF Stock Price History - Investing.com",
+          "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5WQ1ZCcVY4MHRidGhWZzVGemhyWk1PaU5SVHBIMUNHLU5VblZuUHNXVi1sNzJEQzByVzZPQWl3cUdMRXc4b2V0dU9oVlFEUEtxbmhyb00yS0JfODExekl4Qg?oc=5",
+          "published": "Wed, 29 Apr 2026 15:28:45 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Elon Musk's SpaceX set to be worth $1 trillion with planned public listing - BBC",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1tUnhqQ2RIZ3g4TzViTTZkcWJfb2dhbUxlOTh3cnRxbUxRR19WVlpnRGJsdVV5Zlh6NUNGOXJoMkVtMVBwcndXb1EzSmpEajRXXzdjWWVZcENfZw?oc=5",
+          "published": "Thu, 02 Apr 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Silver faces sixth year of deficit with stock drawdown raising squeeze risks, research shows - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOXzJvbS1LRmZ3SkpiOXhoeUlHWUZlNXAyNjFtWkgtalFseTFMcTg0WW54bXhYUXRFbXV1LXJ6Y3kyMlpodHhveVNqY1VEN3dXVEtNc001alcwVC00WFN6dk05dHlUR1ZQcUhHT0NaZHRKZkZVQldKWWRxOThHcnZwZ3prTVNuUnpNOVZiUEllQTl3TVUzay16VktqWVJ3R0ZtbnN3LVl5ZEh2OGg2ckFOekU0MU1rVzVXRFdtQ1JMMXdiQUF2TU5JcQ?oc=5",
+          "published": "Wed, 15 Apr 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "AI Skepticism Is Gaining Ground With Stock, Credit Investors - Bloomberg.com",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQYXZENG5jMXNMc0EzRGVrS3EzSnpIU2E3YlFDWkl6d3NjRERYRVB2R3Y4bThMRDJWQ2I1NHBfT29wRVhPdkZwNTVjODltc3V4em1Dc2pzQnM3YjdObTRDVS1DTW9mUWJHUF9sSTk2TUN5MFNpU0t6TkpCSjVxQnVac2Z3dGRJQXZueHQ0amNSUHd4Y1ZsUklMU0dKaUJSWWJZWk5oSkEyY0hTS1o2ZEdoNTZfcw?oc=5",
+          "published": "Fri, 07 Nov 2025 08:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "How Young Traders Use Fake Money to Practice for the Real Thing - WSJ",
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOVExSSzM5Q2M0c01uV2lSbjlpZmRvcGVZU1JRTnNGZ3h1WjRzcVgzLW9JZjJQUHNaTnJHUmhGMHBybXc1aUs4OTBwaGVvWHVfYjBTRlNITGxtYmk1WjY0M0Nmdk5feXB4bkxMX1Bmd3NnVDRGNFBGSkFIV3dnWGp1X2g0QXM4aFl6NlNfUWVleHpGeUhnUHc?oc=5",
+          "published": "Sat, 17 Jan 2026 08:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Nine Suggestions for Dealing with Stock Price Volatility - \u5bcc\u9014\u725b\u725b",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPV21WSVVTWkE0dEloZ2QwR2ZYVEFoaWpCcks4c1J5MjBFb2pMOFdidnJHSnJkaDB0VGVfcXpWVktzc3diWGxRMk85MHlUQXJBQmRkNVl1Q3VJenFaaDZ1XzB1QlF2cTdhOHFVQWFZZ0gyTGZ0bUJMTWlhbW1qTU9vUEF5eGJERFhUdF9OVnc3c1QtcHMwUFdnZlZhZEt4Zw?oc=5",
+          "published": "Fri, 15 May 2026 15:41:07 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Jim Cramer: Trump sides with stock buyers, sellers risk running into his buzzsaw - CNBC",
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQcHY4QWpuWk1ySjY0Z0d5MUxFUlQzcTZMWHJhMEtmVjQzT1k0N2s5M1hhV2E2dFF0a1RMWThoNEJieXVkeW10WXhwSlRqU1MxbHN0Y2VoNUpWekZsNHVjLVhybTBOTEhiOGFNQkd1dWpHN0xLZGZUdUR5OWVlTnhiQzNhVnp2S243N2diZnY1MlFYNm1WUlJDajdySGMxWkNmSXl2SnlxLWl3ajFPdkEzZThzWWgxZw?oc=5",
+          "published": "Tue, 24 Mar 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Meta boosts top executives' pay with stock options as AI race heats up - Reuters",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQblpUVnExU2V5YW9xX3hZZklma3gtSW5RQ09lZlQyQTJhN2ZFbmpXRkkxNUt5MVFOMTZsUGd1REd0Wk52RXFsRXJZWmxGRzVjRmtFczFmcDF0U0szUktOUXlQdWU0LU1aR1FDcTBvaW5MQkpCanJzalZaUFhpUlk1QS1jTkc3MEdRSFFaZDFIUXNnZVVXcG5MVFlPVW1qRmN4SjA4?oc=5",
+          "published": "Wed, 25 Mar 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Biotech Fund Dumps $84 Million of Nuvalent With Stock Up 29% - Yahoo Finance",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNZFRqRW9tOUlINXF1djk3WnYyeHZRMlE0ejQyRUNXX3JlSUx0REhrbm5sQXlwci03b05uUXFYU1cyT1lpYmVvNlJPS2t5OW1RQ0dxZC1CbmNFOW1fUzlHUlM2MjFUR0dwM1J2QWhpQmNqd3dROGlDdURRdWhwN2RPVA?oc=5",
+          "published": "Mon, 23 Feb 2026 08:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "With stock market concentration risk at peak, 'it's cash, precious metals, and then crypto' as new normal - CNBC",
+          "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUGtoQUhIMGZLdXFpSGstWlExMXk5RnMwOUFQLVZJTW1VR2dvb2k4R1hSZFJlYUJlWDlaUllVakhEM1hwMUc0YWppbUlQb3RncHExSnU1MlFDNzhSMG5ZUHdxZFJCSVpLdHdPMFdEYzFZcVhJVlRYelI4NFNNWktxNWFJS0laUmVtOXBhQVdnQmdieGtFekx3T2ZhTG1DZHJ1bkNVRVV30gGrAUFVX3lxTE4wWlJvTm41Q01tMi1Wa0o2SDIxanNfLXFTMkpCYTI0dmxHSTZ6TDYwbC1rZ1JwMHByd0VPb0pEbFlXYUppM3owMFpDRWlDZXBiVjRaU19LQWpDbVpjaElhZjEzak1sUnJvNU5yamdjaG1vMVJjeFRZMkFRVnpLNktoYW5aQjBnLTZsTkl5TXJDWFl5MlM2MHZXdG1qRWVPTUpUWkNkaUZHSlVCUQ?oc=5",
+          "published": "Thu, 23 Oct 2025 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Micron rides memory price spike into earnings with stock up 62%, drubbing its tech peers - CNBC",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9yeTNHQ1RnNWM1M3hjYTNFb3NQQ2s1TGowOXNzTXVuLXZBQzJqdXdtU0Q3NUxkamVkc2JWX1JEa3JRalJDQWRZSEUyNFM3a2lGMjJtSnNibHpvUXRYT1JpRGZqWVVZWlN2VkhfOUpjSDNySHRYdmZjMEZpckNNUTTSAYQBQVVfeXFMUHhYS0xyVFotSjJvVXgtLUpBRUd1S24zMTIzUTVPODhKRGszZVg4Z292MzNsdmlQRUc0alNTa1NoRUZWcGdvRXFtVkpkWnhrbklxM2lGaWMweGZ1SjNtZVZ0cDVfR2xiUFFOaUppcHotb3NYZG5ZR0RiR0hscU1kaVhpbGsx?oc=5",
+          "published": "Wed, 18 Mar 2026 07:00:00 GMT",
+          "source": "Google News"
+        }
+      ]
     },
     "RSHO": {
-      "status": "error",
+      "status": "ok",
       "ticker": "RSHO",
-      "name": "RSHO",
-      "note": "The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().",
-      "news": []
+      "name": "Tema American Reshoring ETF",
+      "price": 57.5,
+      "prev_close": 57.61,
+      "change_pct": -0.19,
+      "as_of": "2026-05-29",
+      "returns": {
+        "1d": -0.19,
+        "5d": 3.06,
+        "30d": 6.99,
+        "90d": 21.02,
+        "150d": 34.28,
+        "250d": 54.03
+      },
+      "ema50": 55.04,
+      "ema200": 48.96,
+      "ma_signal": "BUY",
+      "zscore": 1.32,
+      "cmf": -0.006,
+      "series": [
+        {
+          "date": "2026-04-17",
+          "value": 55.37
+        },
+        {
+          "date": "2026-04-20",
+          "value": 55.41
+        },
+        {
+          "date": "2026-04-21",
+          "value": 54.98
+        },
+        {
+          "date": "2026-04-22",
+          "value": 55.03
+        },
+        {
+          "date": "2026-04-23",
+          "value": 55.82
+        },
+        {
+          "date": "2026-04-24",
+          "value": 55.79
+        },
+        {
+          "date": "2026-04-27",
+          "value": 55.97
+        },
+        {
+          "date": "2026-04-28",
+          "value": 55.14
+        },
+        {
+          "date": "2026-04-29",
+          "value": 54.47
+        },
+        {
+          "date": "2026-04-30",
+          "value": 56.58
+        },
+        {
+          "date": "2026-05-01",
+          "value": 55.86
+        },
+        {
+          "date": "2026-05-04",
+          "value": 55.05
+        },
+        {
+          "date": "2026-05-05",
+          "value": 56.51
+        },
+        {
+          "date": "2026-05-06",
+          "value": 58.81
+        },
+        {
+          "date": "2026-05-07",
+          "value": 57.72
+        },
+        {
+          "date": "2026-05-08",
+          "value": 57.87
+        },
+        {
+          "date": "2026-05-11",
+          "value": 58.85
+        },
+        {
+          "date": "2026-05-12",
+          "value": 58.01
+        },
+        {
+          "date": "2026-05-13",
+          "value": 57.8
+        },
+        {
+          "date": "2026-05-14",
+          "value": 58.24
+        },
+        {
+          "date": "2026-05-15",
+          "value": 56.68
+        },
+        {
+          "date": "2026-05-18",
+          "value": 54.89
+        },
+        {
+          "date": "2026-05-19",
+          "value": 53.92
+        },
+        {
+          "date": "2026-05-20",
+          "value": 55.58
+        },
+        {
+          "date": "2026-05-21",
+          "value": 55.79
+        },
+        {
+          "date": "2026-05-22",
+          "value": 56.63
+        },
+        {
+          "date": "2026-05-26",
+          "value": 58.44
+        },
+        {
+          "date": "2026-05-27",
+          "value": 58.2
+        },
+        {
+          "date": "2026-05-28",
+          "value": 57.61
+        },
+        {
+          "date": "2026-05-29",
+          "value": 57.5
+        }
+      ],
+      "note": "",
+      "news": [
+        {
+          "title": "It\u2019s Rough Out There. But These 5 Funds Are Crushing It.",
+          "link": "https://finance.yahoo.com/m/907cd7d9-cf0b-370c-924e-517fc129fba6/it%E2%80%99s-rough-out-there.-but.html?.tsrc=rss",
+          "published": "Fri, 06 Mar 2026 19:29:00 +0000",
+          "source": "Yahoo Finance"
+        },
+        {
+          "title": "RSHO: The Right Theme, Not The Best ETF (NYSEARCA:RSHO) - Seeking Alpha",
+          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE91a0tQN0F0c3J5WVl2V3hjWGlKVFJxUEVUY2tSVHo0S1lkTThXZmtReGpEUXpUaklraktrc1hRbjVRckpDSUNKdlI1YTRkSTlCRlRGN0NhbmlWaDZ5Uk5hdl9KU2d0M2U4Q1YzamlYd0IwcHBIejJPNEln?oc=5",
+          "published": "Wed, 11 Mar 2026 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "(RSHO) Movement Within Algorithmic Entry Frameworks - Stock Traders Daily",
+          "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOb1Y3bU5BUnphZVRubWZFZnZTX0thR3l6WXRyU1lUZW5OOERUSDZXVjhsNjBCY3V6Nko5OFNkdE1FZTduRUo1Xy1oVkNsaENfWkhJREszMUw0QVQtRGNNc1dHc2ZnSzNUeklFYUpmMkdEMEJIM2pBNmFoNmxHM3BjWS1NNmlOYkx1N2tlZ25pblZ3MlZYaHNwTVFCWHpQTnd2U09lTVJSR1poN2g3YVZBRE1MRUlkZjhzMFhsN3BKMVBOLUducXhkQg?oc=5",
+          "published": "Sun, 17 May 2026 17:16:02 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "RSHO Stock Fund Price and Chart \u2014 AMEX:RSHO - TradingView",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1MU1VrLTNfRmFsOTJjVEVJM1I1RWpYcGJNelQtTXhqNU9qNUxuMDhJcjNBTjI0cFpzbEp5WDVJYy02V1ZZR3hmd2x3ejYxT3BmVjNCUzF1bGxEQQ?oc=5",
+          "published": "Wed, 10 May 2023 15:22:56 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "The CEO of a reshoring ETF up 41% since launching in 2023 shares 5 stocks he's most bullish on in the fund - Business Insider",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcnVfQ3BqekJRUWhtR2VtRF9meEJhZHVyTDFxNVNkandwUS05Tm8tb3BiZ2NrcTF6ZHByeTNJa1lJWGstSzhtRm83VEtNdE82T084QWxBSjU5ckdoc3BXeTVDeGg4aEtzVmx1UWIxZTlYNzh6cXhmVktaN0M5SjktYk1pRG44YVBiSzdRQldZejUzV2F2LThmaHI4Nm9naGlrU2lWZ05WYlhyU00?oc=5",
+          "published": "Wed, 04 Sep 2024 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Watch Tema Founder on American Reshoring ETF (Ticker: RSHO) - Bloomberg.com",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNeG1wRFo3Q0haUGVwc3M1ZDdTd1JPek01M004QV8yNUtGM2t3Skk2NUhrSEFvUlhycjloNk1GdzNsZm80dFZMd0NUNVo4YkZOQXFTMWNDSjkwTWd4Y0w5aGt0SUdoR0FaUjdMZ0VaRks4VGVLSXhMTE9nbWNrRUdIb1dSYWNhM2ZVZ0NyNDkzakxoYkhvVTFSRFpYRWlaeVF1?oc=5",
+          "published": "Wed, 24 Jul 2024 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Disruptive Theme of the Week: Nearshoring - ETF Trends",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVlNsQndrckFNYW1Mamd5dTJOZWhZZ0puYlVJbVJkaGhNRGYwR3FxU0NQakh5dW9QQTlKWjlQLUV2Q0tmbUI1dGxlOXVTRzBvZkJXY0JEcnZ4NzE4MWxvcEFCNzRKUGtvNmFOV1VPcHNpRHZtSFdGSmUyeWFHYmNjVEpjMEVtalMwMWFfZExOVS1aQlNVUkt0WFFTTks3eHZQNnVN0gGoAUFVX3lxTE5LTWotMjZMMnhBR1RPSC1uQndvYzR1VEFoajZxRjJFRjZORjB6U2Y0a2F0VHFyTXplQU1nT2hReTl5VTVFcm5lSW9RV0V5M29QVk1qcXpPLWJXbW5xWGVhb2xCRUVCNjVUTjM5bWlNMTBwMTRMSklqNVY3dmhVSm02WGVRekJOOWNKYjltSHVmRHEzaVpsYlowV1hZWGd6WW1XQmxzLWRXdg?oc=5",
+          "published": "Wed, 10 Jul 2024 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Avoiding this one sector has been the key to gains for stock investors so far in 2025 - MarketWatch",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbWJuUnNwTHc3b1BTYVBGN2pvYm9NaFFPUnBjbkt4cEJwblh5d2dNYkZ4bnh3eUVIbi1lSGZuMjNlNlh5ZkdHNDFuXzVGWmhRX0J3UGZvVm5tamxyR0ItalZKNjNBVk9ZbWE2ejlNVDhjN0MycXlWZzh3YjVneWRsOWZSYXRiYW9yT2FqZXBtaGtqNG5iX0ktWEs2aEs0b0hBOUJCRzRVeVpjRzlrV0I5OEo4ZWNWMXA1RWFwS3p4NWI5bmdLNTJj?oc=5",
+          "published": "Tue, 04 Mar 2025 08:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Ranked: America\u2019s $425B Trade Deficit by Product - Visual Capitalist",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQWVQ1VXZYOWZzSFFiNHBXMnlfU01GRUdxSVY0Nl8wRmRsWXI2Zy1GbzRuMl9JUEdJVWdxMkx1NnJDR3I4T0NmQ2FuSmpHRHpjVnAya090X21zNnpJVm9fUVpMbzNEakF1MDlUN3BVcEVjRDdUVWRnSGI0WFZsMWY5NXptUjM3Z1VlN21WOXRn?oc=5",
+          "published": "Thu, 29 May 2025 07:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "Tema's New VOLT ETF Sparked by AI Revolution - ETF.com",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE02djZ0azZSdmgwbUwyVXBmc0lENHlmV1UtTXN2bjJqZXJYSWxKQ1B5bnVKank3TVJ4bEFaWTdwc25IcEVWRnFYeG5kWmV5M2xkbzZPdEJSaWx2azdRbFNwSkJ0SmRVNGJjOFZVZVJjRlh6VlNFMk9vYnl5eHE4ejg?oc=5",
+          "published": "Wed, 04 Dec 2024 08:00:00 GMT",
+          "source": "Google News"
+        },
+        {
+          "title": "ETFs tied to Caterpillar jump after the stock's earnings-driven rally (CAT:NYSE) - Seeking Alpha",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdXdncjNWdTJ3MDZhajZ2S0dka3ZjdnJudVBlRzZaRDRSVjQxOHIzZzFocTRuRTNDQTR5LVdobGJjRHZESUtRZWh1aWkwMGJGNnRmWWFYVGI4U0dfSjZhWmZCbXhjWkNDa0Z3RERwMnphcVA2WmJQbXM5bzBKTFhfakFUazJQcENxdW5pVkNjenFkWHo4SGRtSDduWkItSE9YRm5FYjZhV0V0QQ?oc=5",
+          "published": "Thu, 30 Apr 2026 07:00:00 GMT",
+          "source": "Google News"
+        }
+      ]
     }
   }
 }
