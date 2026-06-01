@@ -29,10 +29,10 @@ TOP_N = 10  # top and bottom N ETFs per period
 # 500 largest US ETFs by AUM - curated list
 ETF_UNIVERSE = [
     "SPY","IVV","VOO","VTI","QQQ","VEA","IEFA","AGG","VUG","VTV",
-    "BND","VWO","GLD","IJH","IWM","VIG","IEMG","IJR","VGT","VO",
+    "BND","VWO","IJH","VIG","IEMG","IJR","VGT","VO",
     "IWF","VXUS","BSV","MUB","VB","ITOT","IWD","IEF","LQD",
     "TLT","SHY","VNQ","XLF","XLK","XLE","XLV","XLI","XLC","XLY",
-    "XLP","XLU","XLB","XLRE","GDX","SLV","USO","UNG","DBO","DJP",
+    "XLP","XLU","XLB","XLRE","SLV","USO","UNG","DBO","DJP",
     "IAU","SGOL","SIVR","PALL","PPLT","DBB","DBC","DBO","GSG","PDBC",
     "HYG","JNK","EMB","VCIT","VCSH","VGSH","VGIT","VGLT","VMBS","MBB",
     "TIP","SCHP","STIP","VTIP","SPTI","SPTL","SPTS","SPAB","SPSB","SPSM",
@@ -41,17 +41,17 @@ ETF_UNIVERSE = [
     "SPDW","SPEM","SPMB","SPMD","SPLG","SPYG","SPYV","SPYD","SPMO","SPGP",
     "DIA","MDY","RSP","OEF","SDY","DVY","VHT","VFH","VIS","VAW",
     "VCR","VDC","VPU","VRE","VOX","VBK","VBR","VMC","VGK","VPL",
-    "EFA","EEM","EWJ","EWZ","EWC","EWG","EWU","EWA","EWH","EWS",
+    "EFA","EEM","EWG","EWA","EWH",
     "EWL","EWT","EWY","EWP","EWQ","EWI","EWD","EWN","EWO","EWK",
-    "FXI","MCHI","KWEB","CQQQ","ASHR","GXC","CNXT","KBA","KURE","CXSE",
+    "MCHI","KWEB","CQQQ","ASHR","GXC","CNXT","KBA","KURE","CXSE",
     "EPI","INDA","SMIN","INDY","EZA","AAXJ","GMF","GEM","IEMG","EEMA",
     "VWO","SPEM","DEM","EDIV","EMHY","LEMB","FEMB","PCY","VWOB","MAGS",
-    "IYW","IGV","SOXX","SMH","QTEC","SKYY","CLOU","WCLD","BUG","CIBR",
+    "IYW","SOXX","SMH","QTEC","SKYY","CLOU","WCLD","BUG","CIBR",
     "HACK","IHAK","ROBO","BOTZ","IRBO","THNQ","DTEC","LRNZ","ENOR","EMQQ",
     "ICLN","QCLN","ACES","SMOG","CNRG","ERTH","VEGN","KRBN","NETZ","GREK",
     "IBB","XBI","LABU","ARKG","PTH","BBH","FBT","SBIO","GNOM","HELX",
-    "GNR","XME","PICK","SLX","REMX","LIT","COPX","URA","URNM","NLR",
-    "REIT","IYR","RWR","SCHH","REM","MORT","HOMZ","GRID","INDS","FFR",
+    "GNR","XME","PICK","SLX","REMX","COPX","URA","URNM","NLR",
+    "REIT","IYR","RWR","SCHH","REM","MORT","HOMZ","INDS","FFR",
     "TBF","TMF","TMV","TBT","TTT","SPTL","VGLT","EDV","ZROZ","GOVZ",
     "PSQ","SH","RWM","DOG","SDS","QID","TWM","MYY","MZZ","SPXU",
     "TQQQ","UPRO","UDOW","URTY","TNA","SPXL","TECL","FNGU","SOXL","LABU",
@@ -70,8 +70,12 @@ ETF_UNIVERSE = [
     "QUAL","SIZE","VLUE","MTUM","USMF","LRGF","INTL","INTF","ESGU","ESGE",
     "USSG","ESGV","ESGE","SUSL","SUSA","CRBN","LOWC","ETHO","NUMV","NULV",
     "COWZ","CALF","DEEP","DSTL","DSTX","STXV","STXG","STXE","STXK","STXM",
-    "MOAT","GOAT","IBIT","MFUS","MFEM","MFMO","EUAD","MFUS","MFDX","EMM",
-    "VRP","PFIG","PGF","PSK","IPFF","FPE","SPFF","PFFD","PFFR","PFXF", "AFK"
+    "MOAT","GOAT","IBIT","MFUS","MFEM","MFMO","MFUS","MFDX","EMM",
+    "VRP","PFIG","PGF","PSK","IPFF","FPE","SPFF","PFFD","PFFR","PFXF", "AFK", "ARGT",
+    "CANC", "DARP", "DBA","DVYE","EUAD","EWC","EWJ","EWS","EWU","EWZ", "FCG","FXI","GDX",
+    "GDXJ","GLD","GRID", "GVAL","HFGM","IEUS",,"IGV","IWM","IXC","IXG","JEDI",
+    "KROP", ,"LIT",""MOO, "NASA"
+    
 ]
 
 # Remove duplicates while preserving order
