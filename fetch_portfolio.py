@@ -42,8 +42,8 @@ ETF_TICKERS = [
     "SPY", "GLD", "BRK-B", "GRID", "FXI", "SJB", "GVAL", "VFLO",
     "DVYE", "XLI", "XLB", "MOO", "PAVE","ARGT",
     "CANC", "DARP", "DBA","DVYE","EUAD","EWC","EWJ","EWS","EWU","EWZ", "FCG","FXI","GDX",
-    "GDXJ","HFGM","IEUS",,"IGV","IWM","IXC","IXG","JEDI",
-    "KROP", ,"LIT","MOO", "NASA"
+    "GDXJ","HFGM","IEUS","IGV","IWM","IXC","IXG","JEDI",
+    "KROP","LIT","MOO", "NASA"
 ]
 
 # OTC/illiquid tickers - fetched individually to avoid corrupting batches
