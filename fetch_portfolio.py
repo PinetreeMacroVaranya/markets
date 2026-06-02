@@ -280,10 +280,14 @@ def fetch_news(ticker, max_articles=20):
     articles = []
     seen_titles = set()
 
-    # Source 1: Yahoo Finance RSS
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; PortfolioBot/1.0)"}
+
+    # Source 1: Yahoo Finance RSS (with User-Agent)
     try:
-        url  = f"https://feeds.finance.yahoo.com/rss/2.0/headline?s={ticker}&region=US&lang=en-US"
-        feed = feedparser.parse(url)
+        url = f"https://feeds.finance.yahoo.com/rss/2.0/headline?s={ticker}&region=US&lang=en-US"
+        feed = feedparser.parse(url, request_headers=headers)
+        if feed.bozo and not feed.entries:
+            log(f"  [{ticker}] Yahoo RSS failed: {feed.bozo_exception}")
         for entry in feed.entries[:max_articles]:
             title = entry.get("title", "").strip()
             if title and title not in seen_titles:
@@ -294,13 +298,15 @@ def fetch_news(ticker, max_articles=20):
                     "source":    "Yahoo Finance"
                 })
                 seen_titles.add(title)
-    except Exception:
-        pass
+    except Exception as e:
+        log(f"  [{ticker}] Yahoo RSS exception: {e}")
 
-    # Source 2: Google News RSS — always fetched, not just fallback
+    # Source 2: Google News RSS
     try:
-        url  = f"https://news.google.com/rss/search?q={ticker}+stock&hl=en-US&gl=US&ceid=US:en"
-        feed = feedparser.parse(url)
+        url = f"https://news.google.com/rss/search?q={ticker}+stock&hl=en-US&gl=US&ceid=US:en"
+        feed = feedparser.parse(url, request_headers=headers)
+        if feed.bozo and not feed.entries:
+            log(f"  [{ticker}] Google News RSS failed: {feed.bozo_exception}")
         for entry in feed.entries:
             if len(articles) >= max_articles:
                 break
@@ -313,11 +319,13 @@ def fetch_news(ticker, max_articles=20):
                     "source":    "Google News"
                 })
                 seen_titles.add(title)
-    except Exception:
-        pass
+    except Exception as e:
+        log(f"  [{ticker}] Google News exception: {e}")
+
+    if not articles:
+        log(f"  [{ticker}] WARNING: No news fetched from any source")
 
     return articles[:max_articles]
-
 # -----------------------------------------------------------------
 # LOAD DISPLAY TICKERS
 # -----------------------------------------------------------------
