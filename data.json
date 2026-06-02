@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T05:02:49.538678Z",
+  "generated_at": "2026-06-02T11:05:33.249541Z",
   "generated_date": "2026-06-02",
   "indicators": {
     "move": {
@@ -530,12 +530,16 @@
         {
           "date": "2026-06-01",
           "value": 16.05
+        },
+        {
+          "date": "2026-06-02",
+          "value": 16.13
         }
       ],
-      "latest": 16.05,
-      "prev": 15.32,
-      "change": 0.73,
-      "as_of": "2026-06-01",
+      "latest": 16.13,
+      "prev": 16.05,
+      "change": 0.08,
+      "as_of": "2026-06-02",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
       "note": ""
@@ -1664,247 +1668,14 @@
       "note": "HTTP error: 429 Client Error: Too Many Requests for url: https://api.stlouisfed.org/fred/series/observations?series_id=T10Y2Y&observation_start=2026-03-01&observation_end=2026-06-02&file_type=json&api_key=03e0621a76151977533b8ce1d181595f"
     },
     "brent": {
-      "series": [
-        {
-          "date": "2026-03-02",
-          "value": 77.24
-        },
-        {
-          "date": "2026-03-03",
-          "value": 83.28
-        },
-        {
-          "date": "2026-03-04",
-          "value": 81.56
-        },
-        {
-          "date": "2026-03-05",
-          "value": 88.59
-        },
-        {
-          "date": "2026-03-06",
-          "value": 95.74
-        },
-        {
-          "date": "2026-03-09",
-          "value": 94.35
-        },
-        {
-          "date": "2026-03-10",
-          "value": 89.84
-        },
-        {
-          "date": "2026-03-11",
-          "value": 90.98
-        },
-        {
-          "date": "2026-03-12",
-          "value": 102.38
-        },
-        {
-          "date": "2026-03-13",
-          "value": 103.23
-        },
-        {
-          "date": "2026-03-16",
-          "value": 101.04
-        },
-        {
-          "date": "2026-03-17",
-          "value": 108.39
-        },
-        {
-          "date": "2026-03-18",
-          "value": 118.09
-        },
-        {
-          "date": "2026-03-19",
-          "value": 111.05
-        },
-        {
-          "date": "2026-03-20",
-          "value": 118.42
-        },
-        {
-          "date": "2026-03-23",
-          "value": 103.79
-        },
-        {
-          "date": "2026-03-24",
-          "value": 108.42
-        },
-        {
-          "date": "2026-03-25",
-          "value": 109.14
-        },
-        {
-          "date": "2026-03-26",
-          "value": 113.39
-        },
-        {
-          "date": "2026-03-27",
-          "value": 121.47
-        },
-        {
-          "date": "2026-03-30",
-          "value": 121.88
-        },
-        {
-          "date": "2026-03-31",
-          "value": 126.69
-        },
-        {
-          "date": "2026-04-01",
-          "value": 119.56
-        },
-        {
-          "date": "2026-04-02",
-          "value": 127.61
-        },
-        {
-          "date": "2026-04-07",
-          "value": 138.21
-        },
-        {
-          "date": "2026-04-08",
-          "value": 122.11
-        },
-        {
-          "date": "2026-04-09",
-          "value": 119.03
-        },
-        {
-          "date": "2026-04-10",
-          "value": 119.07
-        },
-        {
-          "date": "2026-04-13",
-          "value": 123.28
-        },
-        {
-          "date": "2026-04-14",
-          "value": 118.69
-        },
-        {
-          "date": "2026-04-15",
-          "value": 114.93
-        },
-        {
-          "date": "2026-04-16",
-          "value": 116.63
-        },
-        {
-          "date": "2026-04-17",
-          "value": 98.63
-        },
-        {
-          "date": "2026-04-20",
-          "value": 103.4
-        },
-        {
-          "date": "2026-04-21",
-          "value": 106.14
-        },
-        {
-          "date": "2026-04-22",
-          "value": 113.44
-        },
-        {
-          "date": "2026-04-23",
-          "value": 113.25
-        },
-        {
-          "date": "2026-04-24",
-          "value": 111.86
-        },
-        {
-          "date": "2026-04-27",
-          "value": 113.89
-        },
-        {
-          "date": "2026-04-28",
-          "value": 117.62
-        },
-        {
-          "date": "2026-04-29",
-          "value": 124.16
-        },
-        {
-          "date": "2026-04-30",
-          "value": 124.24
-        },
-        {
-          "date": "2026-05-01",
-          "value": 118.26
-        },
-        {
-          "date": "2026-05-05",
-          "value": 114.51
-        },
-        {
-          "date": "2026-05-06",
-          "value": 103.7
-        },
-        {
-          "date": "2026-05-07",
-          "value": 101.82
-        },
-        {
-          "date": "2026-05-08",
-          "value": 103.48
-        },
-        {
-          "date": "2026-05-11",
-          "value": 106.11
-        },
-        {
-          "date": "2026-05-12",
-          "value": 111.37
-        },
-        {
-          "date": "2026-05-13",
-          "value": 110.28
-        },
-        {
-          "date": "2026-05-14",
-          "value": 110.91
-        },
-        {
-          "date": "2026-05-15",
-          "value": 113.96
-        },
-        {
-          "date": "2026-05-18",
-          "value": 116.73
-        },
-        {
-          "date": "2026-05-19",
-          "value": 114.64
-        },
-        {
-          "date": "2026-05-20",
-          "value": 108.93
-        },
-        {
-          "date": "2026-05-21",
-          "value": 105.84
-        },
-        {
-          "date": "2026-05-22",
-          "value": 106.9
-        },
-        {
-          "date": "2026-05-26",
-          "value": 102.75
-        }
-      ],
-      "latest": 102.75,
-      "prev": 106.9,
-      "change": -4.15,
-      "as_of": "2026-05-26",
-      "status": "ok",
-      "source": "FRED (DCOILBRENTEU)",
-      "note": ""
+      "series": [],
+      "latest": null,
+      "prev": null,
+      "change": null,
+      "as_of": null,
+      "status": "error",
+      "source": "FRED",
+      "note": "HTTP error: 429 Client Error: Too Many Requests for url: https://api.stlouisfed.org/fred/series/observations?series_id=DCOILBRENTEU&observation_start=2026-03-01&observation_end=2026-06-02&file_type=json&api_key=03e0621a76151977533b8ce1d181595f"
     },
     "fg": {
       "series": [],
