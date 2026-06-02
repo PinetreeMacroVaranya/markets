@@ -73,9 +73,8 @@ ETF_UNIVERSE = [
     "MOAT","GOAT","IBIT","MFUS","MFEM","MFMO","MFUS","MFDX","EMM",
     "VRP","PFIG","PGF","PSK","IPFF","FPE","SPFF","PFFD","PFFR","PFXF", "AFK", "ARGT",
     "CANC", "DARP", "DBA","DVYE","EUAD","EWC","EWJ","EWS","EWU","EWZ", "FCG","FXI","GDX",
-    "GDXJ","GLD","GRID", "GVAL","HFGM","IEUS","IGV","IWM","IXC","IXG","JEDI",
-    "KROP","MILN","LIT","MOO", "NASA"
-    
+    "GDXJ","GLD","GRID", "GVAL","HFGM","IEUS","IGV","IWM","IXC","IXG","JEDI","KROP","MILN","LIT","MOO", "NASA"
+        
 ]
 
 # Remove duplicates while preserving order
