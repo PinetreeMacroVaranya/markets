@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-03T05:17:45.195189Z",
+  "generated_at": "2026-06-03T12:01:50.633972Z",
   "generated_date": "2026-06-03",
-  "universe_count": 427,
+  "universe_count": 429,
   "rankings": {
     "1d": {
       "top": [
@@ -4734,9 +4734,9 @@
           ],
           "as_of": "2026-06-02",
           "name": "Tema Space Innovators ETF",
-          "aum": 279797184,
+          "aum": null,
           "expense": null,
-          "category": "Large Blend"
+          "category": ""
         },
         {
           "ticker": "UFO",
