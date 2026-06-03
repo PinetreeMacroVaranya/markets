@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T05:17:12.008439Z",
+  "generated_at": "2026-06-03T11:28:08.733592Z",
   "generated_date": "2026-06-03",
   "indicators": {
     "move": {
@@ -538,12 +538,16 @@
         {
           "date": "2026-06-02",
           "value": 15.77
+        },
+        {
+          "date": "2026-06-03",
+          "value": 16.11
         }
       ],
-      "latest": 15.77,
-      "prev": 16.05,
-      "change": -0.28,
-      "as_of": "2026-06-02",
+      "latest": 16.11,
+      "prev": 15.77,
+      "change": 0.34,
+      "as_of": "2026-06-03",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
       "note": ""
