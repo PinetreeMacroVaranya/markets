@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-02T11:05:33.249541Z",
-  "generated_date": "2026-06-02",
+  "generated_at": "2026-06-03T05:17:12.008439Z",
+  "generated_date": "2026-06-03",
   "indicators": {
     "move": {
       "series": [
@@ -259,12 +259,16 @@
         {
           "date": "2026-06-01",
           "value": 73.33
+        },
+        {
+          "date": "2026-06-02",
+          "value": 73.43
         }
       ],
-      "latest": 73.33,
-      "prev": 70.22,
-      "change": 3.11,
-      "as_of": "2026-06-01",
+      "latest": 73.43,
+      "prev": 73.33,
+      "change": 0.1,
+      "as_of": "2026-06-02",
       "status": "ok",
       "source": "Yahoo Finance (^MOVE)",
       "note": ""
@@ -533,12 +537,12 @@
         },
         {
           "date": "2026-06-02",
-          "value": 16.13
+          "value": 15.77
         }
       ],
-      "latest": 16.13,
+      "latest": 15.77,
       "prev": 16.05,
-      "change": 0.08,
+      "change": -0.28,
       "as_of": "2026-06-02",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
@@ -801,12 +805,16 @@
         {
           "date": "2026-06-01",
           "value": 25.64
+        },
+        {
+          "date": "2026-06-02",
+          "value": 24.44
         }
       ],
-      "latest": 25.64,
-      "prev": 24.91,
-      "change": 0.73,
-      "as_of": "2026-06-01",
+      "latest": 24.44,
+      "prev": 25.64,
+      "change": -1.2,
+      "as_of": "2026-06-02",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
       "note": ""
@@ -1068,12 +1076,16 @@
         {
           "date": "2026-06-01",
           "value": 79.84
+        },
+        {
+          "date": "2026-06-02",
+          "value": 79.9
         }
       ],
-      "latest": 79.84,
-      "prev": 79.9,
-      "change": -0.06,
-      "as_of": "2026-06-01",
+      "latest": 79.9,
+      "prev": 79.84,
+      "change": 0.06,
+      "as_of": "2026-06-02",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
       "note": ""
@@ -1335,12 +1347,16 @@
         {
           "date": "2026-06-01",
           "value": 4.812
+        },
+        {
+          "date": "2026-06-02",
+          "value": 4.81
         }
       ],
-      "latest": 4.812,
-      "prev": 4.883,
-      "change": -0.071,
-      "as_of": "2026-06-01",
+      "latest": 4.81,
+      "prev": 4.812,
+      "change": -0.002,
+      "as_of": "2026-06-02",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
       "note": ""
@@ -1655,7 +1671,7 @@
       "as_of": null,
       "status": "error",
       "source": "FRED",
-      "note": "HTTP error: 429 Client Error: Too Many Requests for url: https://api.stlouisfed.org/fred/series/observations?series_id=NFCI&observation_start=2026-03-01&observation_end=2026-06-02&file_type=json&api_key=03e0621a76151977533b8ce1d181595f"
+      "note": "HTTP error: 429 Client Error: Too Many Requests for url: https://api.stlouisfed.org/fred/series/observations?series_id=NFCI&observation_start=2026-03-02&observation_end=2026-06-03&file_type=json&api_key=03e0621a76151977533b8ce1d181595f"
     },
     "spread": {
       "series": [],
@@ -1665,7 +1681,7 @@
       "as_of": null,
       "status": "error",
       "source": "FRED",
-      "note": "HTTP error: 429 Client Error: Too Many Requests for url: https://api.stlouisfed.org/fred/series/observations?series_id=T10Y2Y&observation_start=2026-03-01&observation_end=2026-06-02&file_type=json&api_key=03e0621a76151977533b8ce1d181595f"
+      "note": "HTTP error: 429 Client Error: Too Many Requests for url: https://api.stlouisfed.org/fred/series/observations?series_id=T10Y2Y&observation_start=2026-03-02&observation_end=2026-06-03&file_type=json&api_key=03e0621a76151977533b8ce1d181595f"
     },
     "brent": {
       "series": [],
@@ -1675,7 +1691,7 @@
       "as_of": null,
       "status": "error",
       "source": "FRED",
-      "note": "HTTP error: 429 Client Error: Too Many Requests for url: https://api.stlouisfed.org/fred/series/observations?series_id=DCOILBRENTEU&observation_start=2026-03-01&observation_end=2026-06-02&file_type=json&api_key=03e0621a76151977533b8ce1d181595f"
+      "note": "HTTP error: 429 Client Error: Too Many Requests for url: https://api.stlouisfed.org/fred/series/observations?series_id=DCOILBRENTEU&observation_start=2026-03-02&observation_end=2026-06-03&file_type=json&api_key=03e0621a76151977533b8ce1d181595f"
     },
     "fg": {
       "series": [],
