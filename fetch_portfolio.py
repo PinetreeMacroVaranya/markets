@@ -39,12 +39,12 @@ BATCH_SIZE      = 50
 # -----------------------------------------------------------------
 
 ETF_TICKERS = [
-    "SPY", "GLD", "BRK-B", "GRID", "FXI","SJB",
-    "GVAL", "VFLO","DVYE", "XLI", "XLB", "MOO", 
-    "PAVE","ARGT","CANC", "DARP", "DBA","DVYE",
-    "EUAD","EWC","EWJ","EWS","EWU","EWZ","FCG",
-    "FXI","GDX","GDXJ","HFG","IEUS","SRUUF","IGV","IWM",
-    "IXC","IXG","JEDI","KROP","LIT","MOO","NASA"
+    "SPY", "GLD", "BRK-B", "GRID", "FXI", "SJB",
+    "GVAL", "VFLO", "DVYE", "XLI", "XLB", "MOO",
+    "PAVE", "ARGT", "CANC", "DARP", "DBA",
+    "EUAD", "EWC", "EWJ", "EWS", "EWU", "EWZ", "FCG",
+    "GDX", "GDXJ", "HFG", "IEUS", "SRUUF", "IGV", "IWM",
+    "IXC", "IXG", "JEDI", "KROP", "LIT", "NASA",
 ]
 
 # OTC/illiquid tickers - fetched individually to avoid corrupting batches
@@ -55,7 +55,7 @@ INDIVIDUAL_TICKERS = ["ABXXF", "WRTH", "RSHO"]
 # -----------------------------------------------------------------
 
 STOCK_TICKERS = [
-    "GEV", "PLTR"
+    "GEV", "PLTR",
 ]
 
 # -----------------------------------------------------------------
@@ -71,8 +71,10 @@ def dedup(lst):
             out.append(t)
     return out
 
+
 def log(msg):
     print(f"[{datetime.utcnow().strftime('%H:%M:%S')}] {msg}", flush=True)
+
 
 def safe_float(v, decimals=2):
     try:
@@ -83,14 +85,16 @@ def safe_float(v, decimals=2):
     except (TypeError, ValueError):
         return None
 
+
 def pct_return(series, days):
     if len(series) <= days:
         return None
     current = series.iloc[-1]
-    past    = series.iloc[-(days + 1)]
+    past = series.iloc[-(days + 1)]
     if past == 0 or pd.isna(past):
         return None
     return round((current - past) / past * 100, 2)
+
 
 # -----------------------------------------------------------------
 # TECHNICAL INDICATORS
@@ -99,16 +103,19 @@ def pct_return(series, days):
 def compute_ema(series, period):
     return series.ewm(span=period, adjust=False).mean()
 
+
 def compute_cmf(high, low, close, volume, period=21):
     hl_range = (high - low).replace(0, float('nan'))
     mfm = ((close - low) - (high - close)) / hl_range
     mfv = mfm * volume
     return mfv.rolling(period).sum() / volume.rolling(period).sum()
 
+
 def compute_zscore(close, period=90):
     mean = close.rolling(period).mean()
-    std  = close.rolling(period).std()
+    std = close.rolling(period).std()
     return (close - mean) / std.replace(0, float('nan'))
+
 
 def get_ma_signal(price, ema50, ema200):
     if price is None or ema50 is None or ema200 is None:
@@ -120,6 +127,7 @@ def get_ma_signal(price, ema50, ema200):
     pct_above = (price - ema50) / ema50 * 100
     return "BUY" if pct_above <= 5.0 else "HOLD"
 
+
 # -----------------------------------------------------------------
 # BATCH PRICE FETCH
 # -----------------------------------------------------------------
@@ -128,12 +136,12 @@ def fetch_batch_prices(tickers):
     log(f"Fetching price history for {len(tickers)} tickers...")
     all_closes = {}
 
-    individual    = [t for t in tickers if t in INDIVIDUAL_TICKERS]
+    individual = [t for t in tickers if t in INDIVIDUAL_TICKERS]
     batch_tickers = [t for t in tickers if t not in INDIVIDUAL_TICKERS]
 
     for i in range(0, len(batch_tickers), BATCH_SIZE):
-        batch = batch_tickers[i:i+BATCH_SIZE]
-        log(f"  Batch {i//BATCH_SIZE+1}/{max(1,(len(batch_tickers)-1)//BATCH_SIZE+1)}: {len(batch)} tickers")
+        batch = batch_tickers[i:i + BATCH_SIZE]
+        log(f"  Batch {i // BATCH_SIZE + 1}/{max(1, (len(batch_tickers) - 1) // BATCH_SIZE + 1)}: {len(batch)} tickers")
         try:
             data = yf.download(
                 batch,
@@ -142,7 +150,7 @@ def fetch_batch_prices(tickers):
                 auto_adjust=True,
                 progress=False,
                 group_by="ticker",
-                threads=True
+                threads=True,
             )
             for ticker in batch:
                 try:
@@ -165,15 +173,14 @@ def fetch_batch_prices(tickers):
         for ticker in individual:
             try:
                 data = yf.download(
-                    [ticker],          # pass as list to force multi-ticker DataFrame structure
+                    [ticker],
                     period="15mo",
                     interval="1d",
                     auto_adjust=True,
                     progress=False,
                     group_by="ticker",
-                    threads=False
+                    threads=False,
                 )
-                # With a list of 1, yfinance returns multi-level columns
                 if ticker in data.columns.get_level_values(0):
                     close = data[ticker]["Close"].dropna()
                 else:
@@ -190,16 +197,17 @@ def fetch_batch_prices(tickers):
     log(f"  Got price data for {len(all_closes)} tickers")
     return all_closes
 
+
 # -----------------------------------------------------------------
 # COMPUTE SIGNALS
 # -----------------------------------------------------------------
 
 def compute_signals(ticker, close_series):
     try:
-        close      = close_series
-        price      = safe_float(close.iloc[-1], 2)
+        close = close_series
+        price = safe_float(close.iloc[-1], 2)
         prev_close = safe_float(close.iloc[-2], 2) if len(close) >= 2 else None
-        as_of      = close.index[-1].strftime("%Y-%m-%d")
+        as_of = close.index[-1].strftime("%Y-%m-%d")
 
         returns = {
             "1d":   pct_return(close, 1),
@@ -210,10 +218,10 @@ def compute_signals(ticker, close_series):
             "250d": pct_return(close, 250),
         }
 
-        ema50  = safe_float(compute_ema(close, 50).iloc[-1], 2)
+        ema50 = safe_float(compute_ema(close, 50).iloc[-1], 2)
         ema200 = safe_float(compute_ema(close, 200).iloc[-1], 2)
         signal = get_ma_signal(price, ema50, ema200)
-        zs     = compute_zscore(close, 90)
+        zs = compute_zscore(close, 90)
         zscore = safe_float(zs.iloc[-1], 2)
 
         series = [
@@ -249,13 +257,14 @@ def compute_signals(ticker, close_series):
             "news":   [],
         }
 
+
 # -----------------------------------------------------------------
 # ENRICH DISPLAY TICKERS
 # -----------------------------------------------------------------
 
 def enrich_ticker(ticker, data):
     try:
-        t    = yf.Ticker(ticker)
+        t = yf.Ticker(ticker)
         hist = t.history(period="6mo", interval="1d", auto_adjust=True)
         info = {}
         try:
@@ -266,9 +275,9 @@ def enrich_ticker(ticker, data):
         data["name"] = info.get("shortName") or info.get("longName") or ticker
 
         if not hist.empty and "Volume" in hist.columns:
-            close  = hist["Close"].dropna()
-            high   = hist["High"].dropna()
-            low    = hist["Low"].dropna()
+            close = hist["Close"].dropna()
+            high = hist["High"].dropna()
+            low = hist["Low"].dropna()
             volume = hist["Volume"].dropna()
             cmf_series = compute_cmf(high, low, close, volume, 21)
             data["cmf"] = safe_float(cmf_series.iloc[-1], 3)
@@ -276,13 +285,13 @@ def enrich_ticker(ticker, data):
         pass
     return data
 
+
 def fetch_news(ticker, max_articles=20):
     articles = []
     seen_titles = set()
-
     headers = {"User-Agent": "Mozilla/5.0 (compatible; PortfolioBot/1.0)"}
 
-    # Source 1: Yahoo Finance RSS (with User-Agent)
+    # Source 1: Yahoo Finance RSS
     try:
         url = f"https://feeds.finance.yahoo.com/rss/2.0/headline?s={ticker}&region=US&lang=en-US"
         feed = feedparser.parse(url, request_headers=headers)
@@ -295,7 +304,7 @@ def fetch_news(ticker, max_articles=20):
                     "title":     title,
                     "link":      entry.get("link", ""),
                     "published": entry.get("published", ""),
-                    "source":    "Yahoo Finance"
+                    "source":    "Yahoo Finance",
                 })
                 seen_titles.add(title)
     except Exception as e:
@@ -316,7 +325,7 @@ def fetch_news(ticker, max_articles=20):
                     "title":     title,
                     "link":      entry.get("link", ""),
                     "published": entry.get("published", ""),
-                    "source":    "Google News"
+                    "source":    "Google News",
                 })
                 seen_titles.add(title)
     except Exception as e:
@@ -326,6 +335,8 @@ def fetch_news(ticker, max_articles=20):
         log(f"  [{ticker}] WARNING: No news fetched from any source")
 
     return articles[:max_articles]
+
+
 # -----------------------------------------------------------------
 # LOAD DISPLAY TICKERS
 # -----------------------------------------------------------------
@@ -338,12 +349,13 @@ def load_display_tickers():
     except (FileNotFoundError, json.JSONDecodeError):
         return []
 
+
 # -----------------------------------------------------------------
 # MAIN
 # -----------------------------------------------------------------
 
 def main():
-    etf_list   = dedup(ETF_TICKERS)
+    etf_list = dedup(ETF_TICKERS)
     stock_list = dedup(STOCK_TICKERS)
     individual = dedup(INDIVIDUAL_TICKERS)
     all_tickers = dedup(etf_list + stock_list + individual)
@@ -374,11 +386,11 @@ def main():
                 continue
             stocks[ticker] = enrich_ticker(ticker, stocks[ticker])
             stocks[ticker]["news"] = fetch_news(ticker, NEWS_PER_TICKER)
-            log(f"  Enriched {ticker}: {stocks[ticker].get('name','?')} CMF={stocks[ticker].get('cmf','?')} News={len(stocks[ticker].get('news',[]))}")
+            log(f"  Enriched {ticker}: {stocks[ticker].get('name', '?')} CMF={stocks[ticker].get('cmf', '?')} News={len(stocks[ticker].get('news', []))}")
             time.sleep(0.3)
-            
+
     # 4. Summary
-    ok  = sum(1 for v in stocks.values() if v["status"] == "ok")
+    ok = sum(1 for v in stocks.values() if v["status"] == "ok")
     err = sum(1 for v in stocks.values() if v["status"] == "error")
     log(f"\nSummary: OK={ok} | Errors={err}")
 
@@ -398,6 +410,7 @@ def main():
 
     log(f"portfolio.json written — {len(json.dumps(output)) // 1024} KB")
     log("=== Done ===")
+
 
 if __name__ == "__main__":
     main()
