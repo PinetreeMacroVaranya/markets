@@ -362,15 +362,20 @@ def main():
     log(f"Signals computed for {len(stocks)} tickers")
 
     # 3. Enrich display tickers with name + CMF + news
-    display_tickers = load_display_tickers()
+   display_tickers = load_display_tickers()
     if display_tickers:
         log(f"Enriching {len(display_tickers)} display tickers...")
         for ticker in display_tickers:
-            if ticker in stocks and stocks[ticker]["status"] == "ok":
-                stocks[ticker] = enrich_ticker(ticker, stocks[ticker])
-                stocks[ticker]["news"] = fetch_news(ticker, NEWS_PER_TICKER)
-                log(f"  Enriched {ticker}: {stocks[ticker].get('name','?')} CMF={stocks[ticker].get('cmf','?')}")
-                time.sleep(0.3)
+            if ticker not in stocks:
+                log(f"  [{ticker}] SKIPPED — not in fetched universe")
+                continue
+            if stocks[ticker]["status"] != "ok":
+                log(f"  [{ticker}] SKIPPED — status={stocks[ticker]['status']}")
+                continue
+            stocks[ticker] = enrich_ticker(ticker, stocks[ticker])
+            stocks[ticker]["news"] = fetch_news(ticker, NEWS_PER_TICKER)
+            log(f"  Enriched {ticker}: {stocks[ticker].get('name','?')} CMF={stocks[ticker].get('cmf','?')} News={len(stocks[ticker].get('news',[]))}")
+            time.sleep(0.3)
 
     # 4. Summary
     ok  = sum(1 for v in stocks.values() if v["status"] == "ok")
