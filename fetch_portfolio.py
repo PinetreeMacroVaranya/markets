@@ -362,7 +362,7 @@ def main():
     log(f"Signals computed for {len(stocks)} tickers")
 
     # 3. Enrich display tickers with name + CMF + news
-  display_tickers = load_display_tickers()
+    display_tickers = load_display_tickers()
     if display_tickers:
         log(f"Enriching {len(display_tickers)} display tickers...")
         for ticker in display_tickers:
