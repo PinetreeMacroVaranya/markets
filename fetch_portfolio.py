@@ -363,7 +363,7 @@ def main():
 
     # 3. Enrich display tickers with name + CMF + news
    display_tickers = load_display_tickers()
-    if display_tickers:
+   if display_tickers:
         log(f"Enriching {len(display_tickers)} display tickers...")
         for ticker in display_tickers:
             if ticker not in stocks:
