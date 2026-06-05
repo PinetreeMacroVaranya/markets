@@ -362,8 +362,8 @@ def main():
     log(f"Signals computed for {len(stocks)} tickers")
 
     # 3. Enrich display tickers with name + CMF + news
-   display_tickers = load_display_tickers()
-   if display_tickers:
+  display_tickers = load_display_tickers()
+    if display_tickers:
         log(f"Enriching {len(display_tickers)} display tickers...")
         for ticker in display_tickers:
             if ticker not in stocks:
@@ -376,7 +376,7 @@ def main():
             stocks[ticker]["news"] = fetch_news(ticker, NEWS_PER_TICKER)
             log(f"  Enriched {ticker}: {stocks[ticker].get('name','?')} CMF={stocks[ticker].get('cmf','?')} News={len(stocks[ticker].get('news',[]))}")
             time.sleep(0.3)
-
+            
     # 4. Summary
     ok  = sum(1 for v in stocks.values() if v["status"] == "ok")
     err = sum(1 for v in stocks.values() if v["status"] == "error")
