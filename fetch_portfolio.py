@@ -46,7 +46,7 @@ ETF_TICKERS = [
     "GDX", "GDXJ", "HFG", "IEUS", "SRUUF", "IGV", "IWM",
     "IXC", "IXG", "JEDI", "KROP", "LIT", "NASA","ENOR",
     "COPX","HFG","MIEUS","PFIX","PRNT","PSCT","REXC","SCJS",
-    "SIL","SLV","SOXT","ANTI","PURN","WDGF","WEAT, "SIIS"
+    "SIL","SLV","SOXT","ANTI","PURN","WDGF","WEAT,
 ]
 
 # OTC/illiquid tickers - fetched individually to avoid corrupting batches
