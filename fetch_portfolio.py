@@ -44,7 +44,9 @@ ETF_TICKERS = [
     "PAVE", "ARGT", "CANC", "DARP", "DBA",
     "EUAD", "EWC", "EWJ", "EWS", "EWU", "EWZ", "FCG",
     "GDX", "GDXJ", "HFG", "IEUS", "SRUUF", "IGV", "IWM",
-    "IXC", "IXG", "JEDI", "KROP", "LIT", "NASA",
+    "IXC", "IXG", "JEDI", "KROP", "LIT", "NASA","ENOR",
+    "COPX","HFG","MIEUS","PFIX","PRNT","PSCT","REXC","SCJS",
+    "SIL","SLV","SOXT","ANTI","PURN","WDGF","WEAT, "SIIS"
 ]
 
 # OTC/illiquid tickers - fetched individually to avoid corrupting batches
@@ -55,7 +57,7 @@ INDIVIDUAL_TICKERS = ["ABXXF", "WRTH", "RSHO"]
 # -----------------------------------------------------------------
 
 STOCK_TICKERS = [
-    "GEV", "PLTR",
+    "GEV", "PLTR","JMIA"
 ]
 
 # -----------------------------------------------------------------
