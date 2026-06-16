@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-15T12:49:11.439081Z",
-  "generated_date": "2026-06-15",
+  "generated_at": "2026-06-16T11:41:42.324052Z",
+  "generated_date": "2026-06-16",
   "indicators": {
     "move": {
       "series": [
@@ -524,14 +524,14 @@
           "value": 17.68
         },
         {
-          "date": "2026-06-15",
-          "value": 16.58
+          "date": "2026-06-16",
+          "value": 16.16
         }
       ],
-      "latest": 16.58,
+      "latest": 16.16,
       "prev": 17.68,
-      "change": -1.1,
-      "as_of": "2026-06-15",
+      "change": -1.52,
+      "as_of": "2026-06-16",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
       "note": ""
@@ -1562,12 +1562,32 @@
         {
           "date": "2026-06-05",
           "value": 120.08
+        },
+        {
+          "date": "2026-06-08",
+          "value": 120.03
+        },
+        {
+          "date": "2026-06-09",
+          "value": 119.96
+        },
+        {
+          "date": "2026-06-10",
+          "value": 119.91
+        },
+        {
+          "date": "2026-06-11",
+          "value": 120.12
+        },
+        {
+          "date": "2026-06-12",
+          "value": 119.51
         }
       ],
-      "latest": 120.08,
-      "prev": 119.36,
-      "change": 0.72,
-      "as_of": "2026-06-05",
+      "latest": 119.51,
+      "prev": 120.12,
+      "change": -0.61,
+      "as_of": "2026-06-12",
       "status": "ok",
       "source": "FRED (DTWEXBGS)",
       "note": ""
@@ -1593,12 +1613,16 @@
         {
           "date": "2026-04-01",
           "value": 2.52
+        },
+        {
+          "date": "2026-05-01",
+          "value": 2.65
         }
       ],
-      "latest": 2.52,
-      "prev": 2.35,
-      "change": 0.17,
-      "as_of": "2026-04-01",
+      "latest": 2.65,
+      "prev": 2.52,
+      "change": 0.13,
+      "as_of": "2026-05-01",
       "status": "ok",
       "source": "FRED (IRLTLT01JPM156N)",
       "note": ""
@@ -1919,12 +1943,16 @@
         {
           "date": "2026-06-12",
           "value": 0.39
+        },
+        {
+          "date": "2026-06-15",
+          "value": 0.4
         }
       ],
-      "latest": 0.39,
-      "prev": 0.4,
-      "change": -0.01,
-      "as_of": "2026-06-12",
+      "latest": 0.4,
+      "prev": 0.39,
+      "change": 0.01,
+      "as_of": "2026-06-15",
       "status": "ok",
       "source": "FRED (T10Y2Y)",
       "note": ""
