@@ -1,13 +1,9 @@
 {
-  "generated_at": "2026-07-15T08:55:06.761174Z",
-  "generated_date": "2026-07-15",
+  "generated_at": "2026-07-16T08:41:03.682265Z",
+  "generated_date": "2026-07-16",
   "indicators": {
     "move": {
       "series": [
-        {
-          "date": "2026-04-13",
-          "value": 74.42
-        },
         {
           "date": "2026-04-14",
           "value": 74.35
@@ -264,10 +260,6 @@
     "vix": {
       "series": [
         {
-          "date": "2026-04-13",
-          "value": 19.12
-        },
-        {
           "date": "2026-04-14",
           "value": 18.36
         },
@@ -520,24 +512,28 @@
           "value": 17.16
         },
         {
+          "date": "2026-07-14",
+          "value": 16.5
+        },
+        {
           "date": "2026-07-15",
-          "value": 16.25
+          "value": 15.67
+        },
+        {
+          "date": "2026-07-16",
+          "value": 15.99
         }
       ],
-      "latest": 16.25,
-      "prev": 17.16,
-      "change": -0.91,
-      "as_of": "2026-07-15",
+      "latest": 15.99,
+      "prev": 15.67,
+      "change": 0.32,
+      "as_of": "2026-07-16",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
       "note": ""
     },
     "gvz": {
       "series": [
-        {
-          "date": "2026-04-13",
-          "value": 30.0
-        },
         {
           "date": "2026-04-14",
           "value": 31.04
@@ -785,22 +781,26 @@
         {
           "date": "2026-07-13",
           "value": 26.93
+        },
+        {
+          "date": "2026-07-14",
+          "value": 25.02
+        },
+        {
+          "date": "2026-07-15",
+          "value": 24.88
         }
       ],
-      "latest": 26.93,
-      "prev": 23.95,
-      "change": 2.98,
-      "as_of": "2026-07-13",
+      "latest": 24.88,
+      "prev": 25.02,
+      "change": -0.14,
+      "as_of": "2026-07-15",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
       "note": ""
     },
     "hyg": {
       "series": [
-        {
-          "date": "2026-04-13",
-          "value": 79.07
-        },
         {
           "date": "2026-04-14",
           "value": 79.3
@@ -1048,22 +1048,26 @@
         {
           "date": "2026-07-13",
           "value": 79.52
+        },
+        {
+          "date": "2026-07-14",
+          "value": 79.68
+        },
+        {
+          "date": "2026-07-15",
+          "value": 79.81
         }
       ],
-      "latest": 79.52,
-      "prev": 79.71,
-      "change": -0.19,
-      "as_of": "2026-07-13",
+      "latest": 79.81,
+      "prev": 79.68,
+      "change": 0.13,
+      "as_of": "2026-07-15",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
       "note": ""
     },
     "gldtlt": {
       "series": [
-        {
-          "date": "2026-04-13",
-          "value": 5.075
-        },
         {
           "date": "2026-04-14",
           "value": 5.162
@@ -1311,22 +1315,26 @@
         {
           "date": "2026-07-13",
           "value": 4.372
+        },
+        {
+          "date": "2026-07-14",
+          "value": 4.426
+        },
+        {
+          "date": "2026-07-15",
+          "value": 4.42
         }
       ],
-      "latest": 4.372,
-      "prev": 4.463,
-      "change": -0.091,
-      "as_of": "2026-07-13",
+      "latest": 4.42,
+      "prev": 4.426,
+      "change": -0.006,
+      "as_of": "2026-07-15",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
       "note": ""
     },
     "dxy": {
       "series": [
-        {
-          "date": "2026-04-13",
-          "value": 118.99
-        },
         {
           "date": "2026-04-14",
           "value": 118.36
@@ -1639,7 +1647,7 @@
         },
         {
           "date": "2026-05-29",
-          "value": -0.5
+          "value": -0.49
         },
         {
           "date": "2026-06-05",
@@ -1660,22 +1668,22 @@
         {
           "date": "2026-07-03",
           "value": -0.52
+        },
+        {
+          "date": "2026-07-10",
+          "value": -0.54
         }
       ],
-      "latest": -0.52,
-      "prev": -0.51,
-      "change": -0.01,
-      "as_of": "2026-07-03",
+      "latest": -0.54,
+      "prev": -0.52,
+      "change": -0.02,
+      "as_of": "2026-07-10",
       "status": "ok",
       "source": "FRED (NFCI)",
       "note": ""
     },
     "spread": {
       "series": [
-        {
-          "date": "2026-04-13",
-          "value": 0.52
-        },
         {
           "date": "2026-04-14",
           "value": 0.5
@@ -1927,22 +1935,22 @@
         {
           "date": "2026-07-14",
           "value": 0.4
+        },
+        {
+          "date": "2026-07-15",
+          "value": 0.42
         }
       ],
-      "latest": 0.4,
-      "prev": 0.36,
-      "change": 0.04,
-      "as_of": "2026-07-14",
+      "latest": 0.42,
+      "prev": 0.4,
+      "change": 0.02,
+      "as_of": "2026-07-15",
       "status": "ok",
       "source": "FRED (T10Y2Y)",
       "note": ""
     },
     "brent": {
       "series": [
-        {
-          "date": "2026-04-13",
-          "value": 123.28
-        },
         {
           "date": "2026-04-14",
           "value": 118.69
@@ -2174,12 +2182,32 @@
         {
           "date": "2026-07-06",
           "value": 69.56
+        },
+        {
+          "date": "2026-07-07",
+          "value": 71.78
+        },
+        {
+          "date": "2026-07-08",
+          "value": 76.5
+        },
+        {
+          "date": "2026-07-09",
+          "value": 74.46
+        },
+        {
+          "date": "2026-07-10",
+          "value": 74.34
+        },
+        {
+          "date": "2026-07-13",
+          "value": 81.62
         }
       ],
-      "latest": 69.56,
-      "prev": 68.68,
-      "change": 0.88,
-      "as_of": "2026-07-06",
+      "latest": 81.62,
+      "prev": 74.34,
+      "change": 7.28,
+      "as_of": "2026-07-13",
       "status": "ok",
       "source": "FRED (DCOILBRENTEU)",
       "note": ""
