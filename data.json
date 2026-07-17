@@ -1,13 +1,9 @@
 {
-  "generated_at": "2026-07-16T08:41:03.682265Z",
-  "generated_date": "2026-07-16",
+  "generated_at": "2026-07-17T08:35:38.568230Z",
+  "generated_date": "2026-07-17",
   "indicators": {
     "move": {
       "series": [
-        {
-          "date": "2026-04-14",
-          "value": 74.35
-        },
         {
           "date": "2026-04-15",
           "value": 67.94
@@ -259,10 +255,6 @@
     },
     "vix": {
       "series": [
-        {
-          "date": "2026-04-14",
-          "value": 18.36
-        },
         {
           "date": "2026-04-15",
           "value": 18.17
@@ -521,23 +513,23 @@
         },
         {
           "date": "2026-07-16",
-          "value": 15.99
+          "value": 16.73
+        },
+        {
+          "date": "2026-07-17",
+          "value": 18.59
         }
       ],
-      "latest": 15.99,
-      "prev": 15.67,
-      "change": 0.32,
-      "as_of": "2026-07-16",
+      "latest": 18.59,
+      "prev": 16.73,
+      "change": 1.86,
+      "as_of": "2026-07-17",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
       "note": ""
     },
     "gvz": {
       "series": [
-        {
-          "date": "2026-04-14",
-          "value": 31.04
-        },
         {
           "date": "2026-04-15",
           "value": 29.97
@@ -789,22 +781,22 @@
         {
           "date": "2026-07-15",
           "value": 24.88
+        },
+        {
+          "date": "2026-07-16",
+          "value": 26.65
         }
       ],
-      "latest": 24.88,
-      "prev": 25.02,
-      "change": -0.14,
-      "as_of": "2026-07-15",
+      "latest": 26.65,
+      "prev": 24.88,
+      "change": 1.77,
+      "as_of": "2026-07-16",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
       "note": ""
     },
     "hyg": {
       "series": [
-        {
-          "date": "2026-04-14",
-          "value": 79.3
-        },
         {
           "date": "2026-04-15",
           "value": 79.27
@@ -1056,22 +1048,22 @@
         {
           "date": "2026-07-15",
           "value": 79.81
+        },
+        {
+          "date": "2026-07-16",
+          "value": 79.8
         }
       ],
-      "latest": 79.81,
-      "prev": 79.68,
-      "change": 0.13,
-      "as_of": "2026-07-15",
+      "latest": 79.8,
+      "prev": 79.81,
+      "change": -0.01,
+      "as_of": "2026-07-16",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
       "note": ""
     },
     "gldtlt": {
       "series": [
-        {
-          "date": "2026-04-14",
-          "value": 5.162
-        },
         {
           "date": "2026-04-15",
           "value": 5.131
@@ -1323,22 +1315,22 @@
         {
           "date": "2026-07-15",
           "value": 4.42
+        },
+        {
+          "date": "2026-07-16",
+          "value": 4.334
         }
       ],
-      "latest": 4.42,
-      "prev": 4.426,
-      "change": -0.006,
-      "as_of": "2026-07-15",
+      "latest": 4.334,
+      "prev": 4.42,
+      "change": -0.086,
+      "as_of": "2026-07-16",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
       "note": ""
     },
     "dxy": {
       "series": [
-        {
-          "date": "2026-04-14",
-          "value": 118.36
-        },
         {
           "date": "2026-04-15",
           "value": 118.36
@@ -1609,12 +1601,16 @@
         {
           "date": "2026-05-01",
           "value": 2.65
+        },
+        {
+          "date": "2026-06-01",
+          "value": 2.67
         }
       ],
-      "latest": 2.65,
-      "prev": 2.52,
-      "change": 0.13,
-      "as_of": "2026-05-01",
+      "latest": 2.67,
+      "prev": 2.65,
+      "change": 0.02,
+      "as_of": "2026-06-01",
       "status": "ok",
       "source": "FRED (IRLTLT01JPM156N)",
       "note": ""
@@ -1684,10 +1680,6 @@
     },
     "spread": {
       "series": [
-        {
-          "date": "2026-04-14",
-          "value": 0.5
-        },
         {
           "date": "2026-04-15",
           "value": 0.53
@@ -1939,22 +1931,22 @@
         {
           "date": "2026-07-15",
           "value": 0.42
+        },
+        {
+          "date": "2026-07-16",
+          "value": 0.41
         }
       ],
-      "latest": 0.42,
-      "prev": 0.4,
-      "change": 0.02,
-      "as_of": "2026-07-15",
+      "latest": 0.41,
+      "prev": 0.42,
+      "change": -0.01,
+      "as_of": "2026-07-16",
       "status": "ok",
       "source": "FRED (T10Y2Y)",
       "note": ""
     },
     "brent": {
       "series": [
-        {
-          "date": "2026-04-14",
-          "value": 118.69
-        },
         {
           "date": "2026-04-15",
           "value": 114.93
