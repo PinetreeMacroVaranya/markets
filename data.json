@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-28T09:17:42.410948Z",
-  "generated_date": "2026-07-28",
+  "generated_at": "2026-07-29T09:22:20.115383Z",
+  "generated_date": "2026-07-29",
   "indicators": {
     "move": {
       "series": [
@@ -501,13 +501,17 @@
         },
         {
           "date": "2026-07-28",
-          "value": 18.89
+          "value": 18.21
+        },
+        {
+          "date": "2026-07-29",
+          "value": 18.23
         }
       ],
-      "latest": 18.89,
-      "prev": 18.67,
-      "change": 0.22,
-      "as_of": "2026-07-28",
+      "latest": 18.23,
+      "prev": 18.21,
+      "change": 0.02,
+      "as_of": "2026-07-29",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
       "note": ""
@@ -765,12 +769,16 @@
         {
           "date": "2026-07-27",
           "value": 24.13
+        },
+        {
+          "date": "2026-07-28",
+          "value": 24.62
         }
       ],
-      "latest": 24.13,
-      "prev": 24.33,
-      "change": -0.2,
-      "as_of": "2026-07-27",
+      "latest": 24.62,
+      "prev": 24.13,
+      "change": 0.49,
+      "as_of": "2026-07-28",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
       "note": ""
@@ -1028,12 +1036,16 @@
         {
           "date": "2026-07-27",
           "value": 79.27
+        },
+        {
+          "date": "2026-07-28",
+          "value": 79.42
         }
       ],
-      "latest": 79.27,
-      "prev": 79.23,
-      "change": 0.04,
-      "as_of": "2026-07-27",
+      "latest": 79.42,
+      "prev": 79.27,
+      "change": 0.15,
+      "as_of": "2026-07-28",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
       "note": ""
@@ -1291,12 +1303,16 @@
         {
           "date": "2026-07-27",
           "value": 4.473
+        },
+        {
+          "date": "2026-07-28",
+          "value": 4.385
         }
       ],
-      "latest": 4.473,
-      "prev": 4.467,
-      "change": 0.006,
-      "as_of": "2026-07-27",
+      "latest": 4.385,
+      "prev": 4.473,
+      "change": -0.088,
+      "as_of": "2026-07-28",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
       "note": ""
@@ -1907,12 +1923,16 @@
         {
           "date": "2026-07-27",
           "value": 0.34
+        },
+        {
+          "date": "2026-07-28",
+          "value": 0.35
         }
       ],
-      "latest": 0.34,
-      "prev": 0.36,
-      "change": -0.02,
-      "as_of": "2026-07-27",
+      "latest": 0.35,
+      "prev": 0.34,
+      "change": 0.01,
+      "as_of": "2026-07-28",
       "status": "ok",
       "source": "FRED (T10Y2Y)",
       "note": ""
