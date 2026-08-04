@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-03T10:51:03.656633Z",
-  "generated_date": "2026-08-03",
+  "generated_at": "2026-08-04T09:44:59.105496Z",
+  "generated_date": "2026-08-04",
   "universe_count": 425,
   "rankings": {
     "1d": {
@@ -270,7 +270,7 @@
             }
           ],
           "as_of": "2026-07-31",
-          "name": "State Street Consumer Discretionary Select Sector SPDR ETF",
+          "name": "State Street Consumer Discretio",
           "aum": 22593435648,
           "expense": null,
           "category": "Consumer Cyclical"
@@ -810,7 +810,7 @@
             }
           ],
           "as_of": "2026-07-31",
-          "name": "Vanguard Consumer Discretionary Index Fund ETF Shares",
+          "name": "Vanguard Consumer Discretion ET",
           "aum": 6827243008,
           "expense": null,
           "category": "Consumer Cyclical"
@@ -1215,7 +1215,7 @@
             }
           ],
           "as_of": "2026-07-31",
-          "name": "ProShares UltraPro Short 20+ Year Treasury",
+          "name": "ProShares UltraPro Short 20 Yea",
           "aum": 16828196,
           "expense": null,
           "category": "Trading--Inverse Debt"
@@ -1350,10 +1350,10 @@
             }
           ],
           "as_of": "2026-07-17",
-          "name": "First Trust Alerian Disruptive Technology Real Estate ETF",
-          "aum": 24026582,
+          "name": "FFR",
+          "aum": null,
           "expense": null,
-          "category": "Global Real Estate"
+          "category": ""
         }
       ],
       "bottom": [
@@ -3786,7 +3786,7 @@
             }
           ],
           "as_of": "2026-07-31",
-          "name": "State Street Consumer Discretionary Select Sector SPDR ETF",
+          "name": "State Street Consumer Discretio",
           "aum": 22593435648,
           "expense": null,
           "category": "Consumer Cyclical"
@@ -4056,7 +4056,7 @@
             }
           ],
           "as_of": "2026-07-31",
-          "name": "Vanguard Consumer Discretionary Index Fund ETF Shares",
+          "name": "Vanguard Consumer Discretion ET",
           "aum": 6827243008,
           "expense": null,
           "category": "Consumer Cyclical"
@@ -4868,7 +4868,7 @@
             }
           ],
           "as_of": "2026-07-31",
-          "name": "United States Oil Fund, LP",
+          "name": "United States Oil Fund",
           "aum": 1880301184,
           "expense": null,
           "category": "Commodities Focused"
@@ -5138,7 +5138,7 @@
             }
           ],
           "as_of": "2026-07-31",
-          "name": "United States Natural Gas Fund, LP",
+          "name": "United States Natural Gas Fund ",
           "aum": 418879104,
           "expense": null,
           "category": "Commodities Focused"
@@ -5682,7 +5682,7 @@
             }
           ],
           "as_of": "2026-07-31",
-          "name": "United States Oil Fund, LP",
+          "name": "United States Oil Fund",
           "aum": 1880301184,
           "expense": null,
           "category": "Commodities Focused"
@@ -6087,7 +6087,7 @@
             }
           ],
           "as_of": "2026-07-31",
-          "name": "ProShares UltraPro Short 20+ Year Treasury",
+          "name": "ProShares UltraPro Short 20 Yea",
           "aum": 16828196,
           "expense": null,
           "category": "Trading--Inverse Debt"
@@ -6222,7 +6222,7 @@
             }
           ],
           "as_of": "2026-07-31",
-          "name": "Direxion Daily 20+ Year Treasury Bear 3X Shares",
+          "name": "Direxion Daily 20-Year Treasury",
           "aum": 163211440,
           "expense": null,
           "category": "Trading--Inverse Debt"
@@ -10847,9 +10847,9 @@
       "aum_m": 69.1,
       "category": "High Yield Bond",
       "issuer": "iShares",
-      "ret_since_launch": 0.0,
+      "ret_since_launch": NaN,
       "expense": null,
-      "price": 53.5
+      "price": null
     }
   ]
 }
