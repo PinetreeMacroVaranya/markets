@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-17T07:58:15.522980Z",
-  "generated_date": "2026-08-17",
+  "generated_at": "2026-08-18T07:46:35.664605Z",
+  "generated_date": "2026-08-18",
   "universe_count": 425,
   "rankings": {
     "1d": {
@@ -10416,9 +10416,9 @@
           ],
           "as_of": "2026-08-14",
           "name": "Tema Space Innovators ETF",
-          "aum": null,
+          "aum": 1026915584,
           "expense": null,
-          "category": ""
+          "category": "Large Blend"
         },
         {
           "ticker": "URNM",
