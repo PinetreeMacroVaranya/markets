@@ -1,24 +1,6 @@
 {
   "months": [
     {
-      "label": "31-Dec-25",
-      "date": "2025-12-31",
-      "values": {
-        "move": 63.96,
-        "dxy": 98.28,
-        "jgb": 2.08,
-        "nfci": -0.56,
-        "gldtlt": 4.56,
-        "spread": 0.71,
-        "vix": 14.95,
-        "brent": 63.1,
-        "buffett": 219.36,
-        "hyg": 80.63,
-        "gvz": 23.92,
-        "fg": 43
-      }
-    },
-    {
       "label": "30-Jan-26",
       "date": "2026-01-30",
       "values": {
@@ -105,6 +87,24 @@
         "buffett": null,
         "hyg": 79.97,
         "gvz": 27.2,
+        "fg": null
+      }
+    },
+    {
+      "label": "31-Aug-26",
+      "date": "2026-08-31",
+      "values": {
+        "move": 75.32,
+        "dxy": 118.75,
+        "jgb": 2.67,
+        "nfci": -0.57,
+        "gldtlt": 4.949,
+        "spread": 0.41,
+        "vix": 15.7,
+        "brent": 88.24,
+        "buffett": null,
+        "hyg": 79.81,
+        "gvz": 24.4,
         "fg": null
       }
     }

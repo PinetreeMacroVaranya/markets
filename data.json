@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-31T14:18:25.842256Z",
-  "generated_date": "2026-08-31",
+  "generated_at": "2026-09-01T11:56:02.317148Z",
+  "generated_date": "2026-09-01",
   "indicators": {
     "move": {
       "series": [
@@ -253,14 +253,14 @@
           "value": 69.86
         },
         {
-          "date": "2026-08-28",
-          "value": 70.97
+          "date": "2026-08-31",
+          "value": 75.32
         }
       ],
-      "latest": 70.97,
+      "latest": 75.32,
       "prev": 69.86,
-      "change": 1.11,
-      "as_of": "2026-08-28",
+      "change": 5.46,
+      "as_of": "2026-08-31",
       "status": "ok",
       "source": "Yahoo Finance (^MOVE)",
       "note": ""
@@ -516,18 +516,18 @@
           "value": 14.51
         },
         {
-          "date": "2026-08-28",
-          "value": 14.43
+          "date": "2026-08-31",
+          "value": 14.92
         },
         {
-          "date": "2026-08-31",
-          "value": 15.31
+          "date": "2026-09-01",
+          "value": 15.7
         }
       ],
-      "latest": 15.31,
-      "prev": 14.43,
-      "change": 0.88,
-      "as_of": "2026-08-31",
+      "latest": 15.7,
+      "prev": 14.92,
+      "change": 0.78,
+      "as_of": "2026-09-01",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
       "note": ""
@@ -783,17 +783,13 @@
           "value": 26.8
         },
         {
-          "date": "2026-08-28",
-          "value": 25.17
-        },
-        {
           "date": "2026-08-31",
-          "value": 24.53
+          "value": 24.4
         }
       ],
-      "latest": 24.53,
-      "prev": 25.17,
-      "change": -0.64,
+      "latest": 24.4,
+      "prev": 26.8,
+      "change": -2.4,
       "as_of": "2026-08-31",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
@@ -1050,17 +1046,13 @@
           "value": 79.87
         },
         {
-          "date": "2026-08-28",
-          "value": 79.74
-        },
-        {
           "date": "2026-08-31",
-          "value": 79.65
+          "value": 79.81
         }
       ],
-      "latest": 79.65,
-      "prev": 79.74,
-      "change": -0.09,
+      "latest": 79.81,
+      "prev": 79.87,
+      "change": -0.06,
       "as_of": "2026-08-31",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
@@ -1317,17 +1309,13 @@
           "value": 5.084
         },
         {
-          "date": "2026-08-28",
-          "value": 4.934
-        },
-        {
           "date": "2026-08-31",
-          "value": 4.939
+          "value": 4.949
         }
       ],
-      "latest": 4.939,
-      "prev": 4.934,
-      "change": 0.005,
+      "latest": 4.949,
+      "prev": 5.084,
+      "change": -0.135,
       "as_of": "2026-08-31",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
@@ -1566,12 +1554,32 @@
         {
           "date": "2026-08-21",
           "value": 118.06
+        },
+        {
+          "date": "2026-08-24",
+          "value": 118.32
+        },
+        {
+          "date": "2026-08-25",
+          "value": 118.23
+        },
+        {
+          "date": "2026-08-26",
+          "value": 118.45
+        },
+        {
+          "date": "2026-08-27",
+          "value": 118.36
+        },
+        {
+          "date": "2026-08-28",
+          "value": 118.75
         }
       ],
-      "latest": 118.06,
-      "prev": 118.25,
-      "change": -0.19,
-      "as_of": "2026-08-21",
+      "latest": 118.75,
+      "prev": 118.36,
+      "change": 0.39,
+      "as_of": "2026-08-28",
       "status": "ok",
       "source": "FRED (DTWEXBGS)",
       "note": ""
@@ -1919,12 +1927,16 @@
         {
           "date": "2026-08-28",
           "value": 0.39
+        },
+        {
+          "date": "2026-08-31",
+          "value": 0.41
         }
       ],
-      "latest": 0.39,
-      "prev": 0.47,
-      "change": -0.08,
-      "as_of": "2026-08-28",
+      "latest": 0.41,
+      "prev": 0.39,
+      "change": 0.02,
+      "as_of": "2026-08-31",
       "status": "ok",
       "source": "FRED (T10Y2Y)",
       "note": ""
