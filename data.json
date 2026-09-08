@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-07T12:56:02.571346Z",
-  "generated_date": "2026-09-07",
+  "generated_at": "2026-09-08T11:38:11.293139Z",
+  "generated_date": "2026-09-08",
   "indicators": {
     "move": {
       "series": [
@@ -521,13 +521,17 @@
         },
         {
           "date": "2026-09-07",
-          "value": 15.24
+          "value": 15.3
+        },
+        {
+          "date": "2026-09-08",
+          "value": 15.79
         }
       ],
-      "latest": 15.24,
-      "prev": 14.53,
-      "change": 0.71,
-      "as_of": "2026-09-07",
+      "latest": 15.79,
+      "prev": 15.3,
+      "change": 0.49,
+      "as_of": "2026-09-08",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
       "note": ""
