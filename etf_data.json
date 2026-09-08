@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-07T13:29:52.551423Z",
-  "generated_date": "2026-09-07",
-  "universe_count": 425,
+  "generated_at": "2026-09-08T12:07:02.491262Z",
+  "generated_date": "2026-09-08",
+  "universe_count": 424,
   "rankings": {
     "1d": {
       "top": [
@@ -9741,9 +9741,9 @@
           ],
           "as_of": "2026-09-04",
           "name": "Tema Space Innovators ETF",
-          "aum": null,
+          "aum": 1068308608,
           "expense": null,
-          "category": ""
+          "category": "Large Blend"
         },
         {
           "ticker": "JEDI",
