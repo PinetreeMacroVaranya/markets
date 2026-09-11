@@ -1,13 +1,9 @@
 {
-  "generated_at": "2026-09-10T11:41:57.701572Z",
-  "generated_date": "2026-09-10",
+  "generated_at": "2026-09-11T11:42:15.724145Z",
+  "generated_date": "2026-09-11",
   "indicators": {
     "move": {
       "series": [
-        {
-          "date": "2026-06-09",
-          "value": 77.03
-        },
         {
           "date": "2026-06-10",
           "value": 73.95
@@ -259,22 +255,22 @@
         {
           "date": "2026-09-09",
           "value": 76.74
+        },
+        {
+          "date": "2026-09-10",
+          "value": 82.09
         }
       ],
-      "latest": 76.74,
-      "prev": 76.14,
-      "change": 0.6,
-      "as_of": "2026-09-09",
+      "latest": 82.09,
+      "prev": 76.74,
+      "change": 5.35,
+      "as_of": "2026-09-10",
       "status": "ok",
       "source": "Yahoo Finance (^MOVE)",
       "note": ""
     },
     "vix": {
       "series": [
-        {
-          "date": "2026-06-09",
-          "value": 19.87
-        },
         {
           "date": "2026-06-10",
           "value": 22.22
@@ -533,23 +529,23 @@
         },
         {
           "date": "2026-09-10",
-          "value": 16.68
+          "value": 17.84
+        },
+        {
+          "date": "2026-09-11",
+          "value": 17.08
         }
       ],
-      "latest": 16.68,
-      "prev": 16.46,
-      "change": 0.22,
-      "as_of": "2026-09-10",
+      "latest": 17.08,
+      "prev": 17.84,
+      "change": -0.76,
+      "as_of": "2026-09-11",
       "status": "ok",
       "source": "Yahoo Finance (^VIX)",
       "note": ""
     },
     "gvz": {
       "series": [
-        {
-          "date": "2026-06-09",
-          "value": 28.04
-        },
         {
           "date": "2026-06-10",
           "value": 32.18
@@ -801,22 +797,22 @@
         {
           "date": "2026-09-09",
           "value": 27.79
+        },
+        {
+          "date": "2026-09-10",
+          "value": 28.48
         }
       ],
-      "latest": 27.79,
-      "prev": 27.26,
-      "change": 0.53,
-      "as_of": "2026-09-09",
+      "latest": 28.48,
+      "prev": 27.79,
+      "change": 0.69,
+      "as_of": "2026-09-10",
       "status": "ok",
       "source": "Yahoo Finance (^GVZ)",
       "note": ""
     },
     "hyg": {
       "series": [
-        {
-          "date": "2026-06-09",
-          "value": 78.44
-        },
         {
           "date": "2026-06-10",
           "value": 78.29
@@ -1068,22 +1064,22 @@
         {
           "date": "2026-09-09",
           "value": 78.98
+        },
+        {
+          "date": "2026-09-10",
+          "value": 78.62
         }
       ],
-      "latest": 78.98,
-      "prev": 79.12,
-      "change": -0.14,
-      "as_of": "2026-09-09",
+      "latest": 78.62,
+      "prev": 78.98,
+      "change": -0.36,
+      "as_of": "2026-09-10",
       "status": "ok",
       "source": "Yahoo Finance (HYG)",
       "note": ""
     },
     "gldtlt": {
       "series": [
-        {
-          "date": "2026-06-09",
-          "value": 4.644
-        },
         {
           "date": "2026-06-10",
           "value": 4.464
@@ -1335,22 +1331,22 @@
         {
           "date": "2026-09-09",
           "value": 4.935
+        },
+        {
+          "date": "2026-09-10",
+          "value": 4.907
         }
       ],
-      "latest": 4.935,
-      "prev": 4.863,
-      "change": 0.072,
-      "as_of": "2026-09-09",
+      "latest": 4.907,
+      "prev": 4.935,
+      "change": -0.028,
+      "as_of": "2026-09-10",
       "status": "ok",
       "source": "Yahoo Finance (GLD/TLT ratio)",
       "note": ""
     },
     "dxy": {
       "series": [
-        {
-          "date": "2026-06-09",
-          "value": 119.96
-        },
         {
           "date": "2026-06-10",
           "value": 119.91
@@ -1680,22 +1676,22 @@
         {
           "date": "2026-08-28",
           "value": -0.56
+        },
+        {
+          "date": "2026-09-04",
+          "value": -0.56
         }
       ],
       "latest": -0.56,
       "prev": -0.56,
       "change": 0.0,
-      "as_of": "2026-08-28",
+      "as_of": "2026-09-04",
       "status": "ok",
       "source": "FRED (NFCI)",
       "note": ""
     },
     "spread": {
       "series": [
-        {
-          "date": "2026-06-09",
-          "value": 0.4
-        },
         {
           "date": "2026-06-10",
           "value": 0.42
@@ -1947,22 +1943,22 @@
         {
           "date": "2026-09-09",
           "value": 0.4
+        },
+        {
+          "date": "2026-09-10",
+          "value": 0.39
         }
       ],
-      "latest": 0.4,
-      "prev": 0.41,
+      "latest": 0.39,
+      "prev": 0.4,
       "change": -0.01,
-      "as_of": "2026-09-09",
+      "as_of": "2026-09-10",
       "status": "ok",
       "source": "FRED (T10Y2Y)",
       "note": ""
     },
     "brent": {
       "series": [
-        {
-          "date": "2026-06-09",
-          "value": 94.15
-        },
         {
           "date": "2026-06-10",
           "value": 95.73
@@ -2198,12 +2194,36 @@
         {
           "date": "2026-09-01",
           "value": 96.02
+        },
+        {
+          "date": "2026-09-02",
+          "value": 97.59
+        },
+        {
+          "date": "2026-09-03",
+          "value": 100.52
+        },
+        {
+          "date": "2026-09-04",
+          "value": 102.24
+        },
+        {
+          "date": "2026-09-07",
+          "value": 104.47
+        },
+        {
+          "date": "2026-09-08",
+          "value": 106.12
+        },
+        {
+          "date": "2026-09-09",
+          "value": 109.51
         }
       ],
-      "latest": 96.02,
-      "prev": 89.75,
-      "change": 6.27,
-      "as_of": "2026-09-01",
+      "latest": 109.51,
+      "prev": 106.12,
+      "change": 3.39,
+      "as_of": "2026-09-09",
       "status": "ok",
       "source": "FRED (DCOILBRENTEU)",
       "note": ""
